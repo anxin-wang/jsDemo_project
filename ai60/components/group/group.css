@@ -1,0 +1,161 @@
+/************可提取的公共部分************/
+#C_pagePreBody {
+    background: no-repeat center center;
+    /*background-image: url("http://img1.meetupstatic.com/img/02266392596189697910/explore_page_photos/find-14.jpg");*/
+    background-size: cover;
+    position: relative;
+}
+.doc-section-inner {
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 960px;
+}
+.doc-content, .doc-controls, .doc-padding {
+    border-bottom: 1px solid transparent;
+    padding: 18px 18px 0;
+}
+.cardList > li .doc-content {
+    border-top: 1px solid #eee;
+    padding: 18px 18px 0;
+}
+.cardList > li .doc-content:first-child {
+    border-top: 0 none;
+}
+.big {
+    font-size: 20px;
+    line-height: 1.33;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: rgba(0, 0, 0, 0.95);
+    font-family: Microsoft YaHei,Arial,Helvetica,sans-serif !important;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0 0 9px;
+}
+h2 {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+.ffbox {
+    box-sizing: border-box;
+    display: table;
+    table-layout: auto;
+    width: 100%;
+}
+.ffbox--fixed {
+    table-layout: fixed;
+}
+.ffbox-fix, .ffbox-flex {
+    display: table-cell;
+    vertical-align: middle;
+}
+/*******页面专属部分********/
+#member-home-header {
+    background: none repeat scroll 0 0 #a3c12f;
+    color: #cfdfec;
+    font-size: 16px;
+    padding-bottom: 58px;
+    padding-top: 36px;
+}
+#member-home-header .ffbox-flex {
+    width: 60%;
+}
+#member-home-header-event {
+    background-color: #9db62c;
+    
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #cfdfec;
+    display: block;
+    min-height: 172px;
+    padding: 36px 36px 26px;
+    text-decoration: none;
+}
+#member-home-header-stats {
+    list-style: none outside none;
+    margin: 0 0 0 54px;
+    padding: 0;
+}
+#member-home-header h1, #member-home-header h2, #member-home-header h3, #member-home-header h4 {
+    color: #fff;
+}
+#member-home-header-stats li {
+    clear: both;
+    color: #fff;
+    display: block;
+    font-size: 19px;
+    margin: 0;
+    padding-top: 18px;
+}
+#member-home-header-stats li:first-child {
+    padding-top: 0;
+}
+#member-home-header-stats .stats-count {
+    background: none repeat scroll 0 0 #a2bd2b;
+    border: 1px solid #9db62c;
+    border-radius: 50%;
+    box-sizing: border-box;
+    float: left;
+    font-size: 21px;
+    font-weight: 500;
+    height: 68px;
+    line-height: 66px;
+    margin-right: 12px;
+    text-align: center;
+    width: 68px;
+}
+#member-home-header-stats .stats-label {
+    display: table-cell;
+    height: 68px;
+    vertical-align: middle;
+}
+#member-home-header-stats li a {
+    color: #fff;
+}
+
+/*列表项*/
+.cardList {
+    font-size: 0;
+    list-style: none outside none;
+    margin: 0 -18px 0 0;
+    padding: 0;
+    vertical-align: top;
+}
+.cardList > li {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 18px 18px 0;
+    padding: 0;
+    vertical-align: top;
+    width: 223px;
+}
+.name-card.cardList {
+    background-color: transparent !important;
+    border: 0 none;
+    position: relative;
+}
+.search-card.cardList > li {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    margin: 0 16px 24px 0;
+    position: relative;
+    width: 309.33px;
+}
+
+.simple-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+}
+.name-card.cardList .nametag-photo {
+    background-color: #333;
+    border-radius: 3px 3px 0 0;
+    height: 180px;
+    text-decoration: none;
+    width: 100%;
+}
