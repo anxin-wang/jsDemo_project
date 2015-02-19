@@ -1,0 +1,479 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn{
+  display: inline-block;
+  padding: 8px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  //line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+   -webkit-user-select:none;
+      -moz-user-select:none;
+       -ms-user-select:none;
+   user-select:none;
+   background-image: none;
+   border:1px solid transparent;
+   border-radius: 2px;
+
+  &:active,
+  &.active {
+    &:focus {
+      .tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:active,
+  &.active,
+  .open .dropdown-toggle&{
+    background-image: none;
+    outline: 0;
+    //-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    //box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    .tab-disabled{}
+  }
+}
+.tab-focus{
+  outline: 0;
+  //outline: 5px auto -webkit-focus-ring-color;
+  //outline-offset: -2px;
+  
+}
+
+.tab-disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  filter:alpha(opacity=65);
+    -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity:  .65;
+  background-color: #ccc;
+}
+
+.btn-default{
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active {
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+}
+
+
+.btn-primary{
+  color: #fff;
+  background-color: #428bca;
+  border-color: #428bca;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #428bca;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active {
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+
+}
+
+.btn-success{
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active {
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+}
+
+.btn-info{
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+  color: #fff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active {
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+}
+
+
+.btn-warning{
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+    color: #fff;
+    background-color: #ed9c28;
+    border-color: #d58512;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active {
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+}
+
+.btn-danger{
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+    color: #fff;
+    background-color: #d2322d;
+    border-color: #ac2925;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active{
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+}
+
+
+.btn-link{
+  color: #428bca;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  &:active,
+  &.active,
+  &:hover,
+  &:focus,
+  .open .dropdown-toggle& {
+    color: #428bca;
+    text-decoration: none;
+    background-color: #e5e5e5;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & ,
+  &.disabled:hover,
+  &[disabled]:hover,
+  fieldset[disabled] &:hover,
+  &.disabled:focus,
+  &[disabled]:focus,
+  fieldset[disabled] &:focus,
+  &.disabled:active,
+  &[disabled]:active,
+  fieldset[disabled] &:active {
+    background-color: #ccc;
+        -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+}
+
+
+
+//btn大小
+//.btn-lg{
+  //padding:10px 16px;
+  //font-size: 18px;
+  //line-height: 1.33;
+ // border-radius: 2px;
+//}
+
+.btn-sm{
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+
+.btn-xs{
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+
+
+
+/* .btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  //border: 1px solid transparent;
+  white-space: nowrap;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+  .user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus {
+      .tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: @btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    .opacity(.65);
+    .box-shadow(none);
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+.btn-primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+}
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: @link-color;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+ */
