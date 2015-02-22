@@ -1,25 +1,36 @@
+body{
+  font-size:12px;
+}
 .site-nav {
     background: none repeat scroll 0 0 #f5f5f5;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
     z-index: 10000;
 }
 .site-nav .site-nav-bd {
     background: none repeat scroll 0 0 #f5f5f5;
     height: 35px;
 }
-
+.site-nav-bd .site-nav-bd-r li.menu,
+.site-nav-bd .site-nav-bd-l>li.menu{
+  float:left;
+}
 .site-nav-bd .menu .menu-hd {
     height: 35px;
     line-height: 35px;
     padding: 0 6px;
-    position: relative;
-    z-index: 10002;
+    // position: relative;
+    // z-index: 10002;
 }
-.site-nav-bd .site-nav-bd-r li.menu,.site-nav-bd .site-nav-bd-l>li{
-  &:extend(.clearfix all);
-  float:left;
+//hover后弹出的菜单
+.site-nav-bd .menu .menu-bd .menu-bd-panel {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #eee;
+    line-height: normal;
+    padding: 8px;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
 }
-
 .site-nav-bd .menu .menu-list .menu-bd-panel a {
     color: #6c6c6c;
     display: block;
@@ -27,6 +38,7 @@
     padding: 0 5px;
     white-space: nowrap;
 }
+//分割线
 .site-nav-bd .site-nav-pipe {
     color: #ddd;
     font-style: normal;
