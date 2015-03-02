@@ -18,18 +18,29 @@ body{
     height: 35px;
     line-height: 35px;
     padding: 0 6px;
-    // position: relative;
-    // z-index: 10002;
+    position: relative;
+    z-index: 10002;
 }
 //hover后弹出的菜单
+.site-nav-bd .menu .menu-bd {
+    // margin-top: -1px;
+    position: relative;
+    z-index: 10001;
+    display:none;
+    // -webkit-transition: background 5s linear;
+    // -o-transition: background 5s linear;
+    // transition: background 5s linear;
+    
+}
 .site-nav-bd .menu .menu-bd .menu-bd-panel {
     background: none repeat scroll 0 0 #fff;
     border: 1px solid #eee;
+    border-top:none;
     line-height: normal;
     padding: 8px;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .site-nav-bd .menu .menu-list .menu-bd-panel a {
     color: #6c6c6c;
@@ -48,4 +59,48 @@ body{
     float: left;
     height: 35px;
     line-height: 35px;
+}
+.site-nav-bd .login-info .menu-bd .user-avatar {
+    float: left;
+    margin-left: 9px;
+    margin-right: 10px;
+}
+.site-nav-bd .login-info .menu-bd .user-avatar img {
+    border-radius: 50%;
+    display: block;
+    height: 80px;
+    width: 80px;
+}
+.site-nav-bd .login-info .menu-bd .menu-bd-panel {
+    width: 248px;
+}
+.site-nav-bd .login-info .menu-bd .user-info{
+  height:80px;
+}
+.site-nav-bd .login-info .menu-bd .user-info .user-operate{
+  text-align: right;
+}
+.site-nav-bd .login-info .menu-bd .user-privilege-tip{
+  margin:6px;
+  text-align:center;
+  background-color: #eee;
+}
+.site-nav-bd .login-info .menu-bd .user-privilege-tip a{
+  padding:5px 0;
+  display:block;
+}
+
+.site-nav-bd-l .menu:hover .menu-bd,.site-nav-bd-r .menu:hover .menu-bd{
+  display:block;
+}
+
+.test{
+  height:100px;
+  width:100px;
+  background-color:#333;
+  .transition(background-color);
+}
+.test:hover{
+  height:100px;
+  background-color:#895;
 }
