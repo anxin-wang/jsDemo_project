@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Forms-Demo</title>
+<link rel="stylesheet" href="../style/ylb-pc.css">
+
+<body>
+<div style="width:970px; margin:0 auto;">
+	<h1>基础表单</h1>
+	<h2>input基础样式</h2>
+	<form action="" role="form">
+		<div class="form-group">
+			<label for="input-primary">正常状态</label>
+			<input type="text" class="input" placeholder="正常状态">
+		</div>
+		<br/>
+		<div class="form-group">
+			<label for="input-disabled">不可输入</label>
+			<input type="text" class="input input-disabled" id="input-disabled" placeholder="不可输入">
+		</div>
+		<br/>
+		<div class="form-group">
+			<label for="input-focus">正在输入</label>
+			<input type="text" class="input input-focus" id="input-focus" placeholder="正在输入">
+		</div>
+		<br/>
+		<div class="form-group">
+			<label for="input-error">输入错误</label>
+			<input type="text" class="input input-error" id="input-error" placeholder="输入错误">
+		</div>
+		<br/>
+		<div class="form-group">
+			<label for="input-success">输入成功</label>
+			<input type="text" class="input input-success" id="input-success" placeholder="输入成功">
+		</div>
+	</form>
+	<br/>
+	<h2>radio基础样式</h2>
+	<form action="" role="form">
+		<label>
+			<input type="radio" checked>
+			选中状态
+		</label>
+		<label>
+			<input type="radio" disabled>
+			不可选状态
+		</label>
+		<label>
+			<input type="radio" >
+			待选状态
+		</label>
+	</form>
+	<br/>
+	<h2>checkbox基础样式</h2>
+	<form action="" role="form">
+		<label>
+			<input type="checkbox" checked>
+			选中状态
+		</label>
+		<label>
+			<input type="checkbox" disabled>
+			不可选状态
+		</label>
+		<label>
+			<input type="checkbox" >
+			待选状态
+		</label>
+	</form>
+	<br/>
+	<h2>单选下拉框</h2>
+	<div class="form-group">
+			<select class="form-control">
+				<option>下拉选择框</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+	</div>
+	<br/>
+	<h2>下拉框</h2>
+	<div class="form-group">
+		<select class="form-control" multiple >
+			<option>下拉选择框</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+	</div>
+	<br/>
+	<h2>基础表单</h2>
+	<form action="" role="form">
+		<div class="form-group">
+			<label for="input-email">邮箱：</label>
+			<input type="email" class="input" id="input-email" placeholder="请输入邮箱地址">
+		</div>
+		<div class="form-group">
+			<label for="input-email">邮箱：</label>
+			<input type="email" class="input input-sm" id="input-email" placeholder=".input-sm">
+		</div>
+		<div class="form-group">
+			<label for="input-pwd">密码：</label>
+			<input type="password" class="input" id="input-pwd" placeholder="请输入邮箱密码">
+		</div>
+		<div class="form-group">
+			<label for="input-pwd">密码：</label>
+			<input type="password" class="input input-lg" id="input-pwd" placeholder=".input-lg">
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> 记住密码
+			</label>
+			<label>
+				<input type="checkbox"> 忘记密码
+			</label>
+			<label>
+				<input type="checkbox"> 重置密码
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio"> 男
+			</label>
+			<label>
+				<input type="radio"> 女
+			</label>
+		</div>
+		<div class="form-group">
+			<input type="textarea" class="form-group" placeholder="请输入您的留言">
+		</div>
+		<button class="btn btn-primary" type="submit">提交</button>
+	</form>
+	<br/>
+	<h2>水平表单</h2>
+	<form action="" role="form" class="form-horizontal">
+		<div class="form-group">
+			<label for="input-email">邮箱</label>
+			<input type="email" class="input" id="input-email" placeholder="请输入您的邮箱地址">
+		</div>
+		<div class="form-group">
+			<label for="input-pwd">密码</label>
+			<input type="password" class="input" id="input-pwd" placeholder="请输入您的邮箱密码">
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> 记住密码
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio"> 男
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">进入邮箱</button>
+	</form>
+	<br/>
+	<h2>内联表单</h2>
+	<form action="" role="form" class="form-inline">
+		<div class="form-group">
+			<label for="input-email" class="sr-only">邮箱</label>
+			<input type="email" class="input" id="input-email" placeholder="请输入您的邮箱地址">
+		</div>
+		<div class="form-group">
+			<label for="input-pwd" class="sr-only">密码</label>
+			<input type="password" class="input" id="input-pwd" placeholder="请输入您的邮箱密码">
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> 记住密码
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio"> 男
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">进入邮箱</button>
+	</form>
+</div>
+</body>
+</html>

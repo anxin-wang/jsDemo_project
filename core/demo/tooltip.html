@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Tooltip UI</title>
+<link rel="stylesheet" href="../style/ylb-pc.css">
+
+<body>
+  <br/>
+  <table class="table table-border"  style="width:500px; margin:0 auto" >
+    <thead>
+      <tr>
+        <th width="20%">参数名</th>
+        <th width="70%">参数说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data-place</td>
+        <td>样式，默认"bottom"(bottom,left,top,right)</td>
+      </tr>
+      <tr>
+        <td>data-top</td>
+        <td>top值，默认auto</td>
+      </tr>
+        <tr>
+        <td>data-bottom</td>
+        <td>bottom值，默认auto</td>
+      </tr>
+      <tr>
+        <td>data-left</td>
+        <td>left值，默认auto</td>
+      </tr>
+    
+      <tr>
+        <td>data-right</td>
+        <td>right值，默认auto</td>
+      </tr>
+      <tr>
+        <td>data-trigger</td>
+        <td>绑定事件类型,默认click (click,hover)</td>
+      </tr>
+      <tr>
+        <td>data-text</td>
+        <td>提示文字，默认"暂无公告"</td>
+      </tr>
+      <tr>
+        <td>data-width</td>
+        <td>提示框的宽度，默认"auto"</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <hr/>
+  <div style="width:970px; margin:0 auto">
+  <h1>"tooltip bottom" </h1>
+  <h4 style="color:#F60">data-place为bottom,调用data-top,data-left值<br/>
+    $("#tooptip-title01").tooltip();</h4>
+  <div style="position:relative;height:100px"> <span class="tooptip-title" id="tooptip-title01" data-top="32px;" data-left="-5px">点我文字文字</span> </div>
+  <h1>"tooltip top"</h1>
+  <h4 style="color:#F60"> data-place为top,调用data-bottom,data-left值<br/>
+    $("#tooptip-title02").tooltip();</h4>
+  <div style="position:relative; height:50px"> <span class="tooptip-title" id="tooptip-title02" data-text="文字说明文字说明文字说明文字说明" data-place="top" data-bottom="55px" data-left="-74px" data-trigger="hover">文字文字文字文字</span> </div>
+  <h1>"tooltip right"</h1>
+  <h4 style="color:#F60">data-place为right,调用data-top,data-left值<br/>
+    $("#tooptip-title03").tooltip();</h4>
+  <div style="position:relative; height:60px"> <span class="tooptip-title" id="tooptip-title03" data-text="文字说明文字说明文字说明文字说明" data-place="right" data-top="-11px" data-left="124px" data-width="300px">文字文字文字文字</span> </div>
+  <h1>"tooltip left"</h1>
+  <h4 style="color:#F60"> data-place为left,调用data-top,data-right值<br/>
+    $("#tooptip-title04").tooltip();</h4>
+  <div style="position:relative;height:200px"> <span class="tooptip-title" id="tooptip-title04" data-text="文字说明文字说明文字说明文字说明" data-place="left" data-top="-21px" data-right="920px" data-width="200px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字文字文字文字</span> </div>
+  </div>
+
+<script src="http://www.yonglibao.com/Public/static/js/jquery.js"></script> 
+<script src="../js/tooltip.js"></script> 
+<script>
+$("#tooptip-title01").tooltip();
+$("#tooptip-title02").tooltip();
+$("#tooptip-title03").tooltip();
+$("#tooptip-title04").tooltip();
+</script>
+</body>
+</html>
