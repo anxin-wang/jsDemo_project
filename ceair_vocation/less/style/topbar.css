@@ -1,0 +1,85 @@
+.site-nav {
+  background: none repeat scroll 0 0 #ffffff;
+  z-index: 10000;
+  font-size: 12px;
+}
+.site-nav .site-nav-bd {
+  background: none repeat scroll 0 0 #ffffff;
+  height: 35px;
+}
+.site-nav-bd .site-nav-bd-r li.menu,
+.site-nav-bd .site-nav-bd-l > li.menu {
+  float: left;
+}
+.site-nav-bd .menu .menu-hd {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 6px;
+  position: relative;
+  z-index: 10002;
+}
+.site-nav-bd .menu .menu-bd {
+  position: relative;
+  z-index: 10001;
+  display: none;
+}
+.site-nav-bd .menu .menu-bd .menu-bd-panel {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #eee;
+  border-top: none;
+  line-height: normal;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.site-nav-bd .menu .menu-list .menu-bd-panel a {
+  color: #6c6c6c;
+  display: block;
+  line-height: 28px;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+.site-nav-bd .site-nav-pipe {
+  color: #ddd;
+  font-style: normal;
+  padding: 0 5px;
+}
+.site-nav .site-nav-bd .site-nav-bd-r .site-nav-pipe {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+}
+.site-nav-bd .login-info .menu-bd .user-avatar {
+  float: left;
+  margin-left: 9px;
+  margin-right: 10px;
+}
+.site-nav-bd .login-info .menu-bd .user-avatar img {
+  border-radius: 50%;
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+.site-nav-bd .login-info .menu-bd .menu-bd-panel {
+  width: 248px;
+}
+.site-nav-bd .login-info .menu-bd .user-info {
+  height: 80px;
+}
+.site-nav-bd .login-info .menu-bd .user-info .user-operate {
+  text-align: right;
+}
+.site-nav-bd .login-info .menu-bd .user-privilege-tip {
+  margin: 6px;
+  text-align: center;
+  background-color: #eee;
+}
+.site-nav-bd .login-info .menu-bd .user-privilege-tip a {
+  padding: 5px 0;
+  display: block;
+}
+.site-nav-bd-l .menu:hover .menu-bd,
+.site-nav-bd-r .menu:hover .menu-bd {
+  display: block;
+}

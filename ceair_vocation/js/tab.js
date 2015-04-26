@@ -5,7 +5,7 @@
             var $this = $(this);
             var $active, $content, $links = $this.find('li.tab a'),$index = 0;
             $active = $($links.filter('[href="'+location.hash+'"]'));
-            console.log($active)
+
             // If no match is found, use the first link or any with class 'active' as the initial active tab.
             if ($active.length === 0) {
                 $active = $(this).find('li.tab a.active').first();

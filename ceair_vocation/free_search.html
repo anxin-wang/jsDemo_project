@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>東航假期</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="***********************"/>
+    <meta name="author" content="*****"/>
+    <link rel="Shortcut Icon" href="/favicon.ico?=100062" type="image/x-icon"/>
+    <link href="lib/select2/select2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="lib/kalendae/build/kalendae.css" type="text/css">
+    <link rel="stylesheet" href="style/style.css"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/static/style/ylb-ie.css"/>
+    <script src="/static/lib/modernizr/modernizr.js"></script>
+    <script src="/static/lib/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="general">
+
+<div class="site-nav wrap-fluid">
+    <div class="site-nav-bd wrap">
+        <ul class="site-nav-bd-r pull-right">
+            <li class="menu">
+                <div class="menu-hd">
+                    <a class="h order" target="_top" href="#">订单中心<span>(10)</span></a>
+                </div>
+            </li>
+            <li class="site-nav-pipe">|</li>
+            <li class="menu">
+                <div class="menu-hd">
+                    <div class="dropdown">
+                        <a class="" href="#">更多功能<i class="yicon">&#xe602;</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">统计报表</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </li>
+            <li class="site-nav-pipe">|</li>
+            <li class="menu">
+                <div class="menu-hd">
+                    <div class="dropdown">
+                        <div id="am" class="am dropdown-trigger"><img src="images/flags/zh.png" id="language_img"><input id="language_text" value="简体中文"/><i class="yicon">&#xe602;</i></div>
+                        <div class="bm dropdown-menu" id="HMF-1">
+                            <span class="cur" onMouseOver="bgcolor('a1')" onMouseOut="nocolor('a1')" id="a1" data-language="简体中文"  data-pic="zh"><img src="images/flags/zh.png">简体中文</span>
+                            <span class="cur" onmouseout="nocolor('a2')" onmouseover="bgcolor('a2')" id="a2"  data-language="English"  data-pic="en"><img src="images/flags/en.png">English</span>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="wrap header">
+    <div class="wrap">
+        <div class="logo">
+            <a title="东航假期" href="#">东航假期</a>
+        </div>
+        <div class="contact">
+            <a class="weixin" href="#"></a>
+            <a class="tengxun-weibo" href="#"></a>
+            <a class="weibo" href="#"></a>
+        </div>
+    </div>
+</div>
+
+<div class="wrap-fluid nav">
+    <ul class="wrap">
+        <li>
+            <a title="首页" class="nav_non" href="#"><span>首页</span></a></li>
+        <li>
+            <a title="自由行" class="nav_non  selected" href="#"><span>自由行</span></a>
+        </li>
+        <li>
+            <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
+        </li>
+
+        <li>
+            <a title="隔夜中转" class="nav_non" href="#"><span>隔夜中转</span></a>
+        </li>
+
+        <li>
+            <a title="City Tour" class="nav_non" href="#"><span>City Tour</span></a>
+        </li>
+
+        <li id="loginDiv">
+            <div class="login-panel" >
+                <i class="yicon">&#xe686;</i>
+                <a href="#">登录</a>
+            </div>
+            <div class="logoff-panel"  style="display:none">
+                <i class="yicon">&#xe686;</i>
+                <span>某某</span>，您好
+                <a href="#">退出</a>
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+
+<div  class="wrap-fluid">
+    <div class="wrap ziyouxing">
+        <div class="row">
+            <div class="breadCrumbs">
+                您的位置：
+                <a target="_blank" href="#">东航假期首页</a>&nbsp;&gt;
+                <a target="_blank" href="#">自由行</a>&nbsp;&gt;
+                上海-厦门自由行
+            </div>
+        </div>
+        <div class="row">
+            <div class="searchbox free-search">
+                <h3>上海-厦门（<span>100</span>)</h3>
+                <form class="" method="post">
+                    <div class="clearfix">
+                        <div class="item">
+                            <label>产品编号</label>
+                            <input type="text" placeholder="请输入产品编号" value="3443435435"/>
+                        </div>
+                        <div class="item">
+                            <label>出发地</label>
+                            <input type="text" placeholder="请选择出发地"  value="上海"/>
+                            <i class="icon-city"></i>
+                        </div>
+                        <div class="item">
+                            <label>出发日期</label>
+                            <input type="text" placeholder="请选择出发日期" id="input_startdate"/>
+                            <i class="icon-time"></i>
+                        </div>
+                        <div class="item">
+                            <label>舱位等级</label>
+                            <input type="text" placeholder="请输入舱位等级" value="头等舱"/>
+                        </div>
+
+                        <div class="item">
+                            <label>产品名称</label>
+                            <input type="text" placeholder="请输入产品名称" value="厦门自由行"/>
+                        </div>
+
+
+                        <div class="item">
+                            <label>目的地</label>
+                            <input type="text" placeholder="请选择目的地" value="厦门"/>
+                            <i class="icon-city"></i>
+                        </div>
+
+                        <div class="item">
+                            <label>返程日期</label>
+                            <input type="text" placeholder="请选择返程日期" id="input_enddate"/>
+                            <i class="icon-time"></i>
+                        </div>
+
+                        <div class="item">
+                            <label>产品标签</label>
+                            <input type="text" placeholder="请输入产品标签" value="自由行"/>
+                        </div>
+                    </div>
+
+
+                    <div class="btn-container">
+                        <input type="submit" class="btn-query" value="重新查询"/>
+                    </div>
+                    <div class="change-city">
+                        <a href="#" ></a>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="hot_product product_list">
+                <ul class="tabs">
+                    <li class="tab">
+                        <a class="active" href="#by_sales">销量<span class="sort"></span></a>
+                    </li>
+                    <li class="tab"><a href="#by_prize">价格<span class="sort down"></span></a></li>
+                    <li class="prize-range">价格区间<input type="text" placeholder="最低">-<input type="text" placeholder="最高"> <input type="button"></li>
+                    <li class="small-pager clearfix">
+
+                        <ul class="pager">
+                            <li class="previous disabled"><a href="#">&lt;</a></li>
+                            <li class="next"><a href="#">&gt;</a></li>
+                        </ul>
+                        <div><span>1</span>/10</div>
+
+                    </li>
+                </ul>
+                <div class="content" id="by_sales">
+                    <div class="list">
+
+
+                        <div>
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div class="even">
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div>
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div class="even">
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div>
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div class="even">
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="content" id="by_prize">
+                    <div class="list">
+
+
+                        <div>
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div class="even">
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div>
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div class="even">
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div>
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+                        <div class="even">
+                            <div class="searchresult_product02 clearfix">
+                                <div class="product_image">
+                                    <a  title="" href="#">
+                                        <img width="211" height="120" src="images/tmp2.png" >
+                                    </a>
+                                    <p>当月订单销量：<span>32111</span></p>
+                                </div>
+                                <div class="product_content02">
+
+                                    <ul class="product_list02">
+                                        <li>
+                                            <div class="recommend_icon02 clearfix">
+                                                <a href="#" title="厦门岛内闽南大酒店双飞4日自由行" target="_blank" class="small_title">厦门岛内闽南大酒店双飞4日自由行</a>
+                                                <!--营销标签-->
+                                                <div class="recommend_icon01 clearfix s_labels">
+                                                    <span title="浪漫蜜月" class="pro_label_icon icon_orange">浪漫蜜月</span>
+                                                    <span title="温馨亲子" class="pro_label_icon icon_orange">温馨亲子</span>
+                                                    <span title="假期休闲" class="pro_label_icon icon_orange">假期休闲</span>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                                <div class="product_content01">
+                                                    <div class="layout_new_content">
+                                                        <!--出发-->
+                                                        <div class="product_abstract">
+                                                            【找寻恋爱的感觉，厦门4日】鼓浪屿景点门票任选，鼓浪屿岛 上花之声度假旅馆1晚，厦门岛内闽南大酒店1晚 热卖 赏花
+                                                        </div>
+                                                        <!--班期-->
+                                                        <div class="product_other">
+                                                            <div class="other_list">
+
+                                                                起订人数：2人
+
+
+                                                            </div>
+                                                            <div class="go_days  ">
+                                                                促销信息：免费赠送两份早餐<em class="hot"></em>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="product_prise">
+                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <button class="btn-dinggou">立即订购</button>
+                                                </div>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="border"></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="pager_container clearfix">
+                <div class="pager_input">
+                    <span class="text">到第</span>
+                    <input class="input" type="text">
+                    <span class="text">页</span>
+                    <a class="btn" >确定</a>
+                </div>
+                <ul class="pagination pagination-sm">
+                    <li  class="disabled"><a href="#">&lt; 上一页</a></li>
+                    <li  class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">10</a></li>
+
+                    <li><a href="#">下一页&nbsp;&gt;</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+        <i>&copy;</i>&nbsp;Copyright 2015 中国东方航空版权所有 沪ICP备10009470号</br>
+        联系人：某某某&nbsp;&nbsp;&nbsp;联系方式：021-22330000
+
+    </div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="lib/kalendae/src/moment.js"></script>
+<script src="lib/kalendae/build/kalendae.js"></script>
+<script src="lib/slick/slick.min.js"></script>
+<script>
+    $('ul.tabs').tabs();
+
+    var k1 = new Kalendae.Input('input_startdate', {
+        months:2,
+        mode:'single',
+        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    });
+    var k2 = new Kalendae.Input('input_enddate', {
+        months:2,
+        mode:'single',
+        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    });
+
+    //点击排序
+    $("span.sort").click(function(){
+        $(this).toggleClass("down");
+    })
+
+
+</script>
+</body>
+</html>

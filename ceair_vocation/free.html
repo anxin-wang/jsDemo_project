@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>東航假期</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="***********************"/>
+    <meta name="author" content="*****"/>
+    <link rel="Shortcut Icon" href="/favicon.ico?=100062" type="image/x-icon"/>
+    <link href="lib/select2/select2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="lib/kalendae/build/kalendae.css" type="text/css">
+    <link rel="stylesheet" href="style/style.css"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/static/style/ylb-ie.css"/>
+    <script src="/static/lib/modernizr/modernizr.js"></script>
+    <script src="/static/lib/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="general">
+
+<div class="site-nav wrap-fluid">
+    <div class="site-nav-bd wrap">
+        <ul class="site-nav-bd-r pull-right">
+            <li class="menu">
+                <div class="menu-hd">
+                    <a class="h order" target="_top" href="#">订单中心<span>(10)</span></a>
+                </div>
+            </li>
+            <li class="site-nav-pipe">|</li>
+            <li class="menu">
+                <div class="menu-hd">
+                    <div class="dropdown">
+                        <a class="" href="#">更多功能<i class="yicon">&#xe602;</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">统计报表</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </li>
+            <li class="site-nav-pipe">|</li>
+            <li class="menu">
+                <div class="menu-hd">
+                    <div class="dropdown">
+                        <div id="am" class="am dropdown-trigger"><img src="images/flags/zh.png" id="language_img"><input id="language_text" value="简体中文"/><i class="yicon">&#xe602;</i></div>
+                        <div class="bm dropdown-menu" id="HMF-1">
+                            <span class="cur" onMouseOver="bgcolor('a1')" onMouseOut="nocolor('a1')" id="a1" data-language="简体中文"  data-pic="zh"><img src="images/flags/zh.png">简体中文</span>
+                            <span class="cur" onmouseout="nocolor('a2')" onmouseover="bgcolor('a2')" id="a2"  data-language="English"  data-pic="en"><img src="images/flags/en.png">English</span>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="wrap header">
+    <div class="wrap">
+        <div class="logo">
+            <a title="东航假期" href="#">东航假期</a>
+        </div>
+        <div class="contact">
+            <a class="weixin" href="#"></a>
+            <a class="tengxun-weibo" href="#"></a>
+            <a class="weibo" href="#"></a>
+        </div>
+    </div>
+</div>
+
+<div class="wrap-fluid nav">
+    <ul class="wrap">
+        <li>
+            <a title="首页" class="nav_non" href="#"><span>首页</span></a></li>
+        <li>
+            <a title="自由行" class="nav_non  selected" href="#"><span>自由行</span></a>
+        </li>
+        <li>
+            <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
+        </li>
+
+        <li>
+            <a title="隔夜中转" class="nav_non" href="#"><span>隔夜中转</span></a>
+        </li>
+
+        <li>
+            <a title="City Tour" class="nav_non" href="#"><span>City Tour</span></a>
+        </li>
+
+        <li id="loginDiv">
+            <div class="login-panel" >
+                <i class="yicon">&#xe686;</i>
+                <a href="#">登录</a>
+            </div>
+            <div class="logoff-panel"  style="display:none">
+                <i class="yicon">&#xe686;</i>
+                <span>某某</span>，您好
+                <a href="#">退出</a>
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+
+<div  class="wrap-fluid">
+    <div class="wrap ziyouxing">
+        <div class="row">
+            <div class="breadCrumbs">
+                您的位置：
+                <a target="_blank" href="#">东航假期首页</a>&nbsp;&gt;
+                自由行
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="searchbox free">
+                <h3>产品查询</h3>
+                <form class="" method="post">
+
+                    <div class="item">
+                        <label>产品编号</label>
+                        <input type="text" placeholder="请输入产品编号"/>
+                    </div>
+
+                    <div class="item">
+                        <label>产品名称</label>
+                        <input type="text" placeholder="请输入产品名称"/>
+                    </div>
+
+                    <div class="item">
+                        <label>出发地</label>
+                        <input type="text" placeholder="请选择出发地"/>
+                        <i class="icon-city"></i>
+                    </div>
+                    <div class="item">
+                        <label>目的地</label>
+                        <input type="text" placeholder="请选择目的地"/>
+                        <i class="icon-city"></i>
+                    </div>
+                    <div class="item">
+                        <label>出发日期</label>
+                        <input type="text" placeholder="请选择出发日期" id="input_startdate"/>
+                        <i class="icon-time"></i>
+                    </div>
+                    <div class="item">
+                        <label>返程日期</label>
+                        <input type="text" placeholder="请选择返程日期" id="input_enddate"/>
+                        <i class="icon-time"></i>
+                    </div>
+                    <div class="item">
+                        <label>舱位等级</label>
+                        <input type="text" placeholder="请输入产品名称"/>
+                    </div>
+                    <div class="item">
+                        <label>产品标签</label>
+                        <input type="text" placeholder="请输入产品标签"/>
+                    </div>
+                    <div class="btn-container">
+                        <input type="submit" class="btn-query" value="查&nbsp;询"/>
+                    </div>
+                    <div class="change-city">
+                        <a href="#" ></a>
+                    </div>
+                </form>
+
+            </div>
+            <div class="right free">
+                <div>
+                    <h3>热卖产品排行榜</h3>
+                    <div class="goods-list">
+                        <ul>
+                            <li>
+                                <div class="pic">
+                                    <span class="start-end">上海-马尔代夫</span>
+                                    <span class="top one"></span>
+                                    <a href="#">
+                                        <img src="images/tmp.png" height="129" width="205">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a class="text-hidden">港澳4晚5日自由行</a>
+                                    <p class="brand">当月订单销量：<span>6232435</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <span class="start-end">上海-马尔代夫</span>
+                                    <span class="top two"></span>
+                                    <a href="#">
+                                        <img src="images/tmp.png" height="129" width="205">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a class="text-hidden">港澳4晚5日自由行</a>
+                                    <p class="brand">当月订单销量：<span>6232435</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <span class="start-end">上海-马尔代夫</span>
+                                    <span class="top three"></span>
+                                    <a href="#">
+                                        <img src="images/tmp.png" height="129" width="205">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a class="text-hidden">港澳4晚5日自由行</a>
+                                    <p class="brand">当月订单销量：<span>6232435</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <span class="start-end">上海-马尔代夫</span>
+                                    <a href="#">
+                                        <img src="images/tmp.png" height="129" width="205">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a class="text-hidden">香港舒适型酒店4日自由行</a>
+                                    <p class="brand">当月订单销量：<span>6232435</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <span class="start-end">上海-澳门</span>
+                                    <a href="#">
+                                        <img src="images/tmp.png" height="129" width="205">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a class="text-hidden"><span>[五一]</span>埃及包机游轮8日自由行</a>
+                                    <p class="brand">当月订单销量：<span>6232435</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <span class="start-end">上海-澳门</span>
+                                    <a href="#">
+                                        <img src="images/tmp.png" height="129" width="205">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a class="text-hidden">法瑞意11或12日自由行</a>
+                                    <p class="brand">当月订单销量：<span>6232435</span></p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div>
+                    <h3>自由行产品公告</h3>
+                    <ul class="news-list">
+                        <li>
+                            <a title="" target="_blank" href="#">茉莉雅+大溪地8日6晚自由行(5钻)·4晚外岛希尔顿连住 </a>
+                            <span class="time">2015-04-18</span>
+                        </li>
+                        <li>
+                            <a title="" target="_blank" href="#">三亚5日自由行(5钻)·亚龙湾爱琴海酒店 立减600</a>
+                            <span class="time">2015-04-18</span>
+                        </li>
+                        <li>
+                            <a title="" target="_blank" href="#">马尔代夫曼德芙仕岛Medhufushi自由行(4钻)·6日4晚 2沙2水 早晚餐</a>
+                            <span class="time">2015-04-18</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="footer">
+        <i>&copy;</i>&nbsp;Copyright 2015 中国东方航空版权所有 沪ICP备10009470号</br>
+        联系人：某某某&nbsp;&nbsp;&nbsp;联系方式：021-22330000
+
+    </div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="lib/kalendae/src/moment.js"></script>
+<script src="lib/kalendae/build/kalendae.js"></script>
+<script src="lib/slick/slick.min.js"></script>
+<script>
+    $('ul.tabs').tabs();
+    $("#owl-example").slick({
+        dots:true,
+        autoplay:true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+    var k1 = new Kalendae.Input('input_startdate', {
+        months:2,
+        mode:'single',
+        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    });
+    var k2 = new Kalendae.Input('input_enddate', {
+        months:2,
+        mode:'single',
+        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    });
+
+
+</script>
+</body>
+</html>

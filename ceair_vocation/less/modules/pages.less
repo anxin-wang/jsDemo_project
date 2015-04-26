@@ -19,7 +19,7 @@
 			text-decoration: none;
 			background-color: #fff;
 			border: 1px solid #ddd;
-			margin-left: 12px;
+			margin-left: 4px;
 			&:hover,
 			&:focus{
 				background-color: #eee;
@@ -36,25 +36,25 @@
 	.active > a:hover,
 	.active > a:focus {
 		z-index: 2;
-		color: #fff;
 		cursor: default;
-		background-color: #11a5f5;
-		border-color: #11a5f5;
+		border-color: #ff3333;
+		color: #ff3333;
 	}      
 
 	.disabled > a,
 	.disabled > a:hover,
 	.disabled > a:focus {
-		color: #999;
+
 		cursor: not-allowed;
 		background-color: #fff;
-		border-color: #ddd;
+		color: #e8e8e8;
+		border:1px solid #e8e8e8;
 	}
 }
 
 .pagination-sm > li {
 	a {
-		padding: 5px 12px;
+		padding: 2px 7px;
 		font-size: 12px;
 	}
 
@@ -88,10 +88,9 @@
 
 		&:hover,
 		&:focus {
-			color: #fff;
 			text-decoration: none;
-			background-color: #11a5f5;
-			border-color: #11a5f5;
+			border-color: #ff3333;
+			color: #ff3333;
 		}
 	}
 
@@ -106,9 +105,10 @@
 	.disabled > a,
 	.disabled > a:hover,
 	.disabled > a:focus {
-		color: #999;
+		color: #e8e8e8 !important;
+	    border:1px solid #e8e8e8;
 		cursor: not-allowed;
 		background-color: #fff;
-		border-color: #ddd;
+
 	}
 }

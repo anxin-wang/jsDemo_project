@@ -16,11 +16,14 @@
 			 $tooptipTrigger = ($(this).attr("data-trigger")==undefined?"click":$(this).attr("data-trigger")),
 			 $tooptipWidth = ($(this).attr("data-width")==undefined?"auto":$(this).attr("data-width"));
 			 if($tooptipTrigger=="click"){
+				 console.log("ddd")
 				  $(this).toggle(function(){
 					  place();
+					  console.log("ccc")
 					  },function(){
-				  $(this).siblings(".tooltip").remove();
-				}); 
+					  console.log("aaa")
+				      $(this).siblings(".tooltip").remove();
+				});
 			  };
 			   if($tooptipTrigger=="hover"){
 				  $(this).hover(function(){

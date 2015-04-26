@@ -5,6 +5,7 @@
 }
 .nav a{
   color:@colorWhite;
+  font-weight: bold;
 }
 .nav>ul{
   position: relative;
@@ -14,18 +15,16 @@
 }
 .nav li a.nav_has, .nav li a.nav_non{
   display: block;
-  height: 37px;
-  line-height:37px;
-  padding: 0 7px;
-  border-top:3px solid @nav-background-color;
-  &:hover{
-    color:@nav-background-color;
-    background-color:@colorWhite;
-    border-top:3px solid #ff9915;
+  height: 40px;
+  line-height:40px;
+  padding: 0 15px;
+  text-align:center;
+  width:100px;
+  &:hover,&.selected{
+    color:@colorWhite;
+    background-color:@nav-background-hover-color;
   }
-  &.selected{
-    border-top:3px solid #ff9915;
-  }
+
 }
 .nav li a.nav_has {
   padding-left: 14px;

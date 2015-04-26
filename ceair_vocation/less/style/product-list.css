@@ -1,0 +1,156 @@
+.searchresult_product02 {
+  background-color: #fff;
+  padding: 12px 0;
+}
+.product_list .border {
+  background: url("../images/sprites.png") no-repeat scroll -21px -892px rgba(0, 0, 0, 0);
+  height: 2px;
+}
+.product_image {
+  float: left;
+  margin: 0  14px;
+  position: relative;
+  width: 115px;
+  height: 145px;
+}
+.product_image p {
+  font-family: "songti";
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+.product_image p span {
+  color: red;
+}
+.searchresult_product02 .product_image,
+.searchresult_product02 .product_image img {
+  width: 125px;
+}
+.product_content02 {
+  float: left;
+  width: 695px;
+}
+.product_image img {
+  display: block;
+  height: 120px;
+  margin-bottom: 3px;
+  width: 115px;
+}
+.searchresult_product02 .product_image,
+.searchresult_product02 .product_image img {
+  width: 210px;
+}
+.searchresult_product02 .product_image em {
+  position: relative;
+}
+.sr_free {
+  background-color: #f18759;
+  color: #fff;
+  display: inline-block;
+  font-style: normal;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 5px;
+  position: relative;
+}
+.product_content02 h2 {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.product_content02 h2 a {
+  color: #0065bb;
+  display: block;
+  width: 100%;
+}
+.product_list02 li {
+  padding: 8px 0;
+}
+.recommend_icon02 {
+  height: 20px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.product_content01 {
+  float: left;
+  font-family: "songti";
+  font-size: 12px;
+  color: #999;
+}
+.product_prise {
+  float: right;
+  text-align: right;
+}
+.sr_price {
+  color: #999;
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  margin-top: -5px;
+  overflow: hidden;
+  text-align: right;
+}
+.sr_price dfn {
+  padding-right: 1px;
+  color: #e50012;
+  font-size: 14px;
+  font-style: normal;
+  font-family: "arial";
+}
+.sr_price strong {
+  font: 24px tahoma;
+  margin: 0 2px;
+  color: #e50012;
+}
+.recommend_icon01 {
+  height: 20px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+.pro_label_icon {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  color: #5a5a5a;
+  height: 18px;
+  line-height: 17px;
+  margin-right: 5px;
+  padding: 0 2px;
+}
+.recommend_icon02 .pro_label_icon {
+  float: left;
+}
+.recommend_icon02 .small_title {
+  color: #333;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.icon_orange {
+  color: #f5c808;
+  font-size: 12px;
+  font-family: "songti";
+  border-color: #f5c808;
+}
+.product_abstract {
+  width: 496px;
+  margin-bottom: 17px;
+}
+.product_other .hot {
+  background: url("../images/sprites.png") no-repeat scroll -360px -134px rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 25px;
+  vertical-align: -6px;
+  width: 25px;
+}
+.btn-dinggou {
+  background: url("../images/sprites.png") no-repeat scroll -439px -209px rgba(0, 0, 0, 0);
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 51px;
+  float: right;
+  border: none;
+  width: 124px;
+}
