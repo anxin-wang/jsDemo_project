@@ -75,9 +75,9 @@
 <div class="wrap-fluid nav">
     <ul class="wrap">
         <li>
-            <a title="首页" class="nav_non" href="#"><span>首页</span></a></li>
+            <a title="首页" class="nav_non selected" href="index.html"><span>首页</span></a></li>
         <li>
-            <a title="自由行" class="nav_non  selected" href="#"><span>自由行</span></a>
+            <a title="自由行" class="nav_non" href="free.html"><span>自由行</span></a>
         </li>
         <li>
             <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
@@ -94,7 +94,7 @@
         <li id="loginDiv">
             <div class="login-panel" >
                 <i class="yicon">&#xe686;</i>
-                <a href="#">登录</a>
+                <a href="login.html">登录</a>
             </div>
             <div class="logoff-panel"  style="display:none">
                 <i class="yicon">&#xe686;</i>
@@ -286,6 +286,7 @@
                     <li class="tab"><a href="#route_refer">参考行程</a></li>
                     <li class="tab"><a href="#fee_desp">费用说明</a></li>
                 </ul>
+
                 <div class="content" id="product_intro">
                     <p>
                         【行程特色】尝鲜之旅◆乘坐全新《上厦和谐号》前往海边花园城市，简化旅游巴行车时间◆ 油菜花的海洋——婺源，邀您共赏金色盛宴</br>
@@ -302,7 +303,7 @@
             </div>
 
         </div>
-        <div class="btn-dinggou-container"><button class="btn-query">下一步</button></div>
+        <div class="btn-dinggou-container"><button class="btn-query" id="next_step">下一步</button></div>
 
 
     </div>
@@ -311,7 +312,7 @@
 
     <div id="ticket-choice" style="width:880px;display: none;" class="clearfix">
         <div class="hot_product ticket-choice">
-            <ul class="tabs">
+            <ul class="tabs" id="ticket-choice-tabs">
                 <li class="tab"><a href="#onward_ticket">去程航班</a></li>
                 <li class="tab"><a class="active" href="#return_ticket">返程航班</a></li>
                 <li class="direction"><span>厦门</span><span class="arrow"></span><span>上海</span></li>
@@ -361,6 +362,7 @@
                         <li><span class="ticket_date">到达：2015-04-23</span><span class="ticket_time">08：30</span><span class="low_text">北京首都国际机场</span></li>
 
                     </ul>
+                    <div class="more"><i class="yicon plus" style="display: none">&#xe660;</i><i class="yicon minus" >&#xe651;</i></div>
                     <ul class="cangwei-list clearfix">
                         <li>
                             <span class="cangwei-info"><span>R舱</span><span>3张</span></span>
@@ -368,7 +370,7 @@
                         </li>
                         <li>
                             <span class="cangwei-info"><span>S舱</span><span>4张</span></span>
-                            <span class="pull-right"><span class="cangwei-prise"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
+                            <span class="pull-right"><span class="cangwei-prise minus"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>V舱</span><span>5张</span></span>
@@ -389,6 +391,8 @@
                     </ul>
                 </div>
                 <div class="border"></div>
+
+
                 <div class="ticket_list even">
                     <div class="ticket-airplane">
                         <span class="pubFlights_mu"></span><span class="plane-company">东方航空</span><span class="low_text">MU2123&nbsp;波音777</span>
@@ -399,14 +403,15 @@
                         <li><span class="ticket_date">到达：2015-04-23</span><span class="ticket_time">08：30</span><span class="low_text">北京首都国际机场</span></li>
 
                     </ul>
-                    <ul class="cangwei-list clearfix">
+                    <div class="more"><i class="yicon plus">&#xe660;</i><i class="yicon minus"  style="display: none">&#xe651;</i></div>
+                    <ul class="cangwei-list clearfix hide">
                         <li>
                             <span class="cangwei-info"><span>R舱</span><span>3张</span></span>
                             <span class="pull-right"><span class="cangwei-prise"><span>+</span><span>&yen;</span>0</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>S舱</span><span>4张</span></span>
-                            <span class="pull-right"><span class="cangwei-prise"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
+                            <span class="pull-right"><span class="cangwei-prise minus"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>V舱</span><span>5张</span></span>
@@ -437,14 +442,15 @@
                         <li><span class="ticket_date">到达：2015-04-23</span><span class="ticket_time">08：30</span><span class="low_text">北京首都国际机场</span></li>
 
                     </ul>
-                    <ul class="cangwei-list clearfix">
+                    <div class="more"><i class="yicon plus">&#xe660;</i><i class="yicon minus"  style="display: none">&#xe651;</i></div>
+                    <ul class="cangwei-list clearfix hide">
                         <li>
                             <span class="cangwei-info"><span>R舱</span><span>3张</span></span>
                             <span class="pull-right"><span class="cangwei-prise"><span>+</span><span>&yen;</span>0</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>S舱</span><span>4张</span></span>
-                            <span class="pull-right"><span class="cangwei-prise"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
+                            <span class="pull-right"><span class="cangwei-prise minus"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>V舱</span><span>5张</span></span>
@@ -475,14 +481,15 @@
                         <li><span class="ticket_date">到达：2015-04-23</span><span class="ticket_time">08：30</span><span class="low_text">北京首都国际机场</span></li>
 
                     </ul>
-                    <ul class="cangwei-list clearfix">
+                    <div class="more"><i class="yicon plus">&#xe660;</i><i class="yicon minus"  style="display: none">&#xe651;</i></div>
+                    <ul class="cangwei-list clearfix hide">
                         <li>
                             <span class="cangwei-info"><span>R舱</span><span>3张</span></span>
                             <span class="pull-right"><span class="cangwei-prise"><span>+</span><span>&yen;</span>0</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>S舱</span><span>4张</span></span>
-                            <span class="pull-right"><span class="cangwei-prise"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
+                            <span class="pull-right"><span class="cangwei-prise minus"><span>-</span><span>&yen;</span>64</span><a href="#" class="btn">预定</a></span>
                         </li>
                         <li>
                             <span class="cangwei-info"><span>V舱</span><span>5张</span></span>
@@ -503,6 +510,9 @@
                     </ul>
                 </div>
                 <div class="border"></div>
+
+
+
             </div>
 
         </div>
@@ -516,12 +526,14 @@
     </div>
 </div>
 <script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/tab.js"></script>
+<!--<script src="js/tab.js"></script>-->
 <script src="js/tooltip.js"></script>
 <script src="js/dropdown.js"></script>
+<script src="js/jquery.sticky.js"></script>
 <script type="text/javascript" src="lib/fancyBox/source/jquery.fancybox.pack.js"></script>
 <script>
-    $('ul.tabs').tabs();
+//    $('ul.tabs').tabs();
+
     //点击排序
     $("span.sort").click(function(){
         $(this).toggleClass("down");
@@ -531,6 +543,45 @@
     })
     $("#tooptip-price-intro").tooltip();
     $('.btn-choice').fancybox();
+    $(".cangwei-list a.btn").click(function(){
+        $.fancybox.close();
+    });
+
+    $(".more").click(function(){
+        var cangwei=$(this).siblings(".cangwei-list");
+        if(cangwei.hasClass("hide")){
+            cangwei.removeClass("hide")
+            $(this).find(".plus").hide();
+            $(this).find(".minus").show();
+        }
+        else{
+            cangwei.addClass("hide")
+            $(this).find(".plus").show();
+            $(this).find(".minus").hide();
+        }
+    });
+    $("#next_step").click(function(){
+        location.href="free_yuding_hotel.html"
+    })
+
+    var sticky=function(elem){
+        var tabs_top=elem.offset().top;
+        $( window ).scroll(function() {
+            var windows_top=$( window ).scrollTop();
+            if(tabs_top<=windows_top){
+                elem.addClass("fixed");
+            }else if(windows_top){
+                elem.removeClass("fixed");
+            }
+        })
+    }
+sticky($(".tabs"));
+
+
+
+
+
+
 
 
 

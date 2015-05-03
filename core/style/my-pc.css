@@ -1566,3 +1566,13 @@ table {
 .round_box .table_round .base_price02 {
   font-size: 24px;
 }
+.radio_ck {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  cursor: pointer;
+  background: url(../images/radiobox.png) 32px -10px;
+}
+.radio_checked .radio_ck {
+  background-position: -7px -10px;
+}
