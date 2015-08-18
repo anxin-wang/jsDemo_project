@@ -1,0 +1,456 @@
+body {
+  font-family: "songti";
+}
+.footer {
+  background: none repeat scroll 0 0 #242d33;
+  color: #838a8f;
+  font-family: "宋体", sans-serif;
+  font-size: 14px;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer i {
+  font-size: 22px;
+  vertical-align: -4px;
+}
+.header {
+  background: url(../images/header-bg.png) top left repeat-x;
+  height: 72px;
+}
+.main {
+  background: #fff;
+  padding: 15px;
+}
+.logo a {
+  background: url("../images/logo.png") no-repeat scroll 0 -2px rgba(0, 0, 0, 0);
+  display: block;
+  height: 60px;
+  overflow: hidden;
+  text-indent: -999px;
+  width: 395px;
+}
+.header .logo {
+  float: left;
+}
+.header .tabs {
+  float: right;
+  position: static;
+  height: auto;
+  width: auto;
+  background: rgba(27, 43, 72, 0.58);
+  box-shadow: none;
+}
+.header .tabs li {
+  float: left;
+  border-bottom: none;
+  height: 72px;
+  width: 82px;
+  position: relative;
+  border-left: 1px solid rgba(133, 142, 158, 0.58);
+  background: url(../images/sprites.png) 0 -10px;
+}
+.header .tabs a.active {
+  background: rgba(133, 142, 158, 0.58);
+  box-shadow: none;
+}
+.header .tabs a {
+  height: 72px;
+  font-family: "songti";
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  line-height: 109px;
+}
+.header .tabs li em {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 7px;
+  right: 7px;
+  background: url(../images/sprites.png) -518px -29px;
+}
+.header .tabs li.me {
+  background-position: -81px -10px;
+}
+.header .tabs li.trend {
+  background-position: -159px -10px;
+}
+.header .tabs li.news {
+  background-position: -247px -10px;
+}
+.header .tabs li.toolkit {
+  background-position: -330px -10px;
+}
+.header .tabs li.happiness {
+  background-position: -404px -10px;
+}
+.plan .calendar {
+  width: 60px;
+  height: 60px;
+  background: url(../images/sprites.png) -923px -14px;
+}
+.plan .calendar .weekday {
+  color: #fff;
+  line-height: 31px;
+  margin-left: 16px;
+}
+.plan .calendar .date {
+  display: block;
+  color: #aeaeae;
+  font-size: 30px;
+  line-height: 23px;
+  margin-left: 12px;
+  font-family: "Arial";
+}
+.plan .kaoqin-container .calendar {
+  background-position: -1098px -14px;
+}
+.plan .moniji .calendar {
+  background-position: -1012px -14px;
+}
+table thead th {
+  background: #dfe2eb;
+  font-weight: normal;
+}
+table .flight_num {
+  font-size: 20px;
+  color: #2c3b58;
+  font-weight: normal;
+  font-family: "Arial";
+}
+table thead th span {
+  color: #677288;
+  font-size: 14px;
+}
+table thead th.flight_des {
+  color: #242d33;
+  font-size: 16px;
+  font-family: "songti";
+  font-weight: normal;
+}
+table thead th.flight_time {
+  color: #7e8798;
+  font-size: 12px;
+  font-family: "songti";
+}
+table thead th.flight_captain span {
+  border: 1px solid #c8cddc;
+  padding: 5px 20px;
+}
+table thead th i {
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  background: url(../images/sprites.png) -563px -16px;
+}
+table thead th i.icon_computer {
+  background-position: -563px -16px;
+  margin-right: 15px;
+}
+table thead th i.icon_forward {
+  background-position: -623px -16px;
+  margin-right: 15px;
+}
+table thead th i.icon_forward.selected {
+  background-position: -799px -16px;
+}
+table thead th i.icon_printer {
+  background-position: -681px -16px;
+  margin-right: 15px;
+}
+table thead th i.icon_printer.selected {
+  background-position: -856px -16px;
+}
+table thead th i.icon_mailer {
+  background-position: -738px -16px;
+}
+table thead th i.icon_collapse {
+  background-position: -1381px -24px;
+}
+table thead th i.icon_collapse.expand {
+  background-position: -1344px -24px;
+}
+table thead th i.icon_arrow {
+  background-position: -1293px -40px;
+  height: 17px;
+}
+table thead th.icon {
+  padding: 0 34px;
+}
+table thead th.collapse {
+  padding: 5px 15px;
+}
+span.pubFlights_mu {
+  background: url(../images/sprites.png) -1187px -24px;
+  width: 40px;
+  display: inline-block;
+  height: 32px;
+  vertical-align: -3px;
+}
+span.flight_num_mu {
+  color: #2d3b58;
+  font-size: 20px;
+  font-family: "Arial";
+}
+tbody td.des {
+  color: #242d33;
+  font-family: "songti";
+  font-size: 16px;
+  text-align: center;
+}
+tbody td.time {
+  color: #2c3b58;
+  font-size: 20px;
+  font-family: "Arial";
+}
+table tbody td {
+  background: #f4f4fc;
+  border-bottom: 1px solid #dde0e7;
+}
+tbody td a.btn {
+  display: inline-block;
+  padding: 2px 11px;
+  width: 58px;
+  font-family: "songti";
+  color: #fff;
+}
+tbody td a.btn.grey {
+  background: #677288;
+}
+tbody td a.btn.red {
+  background: #fa565a;
+}
+.kaoqin .end-time,
+.kaoqin .start-time {
+  color: #677288;
+  font-family: "songti";
+  font-size: 14px;
+  margin-left: 20px;
+}
+.moniji-inner .kaoqin .end-time,
+.moniji-inner .kaoqin .start-time {
+  margin-left: 13px;
+}
+.kaoqin .title {
+  color: #2c3b58;
+  font-family: "songti";
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+.kaoqin {
+  background: #f4f4fc;
+  border: 1px solid #dfe2eb;
+  padding: 2px 7px;
+  width: 610px;
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
+.moniji-inner {
+  padding: 0;
+  border: 1px solid #dfe2eb;
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
+.moniji-inner .kaoqin {
+  border: none;
+  border-bottom: 1px solid #dfe2eb;
+}
+.beizhu {
+  color: #919090;
+  font-size: 12px;
+  font-family: "songti";
+  padding-left: 9px;
+  margin-bottom: 6px;
+}
+i.plus-one {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url(../images/sprites.png) -1251px -40px;
+}
+.kaoqin-container,
+.zhiji,
+.moniji {
+  margin-bottom: 10px;
+}
+.zhiji table {
+  width: 625px;
+}
+ul.action-list li {
+  background: #f4f4fc;
+  margin-bottom: 5px;
+  height: 43px;
+}
+ul.action-list li a {
+  color: #242d33;
+  font-size: 16px;
+  font-family: "songti";
+  line-height: 43px;
+  display: inline-block;
+}
+ul.action-list i {
+  width: 51px;
+  height: 37px;
+  vertical-align: -8px;
+  display: inline-block;
+  background: url(../images/sprites.png) -9px -147px;
+}
+ul.action-list i.icon_prepare {
+  background-position: -9px -147px;
+}
+ul.action-list i.icon_sms {
+  background-position: -9px -191px;
+}
+ul.action-list i.icon_book {
+  background-position: -9px -237px;
+}
+ul.action-list i.icon_learning {
+  background-position: -9px -283px;
+}
+ul.action-list .num {
+  background: none repeat scroll 0 0 #fa565a;
+  border-radius: 20px;
+}
+ul.action-list .num span {
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+ul.news-list {
+  margin-bottom: 20px;
+  padding: 15px 0;
+  background: #f4f4fc;
+}
+ul.news-list li {
+  background: #f4f4fc;
+  padding: 0 0 8px;
+  height: 43px;
+}
+ul.news-list li a {
+  padding: 5px 0 10px 23px;
+  text-indent: -11px;
+  color: #242d33;
+  font-size: 12px;
+  line-height: 22px;
+  display: inline-block;
+  font-family: "songti";
+}
+/*table*/
+.op-calendar-new-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 234px;
+  margin-bottom: 10px;
+}
+.op-calendar-new-table td,
+.op-calendar-new-table th {
+  height: 37px;
+  padding: 0;
+  width: 55px;
+  font-family: "songti";
+}
+.op-calendar-new-daynumber {
+  color: #242d33;
+  display: block;
+  font-size: 14px;
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+}
+.op-calendar-new-table th {
+  border-top: 1px solid #c8cacc;
+  color: #bdc5cb;
+}
+.op-calendar-new-table td {
+  border: none;
+  text-align: center;
+  background: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-other-month span {
+  color: #bdc5cb;
+}
+.op-calendar-new-table td .op-calendar-new-table-kaoqin-moniji span {
+  background: url(../images/sprites.png) -90px -393px;
+  color: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-zhiji-kaoqin span {
+  background: url(../images/sprites.png) -92px -289px;
+  color: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-purple span {
+  background: url(../images/sprites.png) -95px -147px;
+  color: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-moniji span {
+  background: url(../images/sprites.png) -93px -244px;
+  color: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-kaoqin span {
+  background: url(../images/sprites.png) -93px -340px;
+  color: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-zhiji span {
+  background: url(../images/sprites.png) -94px -195px;
+  color: #fff;
+}
+.op-calendar-new-table td .op-calendar-new-table-today span {
+  background: #cce3f2 ;
+}
+i.icon_blue {
+  width: 12px;
+  height: 12px;
+  background: url(../images/sprites.png) -174px -265px;
+  display: inline-block;
+}
+i.icon_green {
+  width: 12px;
+  height: 12px;
+  background: url(../images/sprites.png) -174px -223px;
+  display: inline-block;
+}
+i.icon_yellow {
+  width: 12px;
+  height: 12px;
+  background: url(../images/sprites.png) -174px -190px;
+  display: inline-block;
+}
+i.icon_purple {
+  width: 12px;
+  height: 12px;
+  background: url(../images/sprites.png) -174px -155px;
+  display: inline-block;
+}
+.op-calendar-list span {
+  margin-right: 11px;
+  font-size: 12px;
+}
+.op-calendar-list span i {
+  margin-right: 3px;
+}
+.op-calendar-list {
+  border-top: 1px solid #dde1e4;
+  padding-top: 5px;
+}
+.calendar-container {
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 5px;
+  border: 1px solid #e1e4e7;
+}
+.calendar-container .calendar-header {
+  color: #242d33;
+  margin-bottom: 10px;
+}
+.calendar-container .calendar-header i {
+  font-size: 20px;
+  color: #6f7d87;
+  position: relative;
+}
+.calendar-container .calendar-header i.previous {
+  left: -66px;
+}
+.calendar-container .calendar-header i.next {
+  right: -66px;
+}

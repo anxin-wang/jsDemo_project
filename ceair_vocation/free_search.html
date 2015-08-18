@@ -16,9 +16,12 @@
     <link rel="stylesheet" href="style/style.css"/>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/static/style/ylb-ie.css"/>
+    <link rel="stylesheet" href="style/ylb-ie.css"/>
     <script src="/static/lib/modernizr/modernizr.js"></script>
     <script src="/static/lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="style/ie7.css"/>
     <![endif]-->
 </head>
 <body class="general">
@@ -78,9 +81,9 @@
 <div class="wrap-fluid nav">
     <ul class="wrap">
         <li>
-            <a title="首页" class="nav_non selected" href="index.html"><span>首页</span></a></li>
+            <a title="首页" class="nav_non" href="index.html"><span>首页</span></a></li>
         <li>
-            <a title="自由行" class="nav_non" href="free.html"><span>自由行</span></a>
+            <a title="自由行" class="nav_non  selected" href="free.html"><span>自由行</span></a>
         </li>
         <li>
             <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
@@ -187,17 +190,18 @@
                         <a class="active" href="#by_sales">销量<span class="sort"></span></a>
                     </li>
                     <li class="tab"><a href="#by_prize">价格<span class="sort down"></span></a></li>
-                    <li class="prize-range">价格区间<input type="text" placeholder="最低">-<input type="text" placeholder="最高"> <!--<input type="button"></li>-->
-                    <li class="small-pager clearfix">
+                    <li class="prize-range">价格区间<input type="text" placeholder="最低">-<input type="text" placeholder="最高"> <input type="button" class="btn" value="确定"></li>
 
-                        <ul class="pager">
-                            <li class="previous disabled"><a href="#">&lt;</a></li>
-                            <li class="next"><a href="#">&gt;</a></li>
-                        </ul>
-                        <div><span>1</span>/10</div>
-
-                    </li>
                 </ul>
+                <div class="small-pager clearfix">
+
+                    <ul class="pager">
+                        <li class="previous disabled"><a href="#">&lt;</a></li>
+                        <li class="next"><a href="#">&gt;</a></li>
+                    </ul>
+                    <div><span>1</span>/10</div>
+
+                </div>
                 <div class="content" id="by_sales">
                     <div class="list">
 
@@ -302,7 +306,7 @@
 
                                                 </div>
                                                 <div class="product_prise">
-                                                    <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税</span>
+                                                    <span class="sr_price chinese"><strong>实时计价</strong></span>
                                                     <button class="btn-dinggou">立即订购</button>
                                                 </div>
                                             </div>
@@ -931,22 +935,29 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/tab.js"></script>
 <script src="js/dropdown.js"></script>
-<script src="lib/kalendae/src/moment.js"></script>
-<script src="lib/kalendae/build/kalendae.js"></script>
+<!--<script src="lib/kalendae/src/moment.js"></script>-->
+<!--<script src="lib/kalendae/build/kalendae.js"></script>-->
+<script src="lib/My97DatePicker/WdatePicker.js"></script>
 <script src="lib/slick/slick.min.js"></script>
 <script>
     $('ul.tabs').tabs();
 
-    var k1 = new Kalendae.Input('input_startdate', {
-        months:2,
-        mode:'single',
-        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
-    });
-    var k2 = new Kalendae.Input('input_enddate', {
-        months:2,
-        mode:'single',
-        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
-    });
+    //    var k1 = new Kalendae.Input('input_startdate', {
+    //        months:2,
+    //        mode:'single',
+    //        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    //    });
+    //    var k2 = new Kalendae.Input('input_enddate', {
+    //        months:2,
+    //        mode:'single',
+    //        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    //    });
+    $("#input_startdate").click(function(){
+        WdatePicker();
+    })
+    $("#input_enddate").click(function(){
+        WdatePicker();
+    })
 
     //点击排序
     $("span.sort").click(function(){
@@ -954,6 +965,13 @@
     })
     $(".btn-dinggou").click(function(){
         location.href="free_yuding.html"
+    })
+    $(".product_list li.prize-range").hover(function(){
+        $(this).addClass("hover");
+        $(this).find(".btn").show();
+    },function(){
+        $(this).removeClass("hover");
+        $(this).find(".btn").hide();
     })
 
 

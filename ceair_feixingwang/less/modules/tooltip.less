@@ -1,0 +1,23 @@
+.tooltip { z-index:99; display: none; max-width: 276px; padding: 1px; font-size:@font-s; font-weight: 400; line-height:@lineHeight; text-align: left; white-space: normal; background-color: @colorWhite;
+-webkit-background-clip: padding-box; background-clip: padding-box; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,.1); border-radius: 6px; -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.1); box-shadow: 0 2px 3px rgba(0,0,0,.1) ; display:none; position:absolute }
+.tooptip-title{ cursor:pointer}
+.tooltip-content { padding: 9px 14px }
+.tooltip>.arrow,
+.tooltip>.arrow:after { position: absolute; display: block; width: 0; height: 0; border-color: transparent; border-style: solid }
+.tooltip>.arrow { border-width: 11px }
+.tooltip>.arrow:after { content: ""; border-width: 10px }
+.tooltip.top>.arrow { bottom: -11px; left: 50%; margin-left: -11px; border-top-color:@colorBlack-light;
+border-top-color: rgba(0,0,0,.25); border-bottom-width: 0 }
+.tooltip.top>.arrow:after { bottom: 1px; margin-left: -10px; content: " "; border-top-color: @colorWhite;
+border-bottom-width: 0 }
+.tooltip.right>.arrow { top: 50%; left: -11px; margin-top: -11px; border-right-color:@colorBlack-light;
+border-right-color: rgba(0,0,0,.25); border-left-width: 0 }
+.tooltip.right>.arrow:after { bottom: -10px; left: 1px; content: " "; border-right-color:@colorWhite;
+border-left-width: 0 }
+.tooltip.bottom>.arrow { top: -11px; left: 50%; margin-left: -11px; border-top-width: 0; border-bottom-color:@colorBlack-light;
+border-bottom-color: rgba(0,0,0,.25) }
+.tooltip.bottom>.arrow:after { top: 1px; margin-left: -10px; content: " "; border-top-width: 0; border-bottom-color: @colorWhite
+}
+.tooltip.left>.arrow { top: 50%; right: -11px; margin-top: -11px; border-right-width: 0; border-left-color:@colorBlack-light; border-left-color: rgba(0,0,0,.25) }
+.tooltip.left>.arrow:after { right: 1px; bottom: -10px; content: " "; border-right-width: 0; border-left-color: @colorWhite
+}

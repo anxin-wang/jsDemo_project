@@ -1,37 +1,15 @@
-.sub-footer .guanzhu-and-download ul li i{
-    background:url("../images/sprites.png") -249px -532px transparent;
-}
-.wrap-inner .product-list li{
-    margin-right:34px;
-}
-.wrap-inner .product-list li i.yicon{
-    border:none;
-    background:url("../images/sprites.png") -368px -519px transparent;
-}
-.wrap-inner .product-list .huoqi li i.yicon{
-    border:none;
-    background:url("../images/sprites.png") -465px -519px transparent;
-}
-.huolibao .product-detail ul.huolibao-feature i, .yinglibao .product-detail ul.huolibao-feature i{
-    background: none;
-}
-.wrap-inner .product-list .dingqi li:hover i.yicon, .wrap-inner .product-list .dingqi li.selected i.yicon{
-    background:url("../images/sprites.png") -563px -519px transparent;
-}
-.wrap-inner .product-list .huoqi li:hover i.yicon, .wrap-inner .product-list .huoqi li.selected i.yicon{
-    background:url("../images/sprites.png") -667px -519px transparent;
-}
+
 
 
 .compatable{
     *width:100%;
-    *background-color:#fffce7;
+    /**background-color:#fffce7;*/
     *border-bottom:1px solid #f8cc7e;
 }
 .compatable p{
     *width:670px;
     *margin:0px auto;
-    *padding:15px 0;
+    *padding:5px 0;
     *color:#edaa32;
     *font-size: 16px;
 
@@ -52,5 +30,18 @@
     *background: url(../images/warning.png) top left;
     *margin-right:10px;
     *display: inline-block;
+}
+.compatable a{
+    background: #E50012;
+    width:80px;
+    height:30px;
+    line-height:30px;
+    padding-left:13px;
+    color:#fff;
+    font-weight:bold;
+    display:inline-block;
+}
+.hotel_body img{
+    vertical-align: -86px ;
 }
 

@@ -1,0 +1,40 @@
+/************************
+Author:Sophie
+E-mail:wangjiayan@yonglibao.com
+Date:2015-02-9
+************************/
+/*@import "config.less";*/
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-grey-light {
+  background-color: #f5f5f5;
+}
+.bg-grey-blue {
+  background-color: #323f4c;
+}
+.bg-grey-dark {
+  background-color: #4d4d4d;
+}
+.bg-black {
+  background-color: #333333;
+}
+.orange {
+  color: #f39c11 !important;
+}
+.grey {
+  color: #666666 !important;
+}
+.light-grey {
+  color: #999999 !important;
+}
+.font-big {
+  font-size: 30px;
+}
+.btn-primary {
+  background-color: #3598db;
+  border-color: #3598db;
+}
+img {
+  vertical-align: middle;
+}

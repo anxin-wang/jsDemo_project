@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>東航假期</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="***********************"/>
+    <meta name="author" content="*****"/>
+    <link rel="Shortcut Icon" href="/favicon.ico?=100062" type="image/x-icon"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="style/ylb-ie.css"/>
+    <script src="/static/lib/modernizr/modernizr.js"></script>
+    <script src="/static/lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="style/ie7.css"/>
+    <![endif]-->
+</head>
+<body class="general">
+
+<div class="site-nav wrap-fluid">
+    <div class="site-nav-bd wrap">
+        <ul class="site-nav-bd-r pull-right">
+            <li class="menu">
+                <div class="menu-hd">
+                    <a class="h order" target="_top" href="#">订单中心<span>(10)</span></a>
+                </div>
+            </li>
+            <li class="site-nav-pipe">|</li>
+            <li class="menu">
+                <div class="menu-hd">
+                    <div class="dropdown">
+                        <a class="" href="#">更多功能<i class="yicon">&#xe602;</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">统计报表</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </li>
+            <li class="site-nav-pipe">|</li>
+            <li class="menu">
+                <div class="menu-hd">
+                    <div class="dropdown">
+                        <div id="am" class="am dropdown-trigger"><img src="images/flags/zh.png" id="language_img"><input id="language_text" value="简体中文"/><i class="yicon">&#xe602;</i></div>
+                        <div class="bm dropdown-menu" id="HMF-1">
+                            <span class="cur" onMouseOver="bgcolor('a1')" onMouseOut="nocolor('a1')" id="a1" data-language="简体中文"  data-pic="zh"><img src="images/flags/zh.png">简体中文</span>
+                            <span class="cur" onmouseout="nocolor('a2')" onmouseover="bgcolor('a2')" id="a2"  data-language="English"  data-pic="en"><img src="images/flags/en.png">English</span>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="wrap header">
+    <div class="wrap">
+        <div class="logo">
+            <a title="东航假期" href="#">东航假期</a>
+        </div>
+        <div class="contact">
+            <a class="weixin" href="#"></a>
+            <a class="tengxun-weibo" href="#"></a>
+            <a class="weibo" href="#"></a>
+        </div>
+    </div>
+</div>
+
+<div class="wrap-fluid nav">
+    <ul class="wrap">
+        <li>
+            <a title="首页" class="nav_non selected" href="index.html"><span>首页</span></a></li>
+        <li>
+            <a title="自由行" class="nav_non" href="free.html"><span>自由行</span></a>
+        </li>
+        <li>
+            <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
+        </li>
+
+        <li>
+            <a title="隔夜中转" class="nav_non" href="#"><span>隔夜中转</span></a>
+        </li>
+
+        <li>
+            <a title="City Tour" class="nav_non" href="#"><span>City Tour</span></a>
+        </li>
+
+        <li id="loginDiv">
+            <div class="login-panel" >
+                <i class="yicon">&#xe686;</i>
+                <a href="login.html">登录</a>
+            </div>
+            <div class="logoff-panel"  style="display:none">
+                <i class="yicon">&#xe686;</i>
+                <span>某某</span>，您好
+                <a href="#">退出</a>
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="wrap-fluid passenger_info">
+    <div class="wrap">
+        <div class="row">
+            <div class="breadCrumbs">
+                您的位置：
+                <a target="_blank" href="#">东航假期首页</a>&nbsp;&gt;
+                <a target="_blank" href="#">自由行</a>&nbsp;&gt;
+                上海-厦门自由行
+            </div>
+        </div>
+        <div class="row">
+            <ul class="step clearfix">
+                <li class="past">选择航班</li>
+                <li class="past">确认产品</li>
+                <li class="selected">填写信息</li>
+                <li class="next">确认信息</li>
+                <li class="next">生成订单</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="header">
+                <i class="icon-man"></i>
+                旅客信息
+            </div>
+            <div>
+                <form class="form-horizontal">
+                    <div class="passenger_info_detail clearfix">
+                        <div class="passenger_info_type">
+                            <h4>旅客<span>1</span></h4>
+                            <span>成人</span>
+                        </div>
+                        <div class="col-width-6 left-part">
+                            <div class="form-group clearfix form-inline name">
+                                <label class="control-label">姓名</label>
+                                <div class="control-container">
+                                    <input type="text" class="form-control"  placeholder="姓">
+                                    <i class="icon-intro" data-trigger="hover" data-left="90px" data-width="300px" data-text="<h1>证件姓名说明</h1><p>1.乘客姓名必须与所持证件一致;</br>2.名字中含....</p>"></i>
+                                    <input type="text" class="form-control"  placeholder="名">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label">E-mail</label>
+                                <div>
+                                    <input type="text" class="form-control"  placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label">护照发照国</label>
+                                <div class="control-dropdown">
+                                    <div class="dropdown yuding_shuliang huzhao">
+                                        <a class="dropdown-trigger" href="#">
+                                            <span>CHINA中国</span><i class="yicon"></i>
+                                        </a>
+                                        <ul class="dropdown-menu" style="display: none;">
+                                            <li>
+                                                <a href="#">CHINA中国</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">JAPAN日本</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label">护照号码</label>
+                                <div>
+                                    <input type="text" class="form-control"  placeholder="护照号码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-width-6">
+                            <div class="form-group form-inline">
+                                <label class="control-label">出生日期</label>
+                                <div>
+                                    <div class="date">
+                                        <input type="text" placeholder="" id="input_birthday">
+                                        <i class="icon-time"></i>
+                                    </div>
+                                    <div class="dropdown yuding_shuliang xingbie">
+                                        <a href="#" class="dropdown-trigger">
+                                            <span>男</span><i class="yicon"></i>
+                                        </a>
+                                        <ul style="display: none;" class="dropdown-menu">
+                                            <li>
+                                                <a href="#">男</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">女</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="control-label">电话</label>
+                                <div>
+                                    <div class="dropdown yuding_shuliang tel">
+                                        <a href="#" class="dropdown-trigger">
+                                            <span>中国(86)</span><i class="yicon"></i>
+                                        </a>
+                                        <ul style="display: none;" class="dropdown-menu">
+                                            <li>
+                                                <a href="#">中国(86)</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">日本(76)</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="手机号码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">国籍</label>
+                                <div class="control-dropdown">
+                                    <div class="dropdown yuding_shuliang huzhao">
+                                        <a href="#" class="dropdown-trigger">
+                                            <span>JAPAN日本</span><i class="yicon"></i>
+                                        </a>
+                                        <ul style="display: none;" class="dropdown-menu">
+                                            <li>
+                                                <a href="#">CHINA中国</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">JAPAN日本</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="line"></div>
+
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header">
+                <i class="icon-contact"></i>
+                联系人信息
+            </div>
+            <div>
+                <form class="form-horizontal clearfix">
+                    <div class="col-width-6 left-part">
+                        <div class="form-group clearfix">
+                            <label class="control-label">姓名</label>
+                            <div class="control-container">
+                                <input type="text" class="form-control"  placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label">E-mail</label>
+                            <div>
+                                <input type="text" class="form-control"  placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-width-6">
+                        <div class="form-group">
+                            <label class="control-label">手机号码</label>
+                            <div>
+                                <input type="text" class="form-control" placeholder="手机号码">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="header">
+                <i class="icon-beizhu"></i>
+                订单备注
+            </div>
+            <div>
+                <textarea class="textarea_width" placeholder="请输入"></textarea>
+            </div>
+        </div>
+        <div class="row button-row">
+            <a class="previous_step" href="free_yuding.html"><i class="yicon"></i>上一步</a>
+            <button class="btn-query" id="next_step">下一步</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="lib/My97DatePicker/WdatePicker.js"></script>
+
+<script>
+    $('ul.tabs').tabs();
+    $("#input_birthday").click(function(){
+        WdatePicker();
+    })
+    $(".icon-intro").tooltip();
+
+    $("#next_step").click(function(){
+        location.href="confirm_info.html"
+    })
+
+</script>
+</body>
+</html>

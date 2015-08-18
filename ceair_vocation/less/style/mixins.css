@@ -7,3 +7,7 @@
   content: "";
   display: table;
 }
+.ie7-inline-block {
+  *display: inline;
+  *zoom: 1;
+}

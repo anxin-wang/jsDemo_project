@@ -1,0 +1,16 @@
+.login .bx-controls{
+  width:auto;
+  max-width:393px;
+//  height:219px;
+  overflow-y:hidden;
+}
+
+
+.bx-controls{
+  position:relative;
+  top: -140px;
+}
+
+.bx-controls .slider-next {
+  right: 0px;
+}

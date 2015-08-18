@@ -16,10 +16,14 @@
     <link rel="stylesheet" href="style/style.css"/>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/static/style/ylb-ie.css"/>
+    <link rel="stylesheet" href="style/ylb-ie.css"/>
     <script src="/static/lib/modernizr/modernizr.js"></script>
     <script src="/static/lib/respond/respond.min.js"></script>
     <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="style/ie7.css"/>
+    <![endif]-->
+
 </head>
 <body class="general">
 
@@ -28,7 +32,7 @@
         <ul class="site-nav-bd-r pull-right">
             <li class="menu">
                 <div class="menu-hd">
-                    <a class="h order" target="_top" href="#">订单中心<span>(10)</span></a>
+                    <a class="h order" target="_top" href="dingdan_query.html">订单中心<span>(10)</span></a>
                 </div>
             </li>
             <li class="site-nav-pipe">|</li>
@@ -175,7 +179,9 @@
 
 
                 </div>
+
 <!--搜索框结束-->
+
 
 
 
@@ -393,8 +399,9 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/tab.js"></script>
 <script src="js/dropdown.js"></script>
-<script src="lib/kalendae/src/moment.js"></script>
-<script src="lib/kalendae/build/kalendae.js"></script>
+<!--<script src="lib/kalendae/src/moment.js"></script>-->
+<!--<script src="lib/kalendae/build/kalendae.js"></script>-->
+<script src="lib/My97DatePicker/WdatePicker.js"></script>
 <script src="lib/slick/slick.min.js"></script>
 <script>
     $('ul.tabs').tabs();
@@ -406,16 +413,26 @@
         fade: true,
         cssEase: 'linear'
     });
-    var k1 = new Kalendae.Input('input_startdate', {
-        months:2,
-        mode:'single',
-        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
-    });
-    var k2 = new Kalendae.Input('input_enddate', {
-        months:2,
-        mode:'single',
-        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
-    });
+//    var k1 = new Kalendae.Input('input_startdate', {
+//        months:2,
+//        mode:'single',
+//        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+//    });
+//    var k2 = new Kalendae.Input('input_enddate', {
+//        months:2,
+//        mode:'single',
+//        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+//    });
+    $("#input_startdate").click(function(){
+        WdatePicker();
+    })
+    $("#input_enddate").click(function(){
+        WdatePicker();
+    })
+
+    if ( ! + "\v1" && !"1"[0]) {
+        $('<div class="compatable"> <p> 您的浏览器版本过低，推荐您升级您的浏览器，升级后可享受更好的体验。 <a href="http://www.microsoft.com/zh-cn/download/internet-explorer-8-details.aspx" target="_blank">立即升级</a>  </p> </div>').prependTo($("body"));
+    }
 
 
 </script>

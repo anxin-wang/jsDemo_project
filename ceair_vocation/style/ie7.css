@@ -1,0 +1,148 @@
+/*bug 1*/
+.searchbox{
+    top:0px;
+    left:0px;
+    z-index: 9999;
+}
+.search-container{
+    z-index:100;
+}
+/*bug 2*/
+.free.searchbox{
+background-position: -16px -346px;
+}
+/*bug 3*/
+.searchbox FORM .item LABEL{
+    line-height:23px;
+}
+i.icon-time,i.icon-city{
+vertical-align: 0;
+}
+.small-pager DIV{
+    margin-right:50px;
+    margin-top:-28px;
+}
+.yuding .table_round TD.flight_date DIV{
+    width:130px;
+}
+.table_round TD.flight_date I.icon-time{
+    vertical-align: 0;
+
+}
+/*bug 4*/
+.ico_go{
+    line-height:50px;
+    height:50px;
+}
+.yuding.hot_product .tabs LI A{
+    height:34px;
+}
+/*bug 5*/
+.yuding .table_round .direction{
+    width:110px;
+}
+.hotel.yuding .table_round TD.favorable{
+    width:70px;
+}
+.hotel.yuding .table_round .leave,.hotel.yuding .table_round .arrive{
+    width:100px;
+    padding-right: 0;
+}
+.hotel-date > DIV{
+    padding-bottom:4px;
+}
+.hotel-date{
+    top:-11px;
+}
+.searchbox .tabs{
+    left:0px;
+}
+.searchbox .tabs a{
+    height:60px;
+}
+.header{
+    padding-top:0;
+}
+.menu-hd UL{
+    margin-left:0;
+}
+.hotel_body IMG{
+    vertical-align: 0px;
+}
+.choose-people-btn A.btn-add{
+    right:19px;
+}
+.choose-people-btn A.btn-minus{
+    left:9px;
+}
+.choose-people-btn A.btn-minus i,.choose-people-btn A.btn-add i{
+    line-height: 35px;
+
+}
+.dingdan-query .form-horizontal .date{
+    width:204px;
+}
+.query-container INPUT{
+    margin-left:-2px;
+    vertical-align: -10px;
+}
+
+.dingdan-query .query-container .dropdown.yuding_shuliang .dropdown-menu{
+    left:0px;
+    top:45px;
+}
+
+.form-horizontal  .passenger_info_detail .col-width-6.left-part,.passenger_info .col-width-6.left-part{
+    width:360px !important;
+}
+.dropdown.yuding_shuliang .dropdown-menu{
+left:0px;
+    top:32px;
+}
+.passenger_info .yuding_shuliang.dropdown{
+    vertical-align: 5px;
+}
+.passenger_info .form-horizontal .date{
+    margin:5px 0px !important;
+}
+.passenger_info .yuding_shuliang{
+    vertical-align: 3px;
+}
+.passenger_info .yuding_shuliang.tel{
+    vertical-align: 7px;
+    z-index:100;
+}
+
+.passenger_info .dropdown.yuding_shuliang A.dropdown-trigger{
+    line-height: 26px;
+}
+.passenger_info .yuding_shuliang.tel A.dropdown-trigger{
+    line-height: 28px;
+}
+.passenger_info .control-dropdown{
+    padding-left:0px;
+}
+.huzhao.yuding_shuliang.dropdown .dropdown-menu{
+    left:0px;
+}
+.fujia.hotel_datalist TD.flight_date INPUT{
+    padding-left:3px;
+}
+.yuding.fujia.hotel .choose-people-btn A.btn-minus{
+    left:0px;
+}
+.am INPUT{
+    line-height:20px;
+
+}
+.am IMG{
+    margin-top:10px;
+}
+.pay{
+    padding:12px 0 10px 13px;
+}
+.yuding_jingjia.dropdown .dropdown-menu{
+    left:0px;
+    top:35px;
+}
+

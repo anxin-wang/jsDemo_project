@@ -16,9 +16,12 @@
     <link rel="stylesheet" href="style/style.css"/>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/static/style/ylb-ie.css"/>
+    <link rel="stylesheet" href="style/ylb-ie.css"/>
     <script src="/static/lib/modernizr/modernizr.js"></script>
     <script src="/static/lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="style/ie7.css"/>
     <![endif]-->
 </head>
 <body class="general">
@@ -78,9 +81,9 @@
 <div class="wrap-fluid nav">
     <ul class="wrap">
         <li>
-            <a title="首页" class="nav_non selected" href="index.html"><span>首页</span></a></li>
+            <a title="首页" class="nav_non" href="index.html"><span>首页</span></a></li>
         <li>
-            <a title="自由行" class="nav_non" href="free.html"><span>自由行</span></a>
+            <a title="自由行" class="nav_non selected" href="free.html"><span>自由行</span></a>
         </li>
         <li>
             <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
@@ -131,6 +134,7 @@
                 <tbody>
                 <tr>
                     <td class="direction"><span class="ico_go">去程</span></td>
+                    <td class="favorable">2015-4-20</td>
                     <td class="flight_logo"><span class="pubFlights_mu"></span></td>
                     <td class="flight_info">东方航空<br>
                         <div class="low_text"><span>MU2123&nbsp;T舱</span></div>
@@ -146,15 +150,14 @@
                         <div><strong class="time">00:30</strong></div>
                         <div class="airport" title="新白云国际机场">新白云国际机场</div>
                     </td>
-                    <td class="favorable">3张</td>
 
-                    <td class="detail_price" rowspan="3">
-                        <a class="btn-choice" href="#ticket-choice">重&nbsp;&nbsp;&nbsp;选</a>
-                    </td>
+
+
                 </tr>
-                <tr class="first"><td colspan="7">&nbsp;</td></tr>
+
                 <tr class="line">
                     <td class="direction"><span class="ico_go">返程</span></td>
+                    <td class="favorable">2015-4-23</td>
                     <td class="flight_logo"><span class="pubFlights_mu"></span></td>
                     <td class="flight_info">东方航空<br>
                         <div class="low_text"><span>MU2123&nbsp;T舱</span></div>
@@ -170,7 +173,7 @@
                         <div><strong class="time">16:00</strong></div>
                         <div class="airport" title="虹桥国际机场T2">虹桥国际机场T2</div>
                     </td>
-                    <td class="favorable">3张</td>
+
 
 
                 </tr>
@@ -180,14 +183,27 @@
         <div class="row">
             <div class="header">
                 <i class="icon-hotel"></i>选择酒店
-                <div class="sort">星级<i class="arrow"></i></div>
+                <div class="sort hide">星级<i class="arrow"></i></div>
+                <div class="hotel-date">
+                    <div>
+                        入住日期
+                        <input type="text" id="input_startdate" placeholder="入住日期">
+                        <i class="icon-time"></i>
+                    </div>
+                    <div>
+                        退房日期
+                        <input type="text" id="input_enddate" placeholder="退房日期">
+                        <i class="icon-time"></i>
+                    </div>
+                </div>
+
             </div>
             <ul class="hotel_list">
                 <li>
                     <div class="hotel_header radiobox radio_checked"><span class="radio_ck"></span><h5>厦门五星鼓浪湾酒店</h5><span class="hotel_diamond04"></span><span class="hotel_tag">WIFI&nbsp;游泳池&nbsp;健身房</span></div>
                     <div class="hotel_body">
                         <img src="images/tmp_hotel.png" width="183"/>
-                        <div style="width:694px;height:124px;display: inline-block">
+                        <div class="hotel_body_table">
                             <table class="hotel_datalist" width="100%">
                                 <thead>
                                     <tr>
@@ -251,7 +267,7 @@
                     <div class="hotel_header radiobox"><span class="radio_ck"></span><h5>厦门五星鼓浪湾酒店</h5><span class="hotel_diamond04"></span><span class="hotel_tag">WIFI&nbsp;游泳池&nbsp;健身房</span></div>
                     <div class="hotel_body hide">
                         <img src="images/tmp_hotel.png" width="183"/>
-                        <div style="width:694px;height:124px;display: inline-block">
+                        <div class="hotel_body_table">
                             <table class="hotel_datalist" width="100%">
                                 <thead>
                                 <tr>
@@ -315,7 +331,7 @@
                     <div class="hotel_header radiobox"><span class="radio_ck"></span><h5>厦门五星鼓浪湾酒店</h5><span class="hotel_diamond04"></span><span class="hotel_tag">WIFI&nbsp;游泳池&nbsp;健身房</span></div>
                     <div class="hotel_body hide">
                         <img src="images/tmp_hotel.png" width="183"/>
-                        <div style="width:694px;height:124px;display: inline-block">
+                        <div class="hotel_body_table">
                             <table class="hotel_datalist" width="100%">
                                 <thead>
                                 <tr>
@@ -381,6 +397,10 @@
 
 
         </div>
+        <div class="row button-row">
+            <a href="free_yuding.html" class="previous_step"><i class="yicon">&#xe603;</i>上一步</a>
+            <button id="next_step" class="btn-query">下一步</button>
+        </div>
         <div class="row">
             <h1>附：星级图标</h1>
             <span class="hotel_diamond00"></span>
@@ -410,8 +430,9 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/tab.js"></script>
 <script src="js/dropdown.js"></script>
-<script src="lib/kalendae/src/moment.js"></script>
-<script src="lib/kalendae/build/kalendae.js"></script>
+<!--<script src="lib/kalendae/src/moment.js"></script>-->
+<!--<script src="lib/kalendae/build/kalendae.js"></script>-->
+<script src="lib/My97DatePicker/WdatePicker.js"></script>
 <script src="lib/slick/slick.min.js"></script>
 <script>
     $('ul.tabs').tabs();
@@ -439,6 +460,26 @@
         })
         $(this).addClass("radio_checked")
         $(this).siblings(".hotel_body").show();
+    })
+
+    //    var k1 = new Kalendae.Input('input_startdate', {
+    //        months:2,
+    //        mode:'single',
+    //        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    //    });
+    //    var k2 = new Kalendae.Input('input_enddate', {
+    //        months:2,
+    //        mode:'single',
+    //        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+    //    });
+    $("#input_startdate").click(function(){
+        WdatePicker();
+    })
+    $("#input_enddate").click(function(){
+        WdatePicker();
+    })
+    $("#next_step").click(function(){
+        location.href="free_yuding_fujia.html"
     })
   
 

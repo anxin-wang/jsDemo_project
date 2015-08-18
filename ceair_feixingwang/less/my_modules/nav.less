@@ -1,0 +1,69 @@
+.nav{
+  background-color:@nav-background-color;
+  height:40px;
+  font-size:16px;
+}
+.nav a{
+  color:@colorWhite;
+}
+.nav>ul{
+  position: relative;
+}
+.nav li{
+  float: left;
+}
+.nav li a.nav_has, .nav li a.nav_non{
+  display: block;
+  height: 37px;
+  line-height:37px;
+  padding: 0 7px;
+  border-top:3px solid @nav-background-color;
+  &:hover{
+    color:@nav-background-color;
+    background-color:@colorWhite;
+    border-top:3px solid #ff9915;
+  }
+  &.selected{
+    border-top:3px solid #ff9915;
+  }
+}
+.nav li a.nav_has {
+  padding-left: 14px;
+}
+
+.nav li.divider {
+  background-color: #1d67dd;
+  height: 16px;
+  margin: 13px 1px 0;
+  padding-left: 0;
+  width: 1px;
+}
+
+/*subnav*/
+.nav li .subnav_wrap{
+  display:none;
+  position:absolute;
+  background-color:@colorWhite;
+  left:0;
+  width: 100%;
+
+}
+.nav li .subnav_wrap a{
+  font-size:12px;
+  color:#333;
+}
+.nav li:hover .subnav_wrap{
+  display: block;
+}
+.sub_nav{
+  height: 37px;
+  line-height: 37px;
+  border: 1px solid #bbb;
+  border-top: none;
+}
+.sub_nav li{
+  margin: 0 5px;
+}
+.sub_nav li a:hover{
+  color:@colorBlue-light;
+}

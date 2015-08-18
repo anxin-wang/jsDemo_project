@@ -28,6 +28,7 @@
 
             // Bind the click event handler
             $this.on('click', 'a', function(e){
+
                 // Make the old tab inactive.
                 $active.removeClass('active');
                 $content.hide();

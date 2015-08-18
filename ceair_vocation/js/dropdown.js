@@ -38,3 +38,35 @@ $(".dropdown .dropdown-menu span").click(function(){
     $(this).parent().siblings('.dropdown-trigger').find('#language_img').attr("src","images/flags/"+$(this).attr("data-pic")+".png")
     $(this).parent().hide()
 })
+$(".dropdown.customer ul.dropdown-menu li a").click(function(e){
+    e.preventDefault();
+    $(this).parents("ul.dropdown-menu").siblings('.dropdown-trigger').find("span").text($(this).text())
+
+    $(this).parents("ul.dropdown-menu").hide()
+})
+$(".dropdown.yuding_jingjia ul.dropdown-menu li a").click(function(e){
+    e.preventDefault();
+    var text=$(this).text();
+    if(text=="预定销售价"){
+        $(".pay .prise").hide();
+        $(".pay .customer_container").hide();
+        $(".pay .commission.prise").show();
+
+
+    }else{
+        $(".pay .prise").show();
+        $(".pay .customer_container").show();
+        $(".pay .commission.prise").hide();
+
+    }
+    $(this).parents("ul.dropdown-menu").siblings('.dropdown-trigger').find("span").text(text)
+
+    $(this).parents("ul.dropdown-menu").hide()
+})
+$(".dropdown.yuding_shuliang ul.dropdown-menu li a").click(function(e){
+    e.preventDefault();
+    $(this).parents("ul.dropdown-menu").siblings('.dropdown-trigger').find("span").text($(this).text())
+
+    $(this).parents("ul.dropdown-menu").hide()
+})
+

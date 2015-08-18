@@ -1,0 +1,95 @@
+/*"reset.less"*/
+body,dl,dt,dd,img,ul,ol,li,p,form,input,textarea,th,td{margin:0;padding:0;}
+body{
+  font:14px/1.6 Microsoft YaHei,Verdana,Arial,Helvetica,sans-serif,Simsun;
+  color:@colorBlack-dark;
+  background-color:@colorGray-light;
+}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,address,dfn{font-style:normal;}
+
+a,button{cursor:pointer;}
+a{color:#3498db;text-decoration:none}
+a:hover{color:#3486bc}
+a:active,
+input:focus,
+textarea:focus,
+a:focus{outline:0;}
+
+ul,li{list-style:none;}
+
+h1{font-size:@font-xl;}
+h2{font-size:@font-l;}
+h3{font-size:@font-m;}
+h4{font-size:@font-base;}
+h5{font-size:@font-s;}
+h6{font-size:@font-xs;}
+
+
+
+//屏蔽ie9+ 浏览器，眼睛和叉号提示
+input::-ms-clear { display: none; }
+input::-ms-reveal { display: none; }
+
+//h5表单默认提示颜色
+input::-webkit-input-placeholder {color:@colorGray-dark!important;/* WebKit browsers */}
+input:-moz-placeholder           {color:@colorGray-dark!important;/* Mozilla Firefox 4 to 18 */  }
+input::-moz-placeholder          {color:@colorGray-dark!important;/* Mozilla Firefox 19+ */  }
+input:-ms-input-placeholder      {color:@colorGray-dark!important;/* Internet Explorer 10+ */  }
+
+
+//base style
+.hr{border-top:1px solid #ddd;height:0;}
+.hr-vertical{border-right:1px solid #ddd;width:0;}
+
+.hide{display:none;}
+.center{text-align:center;clear:both;}
+
+
+
+/* Hides from IE-mac \*/
+//.clearfix{display:inline-block;clear:both;overflow:hidden;*zoom:1;*height: 1%;}
+//.clearfix:after{content:"\20";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+//* html .clearfix {height:1%;}
+//.clearfix{display:block;}
+/* End hide from IE-mac */
+
+//border-radius====================
+.border-radius (@radius:5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+     -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+          border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//eg:
+.btn{.border-radius(2px);}
+
+//box-shadow====================
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+          box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//eg:
+.box-shadow{
+  .box-shadow(5px, 5px, 6px, 0.3);
+}
+
+//transition====================
+.transition (@prop: all, @time: 1s, @ease: linear) {
+  -webkit-transition: @prop @time @ease;
+     -moz-transition: @prop @time @ease;
+       -o-transition: @prop @time @ease;
+      -ms-transition: @prop @time @ease;
+          transition: @prop @time @ease;
+}
+//eg:
+.transition{
+  .transition(all, 0.5s, ease-in);
+}
+

@@ -2,7 +2,19 @@ body{
   background: #fff;
   font-family:"幼圆",sans-serif;
 }
-
+input::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #70a52f;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #70a52f;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #70a52f;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #70a52f;
+}
+input::-ms-clear { display: none; }
 .tabs li{
   font-family:"幼圆",sans-serif;
 }
@@ -65,7 +77,7 @@ body{
 }
 .goods-list .info p.brand{
   color:#999;
-  font-size:14px;
+  font-size:12px;
 }
 .goods-list .info .buy{
   color:#555555;
@@ -260,7 +272,10 @@ body{
   color:#fff;
 }
   .login .submitbtn{
-    bottom: 0;
+    bottom: 149px;
+    right: 74px;
+    border:none;
+    background: none;
     height: 49px;
     position: absolute;
     width: 253px;
@@ -329,7 +344,8 @@ body{
     float:left;
   }
   .hot_product .tabs{
-    position: static;
+//    position: static;
+    position:relative;
     width:91%;
     background: url(../images/sprites.png) -5px 27px no-repeat;
     box-shadow: none;
@@ -342,6 +358,7 @@ body{
     float: left;
     border:none;
     height:40px;
+
 
   }
   .hot_product .content{
@@ -436,6 +453,7 @@ body{
     vertical-align: -9px;
     background: url(../images/sprites.png) -140px -132px no-repeat;
     display:inline-block;
+    .ie7-inline-block();
     cursor: pointer;
   }
 i.icon-meat{
@@ -471,8 +489,48 @@ i.icon-meat{
     cursor: pointer;
 
   }
+  i.icon-add{
+    width:40px;
+    height:26px;
+    vertical-align: -5px;
+    background: url(../images/sprites.png) -19px -1276px no-repeat;
+    display:inline-block;
+    cursor: pointer;
+  }
+i.icon-plus-orange{
+  width:40px;
+  height:26px;
+  vertical-align: -5px;
+  background: url(../images/sprites.png) -206px -1276px no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
+i.icon-add-orange{
+  width:40px;
+  height:26px;
+  vertical-align: -5px;
+  background: url(../images/sprites.png) -147px -1276px no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
+i.icon-contact{
+  width:40px;
+  height:26px;
+  vertical-align: -5px;
+  background: url(../images/sprites.png) -455px -443px  no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
+i.icon-beizhu{
+  width:40px;
+  height:26px;
+  vertical-align: -5px;
+  background: url(../images/sprites.png) -398px -445px no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
   .btn-query{
-    background: url("../images/sprites.png") no-repeat scroll -17px -212px rgba(0, 0, 0, 0);
+    background: url("../images/sprites.png") no-repeat scroll -17px -212px transparent;
     border: medium none;
     color: #fff;
     font-size: 20px;
@@ -485,7 +543,7 @@ i.icon-meat{
     margin-top:10px;
   }
   .dropdown{
-    font-size: 14px;
+    font-size: 12px;
   }
   .site-nav .am{
     width:94px;
@@ -527,7 +585,7 @@ i.icon-meat{
     font-family: "宋体",sans-serif;
   }
   .change-city{
-    background: url("../images/sprites.png") no-repeat scroll -12px -107px rgba(0, 0, 0, 0);
+    background: url("../images/sprites.png") no-repeat scroll -12px -107px ;
     height: 70px;
     position: absolute;
     right: 8px;
@@ -571,7 +629,7 @@ i.icon-meat{
   //  padding-right: 13px;
   //}
   .ziyouxing .right h3{
-    background: url("../images/sprites.png") no-repeat scroll -4px -275px rgba(0, 0, 0, 0);
+    background: url("../images/sprites.png") no-repeat scroll -4px -275px ;
     height:37px;
     margin-bottom: 0px;
     font-size:16px;
@@ -596,7 +654,9 @@ i.icon-meat{
     color:red;
   }
   .goods-list .pic .start-end{
+    background:#fff;
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+
     border-radius: 15px;
 
     left: 10px;
@@ -652,7 +712,7 @@ i.icon-meat{
   width: 56px;
 }
 .searchbox.free-search h3{
-  background: url("../images/sprites.png") no-repeat scroll -234px -35px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -234px -35px ;
   color: #70a52f;
   font-size: 18px;
   margin-left: 0;
@@ -697,20 +757,34 @@ i.icon-meat{
 .pager_container .pager_input input{
   border:1px solid #ddd;
   width:50px;
+  height:26px;
 }
 .btn{
   background: #70A52F;
   color:#fff;
   padding:5px 10px;
 }
+.product_list li.prize-range{
+  font-size:14px;
+  padding-left:5px;
+}
+.product_list li.prize-range.hover{
+  background: #fff9e0;
+}
 .prize-range input {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 14px;
-  line-height: 23px;
+  line-height: 24px;
   margin: 0 5px;
   padding-left: 5px;
   width: 67px;
+}
+.prize-range input.btn {
+  line-height: 16px;
+  padding-left:10px;
+  display: none;
+
 }
 .prize-range input:first-of-type {
   margin-left:10px;
@@ -739,16 +813,7 @@ i.icon-meat{
   float:right;
   margin:0;
 }
-.hot_product .tabs .small-pager a{
-  border-radius: 0;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 8px;
-}
-.hot_product .tabs .small-pager li{
-  height:26px;
-  margin-right: 5px;
-}
+
 .tabs li a span.sort{
   background: url(../images/sprites.png) -546px -147px  no-repeat;
   display: inline-block;
@@ -823,6 +888,7 @@ i.icon-meat{
 .yuding .product_prise .sr_price strong{
   font-size:33px;
 }
+
 .yuding .product_prise .sr_price span.price_intro{
   margin-left:15px;
 }
@@ -834,12 +900,16 @@ i.icon-meat{
   color:#666;
   margin-top: 26px;
 }
-.yuding .header{
+.yuding .header,.passenger_info .header,.confirm_info .header,.dingdan-query .header{
   background: url(../images/sprites.png) -19px -936px  no-repeat;
   padding: 0;
   margin: 0;
   padding: 0 0 8px 20px;
 
+}
+.yuding.hotel .header,.passenger_info .header,.confirm_info .header,.dingdan-query .header{
+  margin-top: 20px;
+  background: url("../images/sprites.png") no-repeat scroll -8px -808px ;
 }
 .yuding .searchresult_product02{
   padding: 30px 0 14px;
@@ -892,8 +962,9 @@ i.icon-meat{
 
 }
 .hot_product.yuding .tabs{
-  background: url("../images/sprites.png") no-repeat scroll -17px -993px rgba(0, 0, 0, 0);
-  width:100%;
+  background: url("../images/sprites.png") no-repeat scroll -17px -981px;
+  width:980px;
+  height:80px;
   padding-left: 0;
 }
 .hot_product.yuding .tabs.fixed{
@@ -903,6 +974,8 @@ i.icon-meat{
 }
 .hot_product.yuding .tabs li{
   margin-right:3px;
+  margin-top: 11px;
+
 }
 .hot_product.yuding .tabs li a{
   border: 1px solid #70a52f;
@@ -925,30 +998,32 @@ i.icon-meat{
   text-align: center;
   margin:20px 0;
 }
-.btn-dinggou-container{
-  bottom: 50px;
-  margin: 0 auto;
-  position: fixed;
-  width: 980px;
-}
+
 .btn-dinggou-container .btn-query{
-  right:0;
+  right: 35px;
+  top: 2px;
   position: absolute;
 }
-.sr_price .tooltip{
+.sr_price .tooltip,.control-container  .tooltip{
   border: 1px solid #f5c808;
   background-color: #fff9e0;
   border-radius: 0;
   color:#f5c808;
   font-family: "songti";
   font-size:14px;
+  width:300px;
 }
-.sr_price .tooltip h1{
+.sr_price .tooltip h1,.control-container .tooltip h1{
   margin: 0 0 13px;
   font-size:14px;
   padding-bottom: 10px;
   background: url(../images/sprites.png) -19px -1046px  no-repeat;
 
+}
+.control-container .tooltip p{
+  font-size:12px;
+  font-family: "songti";
+  color:#666666;
 }
 .sr_price .tooltip.bottom > .arrow{
   border-bottom-color: #f5c808;
@@ -959,7 +1034,7 @@ i.icon-meat{
   width:870px;
 }
 .hot_product.ticket-choice .tabs{
-  background: url("../images/sprites.png") no-repeat scroll -19px -1085px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -19px -1085px ;
   width: 830px;
 }
 .ticket-choice .table_round .direction{
@@ -1000,7 +1075,7 @@ i.icon-meat{
 ul.ticket-info{
   padding: 7px 0 10px 57px;
   margin-top:10px;
-  background: url("../images/sprites.png") no-repeat scroll -606px -199px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -606px -199px ;
 }
 ul.ticket-info span.ticket_date{
 font-size:14px;
@@ -1066,7 +1141,7 @@ ul.ticket-info li{
 }
 .ticket-choice .border{
   height:2px;
-  background: url("../images/sprites.png") no-repeat scroll -38px -893px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -38px -893px ;
 }
 .ticket_list{
   padding-top:15px;
@@ -1076,12 +1151,12 @@ ul.ticket-info li{
   font-size:16px;
   color:#43631c;
   position: absolute;
-  left:300px;
+  left:200px;
   top:7px;
 }
 
 .ticket-choice li.direction .arrow{
-  background: url("../images/sprites.png") no-repeat scroll -1057px -144px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -1057px -144px ;
   width:94px;
   height:27px;
   vertical-align: -8px;
@@ -1096,7 +1171,7 @@ ul.ticket-info li{
   font-weight: bold;
 }
 .ticket-choice li.sort .arrow{
-  background: url("../images/sprites.png") no-repeat scroll -1196px -151px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -1196px -151px ;
   width:24px;
   height:24px;
   vertical-align: -8px;
@@ -1128,10 +1203,7 @@ ul.ticket-info li{
   border: 1px solid #999;
 }
 
-.yuding.hotel .header{
-  margin-top: 20px;
-  background: url("../images/sprites.png") no-repeat scroll -8px -808px rgba(0, 0, 0, 0);
-}
+
 .yuding.hotel .sort {
   color: #70a52f;
   font-size: 14px;
@@ -1141,7 +1213,7 @@ ul.ticket-info li{
   top: 7px;
 }
 .yuding.hotel .sort .arrow {
-  background: url("../images/sprites.png") no-repeat scroll -1196px -151px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -1196px -151px ;
   cursor: pointer;
   display: inline-block;
   height: 24px;
@@ -1151,23 +1223,24 @@ ul.ticket-info li{
 .yuding.hotel .sort .arrow.down {
   background-position: -1164px -149px;
 }
-.yuding.hotel h3{
-  background: url("../images/sprites.png") no-repeat scroll -234px -35px rgba(0, 0, 0, 0);
+.yuding.hotel h3,.dingdan-query h3{
+  background: url("../images/sprites.png") no-repeat scroll -234px -35px ;
   color: #70a52f;
   font-size: 18px;
   margin-left: 0;
   margin-top: 30px;
+  margin-bottom:0px;
   padding: 0 0 24px 30px;
 }
 .yuding.hotel h4{
-  background: url("../images/sprites.png") no-repeat scroll -604px -381px rgba(0, 0, 0, 0);
-  color: #fff;
+  background: url("../images/sprites.png") no-repeat scroll -604px -379px ;
+  color: #333;
   font-size: 16px;
   margin: 0;
   padding: 13px 0 24px 57px;
 }
 .hotel_diamond00,.hotel_diamond01, .hotel_diamond02, .hotel_diamond03, .hotel_diamond04, .hotel_diamond05,  .hotel_halfdiamond00, .hotel_halfdiamond01, .hotel_halfdiamond02, .hotel_halfdiamond03, .hotel_halfdiamond04{
-  background: url("../images/sprites.png") no-repeat scroll -29px -1211px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll -29px -1211px ;
   height:25px;
   width:80px;
   display:inline-block;
@@ -1217,6 +1290,7 @@ ul.ticket-info li{
 }
 .hotel_header h5{
   display:inline-block;
+  .ie7-inline-block();
   margin: 0 10px;
   vertical-align: 6px;
 }
@@ -1230,6 +1304,12 @@ ul.ticket-info li{
   padding:0 30px 0 65px;
   margin-top:20px;
 }
+.hotel_body_table{
+  width:694px;height:124px;display: inline-block;
+  .ie7-inline-block();
+
+}
+
 
 .hotel_datalist thead{
   font-size:14px;
@@ -1254,12 +1334,16 @@ div.choose-people-btn{
 .choose-people-btn input{
   width:29px;
   height:29px;
+  line-height:29px;
   border:1px solid #d3d3d3;
   border-radius:5px;
   text-align: center;
   margin-right:10px;
   padding: 0 40px;
+  color:#4e7321;
 }
+
+
 .choose-people-btn  a{
   display: inline-block;
   width:30px;
@@ -1289,10 +1373,953 @@ div.choose-people-btn{
 }
 
 .hotel_list .border{
-  background: url("../images/sprites.png") no-repeat scroll 0 -891px rgba(0, 0, 0, 0);
+  background: url("../images/sprites.png") no-repeat scroll 0 -891px ;
   height: 3px;
   margin-top: 10px;
 }
 .hotel_list li{
   margin-top:10px;
 }
+.hotel-date{
+  position: absolute;
+  right: 25px;
+  top: -7px;
+
+}
+.hotel-date > div{
+  float:left;
+
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+  font-size: 14px;
+  color:#4e7321;
+  margin-left: 10px;
+  padding-left: 6px;
+
+
+}
+.hotel-date input{
+    background: none repeat scroll 0 0 ;
+    border: medium none;
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 8px;
+    width: 90px;
+  color:#4e7321;
+}
+.previous_step{
+  color:#70a52f;
+  font-size:16px;
+  display: inline-block;
+  float: left;
+}
+.previous_step:hover{
+  color:#70a52f;
+  font-size:16px;
+}
+.button-row{
+  margin-top:40px;
+  margin-bottom: 60px;
+  position: relative;
+}
+.button-row .btn-query{
+  position: absolute;
+  right: 0;
+}
+.yuding.hotel .table_round td.favorable{
+  font-family: "Arial";
+  width:50px;
+}
+.yuding.hotel .table_round .ico_go,.yuding.hotel .table_round  .ico_back{
+  padding:7px 20px;
+}
+.yuding.hotel  .table_round .ico_go,.yuding.hotel  .table_round  .ico_back{
+  padding: 7px 38px;
+}
+.hotel_datalist .radio_checked .choose-people-btn a.btn-add{
+  color: #ff3333;
+}
+.yuding .table_round .direction{
+  padding: 0 20px 0 25px;
+  width:100px;
+}
+.yuding .table_round .arrow_item{
+  padding:15px 0;
+}
+.yuding .table_round .favorable{
+  padding-right: 10px;
+  line-height: 33px;
+  font-family: Arial;
+}
+.yuding .table_round td.flight_date div{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin: 16px 10px 10px 0;
+  width: 123px;
+}
+.yuding .table_round td.flight_date input{
+  width: 80px;
+}
+.yuding .table_round .direction{
+  padding-right: 0;
+  width: 70px;
+}
+.yuding.hotel .table_round td.favorable{
+  padding-left:0;
+}
+.yuding.hotel .table_round td{
+  padding-top:0;
+  padding-bottom: 10px;
+}
+.yuding.hotel .table_round td.arrow_item{
+  padding-top:0;
+  padding-bottom:0;
+}
+.yuding.hotel .table_round .leave{
+  padding-right: 55px;
+  padding-left:0;
+}
+
+.yuding.hotel .table_round .leave,.yuding.hotel .table_round .arrive{
+  width: 80px;
+}
+.hotel_datalist.fujia thead th,.hotel_datalist.fujia tbody td{
+  text-align: left;
+  padding:10px;
+}
+.hotel_datalist.fujia tbody td{
+  padding: 5px 10px 0;
+}
+.hotel_datalist.fujia tbody td.bigfont span{
+  font-size:20px;
+  color:#f5c808;
+  border:1px solid #f5c808;
+  padding: 5px 20px;
+  font-family: "幼圆";
+  display: inline-block;
+  width:60px;
+  text-align: center;
+}
+.hotel_datalist.fujia tbody td.bigfont{
+  width: 110px;
+}
+.hotel_datalist.fujia tbody td.green span{
+  font-size:14px;
+  color:#70a52f;
+  font-family: "幼圆";
+  font-weight: bold;
+}
+.hotel_datalist.fujia tbody td.orange a{
+  text-decoration: underline;
+  color:#f5c808;
+}
+.hotel_datalist.fujia tbody td.orange i{
+  font-size:24px;
+  text-decoration: none;
+}
+.hotel_datalist.fujia tbody td.flight_date div{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin: 5px 10px 5px 0;
+  width: 128px;
+
+}
+.hotel_datalist.fujia td.flight_date input {
+  width: 85px;
+  background: none repeat scroll 0 0 ;
+  border: medium none;
+  display: inline-block;
+  .ie7-inline-block();
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
+}
+.hotel_datalist.fujia td.grey-bold{
+  color:#333;
+  font-size:14px;
+  font-weight: bold;
+
+}
+.hotel_datalist.fujia td.many-line span,.hotel_datalist.fujia td.many-line a{
+  display: block;
+}
+.hotel_datalist.fujia td.many-line a{
+  text-decoration: underline;
+  color: #70a52f;
+
+}
+.hotel_datalist.fujia td.many-line a.grey{
+color:#333;
+}
+.hotel_datalist.fujia td.green-bold,.hotel_datalist.fujia td span.green-bold{
+  color: #70a52f;
+  font-weight: bold;
+}
+.hotel_datalist.fujia tr.first,.hotel_datalist.fujia tr.line{
+  background: url("../images/sprites.png") no-repeat scroll 111px -887px ;
+  height: 3px;
+  line-height: 3px;
+}
+.hotel_datalist.fujia tr.line{
+  background: url("../images/sprites.png") no-repeat scroll -11px -887px ;
+}
+.hotel_datalist.fujia tr.line td{
+  padding-left:0;
+}
+.hotel_datalist.fujia .radio_checked .radio_ck {
+  background: url("../images/sprites.png") no-repeat scroll -85px -1276px ;
+}
+.hotel_datalist.fujia td.radiobox{
+  text-align: center;
+}
+.pay div{
+  float: left;
+
+}
+.pay{
+  background:#fcf0ba;
+  border:1px solid #f5c808;
+  padding: 12px 0 46px 13px;
+  width: 850px;
+}
+.btn.xie{
+  background: url("../images/sprites.png") no-repeat scroll -22px -1345px ;
+  display: block;
+  height:63px;
+  position: absolute;
+  font-size: 18px;
+  right: 0;
+  top: 0;
+  width: 212px;
+}
+.pay .prise{
+  font-size:14px;
+  color:#666666;
+  margin: 0 36px 0 10px;
+}
+.pay .prise span{
+  color:#e50012;
+  font-size:28px;
+  font-family: "Arial";
+
+}
+.pay .prise span.yen{
+  font-size:14px;
+}
+.pay .commission.prise{
+  margin-right:20px;
+}
+.pay .commission.prise div{
+  margin-right:20px;
+}
+.yuding_jingjia.dropdown a{
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 3px 15px;
+  display: inline-block;
+  background: #f5c808;
+  border-radius: 5px;
+  width: 119px;
+}
+.yuding_jingjia.dropdown .dropdown-menu  a{
+  background: #f5c808;
+  border-radius: 0;
+}
+.yuding_jingjia.dropdown i{
+  margin-left: 35px;
+}
+.dropdown.yuding_shuliang{
+  position: relative;
+}
+.yuding_shuliang.dropdown a{
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  color: #4e7321;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 3px 2px 3px 8px;
+  width: 54px;
+}
+.yuding_shuliang.dropdown .dropdown-menu{
+  position: absolute;
+  z-index: 9999;
+}
+.yuding_shuliang.dropdown .dropdown-menu  a{
+  background: #fff;
+  border-radius: 0;
+  border:none;
+  line-height:18px;
+  height:18px;
+  font-size:12px;
+}
+.yuding_shuliang.dropdown .dropdown-menu  a:hover{
+  background: #4e7321;
+  color: #fff;
+}
+.yuding_shuliang.dropdown .dropdown-menu{
+  border: 1px solid #d3d3d3;
+}
+.yuding_shuliang.dropdown i{
+  margin-left: 18px;
+  color:#d3d3d3;
+}
+.pay .customer_container {
+  background: #fefcf1;
+  padding: 8px;
+
+
+}
+.pay .customer_container a{
+  color:#666;
+  font-size: 16px;
+  display:block;
+}
+.pay .customer_container .dropdown-menu{
+  background: none repeat scroll 0 0 #fff;
+  left: -8px;
+
+  position: absolute;
+
+  width: 214px;
+  padding-top:10px;
+}
+.pay .customer_container .dropdown-menu li{
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  width: 100%;
+}
+.pay .customer_container .dropdown-menu li:hover{
+  background: #f3efd7;
+
+}
+.pay .customer_container .dropdown-menu li:hover a{
+  color:#666666;
+}
+.dropdown.customer{
+  position: relative;
+  width: 217px;
+}
+.dropdown.yuding_jingjia{
+  position: relative;
+  width:150px;
+  background: none repeat scroll 0 0 #f5c808;
+  border-radius: 5px;
+}
+.dropdown.yuding_jingjia .dropdown-menu{
+  position: absolute;
+}
+
+.dropdown.customer i,.dropdown.yuding_jingjia i{
+  position: absolute;
+  right: 9px;
+  top: 4px;
+}
+.dropdown.yuding_jingjia i{
+  top: 10px;
+}
+.customer_container input{
+  border:none;
+}
+.wrap.yuding.fujia.hotel{
+  margin-bottom: 150px;
+}
+.hot_product.product_list{
+  position:relative;
+}
+.hot_product.product_list  .small-pager{
+  position: absolute;
+}
+.hot_product.product_list .small-pager li{
+  height:26px;
+  margin-right: 5px;
+  float:left;
+}
+.hot_product.product_list .small-pager a{
+  border-radius: 0;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 8px;
+}
+#fujia-choice .title{
+  height:50px;
+  padding-left:34px;
+  margin-top:10px;
+  background: url("../images/sprites.png") no-repeat scroll -30px -1434px ;
+}
+.fujia-info{
+  display: inline-block;
+  height: 60px;
+  vertical-align: 3px;
+
+}
+.fujia-info h5{
+  margin: 0;
+  display: inline-block;
+  vertical-align: 12px;
+
+}
+.fujia-info span {
+  margin-left: 10px;
+  vertical-align: 6px;
+}
+.fujia-info .room-type{
+font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+#fujia-choice .hotel_datalist.fujia {
+  margin-left:31px;
+  margin-bottom: 40px;
+}
+#fujia-choice .choose_num{
+  font-size: 13px;
+  margin: 0 auto 10px;
+  text-align: right;
+  width: 477px;
+}
+#fujia-choice .choose_num span{
+  color:#e50012;
+}
+#fujia-choice .hotel-info{
+  width: 460px;
+  margin: 0 auto;
+  height:60px;
+}
+#fujia-choice .btn-dinggou{
+  float: none;
+  margin: 0 auto;
+}
+#fujia-choice .hotel-info img{
+display: inline-block;
+}
+/*step*/
+.step{
+  background: url("../images/step.png") no-repeat scroll -17px -6px transparent;
+  margin: 30px 0 0;
+}
+.confirm_info .step{
+  background-position: -17px -80px;
+}
+.step li{
+  float: left;
+  height: 47px;
+  line-height: 47px;
+  padding-left: 68px;
+  width: 128px;
+}
+.step li.past{
+  color:#4e7321;
+}
+.step li.selected{
+  color:#ffffff;
+  font-weight: bold;
+}
+.passenger_info .header i.icon-man{
+  margin-left:10px;
+}
+.textarea_width{
+  width:845px;
+  height:85px;
+  padding:10px;
+  margin-left:70px;
+  border: 1px solid #d3d3d3;
+}
+.control-label {
+  margin-bottom: 0;
+  padding-top: 7px;
+  text-align: right;
+  margin-right: 10px;
+  width: 100px;
+  float:left;
+  color:#4e7321;
+  font-size:14px;
+
+}
+.control-container{
+  float:left;
+}
+.form-control {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 22px;
+  width: 180px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+.form-group{
+  margin-bottom:20px;
+}
+.form-horizontal .col-width-6{
+  box-sizing: border-box;
+}
+.form-horizontal .left-part{
+  padding-left:125px;
+}
+.passenger_info_detail{
+  position: relative;
+}
+
+.passenger_info_type{
+  width:80px;
+  border:1px solid #f5c808;
+  color:#f5c808;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  left:35px;
+}
+.passenger_info_type h4{
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+.huzhao.yuding_shuliang.dropdown a{
+  width: 194px;
+}
+.tel.yuding_shuliang.dropdown a{
+  width: 94px;
+}
+.form-horizontal .yuding_shuliang.dropdown a{
+  position: relative;
+  font-size: 14px;
+}
+.form-horizontal .yuding_shuliang.dropdown i{
+  position: absolute;
+  right: 4px;
+  top: 7px;
+  margin:0;
+}
+.huzhao.yuding_shuliang.dropdown .dropdown-menu{
+
+  left:6px;
+}
+.form-inline.form-group .form-control,.form-inline.form-group .dropdown,.form-inline.form-group .date{
+  display: inline-block;
+  .ie7-inline-block();
+}
+.form-inline.form-group.name .form-control{
+  width:90px;
+}
+.form-horizontal .date{
+width:200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 10px 5px 0;
+}
+.date input {
+  background: none repeat scroll 0 0 ;
+  border: medium none;
+  display: inline-block;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
+  width: 158px;
+}
+.form-horizontal .line{
+  background: url("../images/sprites.png") no-repeat scroll 125px -893px ;
+  height:1px;
+}
+.form-group .control-container{
+  position: relative;
+}
+.form-group .control-container .icon-intro{
+  position: absolute;
+  right: 5px;
+  top: 11px;
+}
+.mask{
+  position: absolute;
+  width:980px;
+  height:200px;
+  left:10px;
+  top:0px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.9);
+
+}
+.mask div{
+  text-align: center;
+  margin-top:70px;
+}
+.confirm_info .arrow_item .arrow{
+  background: url("../images/sprites.png") no-repeat scroll -18px -1508px rgba(0, 0, 0, 0);
+  height: 25px;
+  width: 90px;
+}
+.many-line .fujia-product{
+  margin-left: 97px;
+}
+.many-line em.fujia-product{
+  margin-left: 41px;
+}
+.dingdan-info .beizhu{
+  font-size:14px;
+  color:#666;
+  padding: 0 10px;
+}
+.dingdan-header{
+  position: relative;
+  margin-left: 10px;
+}
+.dingdan-header h1{
+color:#70a52f;
+  font-size:20px;
+  display: inline-block;
+}
+.dingdan-header .people-info{
+  color:#666666;
+  font-size:14px;
+}
+.dingdan-header .prise {
+  color:#e50012;
+  position: absolute;
+  right: 12px;
+  top: 10px;
+
+}
+.dingdan-header .prise span{
+  font-size: 28px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.dingdan-info .border {
+  background: url("../images/sprites.png") no-repeat scroll -10px -892px rgba(0, 0, 0, 0);
+  height: 2px;
+}
+.info-window{
+  width:450px;
+  padding:30px 70px;
+  color:#333333;
+  font-weight: bold;
+}
+.info-window h1{
+  font-size: 30px;
+  color:#70a52f;
+}
+.info-window h1.fail-info{
+  color:#ff3333;
+}
+.info-window ul{
+  padding-left:66px;
+}
+.info-window .label{
+  display: inline-block;
+  line-height: 30px;
+  width: 96px;
+}
+.info-window div{
+  margin-top:30px;
+  padding-left:66px;
+  color:#999;
+}
+.info-window p{
+  padding-left:66px;
+}
+.info-window div .btn-dinggou{
+  float: none;
+  display: inline-block;
+}
+.info-window i.fail-icon{
+  width:23px;
+  height:30px;
+  vertical-align: -9px;
+  background: url(../images/sprites.png) -140px -132px no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
+.info-window i.success-icon{
+  width:50px;
+  height:50px;
+  vertical-align: -9px;
+  background: url(../images/sprites.png) -164px -1492px no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
+.info-window i.fail-icon{
+  width:50px;
+  height:50px;
+  vertical-align: -9px;
+  background: url(../images/sprites.png) -264px -1496px no-repeat;
+  display:inline-block;
+  cursor: pointer;
+}
+.info-window .price_intro{
+  color:#e50012;
+  font-size: 28px;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.info-window .price_intro dfn{
+  font-size: 14px;
+  font-weight: normal;
+  margin-right:10px;
+}
+.dingdan-info table.hotel_datalist{
+  margin: 6px 0 20px;
+}
+.confirm_info .hotel_datalist.fujia tbody td{
+  padding: 15px 10px 0;
+}
+.confirm_info .hotel_datalist.fujia tbody td.flight_info{
+  font-size: 16px;
+  font-weight: bold;
+}
+.confirm_info .hotel_datalist.fujia tbody td.period{
+  width: 110px;
+  padding-left: 30px;
+}
+.confirm_info .hotel_datalist.fujia tbody td.meat{
+  width:20px;
+}
+.confirm_info .hotel_datalist.fujia tbody td.flight_info .low_text{
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+}
+.confirm_info .hotel_datalist.fujia tbody td.leave,.confirm_info .hotel_datalist.fujia tbody td.arrive {
+  text-align: center;
+}
+.confirm_info .hotel_datalist.fujia tbody td .time {
+  font-size: 18px;
+  font-family: "Arial";
+  line-height: 20px;
+  vertical-align: top;
+}
+.confirm_info .hotel_datalist.fujia thead th{
+font-weight: normal;
+}
+.confirm_info .hotel_datalist.fujia tbody td.many-line span{
+  margin-top:5px;
+}
+.dingdan-info .body {
+  margin: 0 30px 0 60px;
+}
+.dingdan-info .hotel_datalist.fujia tbody td.bigfont span{
+  padding: 5px 7px;
+}
+.dingdan-info .hotel_datalist.fujia tbody td.bigfont{
+  width: 85px;
+}
+.dingdan-info .hotel_datalist.fujia tbody td.flight_logo{
+  width: 25px;
+  padding: 0;
+  padding-left:10px;
+}
+.dingdan-info .hotel_datalist.fujia tr.first{
+  background-position: 83px -876px;
+}
+.confirm_info .hotel_datalist.fujia tbody td.many-line{
+  padding-bottom: 20px;
+}
+.confirm_info .hotel_datalist.fujia tbody td.dark-green{
+  color:#4e7321;
+  font-family: "Arial";
+  font-size: 14px;
+}
+.dingdan-query .hotel_datalist.fujia thead th{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 10px 0 10px 25px;
+}
+.dingdan-query .hotel_datalist.fujia tbody td a{
+color:#70a52f;
+  text-decoration: underline;
+}
+.dingdan-query .hotel_datalist.fujia tbody td{
+  padding: 10px 10px 5px 25px;
+}
+.dingdan-query .hotel_datalist.fujia tbody tr.first{
+  background: url("../images/sprites.png") no-repeat scroll -18px -887px rgba(0, 0, 0, 0);
+}
+.pager_container .pager_number{
+  color:#999999;
+  font-size:14px;
+  padding-left:30px;
+}
+.dingdan-query form{
+  background:#f0f6ea;
+  margin: 10px 26px 0;
+}
+.dingdan-query .control-label{
+  font-size:15px;
+}
+.dingdan-query .input-txt-large{
+  width:396px;
+}
+.dingdan-query .form-horizontal .date{
+  background: none repeat scroll 0 0 #fff;
+}
+.dingdan-query .query-container{
+  background: none repeat scroll 0 0 #fff;
+}
+.dingdan-query .form-group{
+  margin-bottom:5px;
+}
+.dingdan-query .header{
+  margin: 0;
+}
+.state-tag li{
+  float: left;
+}
+.state-tag li a{
+  background: none repeat scroll 0 0 #fff;
+  color: #999999;
+  display: inline-block;
+  font-size: 13px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 0px 5px;
+  border:1px solid #999;
+}
+.state-tag li a.selected{
+  color:#fff;
+  background:#70a52f;
+}
+.query-container{
+  width:748px !important;
+}
+.query-container-btn{
+  width:180px !important;
+}
+.query-container .tel.yuding_shuliang.dropdown a{
+  width: 140px;
+
+}
+.query-container .tel.yuding_shuliang.dropdown a.dropdown-trigger{
+  border: 2px solid #70a52f;
+  line-height: 35px;
+  padding-right: 40px;
+  text-align: right;
+  width: 100px;
+  border-radius: 5px 0 0 5px;
+  color:#4e7321;
+  background-color: #f2f2f2;
+}
+.query-container .tel.yuding_shuliang.dropdown a.dropdown-trigger i{
+  font-size: 27px;
+  color:#4e7321;
+}
+.query-container input{
+  border: 2px solid #70a52f;
+  border-radius: 0 5px 5px 0;
+  height: 29px;
+  line-height: 29px;
+  margin-left: -10px;
+  width: 563px;
+  .ie7-inline-block();
+}
+.dingdan-query .form-horizontal .left{
+width: 600px !important;
+}
+.dingdan-query .form-horizontal .right{
+  width: 320px !important;
+}
+.dingdan-query .form-horizontal .right div{
+  margin-bottom: 7px;
+}
+#tuikuan,#cancel-modal{
+  width:530px;
+}
+#tuikuan h4,#cancel-modal h4,#chupiao h4{
+  background: url("../images/sprites.png") no-repeat scroll -27px -1428px rgba(0, 0, 0, 0);
+  margin-bottom: 5px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+#chupiao h4{
+  background: url("../images/sprites.png") no-repeat scroll -7px -1104px rgba(0, 0, 0, 0);
+}
+#tuikuan .control-label,#cancel-modal .control-label{
+  width:90px;
+}
+#tuikuan textarea,#cancel-modal textarea{
+  width:395px;
+  height:90px;
+  padding:0;
+}
+#tuikuan p,#cancel-modal p{
+  color:#70a52f;
+  font-size: 13px;
+  margin: 5px 10px 0 97px;
+}
+#tuikuan .btn-container,#cancel-modal .btn-container,#chupiao .btn-container{
+  text-align: center;
+}
+#tuikuan .btn,#cancel-modal .btn,#chupiao  .btn{
+  float:none;
+  display: inline-block;
+  width: 110px;
+  font-size: 14px;
+}
+#tuikuan .btn.grey,#cancel-modal .btn.grey,#chupiao  .btn.grey{
+  background-color:#93978f;
+  color:#fff;
+  text-align: center;
+}
+#chupiao{
+  width:900px;
+}
+#chupiao td.input{
+  position: relative;
+  width:150px;
+}
+#chupiao td.input i{
+  position: absolute;
+  right: -31px;
+  top: 17px;
+}
+#chupiao .grey{
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: right;
+  width: 120px;
+}
+#chupiao .black{
+  color: #333;
+  display: inline-block;
+  width: 110px;
+}
+#chupiao .hotel_datalist.fujia tr.line{
+  background: url("../images/sprites.png") no-repeat scroll 338px -887px rgba(0, 0, 0, 0);
+}
+#chupiao .tooltip.bottom > .arrow{
+  margin-left: 67px;
+}
+.dingdan-query input::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #C0C0C0;
+}
+.dingdan-query input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #C0C0C0;
+}
+.dingdan-query input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #C0C0C0;
+}
+.dingdan-query input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #C0C0C0;
+}
+.passenger_info .control-dropdown{
+  padding-left: 104px;
+  width: 222px;
+}
+
+

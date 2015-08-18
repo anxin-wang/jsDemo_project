@@ -1,0 +1,11 @@
+- 轮播图（slick）    ok
+- 相册（slick）      OK
+- 弹出窗口（fancybox）  OK
+- calendar(fullcalendar) OK
+- 日期选择 （kalendae）OK
+- 竖版tab
+- 出发地选择 
+- tooltip   
+- 数量加减  
+- radio替代(picker)
+- select替代(select2)

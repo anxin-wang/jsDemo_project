@@ -10,12 +10,16 @@
     <meta name="author" content="*****"/>
     <link rel="Shortcut Icon" href="/favicon.ico?=100062" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="lib/fancyBox/source/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="lib/kalendae/build/kalendae.css" type="text/css">
     <link rel="stylesheet" href="style/style.css"/>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/static/style/ylb-ie.css"/>
+    <link rel="stylesheet" href="style/ylb-ie.css"/>
     <script src="/static/lib/modernizr/modernizr.js"></script>
     <script src="/static/lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="style/ie7.css"/>
     <![endif]-->
 </head>
 <body class="general">
@@ -75,9 +79,9 @@
 <div class="wrap-fluid nav">
     <ul class="wrap">
         <li>
-            <a title="首页" class="nav_non selected" href="index.html"><span>首页</span></a></li>
+            <a title="首页" class="nav_non" href="index.html"><span>首页</span></a></li>
         <li>
-            <a title="自由行" class="nav_non" href="free.html"><span>自由行</span></a>
+            <a title="自由行" class="nav_non selected" href="free.html"><span>自由行</span></a>
         </li>
         <li>
             <a title="团队产品" class="nav_non" href="#"><span>团队产品</span></a>
@@ -146,7 +150,8 @@
                                         <!--出发-->
                                         <div class="product_prise">
                                             <span class="sr_price"><dfn>¥</dfn><strong>1087</strong>起/人&nbsp;不含税
-                                                <span class="price_intro " data-trigger="hover" id="tooptip-price-intro" data-left="450px" data-text="<h1>起价说明</h1><p>费用不含税，包含的航班为最低价航班（去程MU5539 T舱，回程   MU5539 T舱）以及最低价酒店（厦门海港英迪格酒店/传统大床房）</p>"><i class="icon-intro"></i>起价说明</span>
+                                                <span class="price_intro " data-trigger="hover" id="tooptip-price-intro" data-left="450px" data-width="300px" data-text="<h1>起价说明</h1><p>费用不含税，包含的航班为最低价航班（去程MU5539 T舱，回程   MU5539 T舱）以及最低价酒店（厦门海港英迪格酒店/传统大床房）</p>"><i class="icon-intro"></i>起价说明</span>
+
 
                                             </span>
 
@@ -223,13 +228,13 @@
 
         </div>
 
-        <div class="row">
+        <div class="row" style="position: relative">
             <div class="header"><i class="icon-airplane"></i>选择航班</div>
             <div class="detail">
                 <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table_round">
                     <tbody>
                     <tr>
-                        <td class="direction"><span class="ico_go">去程</span></td>
+                        <td class="direction"><span class="ico_go">第一段</span></td>
                         <td class="flight_logo"><span class="pubFlights_mu"></span></td>
                         <td class="flight_info">东方航空<br>
                             <div class="low_text"><span>MU2123&nbsp;T舱</span></div>
@@ -245,15 +250,22 @@
                             <div><strong class="time">00:30</strong></div>
                             <div title="新白云国际机场" class="airport">新白云国际机场</div>
                         </td>
-                        <td class="favorable">3张</td>
 
-                        <td rowspan="3" class="detail_price">
+                        <td class="flight_date">
+                            <div>
+                                <input type="text" placeholder="请选择去程日期" id="input_startdate">
+                                <i class="icon-time"></i>
+                            </div>
+                        </td>
+
+                        <td  class="detail_price">
                             <a href="#ticket-choice" class="btn-choice">选择其他机票</a>
                         </td>
                     </tr>
-                    <tr class="first"><td colspan="7">&nbsp;</td></tr>
+
+                    <tr class="first"><td colspan="9">&nbsp;</td></tr>
                     <tr class="line">
-                        <td class="direction"><span class="ico_go">返程</span></td>
+                        <td class="direction"><span class="ico_go">第二段</span></td>
                         <td class="flight_logo"><span class="pubFlights_mu"></span></td>
                         <td class="flight_info">东方航空<br>
                             <div class="low_text"><span>MU2123&nbsp;T舱</span></div>
@@ -269,12 +281,26 @@
                             <div><strong class="time">16:00</strong></div>
                             <div title="虹桥国际机场T2" class="airport">虹桥国际机场T2</div>
                         </td>
-                        <td class="favorable">3张</td>
+
+
+                        <td class="flight_date">
+                            <div>
+                                <input type="text" id="input_enddate" placeholder="请选择返程日期">
+                                <i class="icon-time"></i>
+                            </div>
+                        </td>
+                        <td  class="detail_price">
+                            <a href="#ticket-choice" class="btn-choice">选择其他机票</a>
+                        </td>
 
 
                     </tr>
+
                     </tbody>
                 </table>
+            </div>
+            <div class="mask hide">
+                <div><img src="images/loading.gif"/></div>
             </div>
 
         </div>
@@ -285,6 +311,7 @@
                     <li class="tab"><a class="active" href="#product_intro">产品介绍</a></li>
                     <li class="tab"><a href="#route_refer">参考行程</a></li>
                     <li class="tab"><a href="#fee_desp">费用说明</a></li>
+                    <li class="btn-dinggou-container"><button class="btn-query" id="next_step">下一步</button></li>
                 </ul>
 
                 <div class="content" id="product_intro">
@@ -303,7 +330,7 @@
             </div>
 
         </div>
-        <div class="btn-dinggou-container"><button class="btn-query" id="next_step">下一步</button></div>
+
 
 
     </div>
@@ -313,7 +340,7 @@
     <div id="ticket-choice" style="width:880px;display: none;" class="clearfix">
         <div class="hot_product ticket-choice">
             <ul class="tabs" id="ticket-choice-tabs">
-                <li class="tab"><a href="#onward_ticket">去程航班</a></li>
+                <!-- <li class="tab"><a href="#onward_ticket">去程航班</a></li> -->
                 <li class="tab"><a class="active" href="#return_ticket">返程航班</a></li>
                 <li class="direction"><span>厦门</span><span class="arrow"></span><span>上海</span></li>
                 <li class="sort">时间<i class="arrow"></i></li>
@@ -324,7 +351,7 @@
 
             </div>
             <div class="content" id="return_ticket">
-                <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table_round">
+                <!-- <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table_round">
                     <tbody>
                     <tr>
                         <td class="direction"><span class="ico_go">已选返程</span></td>
@@ -343,14 +370,14 @@
                             <div><strong class="time">00:30</strong></div>
                             <div class="airport" title="新白云国际机场">新白云国际机场</div>
                         </td>
-                        <td class="favorable">3张</td>
+
 
 
                     </tr>
 
 
                     </tbody>
-                </table>
+                </table> -->
 
                 <div class="ticket_list">
                     <div class="ticket-airplane">
@@ -525,9 +552,13 @@
 
     </div>
 </div>
+
 <script src="js/jquery-1.11.2.min.js"></script>
 <!--<script src="js/tab.js"></script>-->
 <script src="js/tooltip.js"></script>
+<!--<script src="lib/kalendae/src/moment.js"></script>-->
+<!--<script src="lib/kalendae/build/kalendae.js"></script>-->
+<script src="lib/My97DatePicker/WdatePicker.js"></script>
 <script src="js/dropdown.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script type="text/javascript" src="lib/fancyBox/source/jquery.fancybox.pack.js"></script>
@@ -542,7 +573,14 @@
         $(this).toggleClass("down");
     })
     $("#tooptip-price-intro").tooltip();
-    $('.btn-choice').fancybox();
+    $('.btn-choice').fancybox({
+        beforeShow:function(){
+            $(".mask").show();
+        },
+        afterShow:function(){
+            $(".mask").hide();
+        }
+    });
     $(".cangwei-list a.btn").click(function(){
         $.fancybox.close();
     });
@@ -576,6 +614,26 @@
         })
     }
 sticky($(".tabs"));
+
+//    var k1 = new Kalendae.Input('input_startdate', {
+//        months:2,
+//        mode:'single',
+//        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+//    });
+//    var k2 = new Kalendae.Input('input_enddate', {
+//        months:2,
+//        mode:'single',
+//        selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+//    });
+$("#input_startdate").click(function(){
+    WdatePicker();
+})
+$("#input_enddate").click(function(){
+    WdatePicker();
+})
+    $(".cangwei-list .btn").click(function(e){
+        e.preventDefault();
+    })
 
 
 

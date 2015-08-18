@@ -1,0 +1,315 @@
+.topbar{height:40px;border-bottom:1px solid #e1e2e3;background-color:@colorGray-light;}
+.header{background-color:@colorWhite;}
+.contacts span {
+  font-size: @font-s;
+  margin-right:8px;
+  @media (min-width: 1200px) {
+    margin-right:@spacing-md;
+  }
+}
+.contacts span a{color: @colorBlack-dark;}
+.contacts span i{color: @colorBlack-light;font-size: @font-m;}
+.topbar .wrap{
+  line-height:41px;
+  overflow:hidden;
+}
+.topbar ul li {
+  display: block;
+  float: left;
+  border-right: 1px solid @colorGray-border;
+  height: 40px;
+  padding: 0 15px;
+}
+.topbar ul li.topbar-logmsg {
+  border-right: 0 none;
+}
+.list-inline a{
+  color:@colorBlack-dark;
+}
+.topbar-login {
+  border: 1px solid @colorGray-border;
+  border-radius: 2px;
+  margin: 9px 6px;
+  height:22px;
+  line-height: 22px;
+}
+.border-r {
+  border-right: 1px solid @colorGray-border;
+}
+.topbar-login a {
+  display: inline-block;
+  line-height:20px;
+  padding:0 6px;
+}
+
+.recommend-new,.recommend-new a,.topbar-login a.reg {
+  color: @colorOrange-dark;
+}
+.topbar .yicon {
+  margin-right: 3px;
+}
+/***footer****/
+footer,footer a{
+  padding:20px 0;
+  color:@colorBlack;
+}
+.footer-verify {
+  margin-top: 10px;
+}
+.footer-verify img{
+  height: 32px;
+}
+.sub-footer.wrap{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.sub-footer,.sub-footer a{
+  color:@colorGray-dark02;
+}
+.sub-footer h3{
+  color:@colorWhite;
+  margin: 5px 0;
+  font-weight: normal;
+}
+.foot-contact .font-big{
+  color:@colorWhite;
+}
+.friend-link{
+  margin-top:30px;
+  padding-top:20px;
+  border-top:1px solid @colorBlack;
+}
+.friend-link a{
+  padding:0 15px;
+  border-right:1px solid @colorBlack;
+}
+.foot-contact .list-unstyled li:nth-child(3){
+  margin-top:20px;
+}
+
+.header .wrap {
+  background: none repeat scroll 0 0 #fff;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 999;
+  clear:both;
+}
+
+.ylb-logo {
+  margin: 0;
+  padding: 23px 0px 22px 0;
+}
+.ylb-logo .logo {
+  background-image: url(@sprites-image);
+  background-position: -24px -234px;
+  display: block;
+  float: left;
+  height: 48px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 204px;
+}
+/***************nav*******************/
+.navbg {
+  float: right;
+}
+.nav {
+  list-style: outside none none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav .menu-list {
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.nav .menu-list.menu-list-help>ul{
+  width:130px;
+}
+.nav .menu-list.menu-list-safe>ul{
+  width: 104px;
+}
+.nav .menu-list.menu-list-aboutus>ul{
+  width: 84px;
+}
+
+.nav .menu-list.menu-list-help>ul,.nav .menu-list.menu-list-safe>ul,.nav .menu-list.menu-list-aboutus>ul{
+  padding:15px;
+  text-align:left;
+}
+.nav .menu-list.menu-list-help>ul li,.nav .menu-list.menu-list-safe>ul li,.nav .menu-list.menu-list-aboutus>ul li{
+  padding:6px 0;
+}
+//.nav .menu-list.menu-list-help>ul li:last-child,.nav .menu-list.menu-list-safe>ul li:last-child,.nav .menu-list.menu-list-aboutus>ul li:last-child{
+//  padding-bottom:0px;
+//}
+.nav > li > a {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+}
+.nav .menu-list .h4 {
+  color:@colorBlack-dark;
+  font-size:@font-m;
+  line-height: 1.2;
+  margin: 0;
+  padding: 40px 20px 32px;
+  width: 85px;
+}
+.nav .menu-list .h4:hover{
+  color:@colorBlue;
+}
+.nav .menu-list ul{
+  background-color:rgba(76,85,88,.94);
+  padding:15px 0;
+  position: absolute;
+  z-index: 9999;
+}
+
+
+.nav .menu-list ul .arrow{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  line-height: 0px;/*为了防止ie下出现题型*/
+  border-bottom: 10px solid @colorGray-dark05;
+//  opacity: 0.8;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  left: 45px;
+  top: -10px;
+}
+
+.nav .menu-list.menu-list-safe ul .arrow{
+  left: 54px;
+}
+.nav .menu-list.menu-list-help ul .arrow{
+  left: 56px;
+}
+.nav .menu-list.menu-list-aboutus ul .arrow {
+  left: 52px;
+}
+.nav .menu-list ul li a{
+  color:@colorWhite;
+  padding:5px 10px;
+}
+.nav .menu-list ul li:hover{
+  background-color:@colorGray-dark07;
+  border-radius: 5px;
+}
+.nav .menu-list.menu-list-invest>ul{
+  width:630px;
+  height:192px;
+  padding: 15px 0;
+}
+.nav .menu-list.menu-list-invest>ul>li{
+  float:left;
+  height:181px;
+}
+.nav .menu-list.menu-list-invest>ul>li.title{
+  width:15%;
+  margin-left: 2%;
+  height: 65px;
+  padding: 58px 0;
+}
+.nav .menu-list.menu-list-invest>ul>li.huoqi-list{
+  width:25%;
+}
+.nav .menu-list.menu-list-invest>ul>li.dingqi-list{
+  width:40%;
+}
+.nav .menu-list.menu-list-invest span{
+  color:@colorWhite;
+}
+
+.nav .menu-list.menu-list-invest>ul>li.title .font-big{
+  font-size: 40px;
+  margin-left: 27px;
+}
+.nav .menu-list.menu-list-invest>ul>li.title:hover{
+  background: none;
+}
+.nav .menu-list.menu-list-invest .title i,.nav .menu-list.menu-list-invest .title span{
+  color:@colorGray-dark02;
+  display: block;
+}
+.nav .menu-list.menu-list-invest .title span{
+  font-size: @font-base;
+}
+.nav .menu-list.menu-list-invest .huoqi-list ul li{
+
+}
+.nav .menu-list.menu-list-invest .huoqi-list ul li:first-child{
+  margin-bottom: 10px;
+}
+.nav .menu-list.menu-list-invest .huoqi-list ul li a{
+  height:57px;
+  padding:10px;
+  display: block;
+  border:1px solid @colorOrange;
+  border-radius:5px;
+}
+
+.nav .menu-list.menu-list-invest .huoqi-list ul li span{
+  color:@colorOrange;
+  display: block;
+  padding:0;
+}
+.nav .menu-list.menu-list-invest .huoqi-list ul li a:hover{
+  background-color:@colorOrange;
+}
+.nav .menu-list.menu-list-invest .huoqi-list ul li a:hover span{
+  color:@colorWhite;
+
+}
+.nav .menu-list.menu-list-invest .huoqi-list .font-big{
+  font-size: @font-l;
+}
+.nav .menu-list.menu-list-invest .dingqi-list ul{
+  padding-bottom:0px;
+}
+.nav .menu-list.menu-list-invest .dingqi-list ul li{
+  float:left;
+  width:100px;
+  padding:0;
+  margin: 0 20px 10px 0;
+}
+.nav .menu-list.menu-list-invest .dingqi-list ul li a{
+  color:@colorBlue;
+  font-size:20px;
+  padding: 23px 15px;
+  display:block;
+  border:1px solid @colorBlue;
+}
+.nav .menu-list.menu-list-invest .dingqi-list ul li a:hover{
+  background-color:@colorBlue;
+  color:@colorWhite;
+}
+.sub-footer .guanzhu-and-download ul li i{
+  font-size: 30px;
+  color:@colorWhite;
+  background-color:@colorBlack;
+  padding: 13px;
+  border-radius: 50%;
+}
+.sub-footer .guanzhu-and-download ul li{
+  margin: 20px 0;
+}
+.sub-footer .guanzhu-and-download .popover b{
+  white-space:nowrap;
+  display:block;
+}
+
+
+
+.nav .menu-list ul.subnav{
+
+}
+
+.nav .menu-list ul ul{
+  background:none;
+}
+.nav .menu-list ul.subnav li:hover{
+  background:none;
+}
