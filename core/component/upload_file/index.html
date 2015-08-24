@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+</head>
+<body>
+<!--<form action="http://192.168.168.110:1080/api/doc/files/shtpv/" method="post" enctype="multipart/form-data"-->
+      <!--class="dropzone"-->
+      <!--id="my-awesome-dropzone">-->
+    <!--<input type="text" value="文件名.jpg" id="Filename" /></p>-->
+    <!--<p><input type="text" value="档案号" id="ReferenceNo" /></p>-->
+    <!--<p><input type="hidden" value="web_d11d98b87cd742dfb08970ba20f4e849" name="accesskey" id="accesskey"/></p>-->
+    <!--<p><input type="text" value="ff0ff050-26c6-412b-a03c-ad0f849966c0" id="ParentFolderId" /></p>-->
+
+
+<!--</form>-->
+<form action="http://api.losta.net/api/doc/files/shtpv/?accesskey=web_d11d98b87cd742dfb08970ba20f4e849" class="dropzone" id="my-awesome-dropzone">
+</form>
+
+
+
+</body>
+<script>
+
+Dropzone.options.myAwesomeDropzone = {
+    addRemoveLinks:true
+}
+
+</script>
+</html>

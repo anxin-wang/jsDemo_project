@@ -1,0 +1,175 @@
+
+
+.login{
+  background: none repeat scroll 0 0 @colorWhite;
+  border: 1px solid @colorGray-light04;
+  margin-top: @spacing-big;
+  padding-bottom: @spacing-big;
+  height: 650px;
+  clear:both;
+  .login-slider-container{
+      width:393px;
+      height:219px;
+      overflow-y: hidden;
+  }
+}
+
+.slider-control{
+  position:relative;
+  top: -140px;
+  width:393px;
+}
+.slider-control a.bx-next,.slider-control a.bx-prev{
+  font-size:50px;
+  color:#fff;
+}
+.slider-control>div{
+  width:50px;
+  height:50px;
+  position: absolute;
+}
+.slider-control .slider-next{
+  right: 0px;
+}
+.login-container{
+  border:1px solid @colorGray-light04;
+//  height: 555px;
+  position: relative;
+  margin:50px auto;
+  width:400px;
+}
+.login-container h1{
+  margin-top:50px;
+  margin-bottom:20px;
+  text-align: center;
+  font-weight: 300;
+}
+.other-login{
+  margin-top:20px;
+}
+.login-container .other-login .btn{
+  padding:0px;
+}
+.btn-2qrcode,.btn-2login{
+  height: 55px;
+  line-height: 30px;
+  outline: 0 none;
+  overflow: hidden;
+  position: absolute;
+  right: -1px;
+  text-decoration: none;
+  text-indent: -9999em;
+  top: 0;
+  width: 55px;
+  z-index: 2;
+  background: url(@sprites-image) left top;
+}
+.btn-2qrcode{
+  background-position: -287px -116px;
+}
+.btn-2login{
+  background-position: -287px -26px;
+}
+.login-container .form-group .input-text{
+  padding:5px 10px 5px 12px;
+}
+.login-container .form-group .input-text,.login-container .form-group button{
+   height:40px;
+}
+.login-container .form-group .btn.btn-info{
+  background-color:@colorBlue-lighter;
+  padding:12px 10px 12px 12px;
+  font-size:16px;
+  line-height:15px ;
+}
+.qr_login button,.public-code button {
+  display: inline-block;
+  margin-top:20px;
+}
+.qr_login button.btn-success{
+  margin-left:5px;
+}
+.oAuth-login{
+  border-top:1px solid @colorGray;
+  margin-top:50px;
+}
+.oAuth-login li{
+  text-align: center;
+}
+.oAuth-login-title{
+  background-color: #fff;
+  border:1px solid #fff;
+  text-align: center;
+  margin-top:-14px;
+  color:#999;
+
+}
+.oAuth-login li a{
+  display:inline-block;
+  width:56px;
+  height:56px;
+  padding-top:20px;
+  background:url(@sprites-image) left top;
+}
+.oAuth-login li.qq a{
+  background-position:-19px -526px;
+}
+.oAuth-login li.wechat a{
+  background-position:-163px -526px;
+}
+.oAuth-login li.weibo a{
+  background-position:-89px -526px;
+}
+.oAuth-login li.qq a{
+  color:#12a5f5;
+}
+.oAuth-login li.wechat a{
+  color:#6dc46d;
+}
+.oAuth-login li.weibo a{
+  color:#ff6666;
+}
+.oAuth-login i{
+  font-size:25px;
+}
+.captcha{
+  position:relative;
+}
+.captcha-image{
+  height: 38px;
+  vertical-align: -12px;
+  border: 1px solid @colorGray-light04;
+  margin-left:-5px;
+  cursor: pointer;
+  position:absolute;
+  right:0px;
+  top:0px;
+}
+.wechat-qr-tip-ok{
+  background: none repeat scroll 0 0 @colorWhite;
+  display: none;
+  height: 200px;
+  margin: 0 -200px;
+  opacity: 0.8;
+  position: absolute;
+  vertical-align: middle;
+  width: 200px;
+  text-align: center;
+  font-size:18px;
+  font-weight: bold;
+}
+.link-btn{
+  display: inline-block;
+  text-decoration: underline;
+  background-color:transparent;
+  color:#8c8c8c;
+}
+input.error {
+  border:1px solid @colorRed;
+}
+label.error {
+  color:@colorRed;
+  font-size: 12px;
+  font-weight:normal;
+}
+
