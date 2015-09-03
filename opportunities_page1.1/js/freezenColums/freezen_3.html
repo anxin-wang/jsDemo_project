@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="f.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="f.js"></script>
+    <title></title>
+    <style type="text/css">
+
+        .frozen_cols {
+            width:540px;
+        }
+        .move_cols {
+            width:598px;
+        }
+        .f_cols_head, .m_cols_head {
+            /*height:45px;*/
+        }
+        .f_cols_body,.m_cols_body {
+            height:395px;
+        }
+    </style>
+</head>
+<body>
+<div class="collapse_part">
+    <!--left frozen parts of a table-->
+    <div class="frozen_cols">
+        <!--frozen top head parts-->
+        <div class="f_cols_head">
+            <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td><div style="width:30px;">o</div></td>
+
+                        <td><div style="width:32px;float:left;">Alert</div><div style="width:18px;float:right;">门店</div></td>
+                        
+
+                        <td><div style="width:40px;float:left;">Sales Status</div><div style="width:18px;float:left;">门店</div></td>
+
+                        <td><div style="width:45px;">Work Status</div></td>
+                        <td><div style="width:55px;">PID</div></td>
+                        <td><div style="width:74px;">Entity Name</div></td>
+                        <td><div style="width:83px;">Original (Sales) TCV</div></td>
+                        <td><div style="width:67px;">Adjusted TCV</div></td>
+                        <td><div style="width:68px;">Revenue Rec Date</div></td>
+                    </tr>
+                </table>
+        </div>
+        <!--frozen body parts-->
+        <div class="f_cols_body">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                        <td><div style="width:30px;">o</div></td>
+
+                        <td><div style="width:50px;">Alert</div></td>
+                        
+
+                        <td><div style="width:58px;">Sales Status</div></td>
+
+                        <td><div style="width:45px;">Work Status</div></td>
+                        <td><div style="width:55px;">PID</div></td>
+                        <td><div style="width:74px;">Entity Name</div></td>
+                        <td><div style="width:83px;">Original (Sales) TCV</div></td>
+                        <td><div style="width:67px;">Adjusted TCV</div></td>
+                        <td><div style="width:68px;">Revenue Rec Date</div></td>
+                    </tr>
+                
+           </table>
+        </div>
+    </div>
+    <!--right parts that can scroll-->
+    <div class="move_cols">
+        <!--frozen top head parts when drag the y-scroll -->
+        <div class="m_cols_head">
+             <table cellpadding="0" cellspacing="0">
+                  <tr>
+                      <td><div style="width:78px;">Q114</div></td>
+                      <td><div style="width:78px;">Q214</div></td>
+                      <td><div style="width:78px;">Q314</div></td>
+                      <td><div style="width:78px;">Q414</div></td>
+                      <td><div style="width:78px;">Q115</div></td>
+                      <td><div style="width:78px;">Q215</div></td>
+                      <td><div style="width:78px;">Q315</div></td>
+                      <td><div style="width:78px;">Q415</div></td>
+                      <td><div style="width:84px;">Operation</div></td>
+                      
+                      <td><div style="width:90px;">&nbsp;</div></td><!--占位-->
+                  </tr>
+              </table>
+        </div>
+        <!--this parts can be scrolled all the time-->
+        <div class="m_cols_body">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                      <td><div style="width:78px;">Q114</div></td>
+                      <td><div style="width:78px;">Q214</div></td>
+                      <td><div style="width:78px;">Q314</div></td>
+                      <td><div style="width:78px;">Q414</div></td>
+                      <td><div style="width:78px;">Q115</div></td>
+                      <td><div style="width:78px;">Q215</div></td>
+                      <td><div style="width:78px;">Q315</div></td>
+                      <td><div style="width:78px;">Q415</div></td>
+                      <td><div style="width:84px;">Operation</div></td>
+                  </tr>
+                  <tr>
+                      <td>Q114</td>
+                      <td>Q214</td>
+                      <td>Q314</td>
+                      <td>Q414</td>
+                      <td>Q115</td>
+                      <td>Q215</td>
+                      <td>Q315</td>
+                      <td>Q415</td>
+                      <td>Operation</td>
+
+                  </tr>
+                  <tr>
+                      <td>Q114</td>
+                      <td>Q214</td>
+                      <td>Q314</td>
+                      <td>Q414</td>
+                      <td>Q115</td>
+                      <td>Q215</td>
+                      <td>Q315</td>
+                      <td>Q415</td>
+                      <td>Operation</td>
+
+                  </tr>
+                  <tr>
+                      <td>Q114</td>
+                      <td>Q214</td>
+                      <td>Q314</td>
+                      <td>Q414</td>
+                      <td>Q115</td>
+                      <td>Q215</td>
+                      <td>Q315</td>
+                      <td>Q415</td>
+                      <td>Operation</td>
+                  </tr>
+            </table>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+</div>
+</body>
+</html>

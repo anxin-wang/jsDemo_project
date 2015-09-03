@@ -1,0 +1,679 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../js/bootstrap-daterangepicker-master/daterangepicker-bs3.css" />
+    <link href="../js/bootstrap-3.2.0-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    
+    <link href="../css/global.css" type="text/css" rel="stylesheet" />
+    <link href="../js/freezenColums/f.css" type="text/css" rel="stylesheet" />
+    <link href="../css/table_overwrite.css" type="text/css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.1.js" type="text/javascript" ></script>
+
+    <link type="text/css" href="../js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet" />
+    <link type="text/css" href="../css/jqueryui_overwrite.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+
+    <link type="text/css" href="../js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet" />
+    <link type="text/css" href="../css/jqueryui_overwrite.css" rel="stylesheet" />
+    <!--<script type="text/javascript" src="../js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>-->
+    <script type="text/ecmascript" src="../js/jquery-ui-1.11.1.custom/jquery-ui.js" ></script>
+
+    <script src="../js/freezenColums/f.js" type="text/javascript" ></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+    <script src="../js/bootstrap-3.2.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/bootstrap-daterangepicker-master/moment.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-daterangepicker-master/daterangepicker.js"></script>
+    <link href="../css/bootstrap_overwrite.css" type="text/css" rel="stylesheet" />
+
+
+    <title></title>
+    <style type="text/css">
+
+    </style>
+    <style type="text/css">
+
+        .frozen_cols {
+            width:540px;
+        }
+        .move_cols {
+            width:558px;
+        }
+        .f_cols_head, .m_cols_head {
+            /*height:45px;*/
+        }
+        .f_cols_body,.m_cols_body {
+            height:395px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="wrapper">
+        <div class="logo"></div>
+        <span class="menu menu_on">Opportunities</span>
+        <span class="menu">Reports</span>
+        <span class="exit">
+            <span class="exit_icon"></span>
+            <span>Exit</span>
+        </span>
+        <span class="personal_msg">
+            <span class="personal_icon"></span>
+            <span class="personal_text">Jane Jane Jane Jane Jane Jane Smith D.k</span>
+            <span class="personal_btn"></span>
+        </span>
+    </div>
+</div>
+
+<div class="wrapper">
+
+    <div class="area_block">
+        <div class="block_radius1"></div>
+        <div class="block_1">
+            <span class="opp1_collapse">
+                <span class="title_text">Collapse</span>
+                <span class="expand_icon"></span>
+            </span>
+        </div>
+        <div class="container-fluid opp1_collapse_part"><!--container-fluid -->
+            <!--Search Block-->
+            <div class="block_title">
+                <span class="title_text">Search</span>
+                <a class="expand_text more1">Expand</a><!--<span class="expand_text more1">Expand</span>-->
+                <span class="expand_icon"></span>
+            </div>
+            <div class="small_content clearfix">
+                <div class="rows clearfix" style="overflow:hidden;">
+                    <div class="opp_1_0">
+                        <span class="f_left normal_text">PID</span>
+                        <input type="text" class="input_style" />
+                    </div>
+                    <div class="opp_1_1">
+                        <span class="f_left normal_text">Entity ID</span>
+                        <input type="text" class="input_style" />
+                    </div>
+                    <div  class="opp_1_1">
+                        <span class="f_left normal_text">Entity Name</span>
+                        <input type="text" class="input_style" />
+                    </div>
+                    <div  class="opp_1_1">
+                        <span class="f_left normal_text">Solution Name</span>
+                        <input type="text" class="input_style" />
+                    </div>
+                    
+                   </div>
+                <div class="more_part more1_part">
+                    <div class="opp_1_0">
+                        <span class="f_left normal_text">PID</span>
+                        <input type="text" class="input_style" />
+                    </div>
+                </div>
+            </div>
+            <div class="btn_block">
+                <div class="btn_div">
+                    <button class="button_1">Search</button>
+                </div>
+            </div>
+            <!--Filter Block-->
+            <div class="block_title">
+                <span class="title_text">Filter</span>
+                <a class="expand_text more2">More</a>
+                <span class="expand_icon"></span>
+            </div>
+            <div class="small_content clearfix">
+                <div class="rows clearfix">
+                    <div class="opp_1_4">
+                        <span class="f_left normal_text">My Opportunities</span>
+                        <span class="on_off" style="position:relative">
+                            <span class="on_off_text f_left">On</span><span class="on_off_text f_right">Off</span>            
+                            <span class="on_off_btn" style="left:34px;"></span>
+                         </span>
+                    </div>
+                    <div class="opp_1_2">
+                        <span class="f_left normal_text">Sales Status</span><!--<input type="text" value="lvo，嗨，你好！" class="input_style" />-->
+                        <div class="input-group">
+                          <input type="text" class="form-control"/>
+                          <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                              <li><a>Sold</a></li>
+                              <li><a>Active</a></li>
+                              <li><a>Lost</a></li>
+                            </ul>
+                          </div><!-- /btn-group -->
+                        </div>
+                    </div>
+                    <div class="opp_1_2">
+                        <span class="f_left normal_text">Work Status</span><!--<input type="text" value="lvo，嗨，你好！" class="input_style" />-->
+                        <div class="input-group">
+                          <input type="text" class="form-control"/>
+                          <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                              <li><a>Draft</a></li>
+                              <li><a>Final</a></li>
+                              <li><a>In Billing Phase</a></li>
+                            </ul>
+                          </div><!-- /btn-group -->
+                        </div>
+                    </div>
+
+                </div>
+                <!--this is the hidden part,click 'more' ,display this part-->
+                <div class="rows clearfix">
+
+                        <div class="opp_1_4 Range_Slider">
+                            <span class="f_left normal_text">Range Slider</span>
+                            <div class="range_span">
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Select<span class="caret"></span></button>
+                                  <ul class="dropdown-menu" role="menu">
+                                    <li class="opp_1_slider"><div class="opp_1_slider">
+                                            <div class="slider_check_div"><input type="checkbox" class="slider_check" checked="checked" name="slider1_ck" id="slider1_ck"/></div>
+                                            <div class="slider_block">
+                                                <span class="slider_tit"><span class="slider_tit_span">Range Quarter:</span></span>
+                                                <div class="my_slider">
+                                                    <div id="slider1" class="slider1"></div>
+                                                    <div style="line-height:18px;">
+                                                        <span class="f_left">Q1,14</span>
+                                                        <span class="f_right">Q1,20&nbsp;&nbsp;</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></li>
+                                    <li class="opp_1_slider"><div class="opp_1_slider">
+                                            <div class="slider_check_div"><input type="checkbox" class="slider_check" name="slider2_ck" id="slider2_ck"/></div>
+                                            <div class="slider_block">
+                                                <div class="slider_tit"><span class="slider_tit_span">Range Origina (Sales) TCV:</span></div>
+                                                <div class="my_slider">
+                                                    <div id="slider2" class="slider2"></div>
+                                                    <div style="line-height:18px;">
+                                                        <span class="f_left">$10,000,000</span>
+                                                        <span class="f_right">$100,000,000&nbsp;&nbsp;</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></li>
+                                    <li class="opp_1_slider"><div class="opp_1_slider">
+                                            <div class="slider_check_div"><input type="checkbox" class="slider_check" name="slider3_ck" id="slider3_ck"/></div>
+                                            <div class="slider_block">
+                                                <div class="slider_tit"><span class="slider_tit_span">Range Ajusted TCV:</span></div>
+                                                <div class="my_slider">
+                                                    <div id="slider3" class="slider3"></div>
+                                                    <div style="line-height:18px;">
+                                                        <span class="f_left">$10,000,000</span>
+                                                        <span class="f_right">$100,000,000&nbsp;&nbsp;</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div></li>
+                                  </ul>
+                                </div>
+                            </div>
+
+                            <input class="input_style range_select" type="text" value="Quarter Q115 - Q114" />
+                        </div>
+                        <div class="opp_1_3">
+                            <span class="f_left normal_text">RevenueRec Date</span>
+                            <span class="filter_date">
+                                <input type="text" name="reservation" id="reservation" class="input_style" value="03/18/2013 - 03/23/2013" style="width:213px;" />
+                                <span class="expand_icon alert_date reservationIcon"></span>
+                            </span>
+                            
+                        </div>
+
+                </div>
+
+                <div class="more_part clearfix more2_part">
+                    <div class="opp_1_0">
+                        <span class="f_left normal_text">Test</span>
+                        <input type="text" class="input_style" />
+                    </div>
+                </div>
+            </div>
+            <!--Alert Block-->
+            <div class="block_title">
+                <span class="title_text">Alert</span>
+                <a class="expand_text more3">More</a>
+                <span class="expand_icon"></span>
+            </div>
+            <div class="small_content opp1_alert clearfix">
+                <div class="rows" style="overflow:hidden;">
+                    <span class="alert_parts light_blue">
+                        <span class="expand_icon alert_gou"></span><span class="alert_parts_text">Sales Status Change from Active to Sold</span><span class="expand_icon alert_dollor"></span>
+                    </span>
+                    <span class="alert_parts">
+                        <span class="expand_icon alert_gou"></span><span class="alert_parts_text">Implementation Date Change</span><span class="expand_icon alert_date"></span>
+                    </span>
+                    <span class="alert_parts">
+                        <span class="expand_icon alert_gou"></span><span class="alert_parts_text" >Sales Status Change from Active to Sold</span><span class="expand_icon alert_sold"></span>
+                    </span>
+                    
+                    <div class="clear_both"></div>
+                </div>
+                <div class="more_part more3_part">
+                    <span class="alert_parts">
+                        <span class="expand_icon alert_gou"></span><span class="alert_parts_text">Sales Status Change from Active to Sold</span><span class="expand_icon alert_sold"></span>
+                    </span>
+                </div>
+                <!--<br class="clear_both" />-->
+            </div>
+            <div class="btn_block">
+                <div class="btn_div"><button class="button_2">Clear</button></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="area_block">
+        <div class="block_radius2"></div>
+        <div class="block_2">
+            <span class="title_text">Oporttunities</span>
+        </div>
+        <div class="collapse_part opp_tb_1 container-fluid">
+        <!--left frozen parts of a table-->
+        <div class="frozen_cols">
+            <!--frozen top head parts-->
+            <div class="f_cols_head">
+                <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td><div style="width:30px;">&nbsp;</div></td>
+
+                            <td><div class="td_desc_text1">Alert</div><div class="td_desc"><div class="td_up1"></div><div class="td_down"></div></div></td>
+                            
+
+                            <td><div class="td_desc_text2">Sales Status</div><div class="td_desc"><div class="td_up"></div><div class="td_down"></div></div></td>
+
+                            <td><div style="width:45px;">Work Status</div></td>
+                            <td><div style="width:55px;">PID</div></td>
+                            <td><div style="width:74px;">Entity Name</div></td>
+                            <td><div style="width:83px;">Original (Sales) TCV</div></td>
+                            <td><div style="width:67px;">Adjusted TCV</div></td>
+                            <td><div style="width:68px;">Revenue Rec Date</div></td>
+                        </tr>
+                    </table>
+            </div>
+            <!--frozen body parts-->
+            <div class="f_cols_body">
+                <table cellpadding="0" cellspacing="0">
+                    <tr id="opp1_tr_1"> <!--这个class必须和右边的table tr class同名-->
+                            <td><div style="width:30px;"><span class="expand_icon switch_blue"></span></div></td>
+
+                            <td><div style="width:50px;">&nbsp;</div></td>
+                            
+
+                            <td><div style="width:58px;">Active</div></td>
+
+                            <td><div style="width:45px;">Final</div></td>
+                            <td><div style="width:55px;">234710</div></td>
+                            <td><div style="width:74px;">Bank One</div></td>
+                            <td><div style="width:83px;">$41,000,101</div></td>
+                            <td><div style="width:67px;"></div></td>
+                            <td><div style="width:68px;">3/1/2015</div></td>
+                        </tr>
+                    <tr id="opp1_tr_1_hidden" class="hidden">
+                            <!--<td colspan="4" class="the_content_borther">Sales Summary Note</td>-->
+
+                            <td colspan="9" class="opp1_td_content">
+                                <div class="the_content" style="text-align:left;padding:15px 15px 45px 15px;">
+                                     Integer eget sem. Ut vitae enim eu est vehicula gravida.Lorem ispum. Proin at eros non eros adipiscing mollis. Donec semper turpis sed diam. Sed consequat ligula nec tortor. Integer eget sem. Ut vitae enim eu est vehicula gravida. </div>
+                            </td>
+                        </tr>
+                    <tr id="opp1_tr_2">
+                            <td><div style="width:30px;"><span class="expand_icon switch_blue"></span></div></td>
+
+                            <td><div style="width:50px;"><span class="expand_icon tb_warning"></span></div></td>
+                            
+
+                            <td><div style="width:58px;">Active</div></td>
+
+                            <td><div style="width:45px;">Final</div></td>
+                            <td><div style="width:55px;">234710</div></td>
+                            <td><div style="width:74px;">Bank One</div></td>
+                            <td><div style="width:83px;">$600,000,101</div></td>
+                            <td><div style="width:67px;">$550,000</div></td>
+                            <td><div style="width:68px;">3/1/2015</div></td>
+                        </tr>
+
+                    <tr id="opp1_tr_2_hidden" class="hidden">
+                            <!--<td colspan="4" class="the_content_borther">Sales Summary Note</td>-->
+
+                            <td colspan="9" class="opp1_td_content" style="position:relative;z-index:100;">
+                                <div class="the_content" style="text-align:left;padding:15px 15px 45px 15px;">
+                                     Integer eget sem. Ut vitae enim eu est vehicula gravida.Lorem ispum. Proin at eros non eros adipiscing mollis. Donec semper turpis sed diam. Sed consequat ligula nec tortor. Integer eget sem. Ut vitae enim eu est vehicula gravida. </div>
+                            </td>
+                    </tr>
+
+                    <tr id="opp1_tr_3">
+                            <td><div style="width:30px;"><span class="expand_icon switch_blue"></span></div></td>
+
+                            <td><div style="width:50px;"><span class="expand_icon tb_axh"></span></div></td>
+                            
+
+                            <td>Active</td>
+
+                            <td>Final</td>
+                            <td>234710</td>
+                            <td>Bank One</td>
+                            <td>$600,000,101</td>
+                            <td>$550,000</td>
+                            <td>3/1/2015</td>
+                        </tr>
+
+                    <tr id="opp1_tr_3_hidden" class="hidden">
+                            <!--<td colspan="4" class="the_content_borther">Sales Summary Note</td>-->
+
+                            <td colspan="9" class="opp1_td_content" style="position:relative;z-index:100;">
+                                <div class="the_content" style="text-align:left;padding:15px 15px 45px 15px;">
+                                     Integer eget sem.</div>
+                            </td>
+                        </tr>
+
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    <!--占位-->
+                    <tr class="hold_place_td">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+               </table>
+            </div>
+        </div>
+        <!--right parts that can scroll-->
+        <div class="move_cols">
+            <!--frozen top head parts when drag the y-scroll -->
+            <div class="m_cols_head">
+                 <table cellpadding="0" cellspacing="0">
+                      <tr>
+                          <td><div style="width:78px;">Q114</div></td>
+                          <td><div style="width:78px;">Q214</div></td>
+                          <td><div style="width:78px;">Q314</div></td>
+                          <td><div style="width:78px;">Q414</div></td>
+                          <td><div style="width:78px;">Q115</div></td>
+                          <td><div style="width:78px;">Q215</div></td>
+                          <td><div style="width:78px;">Q315</div></td>
+                          <td><div style="width:78px;">Q415</div></td>
+                          <td><div style="width:84px;">Operation</div></td>
+                          
+                          <td><div style="width:90px;">&nbsp;</div></td><!--占位-->
+                      </tr>
+                  </table>
+            </div>
+            <!--this parts can be scrolled all the time-->
+            <div class="m_cols_body">
+                <table cellpadding="0" cellspacing="0">
+                    <tr class="opp1_tr_1"><!--这个class必须和左边的table tr id同名-->
+                          <td><div style="width:78px;"></div></td>
+                          <td><div style="width:78px;"></div></td>
+                          <td><div style="width:78px;"></div></td>
+                          <td><div style="width:78px;"></div></td>
+                          <td><div style="width:78px;"></div></td>
+                          <td><div style="width:78px;">$5,534,472</div></td>
+                          <td><div style="width:78px;">$1,734,472</div></td>
+                          <td><div style="width:78px;">$1,734,472</div></td>
+                          <td><div style="width:84px;">
+                                  <span class="expand_icon tb_solution_1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></span>
+                                  <span class="expand_icon tb_solution_2" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></span>
+                                  <span class="expand_icon tb_solution_3" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></span>
+                              </div></td>
+                      </tr>
+
+                    <tr class="opp1_tr_1_hidden hidden">
+                            <td colspan="9">
+                                <div></div>
+                            </td>
+                    </tr>
+
+                     <tr class="opp1_tr_2">
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>$550,000</td>
+                          <td></td>
+                          <td></td>
+                          <td><div style="width:84px;">
+                                  <span class="expand_icon tb_solution_1"></span>
+                                  <span class="expand_icon tb_solution_2"></span>
+                                  <span class="expand_icon tb_solution_3"></span>
+                              </div></td>
+                      </tr>
+                    <tr class="opp1_tr_2_hidden hidden">
+                            <td colspan="9">
+                                <div></div>
+                            </td>
+                    </tr>
+
+                     <tr class="opp1_tr_3">
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>$550,000</td>
+                          <td></td>
+                          <td></td>
+                          <td><div style="width:84px;">
+                                  <span class="expand_icon tb_solution_1"></span>
+                                  <span class="expand_icon tb_solution_2"></span>
+                                  <span class="expand_icon tb_solution_3"></span>
+                              </div></td>
+                      </tr>
+                    <tr class="opp1_tr_3_hidden hidden">
+                            <td colspan="9">
+                                <div></div>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="clear:both;"></div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //debugger;
+
+        $('#reservation').daterangepicker();
+
+        $('.tb_solution_1').tooltip();
+        $('.tb_solution_2').tooltip();
+        $('.tb_solution_3').tooltip();
+
+        $(".dropdown-toggle").click(function () {
+            $(".ui-slider-handle").find(".my_handle").eq(0).addClass("my_handle_min").text("Q116");
+            $(".ui-slider-handle").find(".my_handle").eq(1).addClass("my_handle_max").text("Q118");
+        });
+        $('.range_span .dropdown-menu').click(function(event) {
+            event.stopPropagation();
+        });
+
+        $("#slider1").slider({
+            range: true,
+            min: 114,
+            max: 120,
+            values: [116, 118],
+            slide: function (event, ui) {
+                //debugger;
+                $(".ui-slider-handle").find(".my_handle").eq(0).text("Q"+ui.values[0]);
+                $(".ui-slider-handle").find(".my_handle").eq(1).text("Q" + ui.values[1]);
+                if ($("#slider1_ck").prop("checked")) {
+                    $(".range_select").val("Quarter:Q" + ui.values[0] + " - Q" + ui.values[1]);
+                }
+            }
+        });
+
+        $("#slider2").slider({
+            range: true,
+            min: 10000000,
+            max: 100000000,
+            values: [19000000, 60000000],
+            slide: function (event, ui) {
+                if ($("#slider2_ck").prop("checked")) {
+                    $(".range_select").val("Origina:$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            }
+        });
+
+        $("#slider3").slider({
+            range: true,
+            min: 10000000,
+            max: 100000000,
+            values: [19000000, 60000000],
+            slide: function (event, ui) {
+                //debugger;
+                if ($("#slider3_ck").prop("checked")) {
+                    $(".range_select").val("Adjusted:$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

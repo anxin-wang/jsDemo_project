@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Untitled Document</title>
+		<link rel="stylesheet" type="text/css" href="../javascript/lib/jquery.jqGrid-4.1.1/css/ui.jqgrid.css"/>
+		<link rel="stylesheet" type="text/css" href="../javascript/lib/jquery-ui-1.8.13.custom/css/ui-lightness/jquery-ui-1.8.13.custom.css"/>
+		
+		<script src="../javascript/lib/jquery.jqGrid-4.1.1/js/jquery-1.5.2.min.js"></script>
+		<script src="../javascript/lib/jquery.jqGrid-4.1.1/js/i18n/grid.locale-en.js"></script>
+		<script src="../javascript/lib/jquery.jqGrid-4.1.1/js/jquery.jqGrid.min.js"></script>
+		<script src="../javascript/ajax.js"></script>
+		<script src="../javascript/grid.js"></script>
+	</head>
+	<body>
+		<div style="margin-top:10px;"><em>[Selector Demo]</em></div>
+		<a href="#" class="alink">1</a>
+		<a href="#" class="alink">2</a>
+		<a href="#" class="alink">3</a>
+		<a href="#" class="alink">4</a>
+		<a href="#" class="alink">5</a>
+		<a href="#" class="alink">6</a>
+		<input type="button" value="getTag" id="gettag"/>
+		<script type="text/javascript">
+			$("#gettag").click(function(){
+				var length=$(".alink").length;
+				console.log(length);
+				alert("The amount of the link is:"+length);
+				}
+			);
+		</script>
+		<div style="margin-top:10px;"><em>[Ajax Demo]</em></div>
+		Name:<input type="text" name="username" id="username"/>
+		Password:<input type="password" name="password" id="password"/>
+		<input type="button" value="Save" id="save"/>
+		<div id="result"></div>
+		<div style="margin-top:10px;"><em>[jQGrid Demo]</em></div>
+		<table id="list2" style="width:1200px;"></table> 
+		<div id="pager2" style="margin-bottom:50px"></div> 
+		<table id="list4"></table>
+	</body>
+</html>
