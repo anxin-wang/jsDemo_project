@@ -1,0 +1,52 @@
+<% layout('common/layout.html') -%>
+<!-- 页面主体开始 -->
+<div class="wrap page_wrap page_list">
+    <!-- 面包削开始 -->
+    <ol class="breadcrumb">
+      <li><a href="/index">主页</a></li>
+      <li><a href="/r/list">列表</a></li>
+    </ol>
+    <!-- 面包削结束 -->
+    <!-- 添加日报开始 -->
+    <form class="addForm" method="post" action="/sendMail">
+        <!-- 发送给谁 -->
+        <div class="form-group row">
+          <label for="Tomail" class="col-md-2 form-control-label text-right">发送给</label>
+          <div class="col-md-9">
+            <input type="text" class="form-control" id="Tomail" placeholder="邮箱" name="Tomail"/>
+          </div>
+        </div>
+        <!--标题-->
+        <div class="form-group row">
+          <label for="title" class="col-md-2 form-control-label text-right">标题</label>
+          <div class="col-md-9">
+            <input type="text" class="form-control" id="title" placeholder="标题" name="title"/>
+          </div>
+        </div>
+        <!--内容-->
+        <div class="form-group row">
+          <label for="content" class="col-md-2 form-control-label text-right">日报内容</label>
+          <div class="col-md-9">
+             <textarea class="form-control" placeholder="日报内容" cols="10" row="20" name="content" style="height:240px;"></textarea>
+          </div>
+        </div>
+        <!--日期-->
+        <div class="form-group row">
+          <label for="sdate" class="col-md-2 form-control-label text-right">日期</label>
+          <div class="col-md-9">
+            <input id="sdate"  type="text" readonly="readonly" onfocus="WdatePicker({isShowWeek:true})" placeholder="日期" name="sdate" class="form-control"/>
+          </div>
+        </div>
+        <!-- 提交 -->
+        <div class="form-group row">
+          <div class="col-md-offset-2 col-md-9">
+            <button type="submit" class="btn btn-primary">提交</button>
+            <button type="reset" class="btn btn-primary">重置</button>
+          </div>
+        </div>
+    </form>
+    <!-- 添加日报结束 -->
+</div>
+<link rel="stylesheet" type="text/css" href="javascripts/datepicker/4.8.0b/datepicker.css">
+<script type="text/javascript" src="javascripts/datepicker/4.8.0b/datepicker.js"></script>
+<!-- 页面主体结束 -->

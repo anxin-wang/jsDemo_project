@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>工作流-<%=title%></title>
+	<!--[if lt IE 9]>
+		<script src="javascripts/html5/html5shiv.min.js"></script>
+	<![endif]-->
+    <link href="<%=config.site%>stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="<%=config.site%>stylesheets/main.css" rel="stylesheet"/>
+    <script type="text/javascript">
+    var baseSiteUrl = '<%=config.site%>',
+    	basePageName = '106a6c241b8797f52e1e77317b96a201',
+    	basePageToken = '673016ae6bf6734096a0abb5d347edcb';
+    </script>
+    <script src="<%=config.site%>javascripts/jquery/jquery.min.js"></script>
+  </head>
+  <body>
+  	<!-- 页面导航开始 -->
+  	<nav class="navbar navbar-dark navbar-fixed-top bg-inverse" id="page_header">
+	      <a class="navbar-brand" href="javascript:void(0)">工作流</a>
+	      <!-- 导航开始 -->
+	      <nav class="nav navbar-nav pull-left">
+	        <a class="nav-item nav-link" href="#">个人信息</a>
+	        <a class="nav-item nav-link" href="#">设置</a>
+	        <a class="nav-item nav-link" href="#">属性</a>
+          <a class="nav-item nav-link" href="#">帮助</a>
+	        <a class="nav-item nav-link" href="/r/full">日历行程</a>
+	      </nav>
+	      <!-- 导航结束 -->
+    </nav>
+  	<!-- 页面导航结束 -->
+    <div class="container-fluid page_main">
+      <div class="row">
+          <% include sidebar.html %>
+		  <%-body -%>
+      </div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "workday",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.2.2",
+    "ejs": "*",
+    "ejs-mate": "*",
+    "mongoose": ">= 0.9.9",
+    "express-mongoose": ">= 0.1.0",
+    "log4js":"*",
+    "session-mongoose":"*",
+    "bagpipe":"*",
+    "cheerio":"*",
+    "formidable":"1.0.16",
+    "nodemailer": "^1.2.1",
+    "dateformat":"*"
+  }
+}

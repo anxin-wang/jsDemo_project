@@ -1,0 +1,466 @@
+@charset "utf-8";
+/* CSS Document */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/** * 1. Set default font family to sans-serif. * 2. Prevent iOS text size adjust after orientation change, without disabling * user zoom. */
+html{font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */}
+/** * Remove default margin. */
+body{margin: 0;}
+/* HTML5 display definitions ========================================================================== */
+/** * Correct `block` display not defined for any HTML5 element in IE 8/9. * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. * Correct `block` display not defined for `main` in IE 11. */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary{display: block;}
+/** * 1. Correct `inline-block` display not defined in IE 8/9. * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
+audio,
+canvas,
+progress,
+video{display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */}
+/** * Prevent modern browsers from displaying `audio` without controls. * Remove excess height in iOS 5 devices. */
+audio:not([controls]){display: none; height: 0;}
+/** * Address `[hidden]` styling not present in IE 8/9/10. * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
+[hidden],
+template{display: none;}
+/* Links ========================================================================== */
+/** * Remove the gray background color from active links in IE 10. */
+a{background: transparent;}
+/** * Improve readability when focused and also mouse hovered in all browsers. */
+a:active,
+a:hover{outline: 0;}
+/* Text-level semantics ========================================================================== */
+/** * Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+abbr[title]{border-bottom: 1px dotted;}
+/** * Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+b,
+strong{font-weight: bold;}
+/** * Address styling not present in Safari and Chrome. */
+dfn{font-style: italic;}
+/** * Address variable `h1` font-size and margin within `section` and `article` * contexts in Firefox 4+, Safari, and Chrome. */
+h1{font-size: 2em; margin: 0.67em 0;}
+/** * Address styling not present in IE 8/9. */
+mark{background: #ff0; color: #000;}
+/** * Address inconsistent and variable font size in all browsers. */
+small{font-size: 80%;}
+/** * Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub,
+sup{font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup{top: -0.5em;}
+sub{bottom: -0.25em;}
+/* Embedded content ========================================================================== */
+/** * Remove border when inside `a` element in IE 8/9/10. */
+img{border: 0;}
+/** * Correct overflow not hidden in IE 9/10/11. */
+svg:not(:root){overflow: hidden;}
+/* Grouping content ========================================================================== */
+/** * Address margin not present in IE 8/9 and Safari. */
+figure{margin: 1em 40px;}
+/** * Address differences between Firefox and other browsers. */
+hr{-moz-box-sizing: content-box; box-sizing: content-box; height: 0;}
+/** * Contain overflow in all browsers. */
+pre{overflow: auto;}
+/** * Address odd `em`-unit font size rendering in all browsers. */
+code,
+kbd,
+pre,
+samp{font-family: monospace, monospace; font-size: 1em;}
+/* Forms ========================================================================== */
+/** * Known limitation: by default, Chrome and Safari on OS X allow very limited * styling of `select`, unless a `border` property is set. */
+/** * 1. Correct color not being inherited. * Known issue: affects color of disabled elements. * 2. Correct font properties not being inherited. * 3. Address margins set differently in Firefox 4+, Safari, and Chrome. */
+button,
+input,
+optgroup,
+select,
+textarea{color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */}
+
+/** * Address `overflow` set to `hidden` in IE 8/9/10/11. */
+button{overflow: visible;}
+/** * Address inconsistent `text-transform` inheritance for `button` and `select`. * All other form control elements do not inherit `text-transform` values. * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. * Correct `select` style inheritance in Firefox. */
+button,
+select{text-transform: none;}
+/** * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` * and `video` controls. * 2. Correct inability to style clickable `input` types in iOS. * 3. Improve usability and consistency of cursor style between image-type * `input` and others. */
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"]{-webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */}
+/** * Re-set default cursor for disabled elements. */
+button[disabled],
+html input[disabled]{cursor: default;}
+/** * Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner,
+input::-moz-focus-inner{border: 0; padding: 0;}
+/** * Address Firefox 4+ setting `line-height` on `input` using `!important` in * the UA stylesheet. */
+input{line-height: normal;}
+/** * It's recommended that you don't attempt to style these elements. * Firefox's implementation doesn't respect box-sizing, padding, or width. * * 1. Address box sizing set to `content-box` in IE 8/9/10. * 2. Remove excess padding in IE 8/9/10. */
+input[type="checkbox"],
+input[type="radio"]{box-sizing: border-box; /* 1 */ padding: 0; /* 2 */}
+/** * Fix the cursor style for Chrome's increment/decrement buttons. For certain * `font-size` values of the `input`, it causes the cursor style of the * decrement button to change from `default` to `text`. */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{height: auto;}
+/** * 1. Address `appearance` set to `searchfield` in Safari and Chrome. * 2. Address `box-sizing` set to `border-box` in Safari and Chrome * (include `-moz` to future-proof). */
+input[type="search"]{-webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box;}
+/** * Remove inner padding and search cancel button in Safari and Chrome on OS X. * Safari (but not Chrome) clips the cancel button when the search input has * padding (and `textfield` appearance). */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration{-webkit-appearance: none;}
+/** * Define consistent border, margin, and padding. */
+fieldset{border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em;}
+/** * 1. Correct `color` not being inherited in IE 8/9/10/11. * 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend{border: 0; /* 1 */ padding: 0; /* 2 */}
+/** * Remove default vertical scrollbar in IE 8/9/10/11. */
+textarea{overflow: auto;}
+/** * Don't inherit the `font-weight` (applied by a rule above). * NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+optgroup{font-weight: bold;}
+/* Tables ========================================================================== */
+/** * Remove most spacing between table cells. */
+table{border-collapse: collapse; border-spacing: 0;}
+td,
+th{padding: 0;}
+/*index*/
+*{margin:0; padding:0px;}
+ul,ol,li{list-style:none;}
+img{border:0; display:block;}
+a{text-decoration:none; cursor:pointer;}
+.ak-hidden{display:none;}
+.ak-clear{clear:both;}
+.ak-left{float:left;}
+.ak-right{float:right;}
+.ak-text-center{text-align:center;}
+.ak-w-max{width:100%;}
+.ak-ellipsis{overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflos:ellipsis;}
+.ak-font-normal{font-size:12px; font-family:'Microsoft YaHei','微软雅黑'; color:#535353;}
+.ak-title{width:151px; height:35px; line-height:35px; font-size:16px; color:#abacac; margin:20px 6px;}
+.ak-title-link{font-size:16px; color:#969696;}
+.ak-text-link{cursor:pointer; color:#336093;}
+.ak-text-link02{font-size:12px; cursor:pointer; color:#2da5da; text-decoration:underline;}
+.font-s-exsmall{font-size:10px;}
+.font-s-small{font-size:11px;}
+.font-s-normal{font-size:12px;}
+.font-s-large{font-size:13px;}
+.font-s-exlarge{font-size:14px;}
+.ak-icon{display:block; background:no-repeat; overflow:hidden;}
+#sideNavBox .ak-body-left .ak-name{float:left; margin-right:45px; line-height:180%;}
+/*EIP-home-index*/
+body{font-family:Segoe UI, 'Microsoft YaHei','微软雅黑' ;}
+.ak-EIP-home-header,.ak-EIP-home-content{width:1344px; margin:0 auto;}
+/*head*/
+.ak-EIP-home-header{height:85px;background-image: url(../images/EIP_home_header_bg.png);background-repeat: no-repeat;background-position: 0px 0px;}
+.ak-EIP-home-header_logo{height: 26px;width: 165px;padding-top: 20px;padding-left: 40px;}
+.ak-EIP-home-header_right{margin-top: 12px;margin-right: 32px;font-size: 12px;color: #FFFFFF;}
+.ak-header_right_lansearch ,.ak-header_right_lansearch a{color: #69c6f3;margin-top: 18px;}
+.ak-header_right_lansearch a:hover ,#ak_lan_search{color: #ffffff;}
+.ak-header_right_line1{height: 50px;width: 1px;background-color: #69c6f3;overflow: hidden;margin-right: 15px;margin-left: 15px;}
+.ak-header_right_line2{width:220px; height:1px; background-color: #96d0ea;margin: 3px 0;overflow: hidden;}
+.ak-header_right_pname{line-height: 120%;margin-left: 10px;}
+.ak-header_right_pname a img{margin:5px 10px 0 10px;}
+.ak-header_right_weather{width:220px;}
+.ak-weather_bottoml{font-size: 30px;font-weight: bold;}
+.ak-weather_bottomr p{text-align:right; padding-top:3px;}
+/*content*/
+.ak-EIP-home-content{height:1260px;}
+/*left-nav*/
+ak-EIP-home-content-left{width: 280px; border-right:1px solid #e6e6e6;}
+.ak-EIP-home-left-nav{width: 280px;position: relative;height:233px;}
+.goods{position: absolute; top: 0;left: 0;width: 280px;}
+.all-goods .item{width: 280px;height: 57px;border-top: 1px solid #e6e6e6;border-right: 1px solid #e6e6e6;background: #f9f9f9;}/*一级li背景之类的*/
+.all-goods .item .product{position: absolute;z-index: 999; width:280px;}
+.all-goods .item .product h3{width: 280px;height: 57px;border-width: 1px 0;font-weight: normal;line-height: 57px;}/*li前面那个小圆点背景*/
+.all-goods .item .product h3 a{color: #3c3a3a;font-size:14px;width: 210px;height: 57px;display:block;padding-left: 70px;}
+.all-goods .item .product h3 .p_aone,.all-goods .item .product h3 .p_atwo,.all-goods .item .product h3 .p_athree,.all-goods .item .product h3 .p_afour{background-repeat: no-repeat;background-position: 45px 17px;}
+.all-goods .item .product h3 .p_aone{background-image: url(../images/EIP_home_03sgshs.png);}
+.all-goods .item .product h3 .p_atwo{background-image: url(../images/EIP_home_06agag.png);}
+.all-goods .item .product h3 .p_athree{background-image: url(../images/EIP_home_08dsghfhst.png);}
+.all-goods .item .product h3 .p_afour{background-image: url(../images/EIP_home_10xdfhdfgt.png);}
+.all-goods .item .product h3 .p_aone:hover{background-image: url(../images/EIP_home_03sgshshh.png);}
+.all-goods .item .product h3 .p_atwo:hover{background-image: url(../images/EIP_home_06agaghh.png);}
+.all-goods .item .product h3 .p_athree:hover{background-image: url(../images/EIP_home_08dsghfhsthh.png);}
+.all-goods .item .product h3 .p_afour:hover{background-image: url(../images/EIP_home_10xdfhdfgthh.png);}
+.all-goods .item .product s{display: block;position: absolute;top: 25px;right:25px;width: 5px;height: 9px;background-image: url(../images/EIP_home_l-nav-xj.jpg);background-repeat: no-repeat;background-position: 0px 0px;}
+.all-goods .active .product h3{line-height:57px;background-position:-12px -185px;background-color:#ffffff;border-width:1px 0;width: 281px;}
+.all-goods .product-wrap{position: absolute; width: 405px; height:231px; z-index: 99; border:1px solid #e6e6e6; background: #ffffff;display: none;left: 280px; top: 0px; overflow:hidden;}/*二级大框背景*/
+.all-goods .btline{border-bottom: 1px solid #e6e6e6;}
+.product-wrap ul li{float: left;height: 21px;width: 110px;margin-left: 20px;margin-top: 21px;}
+.product-wrap ul li a{color: #676464;line-height: 20px;text-align: center;display: block;height: 20px;width: 110px;font-size: 12px;}
+.product-wrap ul li a:hover{color: #FFFFFF;background-color: #f8cb1a;}
+/*FAQ*/
+.ak-EIP-home-left-FAQ{height: 290px;width: 280px;border-right:1px solid #e6e6e6;}
+.ak-EIP-home-left-FAQ-title{height: 60px;border-right:1px solid #e6e6e6;background-color: #019cde;width: 281px;line-height: 60px;background-image: url(../images/EIP_home_faq001.png);background-repeat: no-repeat;background-position: 8px 9px;}
+.ak-EIP-home-left-FAQ-title h3{font-size:16px;color:#FFFFFF;margin-left:55px;}
+.ak-EIP-home-left-FAQ ul li{height: 60px;width: 280px;}
+.ak-EIP-home-left-FAQ ul li a{width:190px;height:42px;display:block;background-color:#f8f8f8;background-repeat: no-repeat;background-position: 20px center;padding-left:60px;padding-right:30px;font-size: 14px;padding-top:18px;color:#797979;}
+.ak-EIP-home-left-FAQ ul li a:hover{background-color:#ffffff;}
+.ak-EIP-home-left-FAQ-a1{background-image: url(../images/EIP_homefaq002.png);}
+.ak-EIP-home-left-FAQ-a2{background-image: url(../images/EIP_homefaq003.png);}
+.ak-EIP-home-left-FAQ-a3{background-image: url(../images/EIP_homefaq004.png);}
+.ak-EIP-home-left-FAQ-more{font-size: 13px;color: #118cc7;display: block;padding-right: 30px;padding-top: 15px;}
+/*breeze*/
+.ak-EIP-home-left-breeze{width: 280px;height: 289px; border-right:1px solid #e6e6e6;}
+#ak-EIP-home-left-breeze-focus{width: 280px; height: 289px; clear: both; overflow: hidden; position: relative; float: left;}
+#ak-EIP-home-left-breeze-focus ul{width: 280px; height: 289px; float: left; position: absolute; clear: both; padding: 0px; margin: 0px;}
+#ak-EIP-home-left-breeze-focus ul li{float: left; width: 280px; height: 289px; overflow: hidden; position: relative; padding: 0px; margin: 0px;}
+#ak-EIP-home-left-breeze-focus .preNext{width: 70px; height: 289px; position: absolute; top: 0px; cursor: pointer;}
+#ak-EIP-home-left-breeze-focus .pre{left: 0; background: url(../images/sprite.png) no-repeat left center;}
+#ak-EIP-home-left-breeze-focus .next{right: 0; background: url(../images/sprite1.png) no-repeat right center;}
+/*survey*/
+/*=============================2014.7.30 survey修改 start======================================*/
+.ak-EIP-home-left-survey{width:280px; overflow:hidden; border-right: 1px solid #e6e6e6;}
+.ak-EIP-home-left-survey-title{background-color: #eaeff4;height: 52px;width: 280px;background-image: url(../images/EIP_home_survey-title.jpg);background-repeat: no-repeat;background-position: 20px center;}
+.ak-EIP-home-left-survey-title h3{color:#1a93da; font-size:18px; padding-top:13px; padding-left:80px;}
+.ak-EIP-home-left-survey-nrbox{height:397px;}
+.ak-EIP-home-left-survey-nr,.ak-EIP-home-left-survey-nrlast{width:240px;border-bottom:solid 1px #eaeaea;padding:20px 20px 0px 20px;}
+.ak-EIP-home-left-survey-nrlast{height:57px;}
+.ak-EIP-home-left-survey-nr{height:77px;}
+.ak-EIP-home-left-survey-nr a{font-size:14px; color:#121212;}
+.ak-EIP-home-left-survey-nr span{display:block; color:#595959; font-size:12px;}
+.ak-EIP-home-left-survey-join{height: 26px;width: 102px; background-color: #019cde; margin-left:20px;} .ak-EIP-home-left-survey-more{margin-left:10px;height: 26px;width: 70px; background-color: #ffa800;}
+.ak-EIP-home-left-survey-join a,.ak-EIP-home-left-survey-more a{font-size:13px;height: 26px;display: block;text-align: center;line-height: 26px;color: #FFFFFF;}
+/*=============================2014.7.30 survey修改 end======================================*/
+/*right content top*/
+.ak-EIP-home-right-content{width:77%;padding-left:20px;}
+.ak-EIP-home-right-top{height:43px;padding-top:10px;}
+.ak-EIP-home-right-top-news,.ak-EIP-home-right-top-news ul li{height:43px; overflow:hidden; width:565px;}
+.ak-EIP-home-right-top-news ul li{background-image: url(../images/EIP_home_right-top-news.jpg);background-repeat: no-repeat;background-position: left center;}
+.ak-EIP-home-right-top-news ul li a{display:block; height:43px; line-height:43px; overflow:hidden; padding-left:30px; color:#666666;}
+.ak-EIP-home-right-top-search{width:220px;height:32px;background-color:#f8cb1a;}
+.ak-EIP-home-right-top-search input{height: 32px;width: 186px; padding-left:10px;line-height:32px;border:none;background-color:#f8cb1a;color: #FFFFFF;font-size: 14px; float:left; display:block;} .ak-EIP-home-right-top-search-icon{width:24px;height:32px; background-image: url(../images/EIP_home_right-tops02.png);background-repeat: no-repeat;background-position: left center;}
+.ak-EIP-home-right-top-search-icon button{width:24px; height:32px; border:none; background:none; display:block;}
+/*right content top site*/
+.ak-EIP-home-right-top-site{width:1027px;height:152px;overflow:hidden;margin-right: auto;margin-left: auto;}
+/*right content middle*/
+.ak-EIP-home-right-middle{width: 1027px;margin-right: auto;margin-left: auto;}
+/*=============================2014.7.30 topnews修改 start======================================*/
+/*right content middle topnews*/
+.ak-EIP-home-right-middle-topnews{height: 319px;width: 728px;overflow:hidden;border: solid 1px #e6e6e6;}
+/*焦点图*/
+.focus{position:relative; width:394px; height:319px; float: left;}
+.focus img{width: 394px; height: 319px;}
+.focus .shadow .title{width: 260px; height: 30px;padding-left: 30px;padding-top: 20px;}
+.focus .shadow .title a{color:red; font-size:12px; overflow:hidden;}
+.focus .btn{position:absolute; bottom:34px; left:510px; overflow:hidden; zoom:1;}
+.focus .btn a{position:relative; display:inline; width:13px; height:13px; border-radius:7px; margin:0 5px;color:#B0B0B0;font:12px/15px "\5B8B\4F53"; text-decoration:none; text-align:center; outline:0; float:left; background:#D9D9D9;}
+.focus .btn a:hover,.focus .btn a.current{cursor:pointer;background:#fc114a;}
+.focus .fPic{position:absolute; left:0px; top:0px;}
+.focus .D1fBt{overflow:hidden; zoom:1; height:16px; z-index:10;}
+.focus .shadow{width:394px; position:absolute; bottom:0; left:0px; z-index:10; height:30px; line-height: 30px; background:rgba(0,0,0,0.6);
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9; display:block; text-align:left;}
+.focus .shadow a{color:#fff; font-size:12px; overflow:hidden; margin-left:20px;}
+.focus .prev,.focus .next{position:absolute;width:25px;height:50px;background: url(../images/focus_btn.png) no-repeat;}
+.focus .prev{top: 50%;margin-top: -25px; left: 0;background-position:0 -50px; cursor:pointer;}
+.focus .next{top: 50%;margin-top: -25px; right: 0; background-position:-25px -50px; cursor:pointer;}
+.focus .prev:hover{background-position:0 0;}
+.focus .next:hover{background-position:-25px 0;}
+/*=============================2014.7.30 topnews修改 end======================================*/
+/*=============================2014.8.1 topnews 增加start======================================*/
+.ak-EIP-home-right-tnr{width:294px; padding:15px 20px; height:289px;}
+.ak-right-tnr-c2 ul li ul li a ul li span{display:block;color: #909090;font-size: 10px;}
+.ak-right-tnr-t1,.ak-right-tnr-t2{width:130px; height:36px; line-height:36px; color:#ff8a00; font-size:18px; text-align:center;margin-left:13px;}
+.ak-right-tnr-t1:hover,.ak-right-tnr-t2:hover{background-color:#4fc0e8; font-size:16px; color:#FFFFFF;}
+.ak-right-tnr-cnews{height:80px; font-size:38px; color:#797877; overflow:hidden; width:294px;}
+.ak-topnews-line{border-bottom: solid 1px #d9d9d9;}
+.ak-right-tnr-cnews span{font-size:16px; margin-left:6px; margin-top:-13px; display:block;}
+.ak-right-tnr-cnews p{padding-left:30px; font-size:16px; margin-top:8px; line-height:150%; height:80px; overflow:hidden; color:#797877;}
+.ak-right-tnr-cnews p a{font-size:16px; margin-top:8px; line-height:150%; height:80px; overflow:hidden; color:#797877;}
+#ak-right-tnr-c2{padding-left:20px; height:250px; overflow:hidden;}
+#ak-right-tnr-c2 ul li a{font-size: 14px;color: #4f4f4f;overflow:hidden;}
+#ak-right-tnr-c2 ul li span{color: #909090;font-size: 12px;}
+#ak-right-tnr-c2 ul li{height:41px;background-repeat: no-repeat;background-position: 0px 10px;padding-left:15px;}
+#ak-right-tnr-c2 ul li{background-image: url(../images/EIP_home_dms-todo01.jpg);}
+#ak-right-tnr-c2{display:none;}
+.topnews-active{background-color: #4fc0e8 !important; font-size:16px; color:#FFFFFF;}
+/*=============================2014.8.1 topnews 增加end======================================*/
+/*right content middle two*/
+.ak-EIP-home-right-middle-two{width: 1027px; height:337px;margin-right: auto;margin-left: auto;}
+/*DMS TODO*/
+.ak-EIP-home-right-middle-dmstodo1,.ak-EIP-home-right-middle-dmstodo2{width:306px;height:277px;border:solid 1px #e5e5e5;padding: 25px; position:relative;}
+.ak-EIP-home-right-middle-dmstodo1-title1,.ak-EIP-home-right-middle-dmstodo2-title2{border-bottom:solid 1px #eff2f3; height:40px; width:316px;background-repeat: no-repeat;background-position: right 0px;}
+.ak-EIP-home-right-middle-dmstodo2-title2{background-image: url(../images/EIP_home_todobj2.jpg);}
+.ak-EIP-home-right-middle-dmstodo1-title1{background-image: url(../images/EIP_home_todobj.jpg);}
+.ak-EIP-home-right-middle-dmstodo1-title1 h3,.ak-EIP-home-right-middle-dmstodo2-title2 h3{font-size: 18px;color: #2f2f2f;}
+.ak-EIP-home-right-middle-dmstodo1 ul li,.ak-EIP-home-right-middle-dmstodo2 ul li{padding-top:10px;background-repeat: no-repeat;background-position: 0px 20px;padding-left:15px;}
+.ak-EIP-home-right-middle-dmstodo1 ul li{background-image: url(../images/EIP_home_dms-todo01.jpg);}
+.ak-EIP-home-right-middle-dmstodo2 ul li{background-image: url(../images/EIP_home_dfhaksdfh.jpg);}
+.ak-EIP-home-right-middle-dmstodo1 ul li a,.ak-EIP-home-right-middle-dmstodo2 ul li a{font-size: 14px;color: #4f4f4f;}
+.ak-EIP-home-right-middle-dmstodo1 ul li span,.ak-EIP-home-right-middle-dmstodo2 ul li span{display:block;color: #909090;font-size: 10px;}
+.ak-EIP-home-right-middle-dmstodo1-more a,.ak-EIP-home-right-middle-dmstodo2-more a{display:block;color:#3095cb;font-size:13px;position:absolute;bottom: 20px;right: 30px;}
+.ak-EIP-home-right-middle-sug-box{height: 297px;width: 242px;background-color:#eff0f2;padding:20px;background-image: url(../images/EIP_home_deng.jpg);background-repeat: no-repeat;background-position: 195px 15px;}
+.ak-EIP-home-right-middle-sug-box h3,.ak-EIP-home-right-middle-sug-box h4,.ak-EIP-home-right-middle-sug-box h5{font-weight: normal;}
+.ak-EIP-home-right-middle-sug-box h3{font-size:18px;}
+.ak-EIP-home-right-middle-sug-box h4{font-size:14px; color:#73a3cb;}
+.ak-EIP-home-right-middle-sug-box h5{font-size:14px;color:#434444; padding-top:5px;}
+.ak-EIP-home-right-middle-sug-box select,.ak-EIP-home-right-middle-sug-box input,.ak-EIP-home-right-middle-sug-box textarea{width:235px; border:solid 1px #c8cacb;}
+.ak-EIP-home-right-middle-sug-box textarea{height:75px;}
+.ak-EIP-home-right-middle-sug-box-submit{height:26px; width:80px; background-color:#ffa800; border:none; margin-top:10px; font-size:13px; color:#FFFFFF; margin-right:5px;}
+/*footer*/
+.ak-EIP-home-footer{background-color: #eeeeee;height: 60px;width: 1344px;margin-right: auto;margin-left: auto;}
+.ak-EIP-home-footer p{font-size: 11px;color: #6f6f6f;margin-top: 20px;margin-right: 30px;}
+/*下拉菜单和top site*/
+.cur{cursor:pointer;display:block;color:#788F72;width:71px;height:22px;line-height:22px;padding:0px 0px 0px 2px;}
+.am{border:solid 1px #dce9ef !important;cursor: pointer;background: url(../images/EIP_home_search_lj.png) no-repeat 184px center;border:1px #ccc solid;display:block;cursor:pointer;width:183px;height: 30px;font-size:14px;color:#73ccf4;margin-left:14px;padding-left:16px;font-style:italic;}
+.bm{border: none;width:200px;margin-left:14px;position:absolute;z-index:99;font-size:13px;color:#fff;background: url(../images/select_bg_03.jpg) no-repeat 0 0 #3897c8;}
+.bm span{display:block; height:36px; line-height:36px; padding-left:16px; width:184px; color:#fff;}
+.bm span em{padding-left:20px; display:block; background:url(../images/add_03.jpg) no-repeat 0 center; font-style:normal;}
+.select_hide{display:none; position:absolute; background:#3897c8; top:125px; margin-left:14px; height:40px; width:183px; padding-left:16px; padding-top:10px;}
+.select_hide input{width:115px; border:solid 1px #fff; background:#fff; height:30px;}
+.select_hide button{background:none; border:none; width:50px; height:30px; color:#fff;}
+.select_hide .button{background:#ffa800; width:50px; height:30px; float:right; margin-right:10px; text-align:center;}
+.floatl{float:left;}
+.products{height:152px; width:100%; background:url(images/bg.jpg); margin:0 auto; position:relative;}
+.picture{overflow:hidden; height:152px;}
+.picture ul{width:9999px;}
+.picture ul li{height:152px; float:left; display:inline; padding-left:1px;}
+.picture ul li a{display:block;}
+.up{background:url(../images/leftbotton.png) no-repeat 50% 50%; width:56px; height:152px; position:absolute; top:0; left:0; z-index:66; cursor:pointer;}
+.down{background:url(../images/rightbotton.png) no-repeat 50% 50%; width:56px; height:152px; position:absolute; top:0; right:0; z-index:66; cursor:pointer;}
+.products .hide{display: none;}
+/*=============================2014.7.30 info list start======================================*/
+.ak-EIP-home-header-info-list-content{width:1344px; height:1160px;margin:0 auto;}
+/*=============================2014.7.31 info list 修改start======================================*/
+.ak-EIP-home-header-banner{height:116px; position:relative;}
+.ak-EIP-home-header-banner-left{width:315px;}
+.ak-EIP-home-header-banner-left img{width:315px; height:116px; position:relative;}
+.ak-EIP-home-header-banner-left span{position:absolute;top:25px;left:45px;font-size:36px;color:#FFFFFF;font-weight: bold;}
+p{line-height:150%; font-family: Segoe UI; font-style:normal;}
+/*=============================2014.7.31 info list 修改end======================================*/
+.ak-EIP-home-header-banner-bottom{height:30px; background-color:#ebecee; color:#7d7e80;padding-left:40px;padding-top:10px;}
+.ak-EIP-home-header-banner-bottom a{color:#7d7e80;}
+.ak-EIP-home-header-banner-bottom a:hover,.ak-EIP-home-header-banner-bottom a span{color:#6096c4;}
+.ak-EIP-home-header-info-list-nr-content{width:1344px; margin:30px auto 0 auto;}
+/* info-list right*/
+.ak-infolist-news-path{line-height: 1px;height: 1px;overflow: hidden;background-color: #e3e3e3;margin-top: 8px;margin-bottom: 8px;display:block;}
+.ak-infolist-news p{line-height: 150%;margin-top: 10px;color: #7e7e7e;font-family: Segoe UI,Arial, Helvetica, sans-serif;}/*============修改字体样式结束========*/
+#infolist-news-box{height:243px; display:block; overflow:hidden;}
+#infolist-news-box p{font-size: 16px;color: #7e7e7e;line-height: 170%;}
+h2{margin-top:16px;} h2 a{font-size: 20px; color: #363940;}
+.ak-info-block{width: 243px;}
+.ak-info-block-content1,.ak-info-block-content2,.ak-info-block-content3{width: 241px;border:solid 1px #d4d4d4;border-top:none;padding-top: 10px;padding-right: 25px;padding-left: 25px;}
+.ak-info-block-content1{height: 140px;}
+.ak-info-block-content2{height: 150px;}
+.ak-info-block-content3{height: 270px;}
+.ak-info-block-content1 span{font-size: 18px;color: #e89e00;display: block;}
+.ak-info-block-content1 p,.ak-info-block-content3 p{color: #7e7e7e;margin-top: 4px;margin-bottom: 4px;font-size: 14px;}
+.ak-info-block-more{height: 24px;width: 61px;text-align: center;display: block;line-height: 24px;color: #FFFFFF;background-color: #60c5e3;font-size: 11px;}
+.ak-info-block-ntitle2,.ak-info-block-ntitle3{font-size: 18px;color: #FFFFFF;height: 34px;width: 268px;padding-left: 25px;padding-top: 8px;}
+.ak-info-block-ntitle2{background-color: #ffd200;}
+.ak-info-block-ntitle3{background-color: #6ac8e4;background-image: url(../images/HR-site_info-list-phone001.png);background-repeat: no-repeat;background-position: right 0px;}
+.ak-info-block-content2 li{float: left;width: 105px;background-image: url(../images/HR-site_info-list_li-xj-01.jpg);background-repeat: no-repeat;background-position: left center;padding-left: 15px;}
+.ak-info-block-content2 li a{font-size: 14px;color: #7e7e7e;line-height: 210%;}
+#ak-info-block-content3-contact p{line-height: 130%;padding-left: 10px;}
+.footer{height: 60px;background-color: #ffb412;}
+.footer p{font-size: 14px;color: #FFFFFF;padding-top: 25px;padding-left: 40px;}
+.ak-infolist-detail-left{height: 880px;width: 900px;margin-right: 50px;margin-left: 50px;overflow:hidden;}
+.ak-infolist-detail-left-pic img{border: 1px solid #dedede;height: 339px;width: 512px;margin-top: 35px;}
+.ak-infolist-detail-left h2{font-size: 20px;color: #303030;font-family: Segoe UI;}
+.ak-infolist-detail-left p{margin-top: 10px;margin-bottom: 10px;color: #7e7e7e;line-height: 210%;}
+/*=============================2014.7.31 page list 增加start======================================*/
+.ak-EIP-home-header-info-list-pagelist{width:100%;}
+.ak-EIP-home-header-pagelist{padding:15px;}
+.ak-EIP-home-header-pagelist li{height:25px; line-height:25px; margin-right:3px; float:left; border:solid 1px #a5a5a5; background-image:none;background-size:auto; background-origin:padding-box;}
+.ak-EIP-home-header-pagelist li a{padding:0 10px; color:#000000; display:block; height:25px; line-height:25px; text-align:center; font-size:12px; font-style:normal;}
+.ak-EIP-home-header-pagelist li a:hover,.pagelist-thisclass a{color:#006baf;}
+.ak-EIP-home-header-pagelist li:hover ,.pagelist-thisclass{border:solid 1px #006baf;}
+/*=============================2014.7.31 info list detail======================================*/
+.ak-EIP-home-info-list-detail-content{width:1234px; margin:0 auto; height:980px; overflow:hidden;}
+.ak-EIP-home-info-list-detail-content h3{font-style:normal;font-size:20px;padding-top:20px;}
+.ak-infolist-detail-pic{padding:25px 0px;}
+.ak-EIP-home-info-list-detail-content p{padding:10px 0px; color:#7b7b7b;}
+/*=============================2014.8.4 survey detail 增加start======================================*/
+.ak-EIP-home-survey-detail-content{width:1234px; margin:0 auto; height:990px; overflow:hidden;}
+.ak-EIP-home-survey-detail-content h3{font-style:normal;font-size:25px;padding-top:28px; line-height:150%;}
+.ak-EIP-home-survey-detail-content span,.ak-EIP-home-survey-detail-content h5{font-weight: normal;color: #5b5b5b;padding-top:10px;font-size: 20px;margin-top:30px;}
+.ak-EIP-home-survey-detail-qa,.ak-EIP-home-survey-detail-qa h4{margin-top:30px; font-size:20px;}
+.ak-EIP-home-survey-detail-qa1 input{margin-left:40px; margin-top:36px;font-size:18px;}
+.ak-EIP-home-survey-detail-qa1 textarea{width:1194px; margin:20px 20px 0px 20px; height:60px; overflow:hidden; font-size:15px; border:none;border-bottom: solid 1px #797979;}
+/*=============================2014.8.4 app start 增加start======================================*/
+.ak-EIP-home-app_center-content{width:1200px;margin:0 auto; height:940px; overflow:hidden;}
+.ak-EIP-home-app_center-content h3{font-style:normal;font-size:25px; margin-left:20px; margin-top:10px;}
+.app_center_border{height:1px; line-height:1px; overflow:hidden; background-color:#e6e6e6; margin:30px 0px;}
+.ak-EIP-home-app_center{height:320px; overflow:hidden;}
+.ak-EIP-home-app_center2{height:218px; overflow:hidden;}
+.ak-EIP-home-app_center3{height:160px; overflow:hidden;}
+.ak-EIP-home-app_center li,.ak-EIP-home-app_center2 li,.ak-EIP-home-app_center3 li{float:left; width:280px; margin-top:10px; margin-left:20px;}
+.ak-EIP-home-app_center img,.ak-EIP-home-app_center2 img,.ak-EIP-home-app_center3 img{border:solid 1px #e6e6e6; float:left;}
+.ak-EIP-home-app_center li a,.ak-EIP-home-app_center2 li a,.ak-EIP-home-app_center3 li a{height:40px; line-height:40px; text-align:center; margin-left:12px; color:#353535;}
+/*2014.8.7bottom 选项卡切换*/
+.ak-EIP-home-right-bottom{height:320px;width: 1026px;margin-right: auto;margin-left: auto;}
+.ak-zb-bottom-qh{width:115px; height:320px;}
+.ak-zb-bottom-qh-t1,.ak-zb-bottom-qh-t2,.ak-zb-bottom-qh-t3,.ak-zb-bottom-qh-t4{background:#4bc0f0; width:115px; height:80px; display:block;}
+.ak-zb-bottom-qh-t1 a:hover,.ak-zb-bottom-qh-t2 a:hover,.ak-zb-bottom-qh-t3 a:hover,.ak-zb-bottom-qh-t4 a:hover{background:#f7c600;display:block;width:115px; height:80px;}
+.ak-zb-bottom-qh a p{width:115px; text-align:center; font-size:12px; color:#FFFFFF; height:25px; line-height:25px;}
+#ak-zb-bottom-qh-c1,#ak-zb-bottom-qh-c2,#ak-zb-bottom-qh-c3,#ak-zb-bottom-qh-c4{width:910px; height:318px;border:solid 1px #e5e5e5;border-left:none;}
+#ak-zb-bottom-qh-c2,#ak-zb-bottom-qh-c3,#ak-zb-bottom-qh-c4{display:none;}
+.ak-zb-bottom-qh-active{background-color: #f7c600 !important;width:115px; height:80px;display:block;}
+.ak-bottom-nav-icon01{display:block; width:115px; height:55px;background-image: url(../images/EIP_home_docu01.png);background-repeat: no-repeat;background-position: center top;}
+.ak-bottom-nav-icon02{display:block; width:115px; height:55px;background-image: url(../images/EIP_home_docu02.png);background-repeat: no-repeat;background-position: center top;}
+.ak-bottom-nav-icon03{display:block; width:115px; height:55px;background-image: url(../images/EIP_home_docu03.png);background-repeat: no-repeat;background-position: center top;}
+.ak-bottom-nav-icon04{display:block; width:115px; height:55px;background-image: url(../images/EIP_home_docu04.png);background-repeat: no-repeat;background-position: center top;}
+/*bottom选项卡内部*/
+.ak-EIP-home-right-bottom-news-box{height: 110px;width: 245px;display: block;margin-top: 30px;margin-left: 10px;padding:0 20px;}
+.ak-EIP-home-right-bottom-news-box h4 a{color: #3c3c3c;font-size: 14px;font-weight: normal;}
+.ak-EIP-home-right-bottom-news-box h5{font-size: 10px;color: #9c9c9c;font-weight: normal;}
+.ak-EIP-home-right-bottom-news-box span{padding-right:8px;}
+.ak-EIP-home-right-bottom-news-box p{color: #9b9b9b;clear: both;padding-top: 10px;font-size: 12px;}
+.ak-news-line{border-bottom:solid 1px #f5f5f5;}
+#ak-zb-bottom-qh-c1,#ak-zb-bottom-qh-c2,#ak-zb-bottom-qh-c3,#ak-zb-bottom-qh-c4{position:relative;}
+.ak-EIP-home-right-bottom-more{width:910px;background-color: #f5f5f5;height: 35px;display: block;position: absolute;left: 0px;bottom: 0px;}
+.ak-EIP-home-right-bottom-more a{font-size: 11px;color: #479dcf;float:right; height:35px; line-height:35px; text-align:center; margin-right:30px;}
+/*================================================2014.8.14workflow增加=========================================================*/
+/*right content middle workflow*/
+.ak-EIP-home-right-middle-workflow{height: 319px;border: solid 1px #e6e6e6;width: 270px;overflow:hidden;background:#eeeff1;/*这里是背景色，如果不需要就去掉*/padding:5px;}
+.ak-EIP-home-right-workflow-title h3{font-size:18px;color:#4fbfe8;font-weight: normal;}
+.ak-EIP-home-right-workflow-nr{margin-top:5px; border-bottom: solid 1px #ffffff;min-height:33px; _height:33px; padding-bottom:5px;}
+.ak-workflow-nr-left-img{width:30px; height:80px; margin-right:10px;}
+.ak-workflow-nr-left-img img{border: solid 1px #dddddd; border-radius:2px; -webkit-border-radius:2px; -moz-border-radius:2px; position:relative; z-index:99; behavior:url(js/ie-css3.htc);background:#ffffff; padding:2px;}
+.ak-EIP-home-right-workflow-nr h4,.ak-EIP-home-right-workflow-nr h4 a{color:#000; font-size:12px; font-weight:normal;}
+.ak-EIP-home-right-workflow-nr p,.ak-EIP-home-right-workflow-nr p a{color:#000; font-size:12px; margin-top:3px;}
+.ak-EIP-home-right-workflow-nr h5,.ak-EIP-home-right-workflow-nr h5 a{color:#4ebee7; font-size:12px; font-weight:normal;margin-top:3px;}
+.ak-workflow-nr-right-bu a{width:30px; height:20px; line-height:20px; text-align:center; color:#fff; background:#fcc633;font-size:10px; display:block; float:left; margin-left:10px;}
+.ak-workflow-nr-right-bu a:hover{background:#5bc0de; width:30px; height:20px; line-height:20px; text-align:center; color:#fff; font-size:10px; display:block; float:left; margin-left:10px;}
+.ak-workflow-nr-more a{font-size:12px; color:#50c0e8; display:block;}
+/*================================================2014.8.27弹出层样式增加（包括修改部分）=========================================================*/
+
+.ak-eip_home-newwork {height: 60px;border-right:1px solid #e6e6e6;background-color: #ffa900;width: 281px;line-height: 60px; color:#fff; text-align:center;font-size:16px; }
+.ak-eip_home-newwork a{font-size:16px;color:#fff; display:block;width: 281px;line-height: 60px;height: 60px; font-weight:bold;}
+.ak-eip_home-clickbox {
+	display:none;
+	background:url(../images/zb-oc-tck-big-bj1.png) repeat;
+	position:fixed;
+	width:100%;
+	height:3000px;
+	top:0;
+	z-index: 9999;
+}
+.ak-eip_home-tck { width:800px; min-height:330px; _height:330px;margin:15% auto;  background:#eee;}
+.ak-eip_home-tck-title { height:48px; width:800px; background:#0066b0;}
+.ak-eip_home-tck-title p {color:#fff; font-size:16px; padding-left:20px; height:48px; line-height:48px;font-family:Segoe UI; font-weight:bold;}
+
+.ak-eip_home-close a img { padding:15px;}
+.ak-eip_home-tck-nr { width:770px; padding:15px;  min-height:40px;_height:40px;border-bottom: solid 1px #ccc;font-family:Segoe UI; }
+.ak-eip_home-tck-nr_t h4{ color:#0359b0;font-family:Segoe UI;}
+.ak-eip_home-tck-nr ul li { float:left; color:#2a2a2a; font-size:12px; height:25px; line-height:25px;}
+.ak-eip_home-tck-nr ul li a {font-size:12px; margin-right:30px; color:#2a2a2a;font-family:Segoe UI;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

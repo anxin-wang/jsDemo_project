@@ -1,0 +1,15 @@
+/*页头*/
+#page_header{background-color:#428bca;}
+#page_header .navbar-brand{color:#fff;margin-right:30px;margin-left:60px;}
+#page_header .navbar-nav a{color:#cdddeb;font-family:"Thoma";margin-left:30px;}
+#page_header .navbar-nav a:hover{color:#fff;}
+/*左侧导航*/
+.page_main .sidebar{position: fixed;top: 50px;bottom: 0;left: 0;z-index: 1000;display: block;overflow-x: hidden;overflow-y: auto;background-color: #428bca;border-right: 1px solid #eee;width:70px;}
+.page_main .nav-sidebar{margin-bottom: 20px;}
+.page_main .nav-sidebar li a{display:block;height:45px;line-height:45px;text-indent:15px;color: #cdddeb;background-color: #428bca;border-bottom:1px solid #cdddeb;}
+.page_main .nav-sidebar li a:hover{color:#fff;text-decoration:none;}
+.page_main .wrap{margin-top:70px;margin-left:80px;width:93%;}
+/*列表页面*/
+.page_list{}
+.page_list .breadcrumb,.page_list a.add_report{margin-bottom:15px;}
+

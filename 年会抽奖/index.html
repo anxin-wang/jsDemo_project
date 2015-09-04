@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>抽奖</title>
+	</head>
+	<body>
+		<!-- 代码 开始 -->
+		<style>
+			#container {
+				width: 100%;
+				max-width: 1024px;
+				margin: 0 auto;
+				height: 100%
+			}
+			#show_num {
+				width: 100%;
+				background: #fff;
+				height: 100%;
+				padding: 2% 0 1% 0;
+			}
+			#num {
+				padding: 0 0 0 1.2%
+			}
+			#start, #stop ,#jiangxiang{
+				margin: 2% 0% 0 1%
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css">
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+		<script type="text/javascript" src="setting.js"></script>
+		<script>
+
+
+
+$(document).ready(function(e) {
+
+
+
+var flag;	//setInterval标志
+var arr = Array();	//数组
+var begin_flag = true;	//初始化开始标志
+var ret;
+var num;
+var max_num; //最大值
+var repeat = false; //是否能重复
+var jiangxiang ;//抽奖时所选的奖项
+var allready = Array();//已经抽取的用户
+var jxname;//奖项名称
+
+document.title = data['标题'];
+$("#for1").html(data['标题']);
+$("#for2").html(data['标题']);
+max_num = data['人员'].length;
+
+
+for(var i=0;i<=max_num;i++){
+	arr.push(i);//循环录入数组
+}
+//开始
+
+$("#start").click(function(){
+	if (begin_flag){
+	    jiangxiang = parseInt($("#jiangxiang").val());
+	    jxname = $("#jiangxiang").find("option:selected").text();
+	   // alert(jxname);
+	    //alert(jiangxiang);
+	    switch(jiangxiang){
+	    	case 1:
+		 		alert("开始抽取一等奖!");
+		  		break;
+			case 2:
+		  		alert("开始抽取二等奖!");
+		  		break;
+		  	case 3:
+		  		alert("开始抽取三等奖!");
+		  		break;
+		  	case 0:
+		  		alert("请选择抽取的奖项!");
+		  		return;
+	    }
+		flag= setInterval(rd,60);
+		begin_flag = false;
+		//alert(flag);
+	}
+});
+
+function setImg()
+{
+	switch(jiangxiang){
+	    	case 1:
+		 		$(data['人员']).each(function(n,o){
+					//alert(JSON.stringify(o));
+					if(1==o['flag'])
+					{
+						$("#num_1").attr("src",o.src);
+						o['flag']=0;
+						num = o['num'];
+					}
+				});
+				break;
+			case 2:
+				$(data['人员']).each(function(n,o){
+					if(2==o['flag'])
+					{
+						$("#num_1").attr("src",o.src);
+						o['flag']=0;
+						num = o['num'];
+					}
+				});
+		  		break;
+		  	case 3:
+		  		$(data['人员']).each(function(n,o){
+					if(3==o['flag'])
+					{
+						$("#num_1").attr("src",o.src);
+						o['flag']=0;
+						num = o['num'];
+					}
+				});
+		  		break;
+	}
+	drayImginbox(num);//绘图右侧奖项公示栏
+	if(!repeat)
+	no_repeat();
+	begin_flag = true;
+}
+//结束
+$("#stop").click(function(){
+clearInterval(flag);
+setTimeout(setImg,100);
+
+});
+
+
+
+
+//产生随机数
+function rd(){
+	num = arr[Math.floor(Math.random()*arr.length)];	//获得的随机数
+	var hundred,figures,theunit;
+	//hundred = Math.floor(num/100);
+	//figures = Math.floor(num%100/10);
+	drayImg(num);
+}
+
+function drayImg(no)
+{
+	theunit = Math.floor(num%10);
+	
+	$(data['人员']).each(function(n,o){
+		//alert(JSON.stringify(o));
+		if(no==o['num'])
+		{
+			$("#num_1").attr("src",o.src);
+		}
+	});
+	//$("#num_1").attr("src","images/"+theunit+".png");
+}
+
+function drayImginbox(num)
+{
+
+	$(data['人员']).each(function(n,o){
+		//alert(JSON.stringify(o));
+		if(num==o['num'])
+		{
+			str = '<div style="float:left;  border: 1px solid #F0F0F0; width: 29%;height: 100px;margin-left: 5px;padding: 10px;position:relative;">';
+			str +='<img style="float: left" height="95%"  src="'+o.src+'" />';
+			str+='<div style="height:50%; padding-left: 20px; right:10%; position:absolute;bottom:20%;">';
+			str+='<font size="5" color="red">'+jxname+'</font><br/>';
+			str+='<font size="4" color="blue">'+o['姓名']+'</font><br/>';
+			str+='<font size="4" color="blue">'+o['手机号']+'</font>';
+			str+='</div></div>';
+			$('#gs').append(str);		
+			return;
+		}
+	});
+		           		
+}
+
+
+//不重复
+function no_repeat(){
+//alert(num);
+//alert(arr);
+	var arr_2 = Array();
+	for(var i =0; i<arr.length;i++){
+		if (arr[i] == num){
+			continue;	//跳过相同
+		}
+		else{
+			arr_2.push(arr[i]);		//放入新的数组
+		}
+	}
+	//alert(arr_2);
+	if(arr_2.length == 1){	//没有数字了
+		alert("抽奖人员参与不足!");
+		for(var i=0;i<=max_num;i++){
+		arr.push(i);//循环录入数组
+		}
+	}
+	else{	//还有数字
+		arr = arr_2;
+	}
+}
+});
+		</script>
+
+		<div id="container">
+			<!--第一屏begin-->
+			<div data-role="page" id="pageone" style="background:#D0C7D3">
+				<div data-role="content" style="text-align:center">
+					<div style="text-align:center;margin:50px 0">
+						<p style="margin:20px 0">
+						<h1 id="for2" >Make For  Stuinfers</h1>
+						</p>
+					</div>			
+					<img src="images/head.png" width="400px" style="margin:0 auto">
+					<div style="width:20%; margin:0 auto; clear:both">
+						<!--div style="float: left;font-size: 1.2em; padding: 6% 0 0 3%;width: 30%;">最大值:</div>
+						<div style="width:60%; float:left">
+						<input id="max" type="text">
+						获取最大值,id别改
+						</div -->
+					</div>
+					<div style="width:18%; margin:0 auto; clear:both">
+						<!--转到第二屏begin,a标签的属性别改-->
+						<a href="#pagetwo" data-transition="slide" style="text-decoration:none">
+						<button>
+							开始抽奖
+						</button> </a>
+						<!--转到第二屏end-->
+					</div>
+					
+				</div>
+			</div>
+			<!--第一屏end-->
+
+			<!--第二屏begin-->
+			<div data-role="page" id="pagetwo">
+				<!--返回链接,属性别改-->
+				<a href="#pageone" data-transition="slide" data-direction="reverse">
+				<div style="background: red">
+				<img src="images/second_bg.png">
+				</div> </a>
+				<div data-role="content" id="con__1">
+						<!--数字显示区域begin id别改-->
+						<div id="show_num" style="width: 100%;height: 100%;">
+							<div id="num" style="width:40%; margin:0; height:400px; float: left;"> 
+							  <img id="num_1" style="background-color: #FFFAF4;width: 30%;position: relative; top:10%;left: 30%;" src="images/0.png" />
+					          <!--
+					          <span id="num_1" style="width:40%; padding-top:50%; margin:0 auto; float:left; background:url(images/0.png) no-repeat;"></span>
+					          --> 
+				           </div>
+				           <div id="gs" style="width: 55%;margin: 0 auto;padding:5px; min-height: 400px;float: left;border: 1px solid #ACD6FF;">
+				           		
+				           		
+				           		
+				           </div>
+				           
+				           <div style="clear: both;margin-top: 20px;" ></div>
+				           
+							<div style="width:100%;   margin:100 auto; height:100px;">
+								 <div style="width: 30%;float: left;">
+					           		<select id="jiangxiang" >
+					           		  <option value="0">请选择奖项</option>
+								      <option value="1">一等奖</option>
+								      <option value="2">二等奖</option>
+								      <option value="3">三等奖</option>
+								    </select>	
+				           		</div>	
+				           		<div style="width: 30%;float: left;">					
+								<!--按钮begin id别改-->
+								<button id="start" style=" float:left;  background:#FF9797">开始抽奖
+								</button>
+								</div>
+								
+								<div style="width: 30%;float: left;">		
+								<button id="stop" style=";float:left; background:#66B3FF">
+									结束
+								</button>
+								</div>
+								<!--按钮end id别改-->
+							</div>
+						</div>
+				</div>
+				
+				<div data-role="footer" id="footerxx" style="position:absolute; width:100%;">
+					<h1 id="for1" >Make For  Stuinfers</h1>
+				</div>
+			</div>
+			<!--第二屏end-->
+		</div>
+		<script type="text/javascript">
+			function show_box(id) {
+				jQuery('.widget-box.visible').removeClass('visible');
+				jQuery('#' + id).addClass('visible');
+			}
+		</script>
+		<!-- 代码 结束 -->
+	</body>
+</html>
