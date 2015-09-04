@@ -1,0 +1,127 @@
+body{margin:0 auto;width:960px;}
+a{text-decoration:none;}
+ul{margin:0;padding:0;}
+li{list-style:none;}
+.pager{width:720px;overflow:hidden;}
+.page{float: right;}
+.page-simple{float:right;}
+input[type="radio"],input[type="checkbox"]{margin:0;}
+select{padding: 0;height: 24px;line-height: 24px;}
+.mod-gray{border: 1px solid #DDD;margin-top:5px;background-color: #F5F5F5;width: 718px;}
+.main-container{width: 738px;float:left;}
+.aside{width:200px;margin-left:21px;float:left;}
+/*sidebar*/
+/*.sidebar-container{position:fixed;}*/
+.sidebar{background-color: #FFFFFF;border: 1px solid #88BDF3;border-top:2px solid #0266D0;}
+.sidebar .sidebar-header{background-color: #DCEEFF;padding: 10px;}
+.sidebar .sidebar-header span.username{font-size:18px;font-weight:bold;}
+.sidebar .sidebar-header .btn-group,.emotion .btn-group{display:inline-block;*display:inline; *zoom:1;}
+.sidebar .sidebar-header .btn-group .btn,.emotion .btn-group .btn{font-size: 12px;padding:2px 9px;border: none;background: none;box-shadow: none;}
+.sidebar .sidebar-header .btn-group > .btn,.sidebar .sidebar-header .btn-group > .dropdown-menu{font-size:12px;}
+.sidebar .sidebar-center{margin-top:10px;}
+.sidebar .sidebar-center ul{padding-bottom:5px;border-bottom:1px dotted #CCCCCC;}
+.sidebar .sidebar-center ul:last-of-type{border-bottom:none;}
+.sidebar .sidebar-center li{padding: 5px 10px;}
+.sidebar .sidebar-center li:hover{background-color: #DCEEFF;}
+.sidebar .sidebar-center li:hover a{text-decoration: none;}
+.sidebar .sidebar-footer{padding: 5px 9px;background-color:#F5F5F5; }
+.sidebar .sidebar-footer button{margin-right:15px;}
+.sidebar .sidebar-footer a{display:inline-block;height:27px;vertical-align:bottom;line-height:27px;*display:inline; *zoom:1;}
+.new-weibo{width:586px;height:auto;position:absolute;top:100px;right:100px;padding:5px;background-color:#FFFFFF;font-size:12px;}
+.new-weibo li{float:left;list-style:none;border:1px solid #CCCCCC;border-right:none;padding:2px;}
+.new-weibo li:last-of-type{border-right:1px solid #CCCCCC;}
+.new-weibo textarea{width:560px;}
+.emotion{width:465px;display:inline-block;*display:inline; *zoom:1;}
+.press-btn{float: right;}
+.new-weibo label{display:inline-block;font-size:12px;margin:0 20px;*display:inline; *zoom:1;}
+.new-weibo .remain-letters{float:right;line-height: 37px;}
+
+
+.new-weibo .popup-bd div:last-of-type{margin-bottom:0;vertical-align:top;}
+
+/**/
+.search-bar a{display:block;float:right;line-height: 35px;}
+.search-bar span.caret{margin-left:5px;vertical-align: middle;}
+
+/*weibo list*/
+ul.weibo-list li.weibo{width:738px;background-color:#FFF;margin-top:8px;border: 1px solid #DDDDDD;} 
+ul.weibo-list li.weibo:first-of-type{margin-top:0;}
+ul.weibo-list li.weibo .weibo-info{background-color:#F5F5F5;padding:10px;}
+ul.weibo-list li.weibo .weibo-link{float: right;}
+ul.weibo-list li.weibo .weibo-content{padding: 10px 10px 0;}
+ul.weibo-list li.weibo strong{font-size:14px;font-weight:bold;}
+ul.weibo-list li.weibo .weibo-footer{background-color:#FDF8E9;color:#666666;padding:5px 10px;overflow: hidden;}
+ul.weibo-list li.weibo .weibo-footer a{margin-left:5px;color: #0066CC;}
+ul.weibo-list li.weibo .weibo-footer a:hover{color:#D87636;}
+ul.weibo-list li.weibo .weibo-footer .weibo-btn{float: right;}
+ul.weibo-list li.weibo em{font-style:normal;} 
+/*change status popup*/
+.mask{min-width:100px;}
+.weibo-type-list,.weibo-worker-list{width:150px;}
+.weibo-type-list .mask-bd{padding:10px 15px;text-align:left;}
+.weibo-type-list li{list-style:none;}
+.weibo-type-list .mask-bd .btn{margin:0;}
+.weibo-type-list .mask-bd p{border-bottom:1px solid #96C2F1;margin-bottom:2px;padding-bottom:2px;}
+.weibo-type-list .mask-bd label{font-size:12px;}
+/*change worker popup*/
+.weibo-worker-list .mask-bd{padding:10px 15px;text-align:left;}
+.weibo-worker-list .mask-bd textarea{width:116px;height:90px;}
+.weibo-worker-list .mask-bd p{margin-bottom:2px;padding-bottom:2px;}
+.weibo-worker-list .mask-bd .btn{margin:0;}
+.weibo-worker-list select{width:120px;}
+/*自定义查询*/
+.custom-query{width:460px;}
+.custom-query .mask-bd{padding:10px 15px;text-align:left;}
+.custom-query li{list-style:none;}
+.custom-query li label{font-size:12px;}
+.custom-query .mask-bd p{border-bottom:1px solid #96C2F1;margin-bottom:10px;padding-bottom:2px;}
+.custom-query .mask-bd select{width: 137px;margin:8px 10px 8px 13px; }
+.custom-query .mask-bd li label{display:inline-block;*display:inline; *zoom:1;}
+.custom-query .mask-bd li label.keyword input{margin:8px 0 8px 24px;width:350px;}
+.custom-query .mask-bd li input{margin:8px 12px;height:24px;}
+.custom-query .mask-bd li input.input-small{width: 134px;}
+.custom-query li.time.last{margin-top: 12px;}
+.custom-query .mask-bd li div.timer input{display:inline-block;vertical-align: middle;*display:inline; *zoom:1;}
+.custom-query .mask-bd li div.timer div{display:inline-block;height:25px;vertical-align: middle;*display:inline; *zoom:1;}
+.custom-query .mask-bd li div.timer div button{display:block;height:12px;}
+.custom-query .mask-bd li.time>div{display:inline-block;*display:inline; *zoom:1;}
+.custom-query .mask-bd li.time input{margin:0;}
+.custom-query .mask-bd ul{margin-bottom:20px;}
+/*评论微博*/
+.comment-weibo{padding:10px;width:716px;border:1px solid #96C2F1;border-top:none;}
+.comment-weibo .new-weibo{display:block;position:static;width:716px;border:none;}
+.comment-weibo .pager{width:705px;}
+.comment-list{border:1px solid #DDDDDD;}
+.comment-list li{padding:10px;border-top: 1px dotted #DDDDDD;}
+.comment-list li:first-of-type{border-top: none;}
+.commentator-name{font-weight:bold;}
+.comment-time{color:#A1A1A1;font-size:11px;}
+.operation-btn-list{text-align:right;} 
+.comment-list .input-xxlarge{width: 628px;margin-bottom:0px;}
+
+.comment-tabs.nav{margin-bottom:0;}
+.comment-weibo .new-weibo textarea{width: 693px;}
+.comment-weibo .new-weibo .emotion{width:520px;vertical-align: top;}
+.comment-weibo .new-weibo .press-btn{vertical-align: top;}
+.popup .weibo-list{font-size:12px;width:570px;}
+
+/*3条关联信息弹出窗口*/
+.popup.weibo-related{width:592px;}
+.index .popup ul.weibo-list li.weibo{width:570px;}
+.popup ul.weibo-list li.weibo:first-of-type{margin-top:0px;}
+.weibo-related ul.weibo-list li.label-box{float:left;height: 160px;margin-top: 4px;}
+.weibo-related ul.weibo-list li.title-box{margin: 4px 0 0;height: 30px;line-height: 20px;}
+*html .weibo-related ul.weibo-list li.label-box,*+html .weibo-related ul.weibo-list li.label-box { width:24px;display:block;float:left;} /* ie6 fixed,ie7 fixed, 注意顺序 */
+.weibo-related ul.weibo-list li.weibo{display:inline-block;*display:block;*float:left;width:717px;*width:712px;}
+.weibo-related ul.weibo-list li.weibo.no-batch-processing{margin-left:17px;margin-top:0px;}
+.nav{width:738px;margin-top:20px;}
+.up-arrow{border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:4px solid #000000;border-top:0 none;content:"";display:inline-block;height:0;vertical-align:top;width:0;*display:inline; *zoom:1;}
+.down-arrow{border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #000000;border-bottom:0 none;content:"";display:inline-block;height:0;vertical-align:top;width:0;*display:inline; *zoom:1;}
+.online-status{vertical-align:middle; border:4px solid #0FD418;border-radius:2px;content:"";display:inline-block;height:0;width:0;margin-right: 5px;}
+.offline-status{border:4px solid #545454;border-radius:2px;content:"";display:inline-block;height:0;width:0;}
+.press-success.popup{width:577px;height:139px; position: absolute;right: 200px;top: 200px;}
+.press-success.popup .popup-bd{padding: 0;}
+
+.handle-weibo p{font-weight:normal;}
+
+.caret{vertical-align: middle !important; margin-top: 0 !important;}
