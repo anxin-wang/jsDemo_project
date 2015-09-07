@@ -128,3 +128,23 @@ body {
 .action-bar .dropdown-menu a:hover {
   color: #11A5F5;
 }
+.confirm-btn,
+.cancel-btn {
+  background: url(../images/sprites.png) top left no-repeat;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.confirm-btn {
+  background-position: -727px -68px;
+}
+.cancel-btn {
+  background-position: -785px -68px;
+}
+.text-box {
+  display: inline-block;
+  vertical-align: 7px;
+}
+.edit-box {
+  display: inline-block;
+}
