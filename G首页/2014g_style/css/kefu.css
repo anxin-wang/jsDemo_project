@@ -1,0 +1,77 @@
+@charset "gb2312";
+
+.kefu .tab-menu{background:url(../images/kefu/sprite.png) no-repeat}
+.kefu .tab-menu li{cursor:default;}
+.kefu .m-2{font-size:12px; font-family:Arial, Helvetica, sans-serif; margin-left:88px}
+.announcement{width:100%; float:left;height:25px; line-height:24px;border-bottom:1px dotted #6a6a65; overflow:hidden}
+.announcement a{float:left;width:140px;}
+.announcement .w-time{float:left; width:84px; margin-left:20px;_display:inline;}
+.rule{background:#3a3a38; padding:20px 0; border-bottom:1px solid #272725}
+.rule a{display:block; height:51px; line-height:44px; position:relative; left:6px; background:url(../images/kefu/sprite.png) no-repeat; margin-bottom:14px;color:#fff; font-size:24px; padding-right:42px; text-align:right}
+.rule a:hover{text-decoration:none;}
+.rule .rule-1{background-position:37px -31px}
+.rule .rule-2{background-position:37px -83px}
+.rule .rule-3{background-position:37px -135px; margin-bottom:0}
+.kefu .service{border-bottom:none}
+.help{height:302px; background:url(../images/kefu/help-bg.png) no-repeat; margin-top:12px; padding:9px 0 0 8px; overflow:hidden}
+.help a{float:left; width:161px; height:292px; margin-right:11px}
+.help a:hover{text-decoration:none}
+.help i{display:block; height:140px; line-height:140px; text-align:center; color:#fff; font-size:27px; font-style:normal}
+.help-1 i{background:#62a807}
+.help-1:hover i{background:#76ca0a}
+.help-2 i{background:#e86d15; margin-top:153px}
+.help-2:hover i{background:#ff7800}
+.help-3 i{background:#69a0cb}
+.help-3:hover i{background:#3da2f2}
+.help-4 i{background:#8d63b5;margin-top:153px}
+.help-4:hover i{background:#a773d9}
+
+.ask{background:#dfdfdf; padding-left:16px; margin-top:22px; height:27px; border-radius:5px}
+.ask a{float:left;width:75px; height:30px; line-height:26px; text-align:center; font-size:14px; margin-right:12px; padding-right:10px; cursor:pointer; border-right:1px solid #fff; _display:inline}
+.ask .on{background:url(../images/tab-menu.png) no-repeat;line-height:30px; color:#518900}
+.ask .remove-right{border-right:none}
+
+form .red{vertical-align:-3px; margin-right:3px}
+.gray{color:#909090}
+.form th{font-weight:normal; font-size:14px; text-align:right; vertical-align:top}
+.form th,
+.form td{padding:6px 0}
+.form input,
+.form select{border:1px solid #ccc6ba;height:24px}
+.form .gray{line-height:24px; margin-left:4px;_display:inline}
+.ml-n{margin-left:2px}
+.form{padding:35px 0 0 20px; background:#f2f2f2; padding-bottom:100px}
+.text-area{width:300px; height:100px;}
+.text{width:160px; padding-left:3px}
+.form .reset,
+.form .submit{float:left;width:56px; height:26px; background:url(../images/kefu/sprite.png) no-repeat -76px -187px; border:none; text-indent:-999px; overflow:hidden; cursor:pointer; margin-right:22px}
+.form .reset{background-position:-132px -187px}
+.note{color:#909090}
+.pic-test{margin-top:2px; height:22px}
+.question-2,
+.question-1{height:31px; line-height:30px;background: url(../images/kefu/icon.png) no-repeat 9px 9px #ff7800; color:#fff; font-size:16px; padding-left:40px;}
+.question-2{background-position:9px -69px; background-color:#62a807}
+.have-answer,
+.no-answer{text-align:center; margin:15px 0; height:38px; line-height:38px; background:#e8edf0; border:1px solid #d0d0d8}
+.have-answer{text-align:left; height:auto; line-height:24px; padding:5px 20px;}
+.have-answer a{display:block; color:#518900}
+.my-question{background:#f2f2f2; padding:20px 23px 100px}
+.gonggao{margin-top:25px; padding-left:10px}
+.g-detail{padding-left:30px; padding-top:25px}
+.g-detail p{line-height:24px}
+.g-detail a{text-decoration:underline}
+ 
+.question-detail{padding:0 12px; margin-top:22px; color:#4f4f4f}
+.question-detail h3{font-size:14px}
+.question-detail .ask-time{float:right; font-size:12px}
+.game-info{width:577px; margin:0 auto; background:#f4f3f3; padding:5px 20px; border:1px solid #dfdfdf; border-radius:6px; margin-top:15px}
+.game-info p{float:left; width:288px; line-height:24px}
+.cell{padding-top:20px; border-top:1px dotted #cccccb; margin-top:21px}
+.black{color:#000}
+.cell p{line-height:22px}
+.manyidu input{vertical-align:-2px;*vertical-align:1px; _vertical-align:-2px; margin-right:3px}
+.manyidu label{margin-right:30px}
+.manyidu-sub{width:60px; height:26px; cursor:pointer; line-height:22px; margin:20px 0 0 150px}
+
+.gonggao-list{margin:26px 0 0 33px}
+.gonggao-list li{line-height:22px}

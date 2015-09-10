@@ -1,0 +1,288 @@
+@charset "gb2312";
+
+.search-box{border:1px solid #bababa; width:300px; height:28px; position:relative; margin-left:9px; background:url(../images/sprite2.png) no-repeat 6px 4px #e6e6e6; padding-left:36px}
+.search-input{width:207px; height:27px; border:0; background:#e6e6e6}
+.sub-btn{position:absolute; right:0; top:0; background:url(../images/sprite.png) no-repeat; width:85px; height:28px; text-indent:-200px; overflow:hidden; border:0; cursor:pointer}
+.sub-btn:hover{background-position:0 -28px}
+.keywords{height:18px; line-height:18px; padding:4px 0 0 9px; overflow:hidden;}
+.keywords a{float:left; margin-right:20px;_display:inline}
+/* CSS Document */
+.libao .tab-menu{background:url(../images/libao/sprite.png) no-repeat}
+.libao .tab-menu li{width:200px}
+.libao-recommend{background:#3a3a38; padding:15px 0}
+.libao-rank-1{background:url(../images/libao/sprite.png) no-repeat 0 -31px; width:15px; height:20px; margin:0 auto}
+.libao-rank-2{background:url(../images/libao/sprite.png) no-repeat -16px -31px; width:15px; height:20px; margin:0 auto}
+.libao-rank-3{background:url(../images/libao/sprite.png) no-repeat -32px -31px; width:15px; height:20px; margin:0 auto}
+.libao-rank-num{width:14px; height:14px; line-height:14px; text-align:center; background:#cdcdcd; border:1px solid #6e6e6e; margin:0 auto}
+.top-banner{margin-top:14px}
+.banner-pic{float:left;}
+.banner-pic img{width:458px;border-radius:6px;}
+.most-gift{background:#fff; width:222px; float:right; padding:3px 1px 9px; border:1px solid #c8c8c8; border-radius:6px}
+.player-name{float:right;}
+.most-gift h3{font-size:14px; font-weight:bold; text-align:center; height:21px; background:#d6d6d6; line-height:20px; border-radius:3px}
+.most-gift li{overflow:hidden; line-height:20px; height:20px}
+.scroll-mask{padding:0 14px; margin-top:8px; height:100px; overflow:hidden}
+.tab-2{ position:relative}
+.tab-2 .ling{ position:absolute;background: url('../images/libao/sprite.png') no-repeat scroll -310px 0; width:64px; height:18px; text-align:center; top:5px; left:625px; color:#fff }
+.tab-menu2{background:#dfdfdf; padding-left:16px; margin-top:22px; height:27px; border-radius:5px; overflow:hidden}
+.tab-menu2 li{float:left;width:75px; height:30px; line-height:26px; text-align:center; font-size:14px; margin-right:12px; padding-right:10px; cursor:pointer; border-right:1px solid #fff; _display:inline}
+.tab-menu2 .on{background:url(../images/tab-menu.png) no-repeat;line-height:30px; color:#518900}
+.tab-menu2 .remove-right{border-right:none}
+.tab-content2 .on{display:block}
+.tab-menu6 a{float:left; width:64px; height:22px; line-height:18px;  text-align:center; background:url(../images/libao/sprite.png) no-repeat -310px 0; color:#fff; margin-right:7px;_display:inline}
+.lingqu{position:relative}
+.tab-menu6 .active,
+.tab-menu6 a:hover{font-weight:bold; text-decoration:none;background-position:-375px 0}
+.tab-menu6{margin-top:24px; margin-left:24px}
+.inner-box{display:none}
+.tab-content6{margin-left:24px}
+.tab-content6 .active{display:block}
+.box{border-bottom:1px dotted #747474; padding:15px 0}
+.box h4{float:left; width:50px; color:#518900; font-size:14px}
+.box ol{float:left; width:622px}
+.box li{float:left; width:99px; border-right:1px solid #747474; text-align:center; height:13px; line-height:13px; margin-bottom:5px; margin-top:5px;}
+
+.hot-libao{padding-top:16px;*padding-bottom:12px}
+.hot-libao li{height:178px; border:1px solid #c8c8c8; border-radius:6px; padding:4px; background:#fff; margin-bottom:12px}
+.game-pic{float:left; width:398px; height:174px;position:relative}
+.pic-mask{position:absolute; left:0; top:0; background:url(../images/libao/mask.png) no-repeat; width:398px; height:174px; cursor:pointer;_display:none}
+.label-client,
+.label-sanduan,
+.label-web{background:url(../images/libao/label-1.png) no-repeat; width:72px; height:65px; position:absolute; left:3px; top:3px;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-1.png" ,sizingMethod="crop");_left:0;_top:0;}
+.label-sanduan{background:url(../images/libao/label-2.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-2.png" ,sizingMethod="crop")}
+.label-client{background:url(../images/libao/label-3.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-3.png" ,sizingMethod="crop")}
+.libao-desc{float:left;width:238px; height:158px; margin-left:7px; margin-top:3px; padding:5px 20px; background:url(../images/libao/bg.png) repeat-y;_display:inline}
+.hot-libao .clearfix{background:#eeeeee; padding:2px 0}
+.libao-desc h3{font-size:14px; font-weight:bold; color:#518900; margin-bottom:5px}
+.libao-desc .libao-text{color:#8f8f8f; line-height:15px; height:45px; overflow:hidden}
+.libao-desc .dotted{height:10px; line-height:10px; overflow:hidden; margin-bottom:8px; border-bottom:1px dotted #8f8f8f}
+.page{text-align:center}
+.page a{color:#ababab; margin-right:10px}
+.page a:hover,
+.page .cur{font-weight:bold; color:#518900; margin-right:10px}
+.libao-list dd,
+.libao-list dt{float:left;}
+.libao-list dt{width:64px; height:17px; background:url(../images/libao/sprite.png) no-repeat -310px 0; margin-right:10px;_display:inline; text-align:center; line-height:18px; color:#fff}
+.libao-list dd{width:76px; height:13px; line-height:14px; margin-top:2px; border-right:1px solid #8f8f8f; text-align:center}
+.libao-list .last{border-right:none}
+.libao-list li{margin-bottom:7px}
+.libao-list{padding-top:15px; padding-left:27px}
+
+.get-libao-list{padding:22px 0 0 0;*padding-bottom:16px;width:750px}
+.get-libao-list img{width:171px; height:98px}
+.get-libao-list li{float:left; position:relative; width:177px; height:131px; margin:0 0 20px 33px; padding:6px 0 0 6px; border:1px solid #c4c4c4;transition:transform 0.3s linear,box-shadow 0.3s linear;-moz-transition:-moz-transform 0.3s linear,box-shadow 0.3s linear;-webkit-transition:-webkit-transform 0.3s linear,box-shadow 0.3s linear}
+.get-libao-list li:hover{transform:translateY(-5px);-webkit-transform:translateY(-5px);-moz-transform:translateY(-5px); box-shadow:0 0 10px #000}
+.get-libao-list .title-bg{position:absolute; left:7px; top:86px;width:170px; height:18px; background:#000; opacity:0.7; filter:alpha(opacity=70);}
+.get-libao-list h3{position:absolute; left:11px; top:86px;width:171px; height:18px; color:#fff; line-height:18px; text-align:center; overflow:hidden}
+.get-libao{position:absolute; right:9px; bottom:6px; background:url(../images/libao/sprite.png) no-repeat -86px -31px; width:73px; height:22px; line-height:22px; color:#fff; text-align:center}
+.left-libao{height:30px; line-height:30px; background:#ebebeb; color:#518900; padding-left:9px;}
+.libao-icon-2{background:url(../images/libao/2.png) no-repeat 0 2px; padding-left:23px}
+.libao-icon-1{background:url(../images/libao/3.png) no-repeat 0 center; padding-left:23px}
+
+.record h3{height:27px; line-height:27px; padding-left:38px;font-size:14px; background:url(../images/libao/sprite.png) no-repeat 14px -60px #dfdfdf; border-radius:6px}
+.record{padding-top:14px; position:relative}
+.goto-game{display:block; width:73px; height:22px; margin:0 auto; line-height:22px; background:url(../images/libao/sprite.png) no-repeat -86px -31px; color:#fff}
+.record td,
+.record th{text-align:center; height:30px; border:1px solid #b1b1b1; background:#fff}
+.record th{background:#cbcbcb}
+.record table{margin-top:21px}
+.gonghui{background:url(../images/libao/paper-bg1.png) no-repeat;padding-top:35px; margin-top:15px}
+.gonghui h2{font-size:14px; font-weight:bold; color:#518900; padding-left:52px; margin-bottom:10px}
+.gonghui table{margin-left:45px}
+.gonghui th{height:55px; text-align:right; padding-right:20px}
+.gonghui .input-text{border:1px solid #c2c2c2; height:26px; line-height:26px; width:280px; padding-left:5px; background:#f2f2f2}
+.gonghui tr{border-bottom:1px dotted #c2c2c2}
+.pic-container{border:1px solid #c2c2c2; height:105px; margin:20px 0;background:#f2f2f2}
+.input-submit{width:114px; height:44px; background:url(../images/libao/sprite.png) no-repeat 0 -105px; text-indent:-999px; overflow:hidden; border:none; cursor:pointer}
+.input-submit:hover{background-position:-115px -105px}
+.gonghui .last{border-bottom:none}
+.gonghui-footer{height:10px; background:url(../images/libao/paper-bg3.png) no-repeat; line-height:10px; overflow:hidden}
+
+
+.input-ys input, .button-ys input, #openService h2, #openService .openServiceCont .arrow, .modelFt1, .scroll, .tab ul.f-n li.hover, .tab_box .model, .ziMu li, .youxiFg li span, .list li a, .receive .receive-n .receive-m-d, .receive .receive-n li.hover, .receive-detail .hd, .receive-detail .ft, .gameIn .img, .gameIn a, .number span, .number input, .goodInfo .hd, .goodInfo .ft, .goodInfo .btn, .goodInfo span, .record h2 i, .record table .gameIn, .record .pageNav .previous span, .record .pageNav .next span, .record .pageNav .end span, .tab_box .model h2 .libao, .tab_box .model h2 .youxi, #login .loginAfter .gamePlayedList .gplBd dd .recharge {
+	background: url(../images/libao/ui3.jpg)
+}
+
+.label-qipai,
+.label-kehuduan,
+.label-shouji,
+.label-wangye{position:absolute; left:4px; top:4px;width:72px; height:65px; background:url(../images/libao/label-1.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-1.png" ,sizingMethod="crop")}
+.label-shouji{background:url(../images/libao/label-5.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-5.png",sizingMethod="crop")}
+.label-kehuduan{background:url(../images/libao/label-3.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-3.png" ,sizingMethod="crop")}
+.label-qipai{background:url(../images/libao/label-7.png) no-repeat;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://g.pps.tv/style/2014g_style/images/libao/label-7.png" ,sizingMethod="crop")}
+.download-client:hover{background-position:-143px -150px}
+.new-libao-right{float:left; width:480px}
+.new-libao-right h3{font-size:14px; line-height:28px; color:#518900; font-weight:bold; border-bottom:1px solid #d3d4d5}
+.new-libao-right dt{float:left; width:65px;}
+.new-libao-right dd{float:left; width:406px;color:#8f8f8f; border-bottom:1px dotted #8f8f8f; padding-bottom:8px; margin-bottom:10px}
+.new-libao-right dd p{line-height:16px; height:32px; overflow:hidden; }
+.new-libao-right dl{padding-top:10px; padding-left:6px}
+.copy-area{padding-left:105px; margin-top:12px; position:relative}
+.select-area{padding-left:105px;margin-top:15px}
+.select-area select{width:218px; float:left}
+.green-btn{float:left; width:73px; height:22px; line-height:22px; background:url(../images/libao/sprite.png) no-repeat -86px -31px; text-align:center; color:#fff; margin-left:26px;_display:inline}
+.copy-area b{float:left;width:218px; font-weight:normal; color:#518900}
+.everyone{margin-top:20px}
+.everyone h2{color:#f36f12; font-size:14px; font-weight:bold; margin-bottom:18px}
+.everyone h2 a{float:right; font-size:12px; font-weight:normal; color:#518900}
+.hot-game-list a{float:left; width:134px; height:92px; overflow:hidden; position:relative; border-radius:6px; margin-right:5px;_display:inline;transition:transform 0.3s linear,box-shadow 0.3s linear;-moz-transition:-moz-transform 0.3s linear,box-shadow 0.3s linear;-webkit-transition:-webkit-transform 0.3s linear,box-shadow 0.3s linear}
+.hot-game-list a:hover{transform:translateY(-6px);-webkit-transform:translateY(-6px);-moz-transform:translateY(-6px); box-shadow:0 0 6px #000}
+.hot-game-list .title-bg2{background:#000; width:134px; height:18px; position:absolute; left:0; bottom:0; opacity:0.75;filter:alpha(opacity=75)}
+.hot-game-list .game-title{position:absolute; left:0; bottom:0; width:134px; height:18px; line-height:18px; text-align:center; color:#fff}
+
+.yixuanzhe{color:#404040; width:645px; float:left; display:inline; padding:15px 0px 0px 28px; margin-bottom:15px;} 
+.yixuanzhe p{ float:left; line-height:31px; display:inline; width:60px; } 
+.yixuanzhe li{ float:left;color:#808080; margin:5px 5px 0 0; line-height:16px;} 
+.yixuanzhe li span{ color:#fff; float:none;position: absolute;right: 2px;top: 2px;width: 14px;height: 14px; float:left; line-height:13px; background:#7bbb03; text-align:center; font-weight:700; font-size:12px;} 
+.yixuanzhe li span:hover{ background:#3b8900; cursor:pointer} 
+.yixuanzhe a{ position: relative;height: 18px;line-height: 18px;border: 1px solid #7bbb03;background:white;color:#7bbb03;white-space: nowrap; padding: 0px 17px 0px 3px; display:inline-block} 
+.yixuanzhe a:hover{ text-decoration:none} 
+.yixuanzhe a:hover span{ _cursor:pointer } 
+.yixuanzhe h5{font-size: 12px;display: inline;font-weight: normal;color: gray;} 
+
+.receive{margin-top:14px; position:relative}
+.receive .receive-n{height:27px; overflow:hidden; padding-left:22px; background:#dfdfdf; border-radius:6px} 
+.receive .receive-n li{ width:75px; height:30px; float:left; display:inline; color:#505050; text-align:center; padding-right:5px; margin-left:5px; line-height:27px; font-size:14px; cursor:pointer; border-right:1px solid #fff;} 
+.receive .receive-n li.none{ border:none} 
+.receive .receive-n li.hover{background:url(../images/tab-menu.png) no-repeat; color:#518900;line-height:30px;} 
+.receive .receive-m-d{ display:none} 
+.receive-detail{margin:20px 0 0 0px; }
+.receive-detail .bd{overflow:hidden; border:1px solid #dbdbdb;padding:20px 0 10px 20px;background:#f9f9fa; border-radius:6px} 
+.gameIn{ float:left; display:inline; width:136px; margin-right:23px; position:relative} 
+
+.gameIn .img{ width:137px; height:174px; background-position:-382px -230px; position:relative} 
+.gameIn img{ width:129px; height:166px; position:absolute; top:4px; left:3px;} 
+.gameIn img.erWei{ width:105px; height:104px; top:278px; left:19px; }
+.gameIn em{display:block; position:absolute; top:4px; left:3px; width:66px; height:57px;} 
+.gameIn em.shouji{ background-position:-67px;} 
+.gameIn em.kehuduan{ background-position:-134px;} 
+.gameIn em.qipai{ background-position:-201px;} 
+.gameIn a{ display:inline-block; margin-top:21px; width:142px; height:42px; overflow:hidden; margin-left:-2px; position:relative; _line-height:0; text-indent:-9999px; _text-indent:0;*text-indent:0!important; *line-height:0!important; } 
+.gameIn a.gameIn{ background:url(../images/libao/ui.jpg) -251px -149px; margin-right:0;} 
+.gameIn a.downKh{ background:url(../images/libao/btn3.jpg)} 
+.gameIn a.downDt{background:url(../images/libao/btn3.jpg) 0 -57px;} 
+.gameIn a.chongZhi{background:url(../images/libao/btn3.jpg) 0 -114px;}
+.gameIn a.downYX{background:url(../images/libao/sprite.png) no-repeat 0 -150px}
+.gameIn a.downYX:hover{background-position:-143px -150px}
+
+ 
+.info{ float:left; display:inline; width:493px;} 
+.info h2{ font-size:14px; color:#518900; padding-bottom:5px; width:493px; border-bottom:1px solid #d3d4d5; margin-bottom:5px; position:relative} 
+.info h2 span{ color:red; position:absolute; top:0; right:0; font-size:12px;}
+.infoBox { width:493px; padding:2px 0; display:inline-block } .infoBox h3{display:inline-block; width:64px; height:17px; line-height:17px; text-align:center; color:#000; float:left; margin-right:9px;} .infoBox .info-r{ width:420px; background:url(../images/libao/zimu-x.jpg) repeat-x bottom; line-height:17px; overflow:hidden; color:#8f8f8f; float:left; display:inline; padding:0 0 10px 0 } .infoBox p{ width:420px; line-height:17px; color:#8f8f8f; float:left; display:inline;} .infoBox p.last{ background:none} 
+
+/*number*/
+.number{ width:483px; height:117px; float:left; display:inline; margin-top:10px; position:relative} 
+	.number span{ display:none} 
+	.number select{position:absolute; display:block; width:220px; height:21px; top:14px; left:139px; z-index: 1;} 
+	.number .select{left:24px}
+	.number .code-input2{width: 50px; height: 18px; line-height: 18px;  margin: 0 6px; padding:0 3px;background:#fff; border:1px solid #dbdbdb; position: absolute;top:14px; left:326px;border-left:1px solid #dbdbdb;border-right:1px solid #dbdbdb;color: #524f58; text-align: left; font-size: 12px; cursor: default;}
+	.number p{position:absolute; display:block; width:395px; height:30px; top:50px; left:105px; line-height:22px; overflow:hidden; color:#518900} 
+	.number .code-img2{position:absolute;top:14px; left:260px;}
+	.number .sendBox{display: none;}
+	.number p.sendPhone{ top: 75px; color: #000}
+	.number p.sendPhoneT{ top: 100px; }
+	.number p.sendPhone .num{ display: inline-block; width: 93px; height: 18px; line-height: 18px;  margin: 0 6px; padding:0 3px;background:#fff; border:1px solid #dbdbdb; position: static;border-left:1px solid #dbdbdb;border-right:1px solid #dbdbdb;color: #524f58; text-align: left; font-size: 12px; cursor: default;}
+	.number p.sendPhone .send{display: inline-block;width: 47px; height: 20px; line-height: 20px; background:url(../images/libao/next.jpg) 0 -36px; color: #000; text-align: center; position: static; border: none; padding: 0; font-size: 12px}
+	.number input{ position:absolute; text-align:center; top:12px; left:405px; background-position:-270px -227px; color:#FFF; width:85px; height:26px; line-height:28px; border:none; cursor:pointer; display:block; padding-bottom:4px; font-size:14px;} 
+	.number input:hover{ background-position:-270px -227px;}
+	.number .code-input{display: inline-block; width: 50px; height: 18px; line-height: 18px;  margin: 0 6px; padding:0 3px;background:#fff; border:1px solid #dbdbdb; position: static;border-left:1px solid #dbdbdb;border-right:1px solid #dbdbdb;color: #524f58; text-align: left; font-size: 12px; cursor: default;}
+	.number input.copy{ top:83px; left: 139px; } 
+	.number input.weiXin,.number input.copy2{ top:46px;  } 
+	.number input.ig{ top:83px; } 
+	.number .inGame{ width:161px; height:61px; background:url(../images/libao/btn2.jpg); top:20px; left:155px; display:block; text-indent:-9999px; overflow:hidden; position:absolute} 
+	.number .dengJi{ width:161px; height:61px; background:url(../images/libao/btn2.jpg) 0 -61px; top:20px; left:155px; display:block; text-indent:-9999px; overflow:hidden; position:absolute} 
+	.number .downKud{ width:161px; height:61px; background:url(../images/libao/btn2.jpg) 0 -122px; top:20px; left:155px; display:block; text-indent:-9999px; overflow:hidden; position:absolute} 
+
+/*nowPlay*/
+.nowPlay{ height:146px; float:left; display:inline; margin:5px 0 0 0px; } 
+	.nowPlay .f-m-w{ position:relative; width:584px; height:94px; overflow:hidden} 
+	.nowPlay .f-m{ position:relative; overflow:hidden} 
+	.nowPlay ul{ float:left; display: inline-block;} 
+	.nowPlay h2{float:left; line-height:48px; height:48px; color:#f36f12; font-size:14px; font-weight:bold; position:relative;} 
+	.nowPlay li{ width:137px; height:94px; float:left;margin-right:2px;position:relative; _display: inline;transition:transform 0.3s linear,box-shadow 0.3s linear;-moz-transition:-moz-transform 0.3s linear,box-shadow 0.3s linear;-webkit-transition:-webkit-transform 0.3s linear,box-shadow 0.3s linear} 
+	.nowPlay li:hover{transform:translateY(-5px);-webkit-transform:translateY(-5px);-moz-transform:translateY(-5px); box-shadow:0 0 10px #000}
+	.nowPlay img{ width:137px; height:94px;  position: absolute; top: 0; left: 0} 
+	.nowPlay ul a{ display:block; position:absolute;bottom:0; left:0; width:137px; height:94px;z-index:4; background:url(about:blank)} 
+	.nowPlay h2 a{ right:0;top:0; position:absolute;color:#518900;} 
+	.nowPlay span{width:137px;height:18px;opacity:0.75;filter:alpha(opacity=75);background:#000;position:absolute;left:0;bottom:0;display:block;z-index:2;} 
+	.nowPlay p{ color:#FFF; height:18px; line-height:18px; width:137px; overflow:hidden;bottom:0; left:0; text-align:center; position:absolute;z-index:3}
+	.back-libao{float:right; color:#518900; line-height:48px; padding-right:7px}
+	
+
+.popup{width: 381px; height: 379px; position: absolute; top: 64px; left: 173px; z-index:6;}
+.popup .popupHd{ width: 381px; height: 55px; background:url(../images/libao/popup.png) no-repeat;line-height: 55px; text-align: center; color: #fff; font-size:20px; }
+.popup .popupBd{width: 379px; height: 315px; border-left: 1px solid #8cb238; border-right: 1px solid #8cb238; background: #fff;}
+.popup .popupFt{background:url(../images/libao/popup.png) no-repeat 0 -55px;width: 381px; height:8px;}
+.popup .popupHd .close{ position: absolute; width: 20px; height: 18px; background: url(about:blank); top: 19px; right: 12px;}
+.popup .popupBd .popupHdPart01 .erWei{position: absolute; top:74px; left: 132px;}
+.popup .popupBd .popupHdPart01 p{position: absolute; top:215px; left: 37px; color: #8e8c8c; font-size: 16px; height: 28px; line-height: 28px;}
+.popup .popupBd a.next,.popup .popupBd a.pre{width: 132px; height: 36px; line-height: 36px; text-align: center; display: block; position: absolute; top: 328px; background:url(../images/libao/next.jpg) no-repeat; font-size: 16px; color: #fff}
+.popup .popupBd a.pre{left: 34px;}
+#next04,
+#next05,
+#next03,
+#next02{left: 194px;}
+.popup .popupBd .popupHdPart01 a.next{left: 124px;}
+.popup .popupBd img{position: absolute; top:74px; left: 27px;}
+.popup .popupBd i{position: absolute; top:184px; left: 226px; width: 125px; height: 117px; display: block;;background:url(../images/libao/i.jpg) no-repeat; line-height: 80px; text-align: center; color: #fff; font-style: normal; font-size: 14px}
+.popup .popupBd em{ position: absolute; width: 114px; height: 12px;background:url(../images/libao/line.png) no-repeat; display: block; left: 176px; top: 294px; z-index: 3; }
+.popup .popupBd .popupHdPart03 i{  top: 151px}
+.popup .popupBd .popupHdPart03 em{top: 261px}
+.popup .popupBd .popupHdPart04 i{ line-height: 22px; padding-top: 8px; height: 121px; top: 186px}
+.popup .popupBd .popupHdPart04 em{left: 100px; width: 190px; top: 297px}
+.popup .popupBd .popupHdPart05 i{ line-height: 22px; padding-top:5px; height: 112px; top: 84px}
+.popup .popupBd .popupHdPart05 em{left: 149px; width: 141px; top: 195px}
+.iframePup{width: 381px; height: 379px; position: absolute; top: 64px; left: 173px;background-color: transparent; z-index:5;display: none;}
+.popup,.popup02{width: 381px; height: 379px; position: absolute; top: 83px; left: 173px; z-index:6; display: none;} 
+.popup .popupHd,.popup02 .popupHd{ width: 381px; height: 55px; background: url(../images/libao/popup.png) no-repeat;line-height: 55px; text-align: center; color: #fff; font-size:20px; } 
+.popup .popupBd,.popup02 .popupBd{width: 379px; height: 315px; border-left: 1px solid #8cb238; border-right: 1px solid #8cb238; background: #fff;} .popup .popupFt,.popup02 .popupFt{background:url(../images/libao/popup.png) no-repeat 0 -55px;width: 381px; height:8px;} 
+.popup .popupHd .close,.popup02 .popupHd .close{ position: absolute; width: 20px; height: 18px; background: url(about:blank); top: 19px; right: 12px;} .popup .popupBd .popupHdPart01 .erWei{position: absolute; top:74px; left: 132px;} 
+.popup .popupBd .popupHdPart01 p{position: absolute; top:215px; left: 37px; color: #8e8c8c; font-size: 16px; height: 28px; line-height: 28px;} .popup .popupBd a.next,.popup .popupBd a.pre,.popup02 .popupBd a.pre{width: 132px; height: 36px; line-height: 36px; text-align: center; display: block; position: absolute; top: 328px; background:url(../images/libao/next.jpg) no-repeat; font-size: 16px; color: #fff} 
+.popup .popupBd a.pre,.popup02 .popupBd a#quXiao.pre{left: 34px;} 
+.popup .popupBd a.next,.popup02 .popupBd a#liJi.pre{left: 194px;} 
+.popup .popupBd .popupHdPart01 a.next,.popup .popupBd a.next,.popup02 .popupBd a#guanBi.pre{left: 124px;} 
+.popup .popupBd img{position: absolute; top:74px; left: 27px;} 
+.popup .popupBd i{position: absolute; top:184px; left: 226px; width: 125px; height: 117px; display: block;;background:url(../images/libao/i.jpg) no-repeat; line-height: 80px; text-align: center; color: #fff; font-style: normal; font-size: 14px} 
+.popup .popupBd em{ position: absolute; width: 114px; height: 12px;background:url(../images/libao/line.png) no-repeat; display: block; left: 176px; top: 294px; z-index: 3; } 
+.popup .popupBd .popupHdPart03 i{ top: 151px} 
+.popup .popupBd .popupHdPart03 em{top: 261px} 
+.popup .popupBd .popupHdPart04 i{ line-height: 22px; padding-top: 8px; height: 121px; top: 186px} 
+.popup .popupBd .popupHdPart04 em{left: 100px; width: 190px; top: 297px} 
+.popup .popupBd .popupHdPart05 i{ line-height: 22px; padding-top:5px; height: 112px; top: 84px} 
+.popup .popupBd .popupHdPart05 em{left: 149px; width: 141px; top: 195px} 
+.iframePup{width: 381px; height: 379px; position: absolute; top: 64px; left: 173px;background-color: transparent; z-index:5;display: none;} .popup02 .popupBd .text{ font-size:18px; color:#ff7900; padding:20PX 0 25px 80PX; height:52px; line-height:26px;} 
+.popup02 .popupBd label{ width:80px; display:inline-block; text-align:right; padding-right:5px; color:#000; height:22px; line-height:22px;} 
+.popup02 .popupBd input{border:1px solid #8cb238; height:20px; line-height:20px; padding:0 3px; width:130px;} 
+.popup02 .popupBd input.send{ width:auto; border:none; background:none; cursor:pointer; text-decoration:underline;color:#ff7900; padding:0;} 
+.popup02 .popupBd span{ clear:both; display:block; padding:3px 0 3px 85px; color:red; } 
+.popup02 .popupBd .step02{ padding-top:70px;} 
+.popup02 .popupBd .step02{ font-size:18px; line-height:22px;color:#ff7900; width:100%; text-align:center } 
+.popup02 .popupBd .step02 .title{ padding:10px 0} 
+
+
+.tab_box .model .img em{ background:url(../images/libao/tip.png)} 
+.gameIn em{ background:url(../images/libao/tip2.png)} 
+
+.goodInfo {margin-top:20px;	overflow:hidden;}
+.goodInfo h2 {height: 22px;line-height: 22px;color: #518900;font-size: 14px;font-weight:bold}
+.goodInfo .hd {display:none}
+.goodInfo .bd {position: relative;background:url(../images/libao/paper-bg1.png) no-repeat;padding-top:50px;padding-bottom:80px;padding-left:50px;}
+.goodInfo .ft {background:url(../images/libao/paper-bg3.png) no-repeat; height:10px}
+.goodInfo li {width: 371px;padding: 14px 0;border-bottom:1px dotted #666}
+.goodInfo li.last {border:none}
+.goodInfo li p {*width:275px!important;position: relative;}
+.goodInfo li p input {width: 180px;}
+.goodInfo li p input#ii {width: 60px;cursor: pointer}
+.goodInfo li p input.file {position: absolute;top: 0;left: 85px;*left:75px!important;left: 160px\0;_left: 90px;filter: alpha(opacity=0);-moz-opacity: 0;opacity: 0;cursor: pointer}
+.goodInfo label {display: inline-block;width: 64px;height: 17px;line-height: 17px;text-align: center;color: #000;float: left;margin: 3px 17px 0 0;font-weight:bold;}
+.goodInfo input {width: 275px;height: 26px;background: #f2f2f2;border: 1px solid #c2c2c2;line-height: 26px;padding: 0 5px;}
+.goodInfo .btn{border: none;width: 114px;height: 43px;cursor: pointer;text-indent: -9999px;color: #FFF;display: block;background:url(../images/libao/sprite.png) no-repeat 0 -106px;margin-left:80px;margin-top:20px}
+.goodInfo .btn:hover{background-position:-115px -106px}
+.goodInfo span {width: 236px;height: 205px;position: absolute;display: block;background-position: -442px -15px;top: 0;right: -39px;_right: -40px;}
+.goodInfo img {width: 288px;height: 107px;_float: left}
+
+.libao{background:url(../images/libao/gift.png) no-repeat 1000px 200px}
+.gift-pic{position:absolute; background:url(../images/libao/gift.png) no-repeat; width:106px; height:127px; right:-100px; top:-50px}
+.record .gift-pic{top:-73px; right:-77px}
+.receive .gift-pic{top:-86px; right:-77px}

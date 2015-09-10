@@ -1,0 +1,217 @@
+@charset "gb2312";
+/* 新闻首页 */
+li{*vertical-align:middle;}
+.wrapper2{padding-bottom:3px}
+.news-nav .wrapper{padding-bottom:10px}
+.keyword{line-height:20px; height:20px; overflow:hidden; float:left; width:700px; padding-left:36px; margin-top:10px}
+.keyword dt,
+.keyword dd{float:left; color:#e56914;}
+.keyword a{color:#e56914}
+.keyword dd{margin-right:15px;_display:inline;}
+.keyword dt{padding-right:15px; margin-right:8px; background:url(../images/news/sprite2.png) no-repeat right 6px}
+.news-nav{background:#3a3a38; height:auto;font-size:13px; padding-top:15px}
+.nav-list li{float:left;width:98px; border-right:1px dotted #535351}
+.nav-list a{color:#fff; display:block; text-align:center; height:22px; line-height:22px;}
+.nav-list a:hover,
+.nav-list .on a{color:#7cae00; text-decoration:none}
+
+.bshare-custom{float:right; margin:10px 11px 0 0}
+
+.slide{position:relative;width:394px; height:249px; overflow:hidden;}
+.slide .pic li{width:394px; height:249px; overflow:hidden; position:relative}
+.num{position:absolute; left:280px;_left:275px; bottom:6px}
+.num ul{width:100%;height:22px;}
+.num li{float:left; width:22px; height:23px; margin-left:5px; color:#fff; font-family:Arial, Helvetica, sans-serif; background:url(../images/news/sprite2.png) no-repeat 0 -30px; text-align:center; line-height:22px; cursor:pointer}
+.num .on{background-position:0 -52px}
+.slide .pic{position:absolute; left:0; top:0}
+.pic-title{position:absolute; left:15px; bottom:8px; color:#fff; font-size:14px; z-index:10}
+.num-bg{width:100%; height:34px; position:absolute; left:0; bottom:0; background:#000; opacity:0.7; filter:alpha(opacity=70)}
+.slide-wrapper{float:left;border:1px solid #e1e1e1; padding:4px; background:#fff}
+.news-main{padding-top:10px; background:url(../images/news/bg-1.jpg) no-repeat 0 269px; color:#777}
+
+.common-frame{border:1px solid #e1e1e1;}
+.frame-border{border:1px solid #fff; display:block}
+.hot-news{float:left; width:568px; margin-left:10px;_display:inline}
+.hot-list li{float:left; width:568px; height:219px;background:#f7f7f7;}
+.hot-list .common-frame{float:left;width:187px;}
+.hot-list .frame-border{padding:5px 4px;}
+.hot-list{margin-top:7px; width:568px; overflow:hidden; position:relative}
+.hot-desc{margin-top:6px; line-height:16px; height:80px; overflow:hidden; font-family:simsun}
+.tag{border-top:1px dotted #9e9e9e; margin-top:3px; line-height:20px; color:#9e9e9e;}
+.next2,
+.prev2{position:absolute; right:25px; top:5px; background:url(../images/news/sprite.png) no-repeat 0 -121px; width:18px; height:18px; cursor:pointer}
+.next2{right:0; background-position:-18px -121px}
+.prev2:hover{background-position:0 -139px}
+.next2:hover{background-position:-18px -139px}
+#slide{width:5000px; position:relative}
+
+.tab-content4 .on{display:block}
+.tab-content4 .tab-box{overflow:hidden}
+.tab-menu4 li{float:left;padding:0 12px 5px 22px; font-size:16px; color:#518900;background:url(../images/sprite2.png) no-repeat left -532px; margin-right:25px; cursor:pointer}
+.tab-menu4 a{display:block}
+.tab-menu4{border-bottom:1px solid #7cae00}
+.tab-menu4 .on{border-bottom:3px solid #7cae00;}
+.menu-wrapper{position:relative}
+.line-tab2,
+.line-tab3,
+.line-tab4,
+.line-tab{position:absolute; left:105px; top:5px; width:1px; height:16px; background:#7cae00}
+.floor-2{padding-top:20px}
+.floor-2-left{float:left; width:396px; position:relative}
+.floor-2-left .tab-menu6{right:0}
+.floor-2-left .tab-menu4 a{color:#518900}
+.floor-2-left img{width:135px; height:84px;}
+.floor-2-left .frame-border{padding:3px}
+.floor-2-left .common-frame{float:left; background:#f7f7f7}
+.list-right{padding-left:8px; overflow:hidden}
+.list-right h3{font-size:14px; font-weight:bold; line-height:30px}
+.time{float:right}
+.list-right p{float:left; width:233px; padding-left:10px; line-height:20px; background:url(../images/news/sprite2.png) no-repeat left -81px}
+.list-right p a{float:left; width:150px; height:20px; overflow:hidden}
+.f_left_list li{border-bottom:1px dotted #a7a7a4; padding:11px 0}
+
+.floor-2-middle{float:left; width:365px; margin-left:18px;_display:inline}
+.floor-2-middle .tab-menu4 li{background:none; padding-left:0}
+.line-tab2{left:83px}
+.line-tab3{left:185px}
+.line-tab4{left:73px}
+.floor-2-middle .frame-border{padding:3px 0 3px 4px; background:#f7f7f7}
+.floor-2-middle .common-frame{margin-top:10px}
+.floor-2-middle h3{color:#ff0000; text-align:center; font-size:14px; line-height:32px; font-weight:bold}
+.article{line-height:20px; border-bottom:1px dotted #a7a7a4; padding-bottom:8px}
+.article-list{padding-top:12px}
+.article-list li{background:url(../images/news/sprite2.png) no-repeat left -105px; padding-left:10px; padding-right:5px; height:22px; line-height:22px; overflow:hidden;zoom:1}
+.article-list a{float:left; width:250px; height:22px; overflow:hidden;}
+.week-test{float:right; width:187px; background:url(../images/news/title-bg.png) repeat-x #f7f7f7}
+.week-test h3{background:url(../images/sprite2.png) no-repeat 10px -530px; line-height:28px; padding-left:34px; font-size:16px; color:#518900}
+.week-test table{text-align:center;}
+.week-test td{line-height:28px; border-top:1px dotted #cacac8}
+.week-test th{line-height:30px}
+.sort{display:block; width:16px; height:16px; text-align:center; line-height:16px; background:url(../images/news/sprite2.png) no-repeat 0 -152px; margin:0 auto}
+.first-three{background-position:0 -136px; color:#fff}
+.week-pic{display:block; padding:13px 0 5px 4px}
+.week-pic img{width:177px; height:114px}
+.ad-banner{display:block; margin-top:10px}
+.ad-banner img{width:982px}
+.f_left_list .last{border-bottom:none; padding-bottom:0}
+
+.floor-3-left{margin-top:15px; width:347px; float:left}
+.slide2{width:294px; margin-left:26px; margin-top:18px; height:193px;position:relative; overflow:hidden }
+.pic3{position:absolute; width:4000px}
+.pic3 li{float:left; width:306px}
+
+.pic3 a{float:left; width:90px; height:90px; margin:0 12px 12px 0; position:relative}
+.pic3 .title-bg{height:18px; width:100%; background:#000; opacity:0.6;filter:alpha(opacity=60); position:absolute; left:0; bottom:0}
+.pic3 h3{width:100%; height:18px; text-align:center; color:#fff; position:absolute; left:0; bottom:0}
+#tab_content9 .tab-box{position:relative}
+.next,
+.prev{position:absolute; left:0; top:100px; background:url(../images/news/sprite2.png) no-repeat 0 -168px; width:11px; height:18px; cursor:pointer}
+.next{left:auto; right:0; background-position:-11px -168px}
+.prev:hover{background-position:0 -185px}
+.next:hover{background-position:-11px -185px}
+.w-pic{display:block; margin-top:20px}
+.w-pic img{width:347px}
+
+.floor-3-middle{float:left; width:408px; margin-top:20px; margin-left:25px;_display:inline}
+.tab-menu5 li{width:26px; height:94px; font-size:16px; padding-left:2px; text-align:center; color:#518900; background:url(../images/news/sprite.png) no-repeat -32px 0; padding-top:8px; margin-bottom:10px; cursor:pointer}
+.tab-menu5 .on{background-position:2px 0; color:#fff}
+.tab-menu5{border-right:3px solid #7cae00; width:28px; height:370px; float:left}
+.tab-content5{float:left; width:375px}
+#tab_content10{border-left:none;}
+.tab-content5 .on{display:block}
+.tab-content5 .tab-box{background:#f7f7f7}
+.tab-content5 h3{color:#ff0000; font-size:14px; font-weight:bold; line-height:44px; text-align:center}
+.tab-content5 .frame-border{padding-left:10px; padding-right:10px;height:367px;}
+.text{overflow:hidden; padding-left:16px; width:192px; line-height:20px}
+.more-text{text-align:right}
+.tab-content5 .article-list{border-top:1px dotted #ababa9; margin-top:4px}
+.tab-content5 .article-list li{float:left; width:158px;}
+.tab-content5 .article-list a{width:150px}
+.key{float:left; width:776px; border:1px solid #d0d0d0; background:#fff}
+.key .friendsLinkCont{padding:15px 20px; line-height:22px}
+.key .friendsLinkCont a{margin-left:5px; margin-right:2px}
+
+.small-game{margin-top:20px; position:relative}
+.top-pic{text-align:center; margin-top:10px}
+.top-pic img{width:56px; height:37px}
+.s-list{padding-top:5px; height:290px; border-bottom:1px solid #cacac8; padding-bottom:20px; position:relative}
+.s-list li{line-height:28px; border-bottom:1px dotted #cacac8; padding-left:15px}
+.s-list .last{border-bottom:none}
+.tab-menu6{position:absolute; top:6px; right:10px}
+.tab-menu6 li{float:left; width:16px; height:16px; line-height:16px; text-align:center; background:#d8d8d8; margin-left:3px;_display:inline; cursor:pointer}
+.tab-menu6 .on{background:#80b008; color:#fff}
+.tab-content6 .on{display:block}
+.s-more{position:absolute; right:0; bottom:0; width:54px; padding-right:4px; height:17px; background:url(../images/news/sprite.png) no-repeat 0 -103px; text-align:center; line-height:14px; color:#fff}
+.bottom-game{padding:10px 0 0 6px}
+.small-game .frame-border{padding-bottom:9px}
+.bottom-right{overflow:hidden; padding-left:7px; padding-top:6px}
+.bottom-right p{color:#9e9e9e; margin-top:3px}
+.ad-left{position:fixed;_position:absolute; left:50%; margin-left:-700px; top:180px}
+.ad-right{position:fixed;_position:absolute; left:50%; top:180px; margin-left:500px}
+
+/*-- 新闻列表页 --*/
+.news-left{float:left; width:662px; font-family:simsun;}
+.news-list .frame-border{padding:4px}
+.news-list h2{font-size:16px; font-weight:bold; color:#535353}
+.news-list p{color:#777777}
+.add-bg{background:url(../images/news/bg-2.jpg) no-repeat 0 bottom; padding-bottom:13px}
+.ver-info{line-height:26px; padding-bottom:2px}
+.news-detial{overflow:hidden; padding-left:10px; line-height:22px; height:66px; overflow:hidden; margin-top:6px}
+.more-news{text-align:right}
+.more-news a{display:inline-block; width:58px; height:17px; margin-top:6px; background:url(../images/news/sprite.png) no-repeat 0 -103px; color:#fff; text-align:center; line-height:17px}
+.news-list li{border-bottom:1px dotted #a9a9a6; padding-bottom:10px; padding-top:20px}
+.common-title{font-family:'Microsoft Yahei'}
+.relative-news{margin-top:20px}
+.relative-news .tab-content5{width:auto; padding-top:15px}
+.relative-news .tab-content5 li{width:316px}
+.relative-news .article-list a{width:302px}
+.relative-news .tab-content5 .text{width:auto; color:#777}
+.relative-news .tab-content5 h3{font-size:14px; text-align:left; line-height:18px}
+.tuijian{margin-top:15px; border:1px solid #d0d0d0; background:url(../images/news/title-bg.png) repeat-x #fff; position:relative}
+.tuijian h3{line-height:28px; padding-left:10px; color:#518900}
+.tuijian h3 a{color:#518900; margin-left:3px}
+.tuijian .slide2{width:586px; margin-top:12px; height:97px; margin-left:43px}
+.tuijian .slide2 li{width:600px}
+.tuijian .pic3 a{width:135px; height:84px}
+.tuijian .slide2 h3{padding-left:0; line-height:18px; color:#fff}
+.tuijian .prev{left:15px; top:72px}
+.tuijian .next{right:15px; top:72px}
+
+.side-bar{float:right; width:300px; padding-top:10px}
+.module{background:url(../images/news/title-bg.png) repeat-x #f7f7f7; position:relative; _zoom:1}
+.module h3{line-height:28px; background:url(../images/news/sprite2.png) no-repeat 12px -235px;color:#518900; font-size:16px; padding-left:38px;}
+.module .more-game{top:6px; right:10px}
+.list{padding:15px 12px;}
+.list a{float:left; line-height:24px; height:24px; width:202px; overflow:hidden}
+.list li{overflow:hidden;line-height:24px; height:24px}
+.mt15{margin-top:15px}
+
+.tab-menu7 li{float:left; width:58px; height:22px; text-align:center; line-height:22px; background:#d8d8d8; margin-right:8px; cursor:pointer}
+.tab-menu7 .on{background:#80b008; color:#fff}
+.tab-menu7{border-bottom:1px solid #d8d8d8; margin:9px 0 0 12px}
+.tab-content7 .on{display:block}
+.bottom-pic{margin-left:5px; display:block; padding-bottom:5px;}
+.green{color:#80b008}
+.goto{float:right; color:#fff; width:67px; height:26px; background:url(../images/news/sprite.png) no-repeat 0 -159px; text-align:center; line-height:26px}
+.game-info{overflow:hidden; _zoom:1; _margin-top:-13px}
+.game-list li{overflow:hidden; padding:12px; border-bottom:1px dotted #cacac8}
+.game-info a{font-weight:bold; text-decoration:underline; margin-right:6px}
+.game-info{padding-left:8px}
+.game-info p{color:#9e9e9e}
+.game-list .last{border-bottom:none}
+.game-list2{_padding-bottom:12px}
+.game-list2 li{border-bottom:none}
+.game-list2 .game-info{padding-top:6px;}
+.game-list2 .game-info h2{margin-bottom:5px}
+
+.common-title2 a{color:#518900}
+.common-title2 b{font-family:simsun}
+.article-content{padding-top:45px; font-family:simsun}
+.article-content h1{font-size:15px; text-align:center; font-weight:bold; color:#666}
+.article-info{color:#999; line-height:70px; text-align:center}
+.article-content p{text-indent:2em; line-height:20px; color:#777; margin-bottom:20px}
+.article-content a{color:#777}
+.article-pic{text-align:center; margin-bottom:20px}
+.article-nav{background:#e4e4e4; height:30px; line-height:30px; padding:0 30px; margin-top:40px}
+.fr{float:right}
+.relative-news .article-list{border-top:none}

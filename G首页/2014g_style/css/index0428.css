@@ -1,0 +1,178 @@
+@charset "gb2312";
+/*-- hot game --*/
+.r-game{height:262px; margin-top:11px}
+.slide{float:left; margin:4px 0 0 4px; position:relative;width:483px; height:224px; overflow:hidden;_display:inline}
+.slide .pic li{width:483px; height:224px; overflow:hidden;}
+.num{float:left; width:450px;  margin:1px 0 0 20px; background:url(../images/num.png) 19px 3px #fff no-repeat; overflow:hidden}
+.num ul{width:450px;height:24px; padding:6px 0 0 48px; }
+.num li{float:left; width:18px; height:18px; margin-right:93px; color:#fff; font-family:Arial, Helvetica, sans-serif; background:url(../images/num.png) no-repeat -29px -46px; text-align:center; line-height:18px; cursor:pointer}
+.num .on{background-position:0 -46px}
+.slide .pic{position:absolute; left:0; top:0}
+.phone-part{float:right; width:194px; height:262px; position:relative}
+.phone-part h3{background:url(../images/sprite2.png) no-repeat 7px -480px; height:35px; line-height:34px; font-size:16px; color:#518900; padding-left:25px}
+.jian{width:32px; height:31px; position:absolute; right:0; top:0; background:url(../images/sprite.png) no-repeat -353px -70px}
+.phone-game-info{height:90px;background:#f0f0f0; padding-top:8px; padding-left:9px;}
+.phone-game-pic{float:left}
+.phone-game-pic img{vertical-align:top; width:83px; height:83px}
+.phone-game-des{float:left; position:relative; width:83px; height:83px; margin-left:13px;_display:inline; cursor:pointer}
+.phone-game-des p{line-height:14px; font-size:14px; color:#ff7800; width:85px; height:16px; background:url(../images/sao.png) no-repeat; text-indent:-999em; _position:relative; overflow:hidden; margin-left:-6px}
+.qr-code{margin-top:7px; text-align:center; padding-right:5px}
+.qr-code img{vertical-align:top; width:60px;}
+.big-pic{position:absolute;left:-6px; bottom:0; display:none}
+.big-pic img{width:126px}
+.android{display:block; margin-top:3px;width:96px; height:38px; background:url(../images/sprite.png) no-repeat -289px -149px;}
+.phone-part .ios{width:101px; height:43px; background:url(../images/sprite.png) -284px -104px; position:absolute; right:-5px; top:136px}
+.phone-part .android:hover{position:relative; top:-2px}
+.phone-part .ios:hover{margin-top:-2px}
+.phone-part .ios-disabled{background-position:0 -263px}
+.phone-part .ios-disabled:hover{margin-top:0}
+.other-phone-game{padding-left:1px}
+.other-phone-game li{float:left; width:64px; height:82px; text-align:center; padding-top:9px}
+.other-phone-game a{display:block}
+
+/*-- 热门页游推荐 --*/
+.page-game{margin-top:27px; padding-left:14px}
+.page-game-list{width:682px; margin-top:12px;_overflow:hidden}
+.page-game-list li{float:left; width:209px; border:1px solid #e1e1e1; margin:0 25px 20px 0;_dsiplay:inline;transition:transform 0.3s linear,box-shadow 0.3s linear;-webkit-transition:-webkit-transform 0.3s linear,box-shadow 0.3s linear;-moz-transition:-moz-transform 0.3s linear,box-shadow 0.3s linear}
+.page-game-list li:hover{transform:translateY(-5px);-webkit-transform:translateY(-5px);-moz-transform:translateY(-5px); box-shadow:0 0 15px #000}
+.page-game-list ul{width:730px}
+.white-line{height:150px; border:1px solid #fff; padding:12px 0 0 18px; position:relative;}
+.white-line img{width:171px; height:98px}
+.page-game-title{margin-top:5px;}
+.page-game-title a{font-size:16px; color:#518900}
+.page-game-list h4{margin-top:3px;}
+.jian2{display:inline-block; width:15px; height:15px; font-size:12px; font-family:simsun; font-weight:normal; background:#ff393a; color:#fff; text-align:center; line-height:14px; _line-height:18px; margin-bottom:-3px;_margin-bottom:3px; overflow:hidden}
+.link-1{display:inline-block; padding-left:7px; background:url(../images/sprite2.png) no-repeat 0 -574px; color:#518900}
+.link-2{display:inline-block; padding-left:7px; background:url(../images/sprite2.png) no-repeat 0 -607px; color:#ff6c00; margin-left:8px}
+.in-game{position:absolute; top:126px; right:17px; width:67px; height:26px; line-height:26px; text-align:center; color:#fff; background:url(../images/sprite.png) no-repeat -318px -188px}
+.in-game:hover{background-position:-318px -215px; text-decoration:none}
+
+/*-- 游戏视频 --*/
+.game-video{padding-left:14px;padding-top:34px; background:url(../images/video-bg.png) 502px 0 no-repeat}
+.video-list{margin-top:10px;_width:682px}
+.video-list ul{width:700px}
+.video-list li{float:left; width:121px; height:101px; margin-right:19px; margin-bottom:7px;_display:inline}
+.video-pic{display:block; width:121px; height:75px; overflow:hidden;transition:transform 0.2s linear,box-shadow 0.2s linear;-webkit-transition:-webkit-transform 0.2s linear,box-shadow 0.2s linear;-moz-transition:-moz-transform 0.2s linear,box-shadow 0.2s linear}
+.video-pic img{width:121px; height:75px}
+.video-pic:hover{transform:scale(1.1);-webkit-transform:scale(1.1);-moz-transform:scale(1.1);box-shadow:0 0 5px #000}
+.first .video-pic:hover{transform:none;-webkit-transform:none;-moz-transform:none;box-shadow:none}
+.video-title{line-height:26px; height:26px; overflow:hidden}
+.video-list .first{width:261px; height:209px;}
+.first a{display:block;}
+.video-title .title-14{font-size:14px; color:#518900; line-height:26px}
+.video-list .first .video-pic img,
+.video-list .first .video-pic{width:261px; height:183px}
+
+/*-- 游戏大全 --*/
+.game-daquan{padding-left:14px; margin-top:12px;*margin-top:10px}
+.tab-menu2{text-align:right; height:15px; position:relative; top:-28px}
+.tab-menu2{color:#518900; font-size:14px}
+.tab-menu2 a{color:#518900}
+.tab-menu2 .on,
+.tab-menu2 a:hover{color:#f36f12; text-decoration:none}
+.tab-content2{height:120px}
+.tab-content2 .on{display:block}
+.game-list a{float:left; width:80px; margin-left:15px; margin-bottom:15px; height:16px; line-height:16px; font-family:simsun; font-weight:normal; overflow:hidden}
+.game-icon b{margin-right:3px; position:relative; top:1px;*top:-1px}
+.game-icon b img{width:15px; height:15px;}
+.pic2{position:absolute}
+.pic2 li{height:118px; overflow:hidden; vertical-align:top}
+.slide2{height:118px; overflow:hidden; position:relative}
+.num2 li{float:left; width:6px; height:6px; margin-right:26px; line-height:6px; overflow:hidden; background:url(../images/sprite.png) no-repeat -108px -45px; cursor:pointer;_display:inline}
+.num2 .on{background-position:-88px -45px}
+.num2-wrapper{position:relative;}
+.num2{position:absolute; left:45%; margin-top:4px}
+
+/*-- 热门手游 --*/
+.phone-game{padding-left:14px;padding-top:20px;*margin-top:12px;_margin-top:0; background:url(../images/p-bg.png) no-repeat 495px 9px}
+.phoneGame{width:682px;_overflow:hidden; margin-top:10px}
+.phoneGame ul{display:inline-block; width:720px}
+.phoneGame li{float:left;_display:inline;width:228px;height:166px; position:relative;}
+.phoneGame .big{ position:absolute;   z-index:99;background:#DFE2E7;border: 1px solid #B6BCC7;display:none;}
+.phoneGame .big img{padding:10px;}
+.phoneGame .show{ display:inline-block;}
+.phoneGame .img{padding:7px 0 0 7px;width:100px}
+.phoneGame .row-3{border-right:none}
+
+.phoneGame .row-1 .big{bottom:172px; left:0;}
+.phoneGame .row-2 .big{bottom:172px; left:-228px;}
+.phoneGame .row-3 .big{bottom:172px; right:-2px}
+.phoneGame .long-1 .big{bottom:154px; left:-75px;}
+.phoneGame .long-2 .big{bottom:154px; left:-255px;}
+.phoneGame .long-3 .big{bottom:154px; right:5px}
+.phoneGame .pic{height:150px}
+
+.phoneGame li .big img{ float:left;position:static; display:inline-block;}
+.phoneGame .k {background:url(../images/inne_k02.png) no-repeat;width:9px;height:6px; line-height:6px; overflow:hidden;position: absolute;z-index: 10;}
+
+.phoneGame .row-1 .big .k{bottom:-6px;left: 33px;}
+.phoneGame .row-2 .big .k{bottom:-6px;left: 262px;}
+.phoneGame .row-3 .big .k{bottom:-6px; right:180px}
+.phoneGame .long-1 .big .k{bottom:-6px;left: 102px;}
+.phoneGame .long-2 .big .k{bottom:-6px;left: 285px;}
+.phoneGame .long-3 .big .k{bottom:-6px; left:574px}
+
+.phoneGame li .iphone{cursor:pointer}
+.phoneGame li p.title{ font-size:16px;  position:absolute; height:20px; line-height:20px; left:108px; top:6px; width:115px; overflow:hidden}
+.phoneGame li p.title a{color:#518900;float:left; width:80px; overflow:hidden; height:21px;}
+.phoneGame li p.title span{font-size:14px;color:#ff393a; padding-left:5px;float:left}
+.phoneGame li p.xing{ position:absolute; top:86px; left:108px;}
+.phoneGame li p.xing span{ display:inline-block; background:url(../images/sprite.png) no-repeat 0 -232px; width:11px; height:11px; margin-right:1px; overflow:hidden}
+.phoneGame li p.text{ width:115px; line-height:16px; height:16px; color:#9e9e9e; position:absolute; top:12px; left:108px;text-justify:inter-ideograph;text-align:justify; height:48px;overflow:hidden}
+.phoneGame li .down{ position:absolute; left:108px; top:120px; text-align:center}
+.phoneGame li .down a{width:54px; height:26px;margin-right:3px;display:block;}
+.phoneGame li .down div{float:left;display:inline-block}
+.phoneGame li .down .erWei{display:none;width:112px;height:110px;background:#fff; text-align:center; padding:5px 0;position:absolute; top:-127px; left:0; background:#fff; z-index:10 }
+.phoneGame li .down .erWei img{width:98px;height:98px;float:left;display:inline;position:static;margin-left:5px;}
+.phoneGame li .down .add{ display:block; }
+.phoneGame li .down .an a{background:url(../images/sprite.png) no-repeat -70px -232px; cursor:pointer}
+.phoneGame li .down .ios a{background:url(../images/sprite.png) no-repeat -127px -232px; cursor:pointer}
+.phoneGame li .down .ios .erWei { background:url(../images/bg.png) no-repeat;width:175px; height:56px; top:-65px; left:-65px;padding:16px 0 0 8px;}
+.phoneGame li .down .ios .erWei a{ width:53px; height:26px; padding-left:25px; line-height:26px; display:inline-block; margin-right:8px; background:url(../images/btn.png); color:#fff; float:left; display:inline}
+.phoneGame li .down .ios .erWei a.disClick{ background-position:0 -26px; cursor:default; text-decoration:none}
+.phoneGame li .down p{color:#8f8f8f}
+.phoneGame li .down span{display:inline-block;height:20px;line-height:20px;float:left;text-align:left; padding-left:2px;}
+.phoneGame .jian2{margin-left:8px}
+
+.index-gonggao{background:#eee; border:1px solid #ccc; margin-top:10px; padding:15px 20px}
+.index-gonggao h1{font-size:24px; text-align:center; color:#e56914; margin-top:20px}
+.pub-date{color:#518900; font-size:16px; margin-top:13px; border-bottom:1px dashed #999; padding-bottom:8px}
+.text{margin-top:20px; line-height:22px}
+.text p{margin-bottom:15px; text-indent:2em}
+.g-pic{margin-bottom:15px}
+.pub-date .bshare-custom{float:left; width:280px}
+.s-baidu{margin-top:10px}
+.s-baidu form{float:right}
+.icon-baidu{position:relative; top:3px;*top:5px}
+.bshare-custom b{position:relative; top:2px; display:inline-block}
+.b_baidu{background:#61a42d; color:#fff; border:none; height:20px; padding:0 5px; cursor:pointer; line-height:20px; *padding:0}
+.bottom-link{margin-top:30px}
+.bottom-link a{display:block; line-height:20px; font-size:14px; color:#e56914;}
+
+.qiyi .r-game{margin-top:0}
+.qiyi .right{background:url(../images/right-bg.png) no-repeat 0 0;}
+.kefu-list li{float:left; width:127px; margin-bottom:10px; margin-right:10px;_display:inline}
+.kefu-list a{display:block; height:127px; background:url(../images/sprite.png) no-repeat}
+.qiyi .left{width:261px;}
+.kefu-list ul{width:280px}
+.k-1 a:hover{background-position:-127px 0}
+.k-2 a{background-position:-254px 0}
+.k-2 a:hover{background-position:-381px 0}
+.k-3 a{background-position:0 -127px}
+.k-3 a:hover{background-position:-127px -127px}
+.k-4 a{background-position:-254px -127px}
+.k-4 a:hover{background-position:-381px -127px}
+
+.qiyi .tab-menu{width:263px}
+.qiyi .tab-menu li{width:130px}
+.qiyi .service{background:#fff; border:1px solid #d9d9d9}
+.phoneGame li .down .ios .down-disabled{background:url(../images/libao.png) no-repeat -25px 0}
+.phoneGame li .down .an .down-disabled{background:url(../images/libao.png) no-repeat -25px -26px}
+
+
+.search-box{border:1px solid #bababa; width:300px; height:28px; position:relative; margin-left:9px; background:url(../images/sprite2.png) no-repeat 6px 4px #e6e6e6; padding-left:36px}
+.search-input{width:207px; height:27px; border:0; background:#e6e6e6}
+.sub-btn{position:absolute; right:0; top:0; background:url(../images/sprite.png) no-repeat; width:85px; height:28px; text-indent:-200px; overflow:hidden; border:0; cursor:pointer}
+.sub-btn:hover{background-position:0 -28px}
+.keywords{height:18px; line-height:18px; padding:4px 0 0 9px; overflow:hidden;}
+.keywords a{float:left; margin-right:20px;_display:inline}
