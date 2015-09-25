@@ -216,7 +216,7 @@ td {
 body {
   font: 14px/1.6 Microsoft YaHei, Verdana, Arial, Helvetica, sans-serif, Simsun;
   color: #333333;
-  background-color: #f2f3f4;
+  background-color: transparent;
 }
 html,
 body,
@@ -224,7 +224,7 @@ fieldset,
 img,
 iframe,
 abbr {
-  border: 0;
+  border: none;
 }
 i,
 cite,
