@@ -1,0 +1,46 @@
+﻿/*****************************  reset.less  *****************/
+body,dl,dt,dd,img,ul,ol,li,p,form,input,textarea,th,td{margin:0;padding:0;}
+html,body,fieldset,img,iframe,abbr{border:none;}
+i,cite,em,address,dfn{font-style:normal;}
+ul,li{list-style:none;}
+a,button{cursor:pointer;}
+a:active, input:focus, textarea:focus, a:focus{outline:0;}
+//屏蔽ie9+ 浏览器，眼睛和叉号提示
+input::-ms-clear { display: none; }
+input::-ms-reveal { display: none; }
+
+body{
+  #font > .yahei();
+  color:@textColor;
+  background-color: @bodyBackgroundColor;
+}
+
+
+a{color:@linkColor;text-decoration:none}
+a:hover{color:@linkColorHover}
+
+h1,.h1{font-size:@fontSizeXXLarge;}
+h2,.h2{font-size:@fontSizeXLarge;}
+h3,.h3{font-size:@fontSizeLarge;}
+h4,.h4{font-size:@baseFontSize;}
+h5,.h5{font-size:@fontSizeSmall;}
+h6,.h6{font-size:@fontSizeMini;}
+
+//set placeholder color
+.placeHolder(@placeHolderColor);
+
+
+
+//h5表单默认提示颜色
+
+
+//base style
+.hr{border-top:1px solid @borderColor;height:0;}
+.hr-vertical{border-right:1px solid @borderColor;width:0;}
+
+*::-moz-selection {
+  background: none repeat scroll 0 0 @primaryColor;
+  color: @white;
+}
+
+

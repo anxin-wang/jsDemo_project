@@ -1,0 +1,28 @@
+// Placeholder text
+// -------------------------
+.placeHolder(@color: #555) {
+  /* Mozilla Firefox 4 to 18 */
+  input&:-moz-placeholder {
+    color: @color;
+  }
+
+  /* Mozilla Firefox 19+ */
+  input&::-moz-placeholder {
+    color: @color;
+  }
+
+  /* Internet Explorer 10+ */
+  input&:-ms-input-placeholder {
+    color: @color;
+  }
+
+  /* WebKit browsers */
+  input&::-webkit-input-placeholder {
+    color: @color;
+  }
+
+}
+
+//eg:
+//.placeHolder(@placeHolderColor);
+

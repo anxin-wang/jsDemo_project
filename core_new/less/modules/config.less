@@ -1,0 +1,39 @@
+//Spacing
+@spacing-lg:30px;
+@spacing-big:20px;
+@spacing-md:15px;
+@spacing-sm:10px;
+
+
+//== Grid system   added by Sophie
+//
+//## Define your custom responsive grid.
+//** Number of columns in the grid.
+@grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         30px;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Medium screen / desktop
+@screen-md-min:              992px;
+// Large screen / wide desktop
+@screen-lg-min:              1200px;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+//** For Flex-Fix
+@fix-column-width:300px;

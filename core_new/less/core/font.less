@@ -1,0 +1,76 @@
+//font-size
+@fontSizeXXLarge:24px;
+@fontSizeXLarge:22px;
+@fontSizeLarge:18px;
+@baseFontSize:16px;
+@fontSizeSmall:14px;
+@fontSizeMini:12px;
+
+//font-weight
+@boldFontWeight:bold;
+
+
+//font-family
+@yaheiFontFamily:"Microsoft Yahei", Arial, sans-serif;
+@songtiFontFamily:"SimSun", Arial, sans-serif;
+
+
+@baseFontSize:          14px;
+@baseFontFamily:        @yaheiFontFamily;
+@baseLineHeight:        1.6;
+@altFontFamily:         @songtiFontFamily;
+
+
+
+#font {
+  #family {
+    .yahei() {
+      font-family: @yaheiFontFamily;
+    }
+    .songti() {
+      font-family: @songtiFontFamily;
+    }
+  }
+  .shorthand(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .yahei(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .yahei;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+  .songti(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+    #font > #family > .songti;
+    #font > .shorthand(@size, @weight, @lineHeight);
+  }
+}
+//eg:
+//.testFont{
+//  #font > .yahei();
+//  #font > .songti(24px, normal, 1.6);
+//}
+
+//font-size
+.font-size(@pxValue){
+  @remValue: (@pxValue / 10);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}
+//.font-size-test {
+//  .font-size(13);
+//}
+
+
+//font effect
+//Disabled effect class
+.disabled() {
+  pointer-events: none;
+  opacity: 0.5;
+}
+//Blurry Text
+.blur() {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+

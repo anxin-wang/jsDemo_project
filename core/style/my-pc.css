@@ -215,7 +215,7 @@ td {
 }
 body {
   font: 14px/1.6 Microsoft YaHei, Verdana, Arial, Helvetica, sans-serif, Simsun;
-  color: #333333;
+  color: #333;
   background-color: transparent;
 }
 html,
@@ -279,19 +279,19 @@ input::-ms-reveal {
   display: none;
 }
 input::-webkit-input-placeholder {
-  color: #cccccc !important;
+  color: #ccc !important;
   /* WebKit browsers */
 }
 input:-moz-placeholder {
-  color: #cccccc !important;
+  color: #ccc !important;
   /* Mozilla Firefox 4 to 18 */
 }
 input::-moz-placeholder {
-  color: #cccccc !important;
+  color: #ccc !important;
   /* Mozilla Firefox 19+ */
 }
 input:-ms-input-placeholder {
-  color: #cccccc !important;
+  color: #ccc !important;
   /* Internet Explorer 10+ */
 }
 .hr {
@@ -332,9 +332,8 @@ input:-ms-input-placeholder {
 @font-face {
   font-family: "ylbfont";
   src: url('../fonts/iconfont.eot');
-  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */ url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg#iconfont') format('svg');
-  
   /* IE9*/
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */ url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 .yicon,
@@ -1228,7 +1227,7 @@ input:-ms-input-placeholder {
   font-size: 16px;
 }
 .nav a {
-  color: #ffffff;
+  color: #fff;
 }
 .nav > ul {
   position: relative;
@@ -1247,7 +1246,7 @@ input:-ms-input-placeholder {
 .nav li a.nav_has:hover,
 .nav li a.nav_non:hover {
   color: #2577e3;
-  background-color: #ffffff;
+  background-color: #fff;
   border-top: 3px solid #ff9915;
 }
 .nav li a.nav_has.selected,
@@ -1268,7 +1267,7 @@ input:-ms-input-placeholder {
 .nav li .subnav_wrap {
   display: none;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #fff;
   left: 0;
   width: 100%;
 }

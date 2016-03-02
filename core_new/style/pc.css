@@ -1,0 +1,1140 @@
+@charset "UTF-8";
+/*base*/
+/**************mixins*********************/
+.clearfix,
+.wrap,
+.wrap-fluid,
+.row {
+  *zoom: 1;
+}
+.clearfix:after,
+.wrap:after,
+.wrap-fluid:after,
+.row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  /* Setting this to 0 make it invisible for VoiceOver */
+  height: 1px;
+  /* Setting this to 0 make it invisible for VoiceOver */
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*透明*/
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  /* Required for IE8 */
+  -o-text-overflow: ellipsis;
+  /* Required for Opera */
+  text-overflow: ellipsis;
+}
+/***************************************   Border-radius  *********************************/
+.light-rounded {
+  border-radius: 3px;
+}
+.heavy-rounded {
+  border-radius: 8px;
+}
+.full-rounded {
+  border-radius: 50%;
+}
+.barrel-rounded {
+  border-radius: 0.33333333px;
+}
+/****************************************   Box shadow  ********************************/
+.box-shadow {
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+/*阴影案例*/
+.drop-shadow.top {
+  box-shadow: 0 -4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+.drop-shadow.right {
+  box-shadow: 4px 0 2px -2px rgba(0, 0, 0, 0.4);
+}
+.drop-shadow.bottom {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+.drop-shadow.left {
+  box-shadow: -4px 0 2px -2px rgba(0, 0, 0, 0.4);
+}
+.emphasize-dark {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+}
+.emphasize-light {
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.25);
+}
+.emphasize-inset {
+  box-shadow: inset 0 0 7px 4px rgba(255, 255, 255, 0.5);
+}
+.emphasize-border {
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.5);
+}
+.embossed-light {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.embossed-heavy {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.3), inset 0 -2px 3px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+.box-shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7) inset;
+}
+/*Body的阴影*/
+body:before {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  content: "";
+  height: 10px;
+  left: 0;
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  z-index: 100;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*****************************  reset.less  *****************/
+body,
+dl,
+dt,
+dd,
+img,
+ul,
+ol,
+li,
+p,
+form,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+  border: none;
+}
+i,
+cite,
+em,
+address,
+dfn {
+  font-style: normal;
+}
+ul,
+li {
+  list-style: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+a:active,
+input:focus,
+textarea:focus,
+a:focus {
+  outline: 0;
+}
+input::-ms-clear {
+  display: none;
+}
+input::-ms-reveal {
+  display: none;
+}
+body {
+  font-family: "Microsoft Yahei", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333;
+  background-color: transparent;
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  color: #1d6fa5;
+}
+h1,
+.h1 {
+  font-size: 24px;
+}
+h2,
+.h2 {
+  font-size: 22px;
+}
+h3,
+.h3 {
+  font-size: 18px;
+}
+h4,
+.h4 {
+  font-size: 14px;
+}
+h5,
+.h5 {
+  font-size: 14px;
+}
+h6,
+.h6 {
+  font-size: 12px;
+}
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+  color: #333;
+}
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+  color: #333;
+}
+/* Internet Explorer 10+ */
+input:-ms-input-placeholder {
+  color: #333;
+}
+/* WebKit browsers */
+input::-webkit-input-placeholder {
+  color: #333;
+}
+.hr {
+  border-top: 1px solid #ddd;
+  height: 0;
+}
+.hr-vertical {
+  border-right: 1px solid #ddd;
+  width: 0;
+}
+*::-moz-selection {
+  background: none repeat scroll 0 0 #f16457;
+  color: #fff;
+}
+/*******************Sophie's icons*********************/
+@font-face {
+  font-family: "sophiefont";
+  src: url('../fonts/iconfont.eot');
+  /* IE9*/
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/iconfont.woff') format('woff'), /* chrome��firefox */ url('../fonts/iconfont.ttf') format('truetype'), /* chrome��firefox��opera��Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.sicon,
+[class^="sicon-"]:before,
+[class*=" sicon-"]:before {
+  font-family: "sophiefont" !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  height: 1em;
+  /*margin-right: .2em;*/
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  /*margin-left: .2em;*/
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  -webkit-text-stroke-width: 0.2px;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.sicon-yunshangchuan:before {
+  content: "\e641";
+}
+.sicon-shangchuan:before {
+  content: "\e642";
+}
+.sicon-bingtu:before {
+  content: "\e643";
+}
+.sicon-shuzhuangtu:before {
+  content: "\e644";
+}
+.sicon-quxiantu:before {
+  content: "\e645";
+}
+.sicon-zhexiantu:before {
+  content: "\e646";
+}
+.sicon-shangchuansucai:before {
+  content: "\e647";
+}
+.sicon-paixu:before {
+  content: "\e648";
+}
+.sicon-xiangzuo:before {
+  content: "\e649";
+}
+.sicon-xiangshang:before {
+  content: "\e64a";
+}
+.sicon-xiangyou:before {
+  content: "\e64b";
+}
+.sicon-jian:before {
+  content: "\e64c";
+}
+.sicon-jia:before {
+  content: "\e64d";
+}
+.sicon-cuowu:before {
+  content: "\e64e";
+}
+.sicon-zhengque:before {
+  content: "\e64f";
+}
+.sicon-fujian:before {
+  content: "\e650";
+}
+.sicon-shuaxin:before {
+  content: "\e651";
+}
+.sicon-xiazai:before {
+  content: "\e652";
+}
+.sicon-guolv:before {
+  content: "\e653";
+}
+.sicon-xiangyou1:before {
+  content: "\e654";
+}
+.sicon-xiangzuo1:before {
+  content: "\e655";
+}
+.sicon-xiangshang1:before {
+  content: "\e656";
+}
+.sicon-xiangxia:before {
+  content: "\e657";
+}
+.sicon-jia1:before {
+  content: "\e658";
+}
+.sicon-jian1:before {
+  content: "\e659";
+}
+.sicon-gengxin:before {
+  content: "\e65a";
+}
+.sicon-tuichu:before {
+  content: "\e65b";
+}
+.sicon-jinru:before {
+  content: "\e65c";
+}
+.sicon-banfen:before {
+  content: "\e65d";
+}
+.sicon-zuoshang:before {
+  content: "\e65e";
+}
+.sicon-xiangshang2:before {
+  content: "\e65f";
+}
+.sicon-youshang:before {
+  content: "\e660";
+}
+.sicon-zuoxia:before {
+  content: "\e661";
+}
+.sicon-xiangxia1:before {
+  content: "\e662";
+}
+.sicon-youxia:before {
+  content: "\e663";
+}
+.sicon-xiangzuo2:before {
+  content: "\e664";
+}
+.sicon-xiangyou2:before {
+  content: "\e665";
+}
+.sicon-tisheng:before {
+  content: "\e666";
+}
+.sicon-xiajiang:before {
+  content: "\e667";
+}
+.sicon-qq:before {
+  content: "\e668";
+}
+.sicon-douban:before {
+  content: "\e669";
+}
+.sicon-anzhuo:before {
+  content: "\e66a";
+}
+.sicon-github:before {
+  content: "\e66b";
+}
+.sicon-weiruan:before {
+  content: "\e66c";
+}
+.sicon-pingguo:before {
+  content: "\e66d";
+}
+.sicon-rili:before {
+  content: "\e60d";
+}
+.sicon-check:before {
+  content: "\e670";
+}
+.sicon-tianjia:before {
+  content: "\e66f";
+}
+.sicon-appreciate:before {
+  content: "\e60f";
+}
+.sicon-check1:before {
+  content: "\e610";
+}
+.sicon-close:before {
+  content: "\e611";
+}
+.sicon-favorfill:before {
+  content: "\e600";
+}
+.sicon-favor:before {
+  content: "\e601";
+}
+.sicon-locationfill:before {
+  content: "\e612";
+}
+.sicon-roundcheckfill:before {
+  content: "\e602";
+}
+.sicon-roundcheck:before {
+  content: "\e603";
+}
+.sicon-roundclosefill:before {
+  content: "\e604";
+}
+.sicon-roundclose:before {
+  content: "\e605";
+}
+.sicon-roundrightfill:before {
+  content: "\e606";
+}
+.sicon-roundright:before {
+  content: "\e607";
+}
+.sicon-search:before {
+  content: "\e613";
+}
+.sicon-unfold:before {
+  content: "\e614";
+}
+.sicon-warnfill:before {
+  content: "\e615";
+}
+.sicon-warn:before {
+  content: "\e616";
+}
+.sicon-commentfill:before {
+  content: "\e608";
+}
+.sicon-comment:before {
+  content: "\e609";
+}
+.sicon-likefill:before {
+  content: "\e617";
+}
+.sicon-like:before {
+  content: "\e618";
+}
+.sicon-notificationfill:before {
+  content: "\e619";
+}
+.sicon-notification:before {
+  content: "\e61a";
+}
+.sicon-order:before {
+  content: "\e61b";
+}
+.sicon-back:before {
+  content: "\e61c";
+}
+.sicon-list:before {
+  content: "\e61d";
+}
+.sicon-more:before {
+  content: "\e61e";
+}
+.sicon-myfill:before {
+  content: "\e60a";
+}
+.sicon-my:before {
+  content: "\e60b";
+}
+.sicon-settings:before {
+  content: "\e60c";
+}
+.sicon-dibiaoxiantiao:before {
+  content: "\e60e";
+}
+.sicon-questionfill:before {
+  content: "\e61f";
+}
+.sicon-question:before {
+  content: "\e620";
+}
+.sicon-filter:before {
+  content: "\e621";
+}
+.sicon-top:before {
+  content: "\e622";
+}
+.sicon-pulldown:before {
+  content: "\e623";
+}
+.sicon-pullup:before {
+  content: "\e624";
+}
+.sicon-right:before {
+  content: "\e625";
+}
+.sicon-deletefill:before {
+  content: "\e626";
+}
+.sicon-qrcode:before {
+  content: "\e627";
+}
+.sicon-delete:before {
+  content: "\e628";
+}
+.sicon-profile:before {
+  content: "\e629";
+}
+.sicon-message:before {
+  content: "\e62a";
+}
+.sicon-lock:before {
+  content: "\e62b";
+}
+.sicon-unlock:before {
+  content: "\e62c";
+}
+.sicon-weibo:before {
+  content: "\e62d";
+}
+.sicon-squarecheckfill:before {
+  content: "\e62e";
+}
+.sicon-square:before {
+  content: "\e62f";
+}
+.sicon-squarecheck:before {
+  content: "\e630";
+}
+.sicon-roundaddfill:before {
+  content: "\e631";
+}
+.sicon-roundadd:before {
+  content: "\e632";
+}
+.sicon-add:before {
+  content: "\e633";
+}
+.sicon-fold:before {
+  content: "\e634";
+}
+.sicon-infofill:before {
+  content: "\e635";
+}
+.sicon-info:before {
+  content: "\e636";
+}
+.sicon-forwardfill:before {
+  content: "\e637";
+}
+.sicon-forward:before {
+  content: "\e638";
+}
+.sicon-check2:before {
+  content: "\e671";
+}
+.sicon-share:before {
+  content: "\e639";
+}
+.sicon-sort:before {
+  content: "\e63a";
+}
+.sicon-minus:before {
+  content: "\e672";
+}
+.sicon-down:before {
+  content: "\e63b";
+}
+.sicon-pullleft:before {
+  content: "\e63c";
+}
+.sicon-pullright:before {
+  content: "\e63d";
+}
+.sicon-check3:before {
+  content: "\e673";
+}
+.sicon-minus1:before {
+  content: "\e674";
+}
+.sicon-check4:before {
+  content: "\e675";
+}
+.sicon-refresharrow:before {
+  content: "\e63e";
+}
+.sicon-minus2:before {
+  content: "\e676";
+}
+.sicon-markfill:before {
+  content: "\e63f";
+}
+.sicon-mark:before {
+  content: "\e640";
+}
+/*Layout*/
+/*
+ Grid system
+ --------------------------------------------------
+ Author:Sophie
+ Date:2015-01-11*/
+.wrap {
+  margin-right: auto;
+  margin-left: auto;
+  width: 970px;
+}
+@media (min-width: 1200px) {
+  .wrap {
+    width: 1170px;
+  }
+}
+.wrap-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+ .col-width-1,  .col-width-2,  .col-width-3,  .col-width-4,  .col-width-5,  .col-width-6,  .col-width-7,  .col-width-8,  .col-width-9,  .col-width-10,  .col-width-11,  .col-width-12 {
+  position: relative;
+  min-height: 1px;
+}
+.col-width-1, .col-width-2, .col-width-3, .col-width-4, .col-width-5, .col-width-6, .col-width-7, .col-width-8, .col-width-9, .col-width-10, .col-width-11, .col-width-12 {
+  float: left;
+}
+.col-width-12 {
+  width: 100%;
+}
+.col-width-11 {
+  width: 91.66666667%;
+}
+.col-width-10 {
+  width: 83.33333333%;
+}
+.col-width-9 {
+  width: 75%;
+}
+.col-width-8 {
+  width: 66.66666667%;
+}
+.col-width-7 {
+  width: 58.33333333%;
+}
+.col-width-6 {
+  width: 50%;
+}
+.col-width-5 {
+  width: 41.66666667%;
+}
+.col-width-4 {
+  width: 33.33333333%;
+}
+.col-width-3 {
+  width: 25%;
+}
+.col-width-2 {
+  width: 16.66666667%;
+}
+.col-width-1 {
+  width: 8.33333333%;
+}
+.col-width-pull-12 {
+  right: 100%;
+}
+.col-width-pull-11 {
+  right: 91.66666667%;
+}
+.col-width-pull-10 {
+  right: 83.33333333%;
+}
+.col-width-pull-9 {
+  right: 75%;
+}
+.col-width-pull-8 {
+  right: 66.66666667%;
+}
+.col-width-pull-7 {
+  right: 58.33333333%;
+}
+.col-width-pull-6 {
+  right: 50%;
+}
+.col-width-pull-5 {
+  right: 41.66666667%;
+}
+.col-width-pull-4 {
+  right: 33.33333333%;
+}
+.col-width-pull-3 {
+  right: 25%;
+}
+.col-width-pull-2 {
+  right: 16.66666667%;
+}
+.col-width-pull-1 {
+  right: 8.33333333%;
+}
+.col-width-pull-0 {
+  right: auto;
+}
+.col-width-push-12 {
+  left: 100%;
+}
+.col-width-push-11 {
+  left: 91.66666667%;
+}
+.col-width-push-10 {
+  left: 83.33333333%;
+}
+.col-width-push-9 {
+  left: 75%;
+}
+.col-width-push-8 {
+  left: 66.66666667%;
+}
+.col-width-push-7 {
+  left: 58.33333333%;
+}
+.col-width-push-6 {
+  left: 50%;
+}
+.col-width-push-5 {
+  left: 41.66666667%;
+}
+.col-width-push-4 {
+  left: 33.33333333%;
+}
+.col-width-push-3 {
+  left: 25%;
+}
+.col-width-push-2 {
+  left: 16.66666667%;
+}
+.col-width-push-1 {
+  left: 8.33333333%;
+}
+.col-width-push-0 {
+  left: auto;
+}
+.col-width-offset-12 {
+  margin-left: 100%;
+}
+.col-width-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-width-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-width-offset-9 {
+  margin-left: 75%;
+}
+.col-width-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-width-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-width-offset-6 {
+  margin-left: 50%;
+}
+.col-width-offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-width-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-width-offset-3 {
+  margin-left: 25%;
+}
+.col-width-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-width-offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-width-offset-0 {
+  margin-left: 0%;
+}
+.col-onlywidth-12 {
+  width: 100%;
+}
+.col-onlywidth-11 {
+  width: 91.66666667%;
+}
+.col-onlywidth-10 {
+  width: 83.33333333%;
+}
+.col-onlywidth-9 {
+  width: 75%;
+}
+.col-onlywidth-8 {
+  width: 66.66666667%;
+}
+.col-onlywidth-7 {
+  width: 58.33333333%;
+}
+.col-onlywidth-6 {
+  width: 50%;
+}
+.col-onlywidth-5 {
+  width: 41.66666667%;
+}
+.col-onlywidth-4 {
+  width: 33.33333333%;
+}
+.col-onlywidth-3 {
+  width: 25%;
+}
+.col-onlywidth-2 {
+  width: 16.66666667%;
+}
+.col-onlywidth-1 {
+  width: 8.33333333%;
+}
+.flex-left {
+  float: left;
+  width: 100%;
+}
+.flex-left .inner {
+  margin-right: 300px;
+}
+.fix-right {
+  float: right;
+  margin-left: -300px;
+  position: relative;
+  width: 300px;
+}
+.flex-right {
+  float: right;
+  width: 100%;
+}
+.flex-right .inner {
+  margin-left: 300px;
+}
+.fix-left {
+  float: left;
+  margin-right: -300px;
+  position: relative;
+  width: 300px;
+}
+/*
+ *@ Name:       水平居中
+ *@ Usage:      支持图片，单行或多行文字，以及图文混排
+ */
+.horizontal-center {
+  margin: 0 auto;
+}
+/*
+ *@ Name:       未知高度垂直居中组件
+ *@ Usage:      支持图片，单行或多行文字，以及图文混排
+ */
+/* 去除 inline-block 的空隙 */
+.vertical-middle {
+  font-size: 0;
+  *word-spacing: -1px;
+  /* IE6、7 */
+  height: 100%;
+  /* 继承父级高度 */
+}
+/* 修复 Safari 5- inline-block 的空隙 */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .vertical-middle {
+    letter-spacing: -5px;
+  }
+}
+/* 使用空标签生成一个高度100%的参照元素 */
+.vertical-middle .vertical-middle-hack {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 0;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+.vertical-middle .vertical-middle-body {
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 12px;
+  vertical-align: middle;
+  /* 保证文字垂直居中 */
+  padding: 0 !important;
+  /* 防止设置边距导致居中失效 */
+  margin: 0 !important;
+  width: 100%;
+  /* 保证连续字符也能居中 */
+  white-space: normal;
+  /* 保证连续字符换行 */
+  word-wrap: break-word;
+}
+.vertical-middle .vertical-middle-img {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 100%;
+  text-align: center;
+  /* 图片默认水平居中 */
+  vertical-align: middle;
+  padding: 0 !important;
+  /* 防止设置边距导致居中失效 */
+  margin: 0 !important;
+  font-size: 0;
+}
+.vertical-middle img {
+  vertical-align: middle;
+  /* 去除现代浏览器 img 底部空隙 */
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+/* Hide / Show classes */
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}

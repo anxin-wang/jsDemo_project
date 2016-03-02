@@ -1,0 +1,104 @@
+/**************mixins*********************/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  /* Setting this to 0 make it invisible for VoiceOver */
+  height: 1px;
+  /* Setting this to 0 make it invisible for VoiceOver */
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*透明*/
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  /* Required for IE8 */
+  -o-text-overflow: ellipsis;
+  /* Required for Opera */
+  text-overflow: ellipsis;
+}
+/***************************************   Border-radius  *********************************/
+.light-rounded {
+  border-radius: 3px;
+}
+.heavy-rounded {
+  border-radius: 8px;
+}
+.full-rounded {
+  border-radius: 50%;
+}
+.barrel-rounded {
+  border-radius: 0.33333333px;
+}
+/****************************************   Box shadow  ********************************/
+.box-shadow {
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+/*阴影案例*/
+.drop-shadow.top {
+  box-shadow: 0 -4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+.drop-shadow.right {
+  box-shadow: 4px 0 2px -2px rgba(0, 0, 0, 0.4);
+}
+.drop-shadow.bottom {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+.drop-shadow.left {
+  box-shadow: -4px 0 2px -2px rgba(0, 0, 0, 0.4);
+}
+.emphasize-dark {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+}
+.emphasize-light {
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.25);
+}
+.emphasize-inset {
+  box-shadow: inset 0 0 7px 4px rgba(255, 255, 255, 0.5);
+}
+.emphasize-border {
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.5);
+}
+.embossed-light {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.embossed-heavy {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.3), inset 0 -2px 3px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+.box-shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7) inset;
+}
+/*Body的阴影*/
+body:before {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  content: "";
+  height: 10px;
+  left: 0;
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  z-index: 100;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
