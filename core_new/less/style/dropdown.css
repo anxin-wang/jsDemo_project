@@ -1,0 +1,14 @@
+.dropdown {
+  position: relative;
+}
+.dropdown .dropdown-toggle {
+  padding: 10px;
+}
+.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.dropdown .menu-item {
+  margin: 5px;
+}

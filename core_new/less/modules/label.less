@@ -1,0 +1,81 @@
+/*label UI start*/
+// Labels
+
+.label-variant(@color,@color-bg,@color-border) {
+  color:@color;
+  background-color: @color-bg;
+  border: 1px solid @color-border;
+  a {
+    color:@color;
+    &:hover,
+    &:focus {
+      color:darken(@color, 10%);
+      //background-color: darken(@color, 10%);
+    }
+  }
+}
+
+
+.label {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  font-weight: normal;
+  padding: 4px 16px;
+  vertical-align: middle;
+  margin: 5px;
+  // Add hover effects, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.label-same-width {
+  width: 105px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 !important;
+}
+
+.label-sm {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.label-lg {
+  padding: 4px 16px;
+  font-size: 16px;
+}
+
+.label-default-success {
+  .label-variant(@labelTextColor_Default, @labelBgColor_Default_Success, @labelBorderColor_Default_Success);
+}
+
+.label-default-info {
+  .label-variant(@labelTextColor_Default, @labelBgColor_Default_Info, @labelBorderColor_Default_Info);
+}
+
+.label-default-finish {
+  .label-variant(@labelTextColor_Default, @labelBgColor_Default_Finish, @labelBorderColor_Default_Finish);
+}
+
+.label-border-success {
+  .label-variant(@labelTextColor_Border_Success, @labelBgColor_Border_Success, @labelBorderColor_Border_Success);
+}
+
+.label-border-info {
+  .label-variant(@labelTextColor_Border_Info, @labelBgColor_Border_Success, @labelBorderColor_Border_Info);
+}
+
+.label-border-finish {
+  .label-variant(@labelTextColor_Border_Finish, @labelBgColor_Border_Success, @labelBorderColor_Border_Finish);
+}
+
+/*label UI end*/
+

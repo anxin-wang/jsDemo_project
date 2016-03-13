@@ -1,0 +1,111 @@
+/********************pagination style***************************/
+.pagination{
+    @textHoverColor:@white;
+    @textColor:@black;
+    @disabledTextHoverColor:@black-light;
+	display: inline-block;
+	padding-left: 0;
+	margin: 20px 0;
+    &:extend(.clearfix all);
+
+	li{
+		display: inline;
+		a{
+			position: relative;
+			float: left;
+			color: @textColor;
+			padding: 6px 14px;
+			text-decoration: none;
+            .border-radius();
+			background-color: @backgroundColor;
+			border: 1px solid @borderColor;
+			margin-left: 12px;
+            &:hover,
+            &:focus{
+              background-color: @primaryColor;
+              border-color: @primaryColor;
+              color: @textHoverColor;
+
+            }
+		}
+        &:last-child {
+          margin-left: 0;
+        }
+	}
+
+	.active > a,
+	.active > a:hover,
+	.active > a:focus {
+		z-index: 2;
+		color: @textHoverColor;
+		cursor: default;
+		background-color: @primaryColor;
+		border-color: @primaryColor;
+	}      
+
+	.disabled > a,
+	.disabled > a:hover,
+	.disabled > a:focus {
+		color: @disabledTextHoverColor;
+		cursor: not-allowed;
+		background-color: @backgroundColor;
+		border-color: @borderColor;
+	}
+}
+
+.pagination-sm > li {
+	a {
+		padding: 5px 12px;
+		font-size: 12px;
+	}
+
+}
+
+
+
+//翻页分页导航
+.pager {
+  @textHoverColor:@white;
+  @textColor:@black;
+  @disabledTextHoverColor:@black-light;
+	padding-left: 0;
+	margin: 20px 0;
+	text-align: center;
+	list-style: none;
+
+    &:extend(.clearfix all);
+
+	li > a {
+		display: inline-block;
+		padding: 5px 14px;
+		color: @textColor;
+		background-color: @backgroundColor;
+		border: 1px solid @borderColor;
+        .border-radius(15px);
+
+		&:hover,
+		&:focus {
+			color: @textHoverColor;
+			text-decoration: none;
+			background-color: @primaryColor;
+			border-color: @primaryColor;
+		}
+	}
+
+	.next > a {
+		float: right;
+	}
+
+	.previous > a {
+		float: left;
+	}
+
+	.disabled > a,
+	.disabled > a:hover,
+	.disabled > a:focus {
+		color: @disabledTextHoverColor;
+		cursor: not-allowed;
+		background-color: @backgroundColor;
+		border-color: @borderColor;
+	}
+}

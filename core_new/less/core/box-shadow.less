@@ -4,10 +4,15 @@
   -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
   box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 }
-//eg:
-.box-shadow{
-  .box-shadow(5px, 5px, 6px, 0.3);
+.inset-box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+  -webkit-box-shadow:inset @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow:inset @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow:inset @x @y @blur rgba(0, 0, 0, @alpha);
 }
+//eg:
+//.box-shadow{
+//  .box-shadow(5px, 5px, 6px, 0.3);
+//}
 
 
 /*阴影案例*/
@@ -63,7 +68,7 @@
 }
 
 /*Body的阴影*/
-body:before {
+.box-shadow-inset:before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   content: "";
   height: 10px;

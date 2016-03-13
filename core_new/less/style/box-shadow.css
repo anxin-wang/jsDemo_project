@@ -1,52 +1,3 @@
-/**************mixins*********************/
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.visuallyhidden {
-  position: absolute;
-  width: 1px;
-  /* Setting this to 0 make it invisible for VoiceOver */
-  height: 1px;
-  /* Setting this to 0 make it invisible for VoiceOver */
-  padding: 0;
-  margin: -1px;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-/*透明*/
-.text-overflow {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  /* Required for IE8 */
-  -o-text-overflow: ellipsis;
-  /* Required for Opera */
-  text-overflow: ellipsis;
-}
-/***************************************   Border-radius  *********************************/
-.light-rounded {
-  border-radius: 3px;
-}
-.heavy-rounded {
-  border-radius: 8px;
-}
-.full-rounded {
-  border-radius: 50%;
-}
-.barrel-rounded {
-  border-radius: 0.33333333px;
-}
 /****************************************   Box shadow  ********************************/
 /*阴影案例*/
 .drop-shadow.top {
@@ -94,11 +45,4 @@
   top: -10px;
   width: 100%;
   z-index: 100;
-}
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Dropdown-Demo</title>
+    <link rel="stylesheet" href="../style/pc.css">
+    <link rel="stylesheet" href="../style/sicon.css">
+</head>
+<body>
+
+
+<div class="dropdown" style="width:300px;margin:10px auto;">
+    <div class="dropdown-toggle" >
+        <i class="sicon menu-item">&#xe66d;</i>苹果<i class="sicon caret">&#xe614;</i>
+    </div>
+    <ul class="dropdown-menu">
+        <li><i class="sicon menu-item">&#xe66d;</i>苹果</li>
+        <li><i class="sicon menu-item">&#xe66c;</i>微软</li>
+        <li><i class="sicon menu-item">&#xe66a;</i>安卓</li>
+    </ul>
+</div>
+
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/dropdown.js"></script>
+<script type="text/javascript">
+    $('.dropdown-toggle').dropdown();
+</script>
+
+
+</body>
+</html>

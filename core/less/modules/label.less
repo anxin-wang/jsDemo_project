@@ -1,15 +1,15 @@
 /*label UI start*/
 
 .label {
-  display:inline-block;
+  display: inline-block;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
   font-weight: normal;
-  padding:4px 16px;
-  vertical-align:middle;
-  margin:5px;
+  padding: 4px 16px;
+  vertical-align: middle;
+  margin: 5px;
   // Add hover effects, but only for links
   a& {
     &:hover,
@@ -19,28 +19,47 @@
     }
   }
 }
-.label-same-width{
-  width:85px; height:30px; line-height:30px; padding:0!important;	
-	}
-.lebal-sm{  padding:2px 8px; font-size:12px; }
-.lebal-lg{  padding:4px 16px; font-size:16px; }
+
+.label-same-width {
+  width: 85px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 !important;
+}
+
+.label-sm {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.label-lg {
+  padding: 4px 16px;
+  font-size: 16px;
+}
+
 .label-default-success {
-  .label-variant(@colorWhite,@colorGreen,@colorGreen);
+  .label-variant(@colorWhite, @colorGreen, @colorGreen);
 }
-.label-default-info{
-  .label-variant(@colorWhite,@colorOrange,@colorOrange);
+
+.label-default-info {
+  .label-variant(@colorWhite, @colorOrange, @colorOrange);
 }
-.label-default-finish{
-  .label-variant(@colorWhite,@colorGray,@colorGray);
+
+.label-default-finish {
+  .label-variant(@colorWhite, @colorGray, @colorGray);
 }
+
 .label-border-success {
-  .label-variant(@colorGreen,@colorWhite,@colorGreen);
+  .label-variant(@colorGreen, @colorWhite, @colorGreen);
 }
-.label-border-info{
-  .label-variant(@colorOrange,@colorWhite,@colorOrange);
+
+.label-border-info {
+  .label-variant(@colorOrange, @colorWhite, @colorOrange);
 }
-.label-border-finish{
-  .label-variant(@colorGray,@colorWhite,@colorGray);
+
+.label-border-finish {
+  .label-variant(@colorGray, @colorWhite, @colorGray);
 }
+
 /*label UI end*/
 
