@@ -16,6 +16,8 @@
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Small screen / tablet
+@screen-sm-min:              768px;
 // Medium screen / desktop
 @screen-md-min:              992px;
 // Large screen / wide desktop
@@ -38,7 +40,7 @@
 //** For Flex-Fix
 @fix-column-width:300px;
 
-//button
+//====Button
 @padding-base-vertical:8px;
 @padding-base-horizontal:12px;
 @border-radius-base:5px;
@@ -55,15 +57,15 @@
 @btn-success-color:@white;
 @btn-success-bg:@green;
 @btn-success-border:@green;
-
+//info button
 @btn-info-color:@white;
 @btn-info-bg:@cyan;
 @btn-info-border:@cyan;
-
+//warning button
 @btn-warning-color:@white;
 @btn-warning-bg:@orange;
 @btn-warning-border:@orange;
-
+//danger button
 @btn-danger-color:@white;
 @btn-danger-bg:@red;
 @btn-danger-border:@red;
@@ -72,14 +74,16 @@
 
 @padding-small-vertical:5px;
 @padding-small-horizontal:10px;
+
 @line-height-small:1.5;
-@border-radius-small:2px;
+@line-height-large:         1.3333333;
+
 
 @padding-xs-vertical:1px;
 @padding-xs-horizontal:5px;
 
 
-//alert
+//============Alert
 @alert-padding:10px;
 @alert-margin-bottom:10px;
 @alert-link-font-weight:@boldFontWeight;
@@ -92,6 +96,45 @@
 @alert-warning-border:@red;
 @alert-warning-text:@red-dark;
 
+
+//=====Border
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
 .border(){
   border:1px solid @borderColor;
 }
+
+
+//=======Form===============
+@cursor-disabled:  not-allowed;
+@input-bg-disabled:@gray-light04;
+
+//input size
+@input-height-base:34px;
+@input-height-small:30px;
+@input-height-large:46px;
+
+@padding-large-vertical:    10px;
+@padding-large-horizontal:  16px;
+@input-border-radius-large:@border-radius-large;
+
+@padding-small-vertical:    5px;
+@padding-small-horizontal:  10px;
+@input-border-radius-small:@border-radius-small;
+
+
+
+//input validation status
+@state-success-text:@green;
+@state-success-bg:@gray;
+
+@state-warning-text:@orange-light;
+@state-warning-bg:@gray;
+
+@state-danger-text:@red;
+@state-danger-bg:@gray;
+
+
+//nav
+@nav-background-color:#2577e3;

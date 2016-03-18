@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Forms-Demo</title>
+<style>
+	input[type="text"] + input[type="text"],  select+select{
+		margin-top: 10px;
+	}
+    h2{
+        color:#006090;
+    }
+    h3{
+        color:#1689F4;
+    }
+
+</style>
+<link rel="stylesheet" href="../style/pc.css">
+
+<body style="padding:20px;">
+<div>
+	<h1 class="page-header">Forms</h1>
+
+	<h2 id="forms-inline">1.布局</h2>
+    <h3>内联</h3>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="exampleInputName2">Name</label>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail2">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+        </div>
+        <button type="submit" class="btn btn-default">Send invitation</button>
+    </form>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword3">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Sign in</button>
+    </form>
+
+
+	<h3 id="forms-horizontal">水平排列</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-width-2 control-label">Email</label>
+            <div class="col-width-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-width-2 control-label">Password</label>
+            <div class="col-width-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-width-offset-2 col-width-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-width-offset-2 col-width-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
+    </form>
+
+
+	<h2>2.静态控件</h2>
+	<p>如果需要在表单中将一行纯文本和 label 元素放置于同一行，为元素添加 .form-control-static 类即可。</p>
+    <h3>水平排列表单</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-width-2 control-label">Email</label>
+            <div class="col-width-10">
+                <p class="form-control-static">email@example.com</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-width-2 control-label">Password</label>
+            <div class="col-width-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+        </div>
+    </form>
+
+    <h3>内联表单</h3>
+    <form class="form-inline">
+        <div class="form-group">
+            <label class="sr-only">Email</label>
+            <p class="form-control-static">email@example.com</p>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Confirm identity</button>
+    </form>
+
+
+
+	<h2 id="forms-control-focus">3.状态</h2>
+    <h3>焦点状态</h3>
+	<p>我们将某些表单控件的默认 outline 样式移除，然后对 :focus 状态赋予 box-shadow 属性。</p>
+    <form>
+        <input class="form-control" id="focusedInput" type="text" value="Demonstrative focus state">
+    </form>
+
+	<h3>禁用状态</h3>
+	<p>Add the <code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.</p>
+
+    <form>
+        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here" disabled>
+    </form>
+
+    <form>
+        <fieldset disabled>
+            <div class="form-group">
+                <label for="disabledTextInput">Disabled input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+            </div>
+            <div class="form-group">
+                <label for="disabledSelect">Disabled select menu</label>
+                <select id="disabledSelect" class="form-control">
+                    <option>Disabled select</option>
+                </select>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Can't check this
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+    </form>
+
+
+
+	<h3>只读状态</h3>
+	<p>为输入框设置 readonly 属性可以禁止用户修改输入框中的内容。处于只读状态的输入框颜色更浅（就像被禁用的输入框一样），但是仍然保留标准的鼠标状态。</p>
+    <form>
+        <input class="form-control" type="text" placeholder="这是只读文本框" readonly>
+    </form>
+
+
+
+
+	<h3>校验状态</h3>
+	<p>Bootstrap 对表单控件的校验状态，如 error、warning 和 success 状态，都定义了样式。使用时，添加 .has-warning、.has-error 或 .has-success 类到这些控件的父元素即可。任何包含在此元素之内的 .control-label、.form-control 和 .help-block 元素都将接受这些校验状态的样式。</p>
+
+
+    <form>
+        <div class="form-group input-success">
+            <label class="control-label" for="inputSuccess1">Input with success</label>
+            <input type="text" class="form-control" id="inputSuccess1">
+        </div>
+        <div class="form-group input-warning">
+            <label class="control-label" for="inputWarning1">Input with warning</label>
+            <input type="text" class="form-control" id="inputWarning1">
+        </div>
+        <div class="form-group input-error">
+            <label class="control-label" for="inputError1">Input with error</label>
+            <input type="text" class="form-control" id="inputError1">
+        </div>
+        <div class="input-success">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxSuccess" value="option1">
+                    Checkbox with success
+                </label>
+            </div>
+        </div>
+        <div class="input-warning">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxWarning" value="option1">
+                    Checkbox with warning
+                </label>
+            </div>
+        </div>
+        <div class="input-error">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxError" value="option1">
+                    Checkbox with error
+                </label>
+            </div>
+        </div>
+    </form>
+
+
+
+	<h2>4.控件尺寸:通过 .input-lg 类似的类可以为控件设置高度，通过 .col-lg-* 类似的类可以为控件设置宽度。</h2>
+	
+	<h3>高度尺寸:创建大一些或小一些的表单控件以匹配按钮尺寸。</h3>	
+	
+	<form>
+		<div class="controls">
+			<h4>input</h4>
+			<input class="form-control input-lg" type="text" placeholder=".input-lg">
+			<input type="text" class="form-control" placeholder="Default input">
+			<input class="form-control input-sm" type="text" placeholder=".input-sm">
+
+			<h4>select</h4>
+
+			<select class="form-control input-lg">
+				<option value="">.input-lg</option>
+			</select>
+			<select class="form-control">
+				<option value="">Default select</option>
+			</select>
+			<select class="form-control input-sm">
+				<option value="">.input-sm</option>
+			</select>
+		</div>
+	</form>
+	
+	
+	<h3>水平排列的表单组的尺寸</h3>
+	<p>通过添加 .form-group-lg 或 .form-group-sm 类，为 .form-horizontal 包裹的 label 元素和表单控件快速设置尺寸。</p>
+
+	<form class="form-horizontal">
+		<div class="form-group form-group-lg">
+			<label class="col-width-2 control-label" for="formGroupInputLarge">Large label</label>
+			<div class="col-width-10">
+				<input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+			</div>
+		</div>
+		<div class="form-group form-group-sm">
+			<label class="col-width-2 control-label" for="formGroupInputSmall">Small label</label>
+			<div class="col-width-10">
+				<input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+			</div>
+		</div>
+	</form>
+
+
+
+
+
+	<h3>调整宽度（column）尺寸</h3>
+	<p>用栅格系统中的列（column）包裹输入框或其任何父元素，都可很容易的为其设置宽度。</p>
+
+	<form>
+		<div class="row">
+			<div class="col-width-2">
+				<input type="text" class="form-control" placeholder=".col-xs-2">
+			</div>
+			<div class="col-width-3">
+				<input type="text" class="form-control" placeholder=".col-xs-3">
+			</div>
+			<div class="col-width-4">
+				<input type="text" class="form-control" placeholder=".col-xs-4">
+			</div>
+		</div>
+	</form>
+
+
+	<h2>5.辅助文本：针对表单控件的“块（block）”级辅助文本。</h2>
+	<p>实例：</p>
+	<form>
+		<div class="form-group">
+			<label for="inputHelpBlock">Input with help text</label>
+			<input type="text" id="inputHelpBlock" class="form-control">
+		</div>
+		<span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+
+
+
+
+
+</body>
+</html>

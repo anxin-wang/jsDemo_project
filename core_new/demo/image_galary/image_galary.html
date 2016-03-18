@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+    <style>
+        body{
+            background:#ddd;
+        }
+        .slider-container{
+            margin-left:20px;
+        }
+        h3 {
+            background: none repeat scroll 0 0 #3498DB;
+            color: #fff;
+            font-size: 36px;
+            line-height: 100px;
+            margin: 10px;
+            padding: 2%;
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="width:500px;">
+<div class="slider-container">
+    <div class="slider-for">
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+    </div>
+
+    <div class="slider-nav">
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+    </div>
+</div>
+
+
+
+
+    <script src="../../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true
+            });
+        });
+    </script>
+
+
+</body>
+</html>

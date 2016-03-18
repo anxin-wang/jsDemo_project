@@ -16,10 +16,11 @@
 @black-dark:#333;
 
 //blue
+@blue-lighter:#11A5F5;
 @blue-light:#2196f3;
 @blue:#6583fb;
 @blue-dark:#5d79e7;
-@blue-lighter:#11A5F5;
+
 
 //orange
 @orange-light:#ffa319;
@@ -50,14 +51,35 @@
 @lighter2: lighten(spin(@base, 10), 20%);
 @darker1: darken(spin(@base, -5), 10%);
 @darker2: darken(spin(@base, -10), 20%);
-
+//.lighter1{
+//   color:@lighter1;
+//}
+//.lighter2{
+//  color:@lighter2;
+//}
+//.darker1{
+//  color:@darker1;
+//}
+//.darker2{
+//  color:@darker2;
+//}
 //互补色方案
 @complement1: spin(@base, 180);
 @complement2: darken(spin(@base, 180), 5%);
 @lighten1: lighten(@base, 15%);
 @lighten2: lighten(@base, 30%);
-
-
+//.complement1{
+//  color:@complement1;
+//}
+//.complement2{
+//  color:@complement2;
+//}
+//.lighten1{
+//  color:@lighten1;
+//}
+//.lighten2{
+//  color:@lighten2;
+//}
 // Scaffolding
 // -------------------------
 @bodyBackgroundColor:        @transparent;

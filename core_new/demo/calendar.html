@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+	<link rel="stylesheet" type="text/css" href="../lib/fullcalendar/fullcalendar.css"/>
+	<link href='../lib/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+	<script src='../lib/fullcalendar/lib/moment.min.js'></script>
+	<script src='../lib/fullcalendar/lib/jquery.min.js'></script>
+	<script src='../lib/fullcalendar/fullcalendar.min.js'></script>
+	<script src='../lib/fullcalendar/lang/zh-cn.js'></script>
+	<script>
+
+		$(document).ready(function() {
+			$('#calendar').fullCalendar({
+				defaultDate: '2015-02-12',
+				lang:'zh-cn',
+				events: [
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-01'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-07'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-10'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-13'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-17'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-20'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-25'
+					},
+					{
+						title: '1,259人/起 10人',
+						start: '2015-02-28'
+					}
+				]
+			});
+
+		});
+
+	</script>
+</body>
+</html>

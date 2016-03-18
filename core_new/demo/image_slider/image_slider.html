@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+    <style>
+        body{
+            margin:0px;
+        }
+        #owl-example{
+            padding: 0px;
+        }
+        .slick-dots{
+            bottom: 15px;
+        }
+        .slick-dots li button::before{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<ul id="owl-example" class="owl-carousel">
+    <li style="background: url('http://ylb-project-attach.oss-cn-hangzhou.aliyuncs.com/141890435834667') repeat-x scroll center top transparent;height: 360px;list-style: outside none none;"></li>
+    <li style="background: url('http://ylb-project-attach.oss-cn-hangzhou.aliyuncs.com/142182454964677') repeat-x scroll center top transparent;height: 360px;list-style: outside none none;"></li>
+    <li style="background: url('http://ylb-project-attach.oss-cn-hangzhou.aliyuncs.com/142511706837282') repeat-x scroll center top transparent;height: 360px;list-style: outside none none;"></li>
+</ul>
+
+<script src="../../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#owl-example").slick({
+            dots:true
+        });
+    });
+</script>
+</body>
+</html>
