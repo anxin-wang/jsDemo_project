@@ -3,27 +3,36 @@
     $.fn.tabs = function () {
         return this.each(function() {
             var $this = $(this);
-            var $active, $content, $links = $this.find('li.tab a'),$index = 0;
+            var $active, $content, $links = $this.find('li.tab'),$index = 0;
             $active = $($links.filter('[href="'+location.hash+'"]'));
+
 
             // If no match is found, use the first link or any with class 'active' as the initial active tab.
             if ($active.length === 0) {
-                $active = $(this).find('li.tab a.active').first();
+                $active = $(this).find('li.tab.active').first();
+
             }
             if ($active.length === 0) {
-                $active = $(this).find('li.tab a').first();
+                $active = $(this).find('li.tab').first();
             }
+
 
             $active.addClass('active');
             $index = $links.index($active);
+
             if ($index < 0) {
                 $index = 0;
             }
 
-            $content = $($active[0].hash);
+            $content = $($active.children().attr("href"));
+
             // Hide the remaining content
+
             $links.not($active).each(function () {
+                this.hash=$(this).children().attr("href");
                 $(this.hash).hide();
+
+
             });
 
             // Bind the click event handler
@@ -33,8 +42,9 @@
                 $content.hide();
 
                 // Update the variables with the new link and content
-                $active = $(this);
+                $active = $(this).parent();
                 $content = $(this.hash);
+
                 $links = $this.find('li.tab a');
 
                 // Make the tab active.
@@ -45,7 +55,7 @@
                     $index = 0;
                 }
                 // Change url to current tab
-//      window.location.hash = $active.attr('href');
+                window.location.hash = $(this).attr('href');
 
                 $content.show();
 

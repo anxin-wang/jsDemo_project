@@ -15,6 +15,8 @@ body{
     background: none repeat scroll 0 0 #f15923;
     color: #fff;
 }
+
+
 a, a:active, a:hover, a:link, a:visited {
     color: #A3C12F;
     cursor: pointer;
@@ -27,15 +29,6 @@ a:active, a:hover {
     text-decoration: underline;
 }
 
-.caps {
-    text-transform: uppercase;
-}
-.bold {
-    font-weight: 700;
-}
-.muted {
-    color: rgba(0, 0, 0, 0.47);
-}
 h1, h2, h3, h4, h5, h6 {
     color: rgba(0, 0, 0, 0.95);
     font-family: Microsoft YaHei,Arial,Helvetica,sans-serif !important;
@@ -62,11 +55,6 @@ h4 {
 }
 
 
-.big {
-    font-size: 20px;
-    line-height: 1.33;
-}
-
 .clearfix:after {
     clear: both;
     content: " ";
@@ -78,57 +66,23 @@ h4 {
 .display-none {
     display: none;
 }
-/*图文混排*/
-.figureset-right:after, .figureset:after {
-    clear: both;
-    content: ".";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
+
+.caps {
+    text-transform: uppercase;
 }
-.figureset-description, .figureset-figure {
-    display: table-cell;
-    vertical-align: top;
+.bold {
+    font-weight: 700;
 }
-.figureset-figure {
-    line-height: 0;
-    width: 1%;
+.muted {
+    color: rgba(0, 0, 0, 0.47);
 }
-.figureset-figure img {
-    margin-bottom: 18px;
+
+.big {
+    font-size: 20px;
+    line-height: 1.33;
 }
-.figureset-description {
-    padding-left: 13.5px;
-    width: auto;
-}
-.figureset-description:after {
-    content: "M M M M M M M M M M M M M M M M M M M M ";
-    display: block;
-    font-size: 50px;
-    height: 0 !important;
-    line-height: 0;
-    overflow: hidden;
-    visibility: hidden;
-}
-.figureset-right .figureset-description {
-    padding: 0 13.5px 0 0;
-}
-.ie6 .figureset .figureset-description, .ie6 .figureset .figureset-figure, .ie7 .figureset .figureset-description, .ie7 .figureset .figureset-figure {
-    float: left;
-}
-.ie6 .figureset .figureset-description, .ie7 .figureset .figureset-description {
-    min-width: 67%;
-    width: 67%;
-}
-.ie6 .figureset-right .figureset-description, .ie6 .figureset-right .figureset-figure, .ie7 .figureset-right .figureset-description, .ie7 .figureset-right .figureset-figure {
-    float: right;
-}
-.ie6 .figureset-right .figureset-description, .ie7 .figureset-right .figureset-description {
-    float: left;
-    min-width: 70%;
-    width: 70%;
-}
+
+
 
 button, input, select, textarea {
     box-sizing: border-box;
@@ -300,6 +254,59 @@ b, strong {
     box-shadow: 0 2px 0 0 #851518;
     color: #fff !important;
 }
+
+/*图文混排*/
+.figureset-right:after, .figureset:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.figureset-description, .figureset-figure {
+    display: table-cell;
+    vertical-align: top;
+}
+.figureset-figure {
+    line-height: 0;
+    width: 1%;
+}
+.figureset-figure img {
+    margin-bottom: 18px;
+}
+.figureset-description {
+    padding-left: 13.5px;
+    width: auto;
+}
+.figureset-description:after {
+    content: "M M M M M M M M M M M M M M M M M M M M ";
+    display: block;
+    font-size: 50px;
+    height: 0 !important;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.figureset-right .figureset-description {
+    padding: 0 13.5px 0 0;
+}
+.ie6 .figureset .figureset-description, .ie6 .figureset .figureset-figure, .ie7 .figureset .figureset-description, .ie7 .figureset .figureset-figure {
+    float: left;
+}
+.ie6 .figureset .figureset-description, .ie7 .figureset .figureset-description {
+    min-width: 67%;
+    width: 67%;
+}
+.ie6 .figureset-right .figureset-description, .ie6 .figureset-right .figureset-figure, .ie7 .figureset-right .figureset-description, .ie7 .figureset-right .figureset-figure {
+    float: right;
+}
+.ie6 .figureset-right .figureset-description, .ie7 .figureset-right .figureset-description {
+    float: left;
+    min-width: 70%;
+    width: 70%;
+}
+
 .bg_white{
 	background-color:#fff !important;
 }

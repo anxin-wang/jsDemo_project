@@ -1,3 +1,4 @@
+//Button Core Start
 // Button variants
 .button-variant(@color; @background; @border) {
   color: @color;
@@ -50,7 +51,7 @@
   -moz-user-select:@value;
   -ms-user-select:@value;
 }
-
+//Button Core End
 /*--------------------------------------------------Base styles --------------------------------------------------*/
 
 
@@ -202,5 +203,11 @@ input[type="button"] {
   &.btn-block {
     width: 100%;
   }
+}
+
+
+//动态button
+.btn-group input[type="radio"],.btn-group input[type="checkbox"]{
+  display:none;
 }
 

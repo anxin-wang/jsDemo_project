@@ -1,14 +1,9 @@
 .text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
   -ms-text-overflow: ellipsis;
   /* Required for IE8 */
   -o-text-overflow: ellipsis;
   /* Required for Opera */
-  text-overflow: ellipsis;
+  white-space: nowrap;
 }

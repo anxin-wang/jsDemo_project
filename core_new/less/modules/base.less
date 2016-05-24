@@ -57,39 +57,4 @@ h6,.h6{font-size:@fontSizeMini;}
   color: @white;
 }
 
-// Images
-
-img {
-  vertical-align: middle;
-}
-
-// Responsive images (ensure images don't scale beyond their parents)
-.img-responsive {
-  .img-responsive();
-}
-
-// Rounded corners
-.img-rounded {
-  border-radius: 6px;
-}
-
-// Image thumbnails
-//
-// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
-.img-thumbnail {
-  padding: 4px;
-  line-height: @baseLineHeight;
-  background-color: @white;
-  border: 1px solid @borderColor;
-  border-radius: 4px;
-  .transition(all .2s ease-in-out);
-
-  // Keep them at most 100% wide
-  .img-responsive(inline-block);
-}
-
-// Perfect circle
-.img-circle {
-  border-radius: 50%; // set radius in percents
-}
 

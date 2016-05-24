@@ -56,6 +56,51 @@
     <input tyle="button" class="btn btn-block btn-success" value="input 整行按钮"/>
 	<br/>
 	<br/>
+	<h2>动态</h2>
+    <h3>1.Toggle</h3>
+	<button class="btn" id="myButton" data-toggle="button" aria-pressed="false" autocomplete="off">Single toggle</button>
+    <h3>2.Checkbox</h3>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+            <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" autocomplete="off"> Checkbox 2
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" autocomplete="off"> Checkbox 3
+        </label>
+    </div>
+    <h3>3.Radiobox</h3>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (pre-checked)
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+    </div>
+    <h3>4.设置值</h3>
+
+    <button class="btn" id="myButton1"  data-loading-text="finished!" autocomplete="off">Set State</button>
+
+	<br/>
+	<br/>
+
+
+
+	<script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/button.js"></script>
+	<script>
+
+        $("#myButton1").on('click',function(){
+            $(this).button("loading")
+        })
+
+	</script>
 
 </body>
 </html>

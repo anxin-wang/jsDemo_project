@@ -1,40 +1,26 @@
-.searchbox {
-  background-color: #3983e5;
-  border: 1px solid #2f79db;
-  border-radius: 6px;
-  height: 286px;
-  padding: 6px;
-}
 .tabs {
-  background-color: #ecf4fc;
-  border-radius: 5px 0 0 5px;
-  box-shadow: -2px 0 2px #d1deee inset;
-  height: 285px;
-  position: absolute;
-  width: 110px;
-}
-.content {
   background-color: #fff;
-  border-left: 1px solid #aecef6;
-  border-radius: 0 5px 5px 0;
-  height: 260px;
-  margin-left: 109px;
-  padding: 20px 20px 5px;
+  height: 48px;
+  position: relative;
+  white-space: nowrap;
 }
-.tabs li {
-  font-family: "Microsoft YaHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
-  font-size: 16px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-bottom: 1px solid #699FE5;
-}
-.tabs a.active {
+.tabs li.tab {
   background-color: #fff;
   display: block;
-  box-shadow: -2px -4px 4px -4px #b7c9e0, -2px 4px 4px -4px #b7c9e0;
-  color: #06c;
-  cursor: default;
-  margin-right: -1px;
-  position: relative;
+  float: left;
+  height: 48px;
+  letter-spacing: 0.8px;
+  line-height: 48px;
+  text-align: center;
+}
+.tabs li.tab a {
+  color: #ee6e73;
+  display: block;
+  height: 100%;
+  border: 1px solid #ee6e73;
+  transition: color 0.28s ease 0s;
+  width: 99%;
+}
+.tabs li.tab a:hover {
+  color: #ee6e73;
 }

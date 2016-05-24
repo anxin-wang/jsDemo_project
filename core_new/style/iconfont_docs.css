@@ -68,13 +68,13 @@ table { border-collapse: collapse; border-spacing: 0; }
   overflow: auto;
 }
 
-.sicon_lists li{
+.sicon_lists li,.yicon_lists li{
   float:left;
   width: 100px;
   height:180px;
   text-align: center;
 }
-.sicon_lists .sicon{
+.sicon_lists .sicon,.yicon_lists .yicon{
   font-size: 42px;
   line-height: 100px;
   margin: 10px 0;
@@ -84,11 +84,11 @@ table { border-collapse: collapse; border-spacing: 0; }
   transition: font-size 0.25s ease-out 0s;
 
 }
-.sicon_lists .sicon:hover{
+.sicon_lists .sicon:hover,.yicon_lists .yicon:hover{
   font-size: 100px;
 }
 
-.sicon_lists .name{
+.sicon_lists .name,.yicon_lists .name{
   margin-top:10px;
   *margin-top:30px;
 }
