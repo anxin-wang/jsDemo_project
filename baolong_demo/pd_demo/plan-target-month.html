@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>plan-target-month</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Administrator" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		
+		<link rel="stylesheet" type="text/css" href="resources/css/common3/common3.css" />
+	</head>
+
+	<body>
+		<div class="title_bar">
+			<div class="div_inner">
+				<div class="title_bar_left">
+					正在查看：
+				</div>
+				<div class="title_bar_right">
+					<input type="button" class="btn_green"  value="导出"/>
+					<input type="button" class="btn_green"  value="刷新"/>
+					<input type="button" class="btn_green"  value="全屏"/>
+				</div>
+			</div>
+		</div>
+		<div style="" id="searchPanel" class="search_senior_div">
+			<div class="div_inner">
+			<form>
+				<div class="search_senior_input_div">
+					<label>类型：</label>
+					<select style="width: 150px" name="planType" id="planType_s">
+						<option value="">--全部--</option>
+						<option value="1">年计划</option>
+						<option value="2">月会工作</option>
+						<option value="3">项目管理</option>
+						<option value="4">指令单</option>
+						<option value="5">综合</option>
+						<option value="6">季度KPI</option>
+						<option value="7">四级计划</option>
+						<option value="8">中心工作</option>
+					</select>
+				</div>
+				<div class="search_senior_input_div">
+					<label>状态：</label>
+					<select style="width: 150px" name="status" id="status_s">
+						<option value="">--全部--</option>
+						<option value="1">执行</option>
+						<option value="2">预完成</option>
+						<option value="3">完成</option>
+						<option value="4">完成但曾经过期</option>
+						<option value="5">过期</option>
+						<option value="6">非考核性过期</option>
+						<option value="7">非本月</option>
+						<option value="8">隐藏</option>
+						<option value="9">申请删除</option>
+						<option value="10">删除</option>
+					</select>
+				</div>
+				<div class="search_senior_input_div">
+					<label>工作内容：</label>
+					<input name="content" id="content_s" style="width: 130px">
+				</div>
+				<div class="search_senior_input_div">
+					    <input type="button" value="搜索" onclick="jumpPage('1')" class="btn_green">
+						<input type="button" value="返回" onclick="hideOrShow_Search();" class="btn_green">
+				</div>
+				<div class="clear">
+				</div>
+			</form>
+			</div>
+		</div>
+		<div class="search_info_bar">
+			<div class="div_inner">
+				<div class="title_bar_left">
+					<input type="button" class="btn_grey"  value="高级搜索"/>
+					<input type="button" class="btn_blue"  value="年计划"/>
+				</div>
+				<div class="title_bar_right">
+					<input type="button" class="btn_new btn_blue"  value="新建计划"/>
+					<input type="button" class="btn_blue"  value="锁定"/>
+				</div>
+			</div>
+		</div>
+	    <table cellspacing="0" cellpadding="0" class="content_table_1" id="contentTable">
+			   <colgroup>
+			        <col width="30">
+				    <col width="50">
+				    <col width="40">
+				    <col width="80">
+				    <col>
+				    <col width="60">
+				    <col width="60">
+				    <col width="60">
+				    <col width="45">
+				</colgroup>
+				<thead>
+					<tr>
+						<th nowrap="nowrap" class="first"><input type="checkbox" title="全选" style="height:auto;border:none;" onclick="selectAll();" id="cbxAll"></th>
+					    <th nowrap="nowrap" title="点击排序" sortcol="sh" onclick="clickSort('sh');" class="head_td sort">序号<label class="">&nbsp;&nbsp;</label></th>
+						<th nowrap="nowrap" class="head_td">关注&nbsp;&nbsp;</th>
+						<th nowrap="nowrap" title="点击排序" sortcol="lx" onclick="clickSort('lx');" class="head_td sort">类型<label class="">&nbsp;&nbsp;</label></th>
+						<th nowrap="nowrap" class="head_td">工作内容</th>
+						<th nowrap="nowrap" title="点击排序" sortcol="mb" onclick="clickSort('mb');" class="head_td sort">目标<label class="">&nbsp;&nbsp;</label></th>
+						<th nowrap="nowrap" title="点击排序" sortcol="zt" onclick="clickSort('zt');" class="head_td sort">状态<label class="">&nbsp;&nbsp;</label></th>
+						<th nowrap="nowrap" title="点击排序" sortcol="gx" onclick="clickSort('gx');" class="head_td sort">更新<label class="">&nbsp;&nbsp;</label></th>
+						<th nowrap="nowrap" class="head_td">附件</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="border-bottom: none;padding-left: 0px;" colspan="9">
+							<!-- 新建中心月计划 -->
+							<div style="display: none;" id="newMonthPlan">
+								<form method="post" id="newPlanTarget" action="/PowerDesk/plan/plan-target!save.action">
+								<input type="hidden" value="132" name="center" id="newCenter">
+								<input type="hidden" name="targetDate" id="targetDate">
+								<input type="hidden" value="0" id="lockFlg" name="lockFlg">
+								<table>
+									<thead>
+									<tr><td colspan="4">&nbsp;</td></tr>
+									<tr>
+										<td colspan="4"><label style="font-weight: bold;padding-left: 14px;">新建中心计划</label>&nbsp;&nbsp;创建人：卢俊云</td>
+									</tr>
+									<tr><td colspan="4">&nbsp;</td></tr>
+									<tr>
+										<td align="right"></td>
+										<td>
+										<input type="hidden" value="" name="planNumber" id="planNumber"></td>
+										<td>类型：
+										  <input style="width:100px;" id="edit_plan_type" class="editPlanType">
+											<div style="margin-left: 40px; display: none;" class="selectType" id="selectNewType">
+												<ul>
+												
+													
+												
+													
+														<li title="月会工作" onclick="clickNewType(this,'月会工作','2');" value="2">月会工作</li>
+													
+												
+													
+														<li title="项目管理" onclick="clickNewType(this,'项目管理','3');" value="3">项目管理</li>
+													
+												
+													
+														<li title="指令单" onclick="clickNewType(this,'指令单','4');" value="4">指令单</li>
+													
+												
+													
+														<li title="综合" onclick="clickNewType(this,'综合','5');" value="5">综合</li>
+													
+												
+													
+														<li title="季度KPI" onclick="clickNewType(this,'季度KPI','6');" value="6">季度KPI</li>
+													
+												
+													
+														<li title="四级计划" onclick="clickNewType(this,'四级计划','7');" value="7">四级计划</li>
+													
+												
+													
+														<li title="中心工作" onclick="clickNewType(this,'中心工作','8');" value="8">中心工作</li>
+													
+												
+												</ul>
+											</div>
+											<input type="hidden" name="planType" id="editPlanNewType">
+										</td>
+										<td>目标月份：<input type="text" onclick="selectNewTime();" id="newTime">
+										<div style="display: none;" id="selectNewMonth">
+												<div class="monthNewDiv">请选择月份</div>
+												<input type="button" onclick="selectNewMonth(01);" key="01" value="01" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(02);" key="02" value="02" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(03);" key="03" value="03" class="btnCancel">
+												<div style="clear: both;"></div>
+												<input type="button" onclick="selectNewMonth(04);" key="04" value="04" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(05);" key="05" value="05" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(06);" key="06" value="06" class="btnCancel">
+												<div style="clear: both;"></div>
+												<input type="button" onclick="selectNewMonth(07);" key="07" value="07" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(08);" key="08" value="08" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(09);" key="09" value="09" class="btnCancel">
+												<div style="clear: both;"></div>
+												<input type="button" onclick="selectNewMonth(10);" key="10" value="10" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(11);" key="11" value="11" class="btnCancel">
+												<input type="button" onclick="selectNewMonth(12);" key="12" value="12" class="btnCancel">
+												<div style="clear: both;"></div>
+											</div>
+										
+										</td>
+									</tr>
+									<tr><td colspan="4">&nbsp;</td></tr>
+									<tr>
+										<td align="right">工作内容：</td>
+										<td colspan="3"><textarea onblur="doVal_content();" style="width:600px;height:60px;" id="content" rows="" cols="" name="content"></textarea><label style="color:red;display: none;" id="contentVal">&nbsp;*</label></td>
+									</tr>
+									<tr><td colspan="4">&nbsp;</td></tr>
+									<tr>
+										<td align="right">留言：</td>
+										<td colspan="3"><textarea style="width:400px;height:60px;" id="planMessages" rows="" cols="" name="planMessages[0].content"></textarea>
+										</td>
+									</tr>
+									<tr><td colspan="4">&nbsp;</td></tr>
+									<tr>
+										<td></td>
+										<td colspan="3"><input type="button" value=" 提交 " onclick="doSubmit();" class="btn btn_Green">&nbsp;<input type="button" value=" 返回 " onclick="hideOrShow_New();" class="btn btn_Green"></td>
+									</tr>
+									<tr><td colspan="4">&nbsp;</td></tr>
+									</thead>
+								</table>
+								</form>
+							</div>
+						</td>
+					</tr>
+					
+					<tr onmouseout="mouseOut('402834e93846a9b2013846e81f25003e');" onmouseover="mouseOver('402834e93846a9b2013846e81f25003e');" id="tr_402834e93846a9b2013846e81f25003e" style="background-color: rgb(255, 255, 255); cursor: pointer;">
+						<td class="body_td"><input type="checkbox" value="402834e93846a9b2013846e81f25003e" onclick="selectOne();" name="cbx" style="height:auto;border:none;"></td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');" class="body_td" id="td_sn_402834e93846a9b2013846e81f25003e">04</td>
+						<td nowrap="nowrap" class="body_td" id="td_attention_402834e93846a9b2013846e81f25003e">
+							<div id="attention_recordVersion_402834e93846a9b2013846e81f25003e" style="display:none;"></div>
+							<div id="attention_status_402834e93846a9b2013846e81f25003e" style="display:none;"></div>
+							<div style="display:inline;"><img style="display:none;" onclick="doDeleteAttention(&quot;planTarget&quot;,&quot;402834e93846a9b2013846e81f25003e&quot;);" src="/PowerDesk/resources/images/common/attention_cancel.png" attentionflg="1" title="点击取消关注" id="attention_402834e93846a9b2013846e81f25003e"><img  onclick="doAddAttention(&quot;planTarget&quot;,&quot;402834e93846a9b2013846e81f25003e&quot;,&quot;2&quot;);" src="resources/images/common3/attention.png" attentionflg="0" title="点击关注,该条将在您的首页自动提示是否有更新" id="attention_cancel_402834e93846a9b2013846e81f25003e"></div>
+							<div id="attention_unread_img_402834e93846a9b2013846e81f25003e" style="display:none;"><img src="/PowerDesk/resources/images/common/new.gif" class="new_img"></div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');" class="body_td" id="td_pt_402834e93846a9b2013846e81f25003e">
+							年计划
+							
+							
+							
+							
+							
+							
+							
+						</td>
+						<td onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');" class="body_td pd-chill-tip" id="td_ct_402834e93846a9b2013846e81f25003e" chilltip="商业系统全面应用(项目数据齐备)&lt;br&gt;&lt;li&gt;邓艳华&nbsp;09-04：【修改状态为预完成】&lt;/li&gt;" title="商业系统全面应用(项目数据齐备)&lt;br&gt;&lt;li&gt;邓艳华&nbsp;09-04：【修改状态为预完成】&lt;/li&gt;">
+						<div class="ellipsis_Div">商业系统全面应用(项目数据齐备)</div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');" class="body_td" id="td_td_402834e93846a9b2013846e81f25003e">09-30</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');" class="body_td" id="td_st_402834e93846a9b2013846e81f25003e">
+							
+							
+							<div title="预完成" class="prefinish">&nbsp;</div>
+							
+							
+							
+							
+							
+							 
+							
+							
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');" class="body_td" id="td_ud_402834e93846a9b2013846e81f25003e">09-04</td>
+						<td nowrap="nowrap" class="body_td"><span onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e93846a9b2013846e81f25003e&quot;);" style="cursor:pointer;" id="edit_atta_imgSpan_402834e93846a9b2013846e81f25003e">
+							</span>
+						</td>
+					</tr>
+					<tr><td style="border-bottom:none;padding-left:0px;" colspan="9">
+						<!-- 编辑中心月计划 -->
+						<div style="display: none;padding:5px 0;" class="editMonthPlan" id="edit_monthPlan_402834e93846a9b2013846e81f25003e">
+						<form method="post" id="editPlanTarget_402834e93846a9b2013846e81f25003e" name="" action="/PowerDesk/plan/plan-target!save.action">
+						<input type="hidden" value="402834e93846a9b2013846e81f25003e" name="id">
+						<input type="hidden" value="" name="isAttentioned">
+                         <input type="hidden" value="2" name="recordVersion">
+							<table class="editTable">
+							     <colgroup><col width="8%">
+								<col width="7%">
+								<col width="35%">
+								<col width="5%">
+								<col width="7%">
+								<col width="48%">
+								</colgroup><tbody><tr valign="top">
+									<td style="padding-right:5px;padding-left:26px;" id="td_edit_sn_402834e93846a9b2013846e81f25003e"><input class="editSequenceNumber" value="04" name="sequenceNumber" id="editSequenceNumber_402834e93846a9b2013846e81f25003e"></td>
+									<td style="padding-right:5px;" id="td_edit_pt_402834e93846a9b2013846e81f25003e">
+									<input value="1" class="editPlanType">
+									<div class="selectType" id="selectType_402834e93846a9b2013846e81f25003e" style="display: none;">
+										<ul>
+										
+											
+										
+											
+												<li title="月会工作" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="2">月会工作</li>
+											
+										
+											
+												<li title="项目管理" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="3">项目管理</li>
+											
+										
+											
+												<li title="指令单" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="4">指令单</li>
+											
+										
+											
+												<li title="综合" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="5">综合</li>
+											
+										
+											
+												<li title="季度KPI" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="6">季度KPI</li>
+											
+										
+											
+												<li title="四级计划" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="7">四级计划</li>
+											
+										
+											
+												<li title="中心工作" onclick="clickType('402834e93846a9b2013846e81f25003e', this.value);" value="8">中心工作</li>
+											
+										
+										</ul>
+									</div>
+									<input type="hidden" value="1" name="planType" id="editPlanTypeVal_402834e93846a9b2013846e81f25003e">
+									</td>
+									<td style="padding-right:5px;" id="td_edit_ct_402834e93846a9b2013846e81f25003e"><textarea class="editContent" id="content" rows="" cols="" name="content">商业系统全面应用(项目数据齐备)</textarea></td>
+									<td style="padding-right:5px;" id="td_edit_td_402834e93846a9b2013846e81f25003e"><input onfocus="WdatePicker({ dateFmt: 'MM-dd' });" class="Wdate editTargetDate" value="09-30" id="editTargetDate_402834e93846a9b2013846e81f25003e"><input type="hidden" value="2012-09-30" name="targetDate" id="targetDate_402834e93846a9b2013846e81f25003e"></td>
+									<td style="padding-right:5px;"><input readonly="readonly" value="预完成" id="edit_st_402834e93846a9b2013846e81f25003e" class="editStatus">
+									 <input type="hidden" value="2" name="status" id="editStatusVal_402834e93846a9b2013846e81f25003e">
+									 </td>
+									<td style="width: 38%;padding-top:3px;padding-left:5px;">
+									<label style="height:24px;">编号：</label>JK-09-04&nbsp;&nbsp;
+									<label>创建时间：</label>07-02
+									<label>创建人：</label>崔巍
+								    </td>
+								</tr>
+								<tr>
+									<td valign="top" class="td" colspan="5" style="padding-left:21px;">
+									
+									
+									
+									
+									 <input type="button" value="&nbsp;&nbsp;保存&nbsp;&nbsp;" class="btn_green" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e');">
+									
+									
+									
+									<input type="button" value="&nbsp;&nbsp;返回&nbsp;&nbsp;" class="btn_green" onclick="openEditPlanTarget('402834e93846a9b2013846e81f25003e');">
+									</td>
+									<td class="td">
+										<table id="statusBtn_402834e93846a9b2013846e81f25003e">
+											<thead>
+												<tr><td>
+												  
+													
+													
+													<input type="button" title="执行" value="&nbsp;执行&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '1');" class="btn btn_Blue">
+													
+													
+													<input type="button" title="预完成" value="&nbsp;预完成&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '2');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="完成" value="&nbsp;完成&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '3');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="非本月" value="&nbsp;非本月&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '7');" class="btn btn_Green">
+												    
+												    
+												</td></tr>
+												<tr><td class="td">
+												   
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													<input type="button" title="过期" value="&nbsp;过期&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '5');" class="btn btn_Red">
+													<input type="button" title="非考核性过期" value="&nbsp;非考核性过期&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '6');" class="btn btn_Red">
+													
+													<input type="button" title="隐藏" value="&nbsp;隐藏&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '8');" class="btn btn_Red">
+													
+													
+													
+													<input type="button" title="退回" value="&nbsp;退回&nbsp;" onclick="doSubmitEdit('402834e93846a9b2013846e81f25003e', '-1');" style="float:left;" class="btn btn_Red">
+												    
+												    
+												    
+												</td></tr>
+											</thead>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="5" style="padding-left:26px;" class="td2">留言：
+									<div id="msgList_402834e93846a9b2013846e81f25003e">
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">邓艳华</span>(09-04 17:09):【修改状态为预完成】</div>
+									
+									</div>
+									<textarea style="width: 300px;height: 50px;float: left;border: 1px solid #7F9DB9;" name="planMessages[1].content" id="editMessage_402834e93846a9b2013846e81f25003e"></textarea><input type="button" value="留言" class="msgBtn pub btn_Green" onclick="doSubmitMessage('402834e93846a9b2013846e81f25003e');">
+									</td>
+									<td valign="top">
+									 <div id="editAttach">
+												<table cellspacing="0px;" cellpadding="0px">
+													<thead>
+													<tr>
+														<td width="50px;"><label style="font-weight: bold;padding-left: 5px;">附件：</label></td>
+														<td colspan="3">
+															<label class="link" onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e93846a9b2013846e81f25003e&quot;);">添加附件</label>&nbsp;|&nbsp;可以上传小于40M的附件
+														</td>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td></td>
+														<td><span class="link" onclick="">&nbsp;</span></td>
+														<td>&nbsp;</td>
+														<td><span class="del" onclick="">&nbsp;</span></td>
+													</tr>
+													</tbody>
+												</table>
+												</div>
+													<input type="hidden" name="attach">
+									</td>
+								</tr>
+							</tbody></table>
+							</form>
+						</div>
+						</td>
+						</tr>
+						
+					
+					
+					<tr onmouseout="mouseOut('402834e5397cffee013989fef3d32dcd');" onmouseover="mouseOver('402834e5397cffee013989fef3d32dcd');" id="tr_402834e5397cffee013989fef3d32dcd" style="background-color: rgb(255, 255, 255); cursor: pointer;">
+						<td class="body_td"><input type="checkbox" value="402834e5397cffee013989fef3d32dcd" onclick="selectOne();" name="cbx" style="height:auto;border:none;"></td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');" class="body_td" id="td_sn_402834e5397cffee013989fef3d32dcd">01</td>
+						<td nowrap="nowrap" class="body_td" id="td_attention_402834e5397cffee013989fef3d32dcd">
+							<div id="attention_recordVersion_402834e5397cffee013989fef3d32dcd" style="display:none;"></div>
+							<div id="attention_status_402834e5397cffee013989fef3d32dcd" style="display:none;"></div>
+							<div style="display:inline;"><img style="display:none;" onclick="doDeleteAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fef3d32dcd&quot;);" src="/PowerDesk/resources/images/common/attention_cancel.png" attentionflg="1" title="点击取消关注" id="attention_402834e5397cffee013989fef3d32dcd"><img  onclick="doAddAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fef3d32dcd&quot;,&quot;2&quot;);" src="resources/images/common3/attention.png" attentionflg="0" title="点击关注,该条将在您的首页自动提示是否有更新" id="attention_cancel_402834e5397cffee013989fef3d32dcd"></div>
+							<div id="attention_unread_img_402834e5397cffee013989fef3d32dcd" style="display:none;"><img src="/PowerDesk/resources/images/common/new.gif" class="new_img"></div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');" class="body_td" id="td_pt_402834e5397cffee013989fef3d32dcd">
+							
+							月会工作
+							
+							
+							
+							
+							
+							
+						</td>
+						<td onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');" class="body_td pd-chill-tip" id="td_ct_402834e5397cffee013989fef3d32dcd" chilltip="【计划考核】今年高层考核责任书&lt;br&gt;" title="【计划考核】今年高层考核责任书&lt;br&gt;">
+						<div class="ellipsis_Div">【计划考核】今年高层考核责任书</div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');" class="body_td" id="td_td_402834e5397cffee013989fef3d32dcd">09-30</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');" class="body_td" id="td_st_402834e5397cffee013989fef3d32dcd">
+							
+							<div title="进行中" class="process">&nbsp;</div>
+							
+							
+							
+							
+							
+							
+							 
+							
+							
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');" class="body_td" id="td_ud_402834e5397cffee013989fef3d32dcd">09-03</td>
+						<td nowrap="nowrap" class="body_td"><span onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fef3d32dcd&quot;);" style="cursor:pointer;" id="edit_atta_imgSpan_402834e5397cffee013989fef3d32dcd">
+							</span>
+						</td>
+					</tr>
+					<tr><td style="border-bottom:none;padding-left:0px;" colspan="9">
+						<!-- 编辑中心月计划 -->
+						<div style="display: none;padding:5px 0;" class="editMonthPlan" id="edit_monthPlan_402834e5397cffee013989fef3d32dcd">
+						<form method="post" id="editPlanTarget_402834e5397cffee013989fef3d32dcd" name="" action="/PowerDesk/plan/plan-target!save.action">
+						<input type="hidden" value="402834e5397cffee013989fef3d32dcd" name="id">
+						<input type="hidden" value="" name="isAttentioned">
+                         <input type="hidden" value="2" name="recordVersion">
+							<table class="editTable">
+							     <colgroup><col width="8%">
+								<col width="7%">
+								<col width="35%">
+								<col width="5%">
+								<col width="7%">
+								<col width="48%">
+								</colgroup><tbody><tr valign="top">
+									<td style="padding-right:5px;padding-left:26px;" id="td_edit_sn_402834e5397cffee013989fef3d32dcd"><input class="editSequenceNumber" value="01" name="sequenceNumber" id="editSequenceNumber_402834e5397cffee013989fef3d32dcd"></td>
+									<td style="padding-right:5px;" id="td_edit_pt_402834e5397cffee013989fef3d32dcd">
+									<input value="2" class="editPlanType">
+									<div class="selectType" id="selectType_402834e5397cffee013989fef3d32dcd" style="display: none;">
+										<ul>
+										
+											
+										
+											
+												<li title="月会工作" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="2">月会工作</li>
+											
+										
+											
+												<li title="项目管理" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="3">项目管理</li>
+											
+										
+											
+												<li title="指令单" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="4">指令单</li>
+											
+										
+											
+												<li title="综合" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="5">综合</li>
+											
+										
+											
+												<li title="季度KPI" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="6">季度KPI</li>
+											
+										
+											
+												<li title="四级计划" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="7">四级计划</li>
+											
+										
+											
+												<li title="中心工作" onclick="clickType('402834e5397cffee013989fef3d32dcd', this.value);" value="8">中心工作</li>
+											
+										
+										</ul>
+									</div>
+									<input type="hidden" value="2" name="planType" id="editPlanTypeVal_402834e5397cffee013989fef3d32dcd">
+									</td>
+									<td style="padding-right:5px;" id="td_edit_ct_402834e5397cffee013989fef3d32dcd"><textarea class="editContent" id="content" rows="" cols="" name="content">【计划考核】今年高层考核责任书</textarea></td>
+									<td style="padding-right:5px;" id="td_edit_td_402834e5397cffee013989fef3d32dcd"><input onfocus="WdatePicker({ dateFmt: 'MM-dd' });" class="Wdate editTargetDate" value="09-30" id="editTargetDate_402834e5397cffee013989fef3d32dcd"><input type="hidden" value="2012-09-30" name="targetDate" id="targetDate_402834e5397cffee013989fef3d32dcd"></td>
+									<td style="padding-right:5px;"><input readonly="readonly" value="进行中" id="edit_st_402834e5397cffee013989fef3d32dcd" class="editStatus">
+									 <input type="hidden" value="1" name="status" id="editStatusVal_402834e5397cffee013989fef3d32dcd">
+									 </td>
+									<td style="width: 38%;padding-top:3px;padding-left:5px;">
+									<label style="height:24px;">编号：</label>&nbsp;&nbsp;
+									<label>创建时间：</label>09-03
+									<label>创建人：</label>黄劲松
+								    </td>
+								</tr>
+								<tr>
+									<td valign="top" class="td" colspan="5" style="padding-left:21px;">
+									
+									
+									<input type="button" value="&nbsp;&nbsp;保存&nbsp;&nbsp;" class="btn btn_Green" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd');">
+									
+									
+									
+									<input type="button" value="&nbsp;&nbsp;返回&nbsp;&nbsp;" class="btn btn_Green" onclick="openEditPlanTarget('402834e5397cffee013989fef3d32dcd');">
+									</td>
+									<td class="td">
+										<table id="statusBtn_402834e5397cffee013989fef3d32dcd">
+											<thead>
+												<tr><td>
+												  
+													
+													
+													<input type="button" title="执行" value="&nbsp;执行&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '1');" class="btn btn_Blue">
+													
+													
+													<input type="button" title="预完成" value="&nbsp;预完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '2');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="完成" value="&nbsp;完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '3');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="非本月" value="&nbsp;非本月&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '7');" class="btn btn_Green">
+												    
+												    
+												</td></tr>
+												<tr><td class="td">
+												   
+													
+													
+													<input type="button" title="删除" value="&nbsp;删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '10');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													
+													<input type="button" title="申请删除" value="&nbsp;申请删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '9');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													<input type="button" title="过期" value="&nbsp;过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '5');" class="btn btn_Red">
+													<input type="button" title="非考核性过期" value="&nbsp;非考核性过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '6');" class="btn btn_Red">
+													
+													<input type="button" title="隐藏" value="&nbsp;隐藏&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '8');" class="btn btn_Red">
+													
+													
+													
+													<input type="button" title="退回" value="&nbsp;退回&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fef3d32dcd', '-1');" style="float:left;" class="btn btn_Red">
+												    
+												    
+												    
+												</td></tr>
+											</thead>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="5" style="padding-left:26px;" class="td2">留言：
+									<div id="msgList_402834e5397cffee013989fef3d32dcd">
+									
+									</div>
+									<textarea style="width: 300px;height: 50px;float: left;border: 1px solid #7F9DB9;" name="planMessages[0].content" id="editMessage_402834e5397cffee013989fef3d32dcd"></textarea><input type="button" value="留言" class="msgBtn pub btn_Green" onclick="doSubmitMessage('402834e5397cffee013989fef3d32dcd');">
+									</td>
+									<td valign="top">
+									 <div id="editAttach">
+												<table cellspacing="0px;" cellpadding="0px">
+													<thead>
+													<tr>
+														<td width="50px;"><label style="font-weight: bold;padding-left: 5px;">附件：</label></td>
+														<td colspan="3">
+															<label class="link" onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fef3d32dcd&quot;);">添加附件</label>&nbsp;|&nbsp;可以上传小于40M的附件
+														</td>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td></td>
+														<td><span class="link" onclick="">&nbsp;</span></td>
+														<td>&nbsp;</td>
+														<td><span class="del" onclick="">&nbsp;</span></td>
+													</tr>
+													</tbody>
+												</table>
+												</div>
+													<input type="hidden" name="attach">
+									</td>
+								</tr>
+							</tbody></table>
+							</form>
+						</div>
+						</td>
+						</tr>
+						
+					
+					
+					<tr onmouseout="mouseOut('402834e5397cffee013989fcc23d2da3');" onmouseover="mouseOver('402834e5397cffee013989fcc23d2da3');" id="tr_402834e5397cffee013989fcc23d2da3" style="background-color: rgb(255, 255, 255); cursor: pointer;">
+						<td class="body_td"><input type="checkbox" value="402834e5397cffee013989fcc23d2da3" onclick="selectOne();" name="cbx" style="height:auto;border:none;"></td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');" class="body_td" id="td_sn_402834e5397cffee013989fcc23d2da3">02</td>
+						<td nowrap="nowrap" class="body_td" id="td_attention_402834e5397cffee013989fcc23d2da3">
+							<div id="attention_recordVersion_402834e5397cffee013989fcc23d2da3" style="display:none;"></div>
+							<div id="attention_status_402834e5397cffee013989fcc23d2da3" style="display:none;"></div>
+							<div style="display:inline;"><img style="display:none;" onclick="doDeleteAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fcc23d2da3&quot;);" src="/PowerDesk/resources/images/common/attention_cancel.png" attentionflg="1" title="点击取消关注" id="attention_402834e5397cffee013989fcc23d2da3"><img onclick="doAddAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fcc23d2da3&quot;,&quot;2&quot;);" src="resources/images/common3/attention.png" attentionflg="0" title="点击关注,该条将在您的首页自动提示是否有更新" id="attention_cancel_402834e5397cffee013989fcc23d2da3"></div>
+							<div id="attention_unread_img_402834e5397cffee013989fcc23d2da3" style="display:none;"><img src="/PowerDesk/resources/images/common/new.gif" class="new_img"></div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');" class="body_td" id="td_pt_402834e5397cffee013989fcc23d2da3">
+							
+							月会工作
+							
+							
+							
+							
+							
+							
+						</td>
+						<td onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');" class="body_td pd-chill-tip" id="td_ct_402834e5397cffee013989fcc23d2da3" chilltip="【战略市场】“生活方式中心”研究&lt;br&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为02、 &lt;font color=''&gt;【战略与市场】“生活方式中心”研究&lt;/font&gt;内容修改为&lt;font color=''&gt;【战略市场】“生活方式中心”研究&lt;/font&gt;】&lt;/li&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为02】&lt;/li&gt;" title="【战略市场】“生活方式中心”研究&lt;br&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为02、 &lt;font color=''&gt;【战略与市场】“生活方式中心”研究&lt;/font&gt;内容修改为&lt;font color=''&gt;【战略市场】“生活方式中心”研究&lt;/font&gt;】&lt;/li&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为02】&lt;/li&gt;">
+						<div class="ellipsis_Div">【战略市场】“生活方式中心”研究</div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');" class="body_td" id="td_td_402834e5397cffee013989fcc23d2da3">09-30</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');" class="body_td" id="td_st_402834e5397cffee013989fcc23d2da3">
+							
+							<div title="进行中" class="process">&nbsp;</div>
+							
+							
+							
+							
+							
+							
+							 
+							
+							
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');" class="body_td" id="td_ud_402834e5397cffee013989fcc23d2da3">09-03</td>
+						<td nowrap="nowrap" class="body_td"><span onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fcc23d2da3&quot;);" style="cursor:pointer;" id="edit_atta_imgSpan_402834e5397cffee013989fcc23d2da3">
+							</span>
+						</td>
+					</tr>
+					<tr><td style="border-bottom:none;padding-left:0px;" colspan="9">
+						<!-- 编辑中心月计划 -->
+						<div style="display: none;padding:5px 0;" class="editMonthPlan" id="edit_monthPlan_402834e5397cffee013989fcc23d2da3">
+						<form method="post" id="editPlanTarget_402834e5397cffee013989fcc23d2da3" name="" action="/PowerDesk/plan/plan-target!save.action">
+						<input type="hidden" value="402834e5397cffee013989fcc23d2da3" name="id">
+						<input type="hidden" value="" name="isAttentioned">
+                         <input type="hidden" value="2" name="recordVersion">
+							<table class="editTable">
+							     <colgroup><col width="8%">
+								<col width="7%">
+								<col width="35%">
+								<col width="5%">
+								<col width="7%">
+								<col width="48%">
+								</colgroup><tbody><tr valign="top">
+									<td style="padding-right:5px;padding-left:26px;" id="td_edit_sn_402834e5397cffee013989fcc23d2da3"><input class="editSequenceNumber" value="02" name="sequenceNumber" id="editSequenceNumber_402834e5397cffee013989fcc23d2da3"></td>
+									<td style="padding-right:5px;" id="td_edit_pt_402834e5397cffee013989fcc23d2da3">
+									<input value="2" class="editPlanType">
+									<div class="selectType" id="selectType_402834e5397cffee013989fcc23d2da3" style="display: none;">
+										<ul>
+										
+											
+										
+											
+												<li title="月会工作" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="2">月会工作</li>
+											
+										
+											
+												<li title="项目管理" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="3">项目管理</li>
+											
+										
+											
+												<li title="指令单" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="4">指令单</li>
+											
+										
+											
+												<li title="综合" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="5">综合</li>
+											
+										
+											
+												<li title="季度KPI" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="6">季度KPI</li>
+											
+										
+											
+												<li title="四级计划" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="7">四级计划</li>
+											
+										
+											
+												<li title="中心工作" onclick="clickType('402834e5397cffee013989fcc23d2da3', this.value);" value="8">中心工作</li>
+											
+										
+										</ul>
+									</div>
+									<input type="hidden" value="2" name="planType" id="editPlanTypeVal_402834e5397cffee013989fcc23d2da3">
+									</td>
+									<td style="padding-right:5px;" id="td_edit_ct_402834e5397cffee013989fcc23d2da3"><textarea class="editContent" id="content" rows="" cols="" name="content">【战略市场】“生活方式中心”研究</textarea></td>
+									<td style="padding-right:5px;" id="td_edit_td_402834e5397cffee013989fcc23d2da3"><input onfocus="WdatePicker({ dateFmt: 'MM-dd' });" class="Wdate editTargetDate" value="09-30" id="editTargetDate_402834e5397cffee013989fcc23d2da3"><input type="hidden" value="2012-09-30" name="targetDate" id="targetDate_402834e5397cffee013989fcc23d2da3"></td>
+									<td style="padding-right:5px;"><input readonly="readonly" value="进行中" id="edit_st_402834e5397cffee013989fcc23d2da3" class="editStatus">
+									 <input type="hidden" value="1" name="status" id="editStatusVal_402834e5397cffee013989fcc23d2da3">
+									 </td>
+									<td style="width: 38%;padding-top:3px;padding-left:5px;">
+									<label style="height:24px;">编号：</label>&nbsp;&nbsp;
+									<label>创建时间：</label>09-03
+									<label>创建人：</label>黄劲松
+								    </td>
+								</tr>
+								<tr>
+									<td valign="top" class="td" colspan="5" style="padding-left:21px;">
+									
+									
+									<input type="button" value="&nbsp;&nbsp;保存&nbsp;&nbsp;" class="btn btn_Green" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3');">
+									
+									
+									
+									<input type="button" value="&nbsp;&nbsp;返回&nbsp;&nbsp;" class="btn btn_Green" onclick="openEditPlanTarget('402834e5397cffee013989fcc23d2da3');">
+									</td>
+									<td class="td">
+										<table id="statusBtn_402834e5397cffee013989fcc23d2da3">
+											<thead>
+												<tr><td>
+												  
+													
+													
+													<input type="button" title="执行" value="&nbsp;执行&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '1');" class="btn btn_Blue">
+													
+													
+													<input type="button" title="预完成" value="&nbsp;预完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '2');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="完成" value="&nbsp;完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '3');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="非本月" value="&nbsp;非本月&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '7');" class="btn btn_Green">
+												    
+												    
+												</td></tr>
+												<tr><td class="td">
+												   
+													
+													
+													<input type="button" title="删除" value="&nbsp;删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '10');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													
+													<input type="button" title="申请删除" value="&nbsp;申请删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '9');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													<input type="button" title="过期" value="&nbsp;过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '5');" class="btn btn_Red">
+													<input type="button" title="非考核性过期" value="&nbsp;非考核性过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '6');" class="btn btn_Red">
+													
+													<input type="button" title="隐藏" value="&nbsp;隐藏&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '8');" class="btn btn_Red">
+													
+													
+													
+													<input type="button" title="退回" value="&nbsp;退回&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fcc23d2da3', '-1');" style="float:left;" class="btn btn_Red">
+												    
+												    
+												    
+												</td></tr>
+											</thead>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="5" style="padding-left:26px;" class="td2">留言：
+									<div id="msgList_402834e5397cffee013989fcc23d2da3">
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(09-03 10:09):【修改序号为02、 <font color="#18478d">【战略与市场】“生活方式中心”研究</font>内容修改为<font color="#18478d">【战略市场】“生活方式中心”研究</font>】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(09-03 10:09):【修改序号为02】</div>
+									
+									</div>
+									<textarea style="width: 300px;height: 50px;float: left;border: 1px solid #7F9DB9;" name="planMessages[2].content" id="editMessage_402834e5397cffee013989fcc23d2da3"></textarea><input type="button" value="留言" class="msgBtn pub btn_Green" onclick="doSubmitMessage('402834e5397cffee013989fcc23d2da3');">
+									</td>
+									<td valign="top">
+									 <div id="editAttach">
+												<table cellspacing="0px;" cellpadding="0px">
+													<thead>
+													<tr>
+														<td width="50px;"><label style="font-weight: bold;padding-left: 5px;">附件：</label></td>
+														<td colspan="3">
+															<label class="link" onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fcc23d2da3&quot;);">添加附件</label>&nbsp;|&nbsp;可以上传小于40M的附件
+														</td>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td></td>
+														<td><span class="link" onclick="">&nbsp;</span></td>
+														<td>&nbsp;</td>
+														<td><span class="del" onclick="">&nbsp;</span></td>
+													</tr>
+													</tbody>
+												</table>
+												</div>
+													<input type="hidden" name="attach">
+									</td>
+								</tr>
+							</tbody></table>
+							</form>
+						</div>
+						</td>
+						</tr>
+						
+					
+					
+					<tr onmouseout="mouseOut('402834e5397cffee013989fb64342d64');" onmouseover="mouseOver('402834e5397cffee013989fb64342d64');" id="tr_402834e5397cffee013989fb64342d64" style="background-color: rgb(255, 255, 255); cursor: pointer;">
+						<td class="body_td"><input type="checkbox" value="402834e5397cffee013989fb64342d64" onclick="selectOne();" name="cbx" style="height:auto;border:none;"></td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');" class="body_td" id="td_sn_402834e5397cffee013989fb64342d64">03</td>
+						<td nowrap="nowrap" class="body_td" id="td_attention_402834e5397cffee013989fb64342d64">
+							<div id="attention_recordVersion_402834e5397cffee013989fb64342d64" style="display:none;"></div>
+							<div id="attention_status_402834e5397cffee013989fb64342d64" style="display:none;"></div>
+							<div style="display:inline;"><img style="display:none;" onclick="doDeleteAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fb64342d64&quot;);" src="/PowerDesk/resources/images/common/attention_cancel.png" attentionflg="1" title="点击取消关注" id="attention_402834e5397cffee013989fb64342d64"><img onclick="doAddAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fb64342d64&quot;,&quot;1&quot;);" src="resources/images/common3/attention.png" attentionflg="0" title="点击关注,该条将在您的首页自动提示是否有更新" id="attention_cancel_402834e5397cffee013989fb64342d64"></div>
+							<div id="attention_unread_img_402834e5397cffee013989fb64342d64" style="display:none;"><img src="/PowerDesk/resources/images/common/new.gif" class="new_img"></div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');" class="body_td" id="td_pt_402834e5397cffee013989fb64342d64">
+							
+							月会工作
+							
+							
+							
+							
+							
+							
+						</td>
+						<td onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');" class="body_td pd-chill-tip" id="td_ct_402834e5397cffee013989fb64342d64" chilltip="【制度标准】天津、厦门、晋江三项目培训工具书&lt;br&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为03】&lt;/li&gt;" title="【制度标准】天津、厦门、晋江三项目培训工具书&lt;br&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为03】&lt;/li&gt;">
+						<div class="ellipsis_Div">【制度标准】天津、厦门、晋江三项目培训工具书</div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');" class="body_td" id="td_td_402834e5397cffee013989fb64342d64">09-30</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');" class="body_td" id="td_st_402834e5397cffee013989fb64342d64">
+							
+							<div title="进行中" class="process">&nbsp;</div>
+							
+							
+							
+							
+							
+							
+							 
+							
+							
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');" class="body_td" id="td_ud_402834e5397cffee013989fb64342d64">09-03</td>
+						<td nowrap="nowrap" class="body_td"><span onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fb64342d64&quot;);" style="cursor:pointer;" id="edit_atta_imgSpan_402834e5397cffee013989fb64342d64">
+							</span>
+						</td>
+					</tr>
+					<tr><td style="border-bottom:none;padding-left:0px;" colspan="9">
+						<!-- 编辑中心月计划 -->
+						<div style="display: none;padding:5px 0;" class="editMonthPlan" id="edit_monthPlan_402834e5397cffee013989fb64342d64">
+						<form method="post" id="editPlanTarget_402834e5397cffee013989fb64342d64" name="" action="/PowerDesk/plan/plan-target!save.action">
+						<input type="hidden" value="402834e5397cffee013989fb64342d64" name="id">
+						<input type="hidden" value="" name="isAttentioned">
+                         <input type="hidden" value="1" name="recordVersion">
+							<table class="editTable">
+							     <colgroup><col width="8%">
+								<col width="7%">
+								<col width="35%">
+								<col width="5%">
+								<col width="7%">
+								<col width="48%">
+								</colgroup><tbody><tr valign="top">
+									<td style="padding-right:5px;padding-left:26px;" id="td_edit_sn_402834e5397cffee013989fb64342d64"><input class="editSequenceNumber" value="03" name="sequenceNumber" id="editSequenceNumber_402834e5397cffee013989fb64342d64"></td>
+									<td style="padding-right:5px;" id="td_edit_pt_402834e5397cffee013989fb64342d64">
+									<input value="2" class="editPlanType">
+									<div class="selectType" id="selectType_402834e5397cffee013989fb64342d64" style="display: none;">
+										<ul>
+										
+											
+										
+											
+												<li title="月会工作" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="2">月会工作</li>
+											
+										
+											
+												<li title="项目管理" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="3">项目管理</li>
+											
+										
+											
+												<li title="指令单" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="4">指令单</li>
+											
+										
+											
+												<li title="综合" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="5">综合</li>
+											
+										
+											
+												<li title="季度KPI" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="6">季度KPI</li>
+											
+										
+											
+												<li title="四级计划" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="7">四级计划</li>
+											
+										
+											
+												<li title="中心工作" onclick="clickType('402834e5397cffee013989fb64342d64', this.value);" value="8">中心工作</li>
+											
+										
+										</ul>
+									</div>
+									<input type="hidden" value="2" name="planType" id="editPlanTypeVal_402834e5397cffee013989fb64342d64">
+									</td>
+									<td style="padding-right:5px;" id="td_edit_ct_402834e5397cffee013989fb64342d64"><textarea class="editContent" id="content" rows="" cols="" name="content">【制度标准】天津、厦门、晋江三项目培训工具书</textarea></td>
+									<td style="padding-right:5px;" id="td_edit_td_402834e5397cffee013989fb64342d64"><input onfocus="WdatePicker({ dateFmt: 'MM-dd' });" class="Wdate editTargetDate" value="09-30" id="editTargetDate_402834e5397cffee013989fb64342d64"><input type="hidden" value="2012-09-30" name="targetDate" id="targetDate_402834e5397cffee013989fb64342d64"></td>
+									<td style="padding-right:5px;"><input readonly="readonly" value="进行中" id="edit_st_402834e5397cffee013989fb64342d64" class="editStatus">
+									 <input type="hidden" value="1" name="status" id="editStatusVal_402834e5397cffee013989fb64342d64">
+									 </td>
+									<td style="width: 38%;padding-top:3px;padding-left:5px;">
+									<label style="height:24px;">编号：</label>&nbsp;&nbsp;
+									<label>创建时间：</label>09-03
+									<label>创建人：</label>黄劲松
+								    </td>
+								</tr>
+								<tr>
+									<td valign="top" class="td" colspan="5" style="padding-left:21px;">
+									
+									
+									<input type="button" value="&nbsp;&nbsp;保存&nbsp;&nbsp;" class="btn btn_Green" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64');">
+									
+									
+									
+									<input type="button" value="&nbsp;&nbsp;返回&nbsp;&nbsp;" class="btn btn_Green" onclick="openEditPlanTarget('402834e5397cffee013989fb64342d64');">
+									</td>
+									<td class="td">
+										<table id="statusBtn_402834e5397cffee013989fb64342d64">
+											<thead>
+												<tr><td>
+												  
+													
+													
+													<input type="button" title="执行" value="&nbsp;执行&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '1');" class="btn btn_Blue">
+													
+													
+													<input type="button" title="预完成" value="&nbsp;预完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '2');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="完成" value="&nbsp;完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '3');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="非本月" value="&nbsp;非本月&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '7');" class="btn btn_Green">
+												    
+												    
+												</td></tr>
+												<tr><td class="td">
+												   
+													
+													
+													<input type="button" title="删除" value="&nbsp;删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '10');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													
+													<input type="button" title="申请删除" value="&nbsp;申请删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '9');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													<input type="button" title="过期" value="&nbsp;过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '5');" class="btn btn_Red">
+													<input type="button" title="非考核性过期" value="&nbsp;非考核性过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '6');" class="btn btn_Red">
+													
+													<input type="button" title="隐藏" value="&nbsp;隐藏&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '8');" class="btn btn_Red">
+													
+													
+													
+													<input type="button" title="退回" value="&nbsp;退回&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fb64342d64', '-1');" style="float:left;" class="btn btn_Red">
+												    
+												    
+												    
+												</td></tr>
+											</thead>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="5" style="padding-left:26px;" class="td2">留言：
+									<div id="msgList_402834e5397cffee013989fb64342d64">
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(09-03 10:09):【修改序号为03】</div>
+									
+									</div>
+									<textarea style="width: 300px;height: 50px;float: left;border: 1px solid #7F9DB9;" name="planMessages[1].content" id="editMessage_402834e5397cffee013989fb64342d64"></textarea><input type="button" value="留言" class="msgBtn pub btn_Green" onclick="doSubmitMessage('402834e5397cffee013989fb64342d64');">
+									</td>
+									<td valign="top">
+									 <div id="editAttach">
+												<table cellspacing="0px;" cellpadding="0px">
+													<thead>
+													<tr>
+														<td width="50px;"><label style="font-weight: bold;padding-left: 5px;">附件：</label></td>
+														<td colspan="3">
+															<label class="link" onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fb64342d64&quot;);">添加附件</label>&nbsp;|&nbsp;可以上传小于40M的附件
+														</td>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td></td>
+														<td><span class="link" onclick="">&nbsp;</span></td>
+														<td>&nbsp;</td>
+														<td><span class="del" onclick="">&nbsp;</span></td>
+													</tr>
+													</tbody>
+												</table>
+												</div>
+													<input type="hidden" name="attach">
+									</td>
+								</tr>
+							</tbody></table>
+							</form>
+						</div>
+						</td>
+						</tr>
+						
+					
+					
+					<tr onmouseout="mouseOut('402834e5397cffee013989fa705e2d47');" onmouseover="mouseOver('402834e5397cffee013989fa705e2d47');" id="tr_402834e5397cffee013989fa705e2d47" style="background-color: rgb(255, 255, 255); cursor: pointer;">
+						<td class="body_td"><input type="checkbox" value="402834e5397cffee013989fa705e2d47" onclick="selectOne();" name="cbx" style="height:auto;border:none;"></td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');" class="body_td" id="td_sn_402834e5397cffee013989fa705e2d47">04</td>
+						<td nowrap="nowrap" class="body_td" id="td_attention_402834e5397cffee013989fa705e2d47">
+							<div id="attention_recordVersion_402834e5397cffee013989fa705e2d47" style="display:none;"></div>
+							<div id="attention_status_402834e5397cffee013989fa705e2d47" style="display:none;"></div>
+							<div style="display:inline;"><img style="display:none;" onclick="doDeleteAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fa705e2d47&quot;);" src="/PowerDesk/resources/images/common/attention_cancel.png" attentionflg="1" title="点击取消关注" id="attention_402834e5397cffee013989fa705e2d47"><img onclick="doAddAttention(&quot;planTarget&quot;,&quot;402834e5397cffee013989fa705e2d47&quot;,&quot;1&quot;);" src="resources/images/common3/attention.png" attentionflg="0" title="点击关注,该条将在您的首页自动提示是否有更新" id="attention_cancel_402834e5397cffee013989fa705e2d47"></div>
+							<div id="attention_unread_img_402834e5397cffee013989fa705e2d47" style="display:none;"><img src="/PowerDesk/resources/images/common/new.gif" class="new_img"></div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');" class="body_td" id="td_pt_402834e5397cffee013989fa705e2d47">
+							
+							月会工作
+							
+							
+							
+							
+							
+							
+						</td>
+						<td onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');" class="body_td pd-chill-tip" id="td_ct_402834e5397cffee013989fa705e2d47" chilltip="【工作督办】营销工作&lt;br&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为04】&lt;/li&gt;" title="【工作督办】营销工作&lt;br&gt;&lt;li&gt;黄劲松&nbsp;09-03：【修改序号为04】&lt;/li&gt;">
+						<div class="ellipsis_Div">【工作督办】营销工作</div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');" class="body_td" id="td_td_402834e5397cffee013989fa705e2d47">09-30</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');" class="body_td" id="td_st_402834e5397cffee013989fa705e2d47">
+							
+							<div title="进行中" class="process">&nbsp;</div>
+							
+							
+							
+							
+							
+							
+							 
+							
+							
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');" class="body_td" id="td_ud_402834e5397cffee013989fa705e2d47">09-03</td>
+						<td nowrap="nowrap" class="body_td"><span onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fa705e2d47&quot;);" style="cursor:pointer;" id="edit_atta_imgSpan_402834e5397cffee013989fa705e2d47">
+							</span>
+						</td>
+					</tr>
+					<tr><td style="border-bottom:none;padding-left:0px;" colspan="9">
+						<!-- 编辑中心月计划 -->
+						<div style="display: none;padding:5px 0;" class="editMonthPlan" id="edit_monthPlan_402834e5397cffee013989fa705e2d47">
+						<form method="post" id="editPlanTarget_402834e5397cffee013989fa705e2d47" name="" action="/PowerDesk/plan/plan-target!save.action">
+						<input type="hidden" value="402834e5397cffee013989fa705e2d47" name="id">
+						<input type="hidden" value="" name="isAttentioned">
+                         <input type="hidden" value="1" name="recordVersion">
+							<table class="editTable">
+							     <colgroup><col width="8%">
+								<col width="7%">
+								<col width="35%">
+								<col width="5%">
+								<col width="7%">
+								<col width="48%">
+								</colgroup><tbody><tr valign="top">
+									<td style="padding-right:5px;padding-left:26px;" id="td_edit_sn_402834e5397cffee013989fa705e2d47"><input class="editSequenceNumber" value="04" name="sequenceNumber" id="editSequenceNumber_402834e5397cffee013989fa705e2d47"></td>
+									<td style="padding-right:5px;" id="td_edit_pt_402834e5397cffee013989fa705e2d47">
+									<input value="2" class="editPlanType">
+									<div class="selectType" id="selectType_402834e5397cffee013989fa705e2d47" style="display: none;">
+										<ul>
+										
+											
+										
+											
+												<li title="月会工作" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="2">月会工作</li>
+											
+										
+											
+												<li title="项目管理" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="3">项目管理</li>
+											
+										
+											
+												<li title="指令单" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="4">指令单</li>
+											
+										
+											
+												<li title="综合" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="5">综合</li>
+											
+										
+											
+												<li title="季度KPI" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="6">季度KPI</li>
+											
+										
+											
+												<li title="四级计划" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="7">四级计划</li>
+											
+										
+											
+												<li title="中心工作" onclick="clickType('402834e5397cffee013989fa705e2d47', this.value);" value="8">中心工作</li>
+											
+										
+										</ul>
+									</div>
+									<input type="hidden" value="2" name="planType" id="editPlanTypeVal_402834e5397cffee013989fa705e2d47">
+									</td>
+									<td style="padding-right:5px;" id="td_edit_ct_402834e5397cffee013989fa705e2d47"><textarea class="editContent" id="content" rows="" cols="" name="content">【工作督办】营销工作</textarea></td>
+									<td style="padding-right:5px;" id="td_edit_td_402834e5397cffee013989fa705e2d47"><input onfocus="WdatePicker({ dateFmt: 'MM-dd' });" class="Wdate editTargetDate" value="09-30" id="editTargetDate_402834e5397cffee013989fa705e2d47"><input type="hidden" value="2012-09-30" name="targetDate" id="targetDate_402834e5397cffee013989fa705e2d47"></td>
+									<td style="padding-right:5px;"><input readonly="readonly" value="进行中" id="edit_st_402834e5397cffee013989fa705e2d47" class="editStatus">
+									 <input type="hidden" value="1" name="status" id="editStatusVal_402834e5397cffee013989fa705e2d47">
+									 </td>
+									<td style="width: 38%;padding-top:3px;padding-left:5px;">
+									<label style="height:24px;">编号：</label>&nbsp;&nbsp;
+									<label>创建时间：</label>09-03
+									<label>创建人：</label>黄劲松
+								    </td>
+								</tr>
+								<tr>
+									<td valign="top" class="td" colspan="5" style="padding-left:21px;">
+									
+									
+									<input type="button" value="&nbsp;&nbsp;保存&nbsp;&nbsp;" class="btn btn_Green" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47');">
+									
+									
+									
+									<input type="button" value="&nbsp;&nbsp;返回&nbsp;&nbsp;" class="btn btn_Green" onclick="openEditPlanTarget('402834e5397cffee013989fa705e2d47');">
+									</td>
+									<td class="td">
+										<table id="statusBtn_402834e5397cffee013989fa705e2d47">
+											<thead>
+												<tr><td>
+												  
+													
+													
+													<input type="button" title="执行" value="&nbsp;执行&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '1');" class="btn btn_Blue">
+													
+													
+													<input type="button" title="预完成" value="&nbsp;预完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '2');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="完成" value="&nbsp;完成&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '3');" class="btn btn_Blue">
+													
+													
+													
+													
+													<input type="button" title="非本月" value="&nbsp;非本月&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '7');" class="btn btn_Green">
+												    
+												    
+												</td></tr>
+												<tr><td class="td">
+												   
+													
+													
+													<input type="button" title="删除" value="&nbsp;删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '10');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													
+													<input type="button" title="申请删除" value="&nbsp;申请删除&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '9');" class="btn btn_Red">
+													
+													
+													
+													
+													
+													<input type="button" title="过期" value="&nbsp;过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '5');" class="btn btn_Red">
+													<input type="button" title="非考核性过期" value="&nbsp;非考核性过期&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '6');" class="btn btn_Red">
+													
+													<input type="button" title="隐藏" value="&nbsp;隐藏&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '8');" class="btn btn_Red">
+													
+													
+													
+													<input type="button" title="退回" value="&nbsp;退回&nbsp;" onclick="doSubmitEdit('402834e5397cffee013989fa705e2d47', '-1');" style="float:left;" class="btn btn_Red">
+												    
+												    
+												    
+												</td></tr>
+											</thead>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="5" style="padding-left:26px;" class="td2">留言：
+									<div id="msgList_402834e5397cffee013989fa705e2d47">
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(09-03 10:09):【修改序号为04】</div>
+									
+									</div>
+									<textarea style="width: 300px;height: 50px;float: left;border: 1px solid #7F9DB9;" name="planMessages[1].content" id="editMessage_402834e5397cffee013989fa705e2d47"></textarea><input type="button" value="留言" class="msgBtn pub btn_Green" onclick="doSubmitMessage('402834e5397cffee013989fa705e2d47');">
+									</td>
+									<td valign="top">
+									 <div id="editAttach">
+												<table cellspacing="0px;" cellpadding="0px">
+													<thead>
+													<tr>
+														<td width="50px;"><label style="font-weight: bold;padding-left: 5px;">附件：</label></td>
+														<td colspan="3">
+															<label class="link" onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e5397cffee013989fa705e2d47&quot;);">添加附件</label>&nbsp;|&nbsp;可以上传小于40M的附件
+														</td>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td></td>
+														<td><span class="link" onclick="">&nbsp;</span></td>
+														<td>&nbsp;</td>
+														<td><span class="del" onclick="">&nbsp;</span></td>
+													</tr>
+													</tbody>
+												</table>
+												</div>
+													<input type="hidden" name="attach">
+									</td>
+								</tr>
+							</tbody></table>
+							</form>
+						</div>
+						</td>
+						</tr>
+						
+					
+					
+					<tr style="color: rgb(153, 153, 153); background-color: rgb(255, 255, 255); cursor: pointer;" onmouseout="mouseOut('402834e534eb587b0134f53933c22aa6');" onmouseover="mouseOver('402834e534eb587b0134f53933c22aa6');" id="tr_402834e534eb587b0134f53933c22aa6">
+						<td class="body_td"><input type="checkbox" value="402834e534eb587b0134f53933c22aa6" onclick="selectOne();" name="cbx" style="height:auto;border:none;"></td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');" class="body_td" id="td_sn_402834e534eb587b0134f53933c22aa6">01</td>
+						<td nowrap="nowrap" class="body_td" id="td_attention_402834e534eb587b0134f53933c22aa6">
+							<div id="attention_recordVersion_402834e534eb587b0134f53933c22aa6" style="display:none;"></div>
+							<div id="attention_status_402834e534eb587b0134f53933c22aa6" style="display:none;"></div>
+							<div style="display:inline;"><img style="display:none;" onclick="doDeleteAttention(&quot;planTarget&quot;,&quot;402834e534eb587b0134f53933c22aa6&quot;);" src="/PowerDesk/resources/images/common/attention_cancel.png" attentionflg="1" title="点击取消关注" id="attention_402834e534eb587b0134f53933c22aa6"><img onclick="doAddAttention(&quot;planTarget&quot;,&quot;402834e534eb587b0134f53933c22aa6&quot;,&quot;139&quot;);" src="resources/images/common3/attention.png" attentionflg="0" title="点击关注,该条将在您的首页自动提示是否有更新" id="attention_cancel_402834e534eb587b0134f53933c22aa6"></div>
+							<div id="attention_unread_img_402834e534eb587b0134f53933c22aa6" style="display:none;"><img src="/PowerDesk/resources/images/common/new.gif" class="new_img"></div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');" class="body_td" id="td_pt_402834e534eb587b0134f53933c22aa6">
+							年计划
+							
+							
+							
+							
+							
+							
+							
+						</td>
+						<td onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');" class="body_td pd-chill-tip" id="td_ct_402834e534eb587b0134f53933c22aa6" chilltip="【战略与市场】市场分析报告&lt;br&gt;&lt;li&gt;崔巍&nbsp;05-21：【修改了状态为完成】&lt;/li&gt;&lt;li&gt;黄劲松&nbsp;05-18：【修改了状态为预完成】&lt;/li&gt;&lt;li&gt;黄劲松&nbsp;04-20：【修改了状态为预完成】&lt;/li&gt;" title="【战略与市场】市场分析报告&lt;br&gt;&lt;li&gt;崔巍&nbsp;05-21：【修改了状态为完成】&lt;/li&gt;&lt;li&gt;黄劲松&nbsp;05-18：【修改了状态为预完成】&lt;/li&gt;&lt;li&gt;黄劲松&nbsp;04-20：【修改了状态为预完成】&lt;/li&gt;">
+						<div class="ellipsis_Div">【战略与市场】市场分析报告</div>
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');" class="body_td" id="td_td_402834e534eb587b0134f53933c22aa6">12-31</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');" class="body_td" id="td_st_402834e534eb587b0134f53933c22aa6">
+							
+							
+							
+							
+							
+							
+							
+							<div title="非本月任务" class="unmonth">&nbsp;</div>
+							 
+							
+							
+						</td>
+						<td nowrap="nowrap" onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');" class="body_td" id="td_ud_402834e534eb587b0134f53933c22aa6">06-27</td>
+						<td nowrap="nowrap" class="body_td"><span onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e534eb587b0134f53933c22aa6&quot;);" style="cursor:pointer;" id="edit_atta_imgSpan_402834e534eb587b0134f53933c22aa6">
+							<div title="附件" class="attach">&nbsp;</div></span>
+						</td>
+					</tr>
+					<tr><td style="border-bottom:none;padding-left:0px;" colspan="9">
+						<!-- 编辑中心月计划 -->
+						<div style="padding:5px 0;" class="editMonthPlan" id="edit_monthPlan_402834e534eb587b0134f53933c22aa6">
+						<form method="post" id="editPlanTarget_402834e534eb587b0134f53933c22aa6" name="" action="/PowerDesk/plan/plan-target!save.action">
+						<input type="hidden" value="402834e534eb587b0134f53933c22aa6" name="id">
+						<input type="hidden" value="" name="isAttentioned">
+                         <input type="hidden" value="139" name="recordVersion">
+							<table class="editTable">
+							     <colgroup><col width="8%">
+								<col width="7%">
+								<col width="35%">
+								<col width="5%">
+								<col width="7%">
+								<col width="48%">
+								</colgroup><tbody><tr valign="top">
+									<td style="padding-right:5px;padding-left:26px;" id="td_edit_sn_402834e534eb587b0134f53933c22aa6"><input class="editSequenceNumber" value="01" name="sequenceNumber" id="editSequenceNumber_402834e534eb587b0134f53933c22aa6"></td>
+									<td style="padding-right:5px;" id="td_edit_pt_402834e534eb587b0134f53933c22aa6">
+									<input value="1" class="editPlanType">
+									<div class="selectType" id="selectType_402834e534eb587b0134f53933c22aa6" style="display: none;">
+										<ul>
+										
+											
+										
+											
+												<li title="月会工作" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="2">月会工作</li>
+											
+										
+											
+												<li title="项目管理" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="3">项目管理</li>
+											
+										
+											
+												<li title="指令单" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="4">指令单</li>
+											
+										
+											
+												<li title="综合" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="5">综合</li>
+											
+										
+											
+												<li title="季度KPI" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="6">季度KPI</li>
+											
+										
+											
+												<li title="四级计划" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="7">四级计划</li>
+											
+										
+											
+												<li title="中心工作" onclick="clickType('402834e534eb587b0134f53933c22aa6', this.value);" value="8">中心工作</li>
+											
+										
+										</ul>
+									</div>
+									<input type="hidden" value="1" name="planType" id="editPlanTypeVal_402834e534eb587b0134f53933c22aa6">
+									</td>
+									<td style="padding-right:5px;" id="td_edit_ct_402834e534eb587b0134f53933c22aa6"><textarea class="editContent" id="content" rows="" cols="" name="content">【战略与市场】市场分析报告</textarea></td>
+									<td style="padding-right:5px;" id="td_edit_td_402834e534eb587b0134f53933c22aa6"><input onfocus="WdatePicker({ dateFmt: 'MM-dd' });" class="Wdate editTargetDate" value="12-31" id="editTargetDate_402834e534eb587b0134f53933c22aa6"><input type="hidden" value="2012-12-31" name="targetDate" id="targetDate_402834e534eb587b0134f53933c22aa6"></td>
+									<td style="padding-right:5px;"><input readonly="readonly" value="非本月任务" id="edit_st_402834e534eb587b0134f53933c22aa6" class="editStatus">
+									 <input type="hidden" value="7" name="status" id="editStatusVal_402834e534eb587b0134f53933c22aa6">
+									 </td>
+									<td style="width: 38%;padding-top:3px;padding-left:5px;">
+									<label style="height:24px;">编号：</label>NJH-2012-JK-1&nbsp;&nbsp;
+									<label>创建时间：</label>01-19
+									
+								    </td>
+								</tr>
+								<tr>
+									<td valign="top" class="td" colspan="5" style="padding-left:21px;">
+									
+									
+									
+									
+									 <input type="button" value="&nbsp;&nbsp;保存&nbsp;&nbsp;" class="btn_green" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6');">
+									
+									
+									
+									<input type="button" value="&nbsp;&nbsp;返回&nbsp;&nbsp;" class="btn_green" onclick="openEditPlanTarget('402834e534eb587b0134f53933c22aa6');">
+									</td>
+									<td class="td">
+										<table id="statusBtn_402834e534eb587b0134f53933c22aa6">
+											<thead>
+												<tr><td>
+												  
+													
+													
+													<input type="button" title="执行" value="&nbsp;执行&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '1');" class="btn_blue">
+													
+													
+													<input type="button" title="预完成" value="&nbsp;预完成&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '2');" class="btn_blue">
+													
+													
+													
+													
+													<input type="button" title="完成" value="&nbsp;完成&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '3');" class="btn_blue">
+													
+													
+													
+													
+													<input type="button" title="非本月" value="&nbsp;非本月&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '7');" class="btn_green">
+												    
+												    
+												</td></tr>
+												<tr><td class="td">
+												   
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													<input type="button" title="过期" value="&nbsp;过期&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '5');" class="btn_red">
+													<input type="button" title="非考核性过期" value="&nbsp;非考核性过期&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '6');" class="btn_red">
+													
+													<input type="button" title="隐藏" value="&nbsp;隐藏&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '8');" class="btn_red">
+													
+													
+													
+													<input type="button" title="退回" value="&nbsp;退回&nbsp;" onclick="doSubmitEdit('402834e534eb587b0134f53933c22aa6', '-1');" style="float:left;" class="btn_red">
+												    
+												    
+												    
+												</td></tr>
+											</thead>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top" colspan="5" style="padding-left:26px;" class="td2">留言：
+									<div id="msgList_402834e534eb587b0134f53933c22aa6">
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">崔巍</span>(05-21 15:05):【修改了状态为完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(05-18 08:05):【修改了状态为预完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(04-20 16:04):【修改了状态为预完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">崔巍</span>(04-09 11:04):【修改了状态为完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(03-15 13:03):【修改了状态为预完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">吴弼川</span>(03-04 19:03):【修改了状态为完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(02-23 16:02):【修改了状态为预完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(01-31 13:01):【修改了状态为预完成】</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(01-29 09:01):完成2012年第一期</div>
+									
+										<div style="width:90%;word-wrap:break-word;"><span style="color:#18478d;">黄劲松</span>(01-29 09:01):【修改了状态为预完成】</div>
+									
+									</div>
+									<textarea style="width: 300px;height: 50px;float: left;border: 1px solid #7F9DB9;" name="planMessages[10].content" id="editMessage_402834e534eb587b0134f53933c22aa6"></textarea><input type="button" value="留言" class="msgBtn btn_green" onclick="doSubmitMessage('402834e534eb587b0134f53933c22aa6');">
+									</td>
+									<td valign="top">
+									 <div id="editAttach">
+												<table cellspacing="0px;" cellpadding="0px">
+													<thead>
+													<tr>
+														<td width="50px;"><label style="font-weight: bold;padding-left: 5px;">附件：</label></td>
+														<td colspan="3">
+															<label class="link" onclick="openAttachment(&quot;附件管理&quot;,&quot;402834e534eb587b0134f53933c22aa6&quot;);">添加附件</label>&nbsp;|&nbsp;可以上传小于40M的附件
+														</td>
+													</tr>
+													</thead>
+													<tbody>
+													<tr>
+														<td></td>
+														<td><span class="link" onclick="">&nbsp;</span></td>
+														<td>&nbsp;</td>
+														<td><span class="del" onclick="">&nbsp;</span></td>
+													</tr>
+													</tbody>
+												</table>
+												</div>
+													<input type="hidden" name="attach">
+									</td>
+								</tr>
+							</tbody></table>
+							</form>
+						</div>
+						</td>
+						</tr>
+						
+					
+					
+				</tbody>
+			</table>
+        <div class="search_info_bar">
+			<div class="div_inner">
+				<div class="left">
+					<span>批量操作：</span>
+					<input type="button" class="btn_blue"  value="执行"/>
+					<input type="button" class="btn_blue"  value="预完成"/>
+					<input type="button" class="btn_blue"  value="完成"/>
+					<input type="button" class="btn_green"  value="非本月"/>
+					<input type="button" class="btn_red"  value="过期"/>
+					<input type="button" class="btn_red"  value="非考核性过期"/>
+					<input type="button" class="btn_red"  value="隐藏"/>
+					<input type="button" class="btn_red"  value="申请删除"/>
+					<input type="button" class="btn_red"  value="删除"/>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
