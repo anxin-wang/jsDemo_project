@@ -1,9 +1,0 @@
-.text-overflow {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
-  /* Required for IE8 */
-  -o-text-overflow: ellipsis;
-  /* Required for Opera */
-  white-space: nowrap;
-}
