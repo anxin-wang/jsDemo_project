@@ -1,0 +1,62 @@
+body{
+	background-color: #F0F0F0;
+}
+div#logo{
+	height:40px;
+	margin-bottom:10px;
+}
+/*******************************************menu菜单**********************************/
+/*如果不设会很窄，影响到下面的宽度，下面的宽度也由这个来决定*/
+ul#menu-levelone,ul#menu-leveltwo,ul.menu-levelthree{
+	width:764px;
+}
+/*原本设在ul上的背景要设到a上，因为ul的宽度已经定死，没有a的地方也会有背景色
+ 原来宽度是auto,完全由里面的元素撑开，ul的宽度与a的一致，所以不会有这个问题
+ * */
+ul#menu-leveltwo,ul.menu-levelthree{
+	background:none;
+}
+/*设置固定宽度，不然占满一行*/
+ul#menu-levelone li{
+	width:90px;
+}
+ul#menu-leveltwo li{
+	width:74px;
+	background-color:#929292;
+}
+/*设置宽度与li一致，这样才能水平对齐*/
+ul#menu-leveltwo li a{
+	padding:5px 0;
+	width:74px;
+	text-align:center;
+}
+/*不用再设，因为leveltwo已经一起设掉了*/
+ul#menu-leveltwo li ul.menu-levelthree li{
+	width:152px;
+}
+/*ie6 hover bug，放在li上会没有效果*/
+ul#menu-levelone li a:hover{
+	color:#FFF;
+	background-color:#929292;
+}
+ul#menu-levelone ul#menu-leveltwo li a:hover{
+	background-color:#2d8bef;
+	border-bottom:#000 1px solid;
+}
+/*ie6 选到下层菜单上层菜单的状态保持，因为上面从li:hover移动到a上，所以状态无法保持*/
+ul#menu-levelone li a.selected{
+	color:#FFF;
+	background-color:#929292;
+}
+ul#menu-leveltwo li a.selected{
+	background-color:#2d8bef;
+	border-bottom:#000 1px solid;
+}
+/*ie6 css sprites bug，sprites会全部显示出来，就不用sprites了*/
+.pagination{
+	background-image:url(../images/banner/banner-bg.png);
+}
+.pagination li a{
+	background:url(../images/pagination_for_ie6.png) left top no-repeat;
+	
+}

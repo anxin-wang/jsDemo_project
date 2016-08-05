@@ -1,0 +1,745 @@
+/*General CSS :float left*/
+ul li,ul#menu-levelone,div#logo{
+	float:left;
+}
+a.no-link{
+	cursor: default;
+}
+html#video-html{
+	width : 897px;
+	height: 501px;
+}
+/*body*/
+body{
+	width: 897px;
+	margin:0 auto;
+	padding:10px;
+	background-color:#EDEDED;
+}
+/*video page*/
+body#video-body{
+	height: 481px;
+    width: 877px;
+	background-color:#fff;
+	text-align: center;
+}	
+#video-body h1 {
+	margin: 0px;
+	background-image: url(../images/projects-details/titles.png);
+    background-repeat:no-repeat;
+    text-indent: -9999px;
+    height: 36px;
+	background-position: left -124px;
+}
+			
+body#index{
+	height:691px;
+}
+body#project_details{
+	height:765px;
+}
+/*header*/
+div#header{
+	height:40px;
+	margin-top:6px;
+}
+a#logo{
+	display:block;
+	float:left;
+	width:100px;
+	padding-right:10px;
+	height:100%;
+	background: url(../images/logo.png) left -7px no-repeat transparent;
+	border-right:#bfbfbf 2px solid;
+}
+
+/*menu*/
+ul li a{
+	display:block;
+	text-decoration:none;
+	height:16px;
+}
+
+ul.menu-levelthree li{
+	float:none;
+}
+ul#menu-leveltwo li ul.menu-levelthree li a{
+	border-right:none;
+}
+ul#menu-levelone{
+	width:420px;
+	height:18px;
+	margin:15px 0 0 10px;
+}
+ul#menu-levelone li a{
+	font: bold 14px/14px '宋体';
+	color:#bfbfbf;
+	padding:4px 13px;
+}
+ul#menu-levelone li:hover a{
+	color:#FFF;
+	background-color:#929292;
+}
+ul#menu-levelone li.disable:hover a{
+	background-color:#AAA;
+}
+ul#menu-levelone li a#li-powerlong-project{
+	border-left:#bfbfbf 2px solid;
+	border-right:#bfbfbf 2px solid;	
+}
+ul#menu-leveltwo,ul.menu-levelthree{
+	position: absolute;
+	background-color:#929292;
+	z-index: 20;
+	display:none;
+}
+
+ul#menu-leveltwo{
+	margin-left:-78px;	
+}
+ul#menu-leveltwo li a{
+	border-right:#fff 2px solid;
+	font:12px/12px '宋体';
+	color:#fff;
+	padding:5px 35px;
+	height:13px;
+	background-color:#929292;
+	border-bottom:#929292 1px solid;
+}
+ul#menu-leveltwo li.last a{
+	border-right:none;
+}
+ul#menu-leveltwo li:hover a{
+	background-color:#2d8bef;
+	border-bottom:#000 1px solid;
+}
+ul#menu-leveltwo li.disable:hover a{
+	background-color:#AAA;
+}
+ul#menu-leveltwo li:hover ul a{
+	background-color:#929292;
+	border-bottom:none;
+}
+ul#menu-leveltwo li:hover ul.menu-levelthree li:hover a{
+	background-color:#2d8bef;
+	border-bottom:#000 1px solid;
+}
+ul#menu-leveltwo li:hover ul.menu-levelthree li.disable:hover a{
+	background-color:#AAA;
+}
+ul#menu-leveltwo ul.menu-levelthree li a{
+	height:13px;
+	width:auto;
+	border-bottom:#929292 1px solid;
+}
+ul.menu-levelthree.last{
+	margin-left:-73px;
+}
+#li-powerlong-project.selected{
+	color:#000;
+}
+/*image_slider*/
+#image_slider{
+	height:260px;
+	width:895px;
+	margin:18px 0 0;
+	position: relative;
+}
+.pagination{
+	position: absolute;
+	z-index: 10;
+	height:32px;
+	bottom:0;
+	width:865px;
+	
+	background-color:rgba(0,0,0,0.6);
+	padding-left:30px; 
+}
+.pagination li{
+	margin:12px 3px 0;
+}
+.pagination li a{
+	display: block;
+	width:8px;
+	height:8px;
+	background:url(../images/pagination.png) left top no-repeat;
+	text-indent: -9999px;
+}
+.pagination li.current a{
+	background:url(../images/pagination.png) left -8px no-repeat;
+}
+
+/*main_content*/
+#main_content{
+	height:345px;
+}
+#main_content div,#main_content a{
+	float:left;
+	width:220px;
+	height:163px;
+}
+#main_content div{
+	margin:8px 0 0 8px;
+}
+#main_content div#index_figure001{
+	height:335px;
+	margin-left:0px;
+}
+#main_content div#index_figure002{
+	width:216px;
+}
+#main_content div#index_figure003{
+	width:217px;
+}
+#main_content div#index_figure005{
+	width:441px;
+}
+#index_figure001 a,#index_figure002 a,#index_figure003 a,#index_figure004 a,#index_figure005 a,#index_figure006 a{
+	text-decoration: none;
+}
+/*-----------------------------------detail page---------------------------------*/
+#main_content  div#project_details_figure001,a#project-intro{
+	width:432px;
+	height:314px;
+	margin-right:12px;
+}
+a#project-intro,a#project-traffic,a#project-landscape,a#project-business-position,#project_details_figure003 a{
+	display:block;
+	text-decoration: none;
+}
+#main_content  div#project_details_figure002{
+	width:216px;
+	height:334px;
+}
+#main_content  div#project_details_figure005,#main_content  div#project_details_figure008,#main_content  div#project_details_figure001{
+	margin-left:0px;
+}
+#main_content  div#project_details_figure008{
+	background-color: #FDBA2D;
+}
+#main_content  div#project_details_figure007{
+	background-color: #AD173C;
+}
+#main_content  div#project_details_figure006,#main_content  div#project_details_figure009{
+	width:440px;
+}
+#project_details_figure009,#project_details_figure003,#project-intro{
+	position: relative;
+}
+#project_details_figure009 span,#project-intro span,#project_details_figure003 ul{
+	color:#fff;
+	font:12px/16px '宋体';
+	display:block;
+	position: absolute;
+	left:12px;
+	bottom: 10px;
+	width:330px;
+	text-decoration:none;
+}
+#project_details_figure003 ul li{
+	float:none;
+	background: url(../images/li-bg.png) no-repeat left 6px  transparent;
+	text-decoration:none;
+}
+#fancybox-content{
+	text-align: center;
+}
+#fancybox-content h1{
+	background-image: url(../images/projects-details/titles.png);
+    background-repeat:no-repeat;
+    text-indent: -9999px;
+    height: 36px;
+}
+#fancybox-content p{
+	font:12px/20px '宋体';
+	width:198px;
+	color:#fff;
+	height:421px;
+	margin-top:10px;
+	padding:10px;
+	overflow:auto;
+	text-align:left;
+	background-color:#2A80EE;
+}
+.overlayer-left{
+	float:left;
+	width:228px;
+	height:auto;
+	margin-left:3px;
+}
+.overlayer-right{
+	margin-top:10px;
+	float:left;
+	width:663px;
+}
+.facilities h1{
+	background-position: left -38px;
+	width:200px;
+}
+.landscape h1{
+	background-position: left -164px;
+	width:200px;
+}
+#project-intro-pic h1{
+	background-position:left  -206px;
+	width:208px;
+}
+#project-traffic-pic h1{
+	background-position:left  -246px;
+	width:200px;
+}
+#project-business-position-pic h1{
+	background-position:left  -286px;
+}
+.general-business-position h1{
+	width:208px;
+}
+.room-type-drawing h1{
+	background-position:left  -80px;
+	width:200px;
+}
+#project-intro-video-content h1{
+	background-position:left -124px;
+}
+#fancybox-content .room-type-drawing p,#fancybox-content .general-business-position p{
+	height:24px;
+	width:750px;
+	margin:0 auto;
+	font:bold 16px/18px '宋体';
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fff;
+	color: #000;
+}
+#main_content div#project_details_figure006{
+	position: relative;
+}
+#main_content #room-type-drawing-link{
+	position: absolute;
+	margin:0;
+	top:0;
+	left:0;
+	width:440px;
+	height:163px;
+}
+#main_content #room-type-drawing-link.hangzhou{
+	background: url(../images/projects-details/hangzhou/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.hechuan{
+	background: url(../images/projects-details/hechuan/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.xiamen{
+	background: url(../images/projects-details/xiamen/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.jinjiang{
+	background: url(../images/projects-details/jinjiang/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.jimo{
+	background: url(../images/projects-details/jimo/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.tianjing{
+	background: url(../images/projects-details/tianjing/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.haiyang{
+	background: url(../images/projects-details/haiyang/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.xinxiang{
+	background: url(../images/projects-details/xinxiang/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.anxi{
+	background: url(../images/projects-details/anxi/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link.luoyang{
+	background: url(../images/projects-details/luoyang/009.jpg) no-repeat top left;
+}
+#main_content #room-type-drawing-link a{
+	display:block;
+	height:163px;
+	float:left;
+	width:146px;
+}
+#main_content #business-room-type-drawing{
+	
+}
+/*fancybox*/
+#fancybox-close{
+	background:url(../images/fancybox-close.png) left top no-repeat;
+	width: 917px;
+	height:46px;
+	right: 0;
+    top: -46px;
+}
+#fancybox-left-ico,#fancybox-right-ico{
+	background-image:url(../images/fancybox.png);
+	height:114px;
+	width:48px;
+	margin-top: -55px;
+}
+#fancybox-left-ico{
+	left:0px;
+	background-position: left top;
+}
+#fancybox-right-ico{
+	right:0;
+	left:auto;
+	background-position: -48px top;
+}
+#fancybox-left:hover span{
+	left:0;
+}
+#fancybox-right:hover span{
+	right:0;
+}
+/*#fancybox-content div{
+	left:45px;
+	width:807px;
+}*/
+/*jCarousel*/
+#main_content .index_project div{
+	margin:0;
+}
+#main_content #index_figure001 .jcarousel-skin-tango .jcarousel-container{
+	height:335px;
+}
+#main_content #index_figure001 .jcarousel-skin-tango .jcarousel-clip-vertical{
+	height:335px;
+}
+#main_content li{
+	height:163px;
+}
+#index_project001 li{
+	height:335px;
+}
+#index_figure005 li,#index_figure005 div{
+	width:440px;
+}
+#main_content .jcarousel-skin-tango .jcarousel-container{
+	background:none;
+	border:none;
+	padding:0;
+}
+#main_content .jcarousel-skin-tango .jcarousel-prev,#main_content .jcarousel-skin-tango .jcarousel-next{
+	display:none !important;
+}
+.jcarousel-skin-tango .jcarousel-item{
+	height:335px;
+	width:220px;
+	margin-bottom:0px;
+	margin-right:0px;
+}
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal{
+	margin-left:0px;
+}
+#project_details_figure002 div,#project_details_figure003 div,#project_details_figure009 div{
+	margin:0px;
+}
+#project_details_figure002 a,#project_details_figure003 a,#project_details_figure009 a{
+	height:auto;
+}
+#project_details_figure002 .jcarousel-clip-vertical,#project_details_figure002 .jcarousel-clip-vertical li{
+	height:334px;
+}
+#project_details_figure009 .jcarousel-clip-horizontal,#project_details_figure009 .jcarousel-clip-horizontal li{
+	width:440px;
+}
+
+/*.jcarousel-has-words,#project-business-position .jcarousel-item-2{
+	position: relative;
+}
+#main_content .jcarousel-has-words div{
+	position: absolute;
+	width:200px;
+	left:10px;
+	top:120px;
+	height:auto;
+	font: 12px/16px '宋体';
+	color:#fff;
+}*/
+#project-landscape-slides-words{
+	background-color:#045c2e;
+	position: relative;
+}
+#project-landscape-slides-words h1{
+	font:18px/18px '微软雅黑';
+	margin:10px 0 0 10px;
+}
+#project-landscape-slides-words div{
+	position: absolute;
+	width:200px;
+	left:10px;
+	top:75px;
+	height:auto;
+	font: 12px/16px '宋体';
+	color:#fff;
+}
+#main_content #project-business-position-slides-words{
+	background-color:#287bed;
+	width:217px;
+	height:334px;
+}
+#main_content #project-business-position-slides-words h1{
+	margin:20px 0 0 12px;
+	font:30px/30px '微软雅黑';
+	color:#fff;
+}
+#main_content #project-business-position-slides-words h2{
+	margin:5px 0 0 12px;
+	font:18px/18px '微软雅黑';
+	color: #D4E4FB;
+}
+#main_content #project-business-position-slides-words p{
+	margin:175px 0 0 12px;
+	font:12px/18px '宋体';
+	color:#fff;
+	width:200px;
+}
+#project-intro,#project_details_figure007{
+	position: relative;
+}
+#project-intro div.jcarousel-skin-tango,#project_details_figure007 div.jcarousel-skin-tango{
+	position: absolute;
+	bottom:15px;
+}
+#project-intro{
+	padding-left:15px;
+	padding-top:20px;
+	
+	background-color: #2981EF;
+	color:#fff;
+}
+#project-intro.hangzhou,#project-intro.xinxiang{
+	background-color: #005065;
+}
+#project-intro.xiameng,#project-intro.anxi{
+	background-color: #D9532B;
+}
+#project-intro.hechuan,#project-intro.luoyang{
+	background-color: #B71A3F;
+}
+
+#project-intro.jimo{
+	background-color: #5E3AB6;
+}
+#project-intro.jinjiang{
+	background-color: #009C19;
+}
+
+#project-intro h1{
+	font:45px/45px '微软雅黑';
+	margin-bottom:10px;
+}
+#project-intro h2{
+	float:left;
+	font:bolder 48px/48px '黑体';
+}
+#project-intro h3{
+	float:left;
+	color:#D4E4FB;
+}
+#project-intro h3 p{
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#project-intro img{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+#project-intro-slides,#project_details_figure007{
+	width:auto;
+	height:auto;
+	font:14px/22px '宋体';
+	color:#fff;
+}
+#main_content #project_details_figure005{
+	padding-top:10px;
+	height:153px;
+	width:205px;
+	padding-left:15px;
+	color:#fff;
+	background-color: #704D31;
+}
+#project_details_figure005 h1{
+	font: 18px/18px '微软雅黑';
+}
+#project_details_figure005 div{
+	height:auto;
+	margin-top:70px;
+	margin-left:0px;
+	
+}
+#project_details_figure005 h2{
+	font:bold 28px/28px '微软雅黑';
+}
+#project_details_figure005.hechuan div{
+	margin-top:40px;
+}
+#project-intro-slides li{
+	width:354px;
+	height:auto;
+}
+#project-intro-slides li p{
+	margin:0 15px 0 0;
+}
+#project_details_figure007 li p{
+	margin:0 10px;
+	color:#fff;
+}
+#project-intro-slides li{
+	height:auto;
+}
+#project-business-position-pic p{
+	line-height: 24px;
+}
+#project-intro .jcarousel-skin-tango,#project-intro .jcarousel-container,#project-intro .jcarousel-clip-vertical{
+	width:354px;
+	height:84px;
+	margin:0px;
+}
+#project_details_figure007 .jcarousel-skin-tango,#project_details_figure007 .jcarousel-container,#project_details_figure007 .jcarousel-clip-vertical,#project_details_figure007 li{
+	height:40px;
+	margin:0px;
+}
+#project_details_figure007 h1{
+	margin:10px 0 0 10px;
+	font:18px/22px '微软雅黑';
+	color:#fff;
+}
+
+#project_details_figure008 h1,#project_details_figure008 div{
+	margin:10px 0 0 10px;
+	color:#71382E;
+}
+#project_details_figure008 h1{
+	font:bold 42px/42px '微软雅黑';
+}
+#project_details_figure008 div{
+	margin-top:70px;
+	height:100px;
+	font:12px/16px '宋体';
+}
+#project_details_figure008.xiamen div{
+	margin-top:50px;
+	width:200px;
+}
+#project_details_figure008.haiyang div{
+	margin-top:85px;
+}
+#project_details_figure008.xinxiang div{
+	margin-top:70px;
+	width:210px;
+}
+#project_details_figure008 div p:first-child{
+	font:bold 14px/16px '宋体';
+}
+#main_content #tianjing_project1_details_words{
+	background-color:#297EEE;
+	width:220px;
+	height:335px;
+	
+}
+#main_content #tianjing_project1_details_words h1{
+	margin:20px 0 0 12px;
+	font:18px/18px '微软雅黑';
+	color:#fff;
+	
+}
+#main_content #tianjing_project1_details_words h2{
+	margin:5px 0 0 12px;
+	font:18px/18px '微软雅黑';
+	color:#fff;
+	
+}
+#main_content #tianjing_project1_details_words p{
+	margin:250px 0 0 10px;
+	font:15px/18px '微软雅黑';
+	color:#fff;
+	width:200px;
+}
+
+#main_content #xiamen_project_details_words{
+	background-color:#D64E29;
+	width:216px;
+	height:163px;
+	
+}
+
+#main_content #xiamen_project_details_words p{
+	color: #FFFFFF;
+    font: 15px/15px '微软雅黑';
+    margin: 140px 0 0 8px;
+    width: 200px;
+    
+}
+
+#main_content #hangzhou_project_details_words{
+	background-color:#005065;
+	width:217px;
+	height:163px;
+}
+
+#main_content #hangzhou_project_details_words p{
+	color: #FFFFFF;
+    font: 15px/15px '微软雅黑';
+    margin: 140px 0 0 8px;
+    width: 200px;
+}
+
+#main_content #jimo_project_details_words{
+	background-color:#5E3AB8;
+	width:220px;
+	height:163px;
+}
+
+#main_content #jimo_project_details_words p{
+	color: #FFFFFF;
+    font: 15px/15px '微软雅黑';
+    margin: 140px 0 0;
+    padding-left: 10px;
+    text-align: left;
+    width: 210px;
+}
+
+#main_content #hechuan_project_details_words{
+	background-color:#B91D46;
+	width:441px;
+	height:164px;
+	text-align: left;
+}
+#main_content #hechuan_project_details_words h1{
+	margin:10px 0 0 8px;
+	font:12px/12px '宋体';
+	color:#fff;
+}
+#main_content #hechuan_project_details_words h2{
+	margin:5px 0 0 8px;
+	font:12px/12px '宋体';
+	color:#fff;
+}
+#main_content #hechuan_project_details_words p{
+	margin:100px 0 0 8px;
+	font:15px/15px '微软雅黑';
+	color:#fff;
+	width:433px;
+}
+#main_content #jinjiang_project_details_words{
+	background-color:#009D19;
+	width:220px;
+	height:164px;
+}
+#main_content #jinjiang_project_details_words h1{
+	margin:10px 0 0 8px;
+	font:12px/12px '宋体';
+	color:#fff;
+}
+#main_content #jinjiang_project_details_words h2{
+	margin:5px 0 0 8px;
+	font:12px/12px '宋体';
+	color:#fff;
+}
+#main_content #jinjiang_project_details_words p{
+	margin:100px 0 0 8px;
+	font:15px/15px '微软雅黑';
+	color:#fff;
+	width:433px;
+}

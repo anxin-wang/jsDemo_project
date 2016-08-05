@@ -1,0 +1,13 @@
+#fancybox-content p{
+	margin-top:8px;
+	margin-left:-10px;
+}
+
+#fancybox-outer{
+	width:917px;
+	
+}
+#project-intro{
+	cursor:pointer;
+	text-decoration: none;
+}
