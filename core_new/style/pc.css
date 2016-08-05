@@ -1370,8 +1370,10 @@ img {
 .pagination-style2 ul li input {
   line-height: 1.6;
   border: 1px solid #ddd;
-  width: 70px;
-  height: 31px;
+  width: 50px;
+  height: 21px;
+  padding: 5px 10px;
+  text-align: center;
 }
 .pagination-style2 .btn {
   padding: 2px 12px;

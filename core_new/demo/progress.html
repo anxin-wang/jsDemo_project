@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>页面进度条</title>
+    <link rel="stylesheet" href="../lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="../style/pc.css">
+    <script src="../lib/nprogress/nprogress.js"></script>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+
+</head>
+<body>
+<h1>使用NProgress.js制作的进度条插件</h1>
+<button class="over btn">完成加载，进度条结束</button>
+<button class="setProgress btn">设置进度</button>
+<button class="setInc btn">设置步长</button>
+<div>具体配置参考<a href="https://github.com/rstacruz/nprogress">NProgress帮助手册</a></div>
+<script>
+    $(function(){
+        NProgress.start();
+        $(".over").click(function(){
+            NProgress.done()
+        })
+        $(".setProgress").click(function(){
+            NProgress.set(0.4)
+        })
+
+        $(".setInc").click(function(){
+            NProgress.inc(0.2);
+        })
+
+
+
+    })
+
+</script>
+
+</body>
+</html>
