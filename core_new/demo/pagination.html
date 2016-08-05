@@ -10,57 +10,100 @@
 
 
 <body class="wrap">
-	<h1>分页导航</h1>
-	<h2>常用大小分页</h2>
-	<h2>ul.pagination</h2>
-	<ul class="pagination">
-		<li><a href="#">&laquo; 第一页</a></li>
-		<li><a href="#">1</a></li>
-		<li class="active"><a href="#">2</a></li>
-		<li><a href="#">3</a></li>
-		<li><a href="#">14</a></li>
-		<li><a href="#">15</a></li>
-		<li><a href="#">...</a></li>
-		<li><a href="#">99</a></li>
-		<li><a href="#">100</a></li>
-		<li class="disabled"><a href="#">最后一页 &raquo;</a></li>
-	</ul>
-	<br/>
-	<h2>小分页</h2>
-	<h2>ul.pagination-sm</h2>
-	<ul class="pagination pagination-sm">
-		<li><a href="#">&laquo; 第一页</a></li>
-		<li><a href="#">1</a></li>
-		<li class="active"><a href="#">2</a></li>
-		<li><a href="#">3</a></li>
-		<li><a href="#">14</a></li>
-		<li><a href="#">15</a></li>
-		<li><a href="#">...</a></li>
-		<li><a href="#">99</a></li>
-		<li><a href="#">100</a></li>
-		<li class="disabled"><a href="#">最后一页 &raquo;</a></li>
-	</ul>
-	<br/>
-	<h2>翻页分页导航</h2>
-	<h2>ul.pager</h2>
-	<h5>一般状态</h5>
-	<ul class="pager">
-		<li><a href="#">&laquo; 上一页</a></li>
-		<br/>
-		<li><a href="#">下一页 &raquo;</a></li>
-	</ul>
-	<br/>
-	<h5>左右对齐状态</h5>
-	<ul class="pager">
-		<li class="previous"><a href="#">&laquo; 上一页</a></li>
-		<li class="next"><a href="#">下一页 &raquo;</a></li>
-	</ul>
-	<br/>
-	<h5>禁止状态</h5>
-	<ul class="pager">
-		<li class="disabled"><a href="#">&laquo; 上一页</a></li><br/>
-		<li><a href="#">下一页 &raquo;</a></li>
-	</ul>
-	<br/>
+<h1>样式一：分页导航</h1>
+
+<h2>常用大小分页</h2>
+
+<h2>ul.pagination</h2>
+<ul class="pagination">
+    <li><a href="#">&laquo; 第一页</a></li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">14</a></li>
+    <li><a href="#">15</a></li>
+    <li><a href="#">...</a></li>
+    <li><a href="#">99</a></li>
+    <li><a href="#">100</a></li>
+    <li class="disabled"><a href="#">最后一页 &raquo;</a></li>
+</ul>
+<br/>
+
+<h2>小分页</h2>
+
+<h2>ul.pagination-sm</h2>
+<ul class="pagination pagination-sm">
+    <li><a href="#">&laquo; 第一页</a></li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">14</a></li>
+    <li><a href="#">15</a></li>
+    <li><a href="#">...</a></li>
+    <li><a href="#">99</a></li>
+    <li><a href="#">100</a></li>
+    <li class="disabled"><a href="#">最后一页 &raquo;</a></li>
+</ul>
+<br/>
+
+<h2>翻页分页导航</h2>
+
+<h2>ul.pager</h2>
+<h5>一般状态</h5>
+<ul class="pager">
+    <li><a href="#">&laquo; 上一页</a></li>
+    <br/>
+    <li><a href="#">下一页 &raquo;</a></li>
+</ul>
+<br/>
+<h5>左右对齐状态</h5>
+<ul class="pager">
+    <li class="previous"><a href="#">&laquo; 上一页</a></li>
+    <li class="next"><a href="#">下一页 &raquo;</a></li>
+</ul>
+<br/>
+<h5>禁止状态</h5>
+<ul class="pager">
+    <li class="disabled"><a href="#">&laquo; 上一页</a></li>
+    <br/>
+    <li><a href="#">下一页 &raquo;</a></li>
+</ul>
+<br/>
+
+<h1>样式二：分页导航</h1>
+
+<h2>完整版</h2>
+
+<div class="pagination-style2 row">
+    <div class="col-width-2">共<span>105</span>页,<span>30</span>条</div>
+    <ul class="col-width-7 text-center">
+        <li><a href="#" title="第一页">|<i class="sicon sicon-back"></i></a></li>
+        <li><a href="#" title="上一页"><i class="sicon sicon-back"></i></a></li>
+        &nbsp;
+        <li><input type="text"/></li>
+        <li>
+            <a href="#" title="跳转">跳转</a>
+        </li>
+        &nbsp;
+        <li><a href="#" title="第一页"><i class="sicon sicon-right"></i></a></li>
+        <li><a href="#" title="最后一页"><i class="sicon sicon-right"></i>|</a></li>
+    </ul>
+    <div class="col-width-3 text-right">
+        <button class="btn">编辑</button>
+        <button class="btn btn-primary">默认</button>
+    </div>
+</div>
+
+<h2>简约版</h2>
+<div class="pagination-style2 simple">
+    <ul class="text-center">
+        <li><a href="#" title="上一页"><i class="sicon sicon-back"></i></a></li>
+        &nbsp;
+        <li><span>20</span>/<span>20</span></li>
+        &nbsp;
+        <li><a href="#" title="第一页"><i class="sicon sicon-right"></i></a></li>
+
+    </ul>
+</div>
 </body>
 </html>

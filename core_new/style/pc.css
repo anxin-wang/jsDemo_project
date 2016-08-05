@@ -7,6 +7,7 @@
 .row,
 .pagination,
 .pager,
+.pagination-style2 ul,
 .form-horizontal .form-group,
 .modal-footer {
   *zoom: 1;
@@ -17,6 +18,7 @@
 .row:after,
 .pagination:after,
 .pager:after,
+.pagination-style2 ul:after,
 .form-horizontal .form-group:after,
 .modal-footer:after {
   clear: both;
@@ -1156,13 +1158,13 @@ input::-webkit-input-placeholder {
   /* 去除现代浏览器 img 底部空隙 */
 }
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 .pull-right {
   float: right;
@@ -1229,6 +1231,9 @@ img {
 }
 .table tbody tr:last-child td {
   border-bottom: 0;
+}
+.table tbody tr.selected {
+  background-color: #f2f3f4;
 }
 .table.table-striped tbody tr:nth-child(even) {
   background: #F9F9F9;
@@ -1339,6 +1344,42 @@ img {
   cursor: not-allowed;
   background-color: #fff;
   border-color: #ddd;
+}
+.pagination-style2 {
+  width: 100%;
+  background-color: #dedede;
+  padding: 3px 10px;
+  line-height: 42px;
+  margin-bottom: 30px;
+}
+.pagination-style2 ul li {
+  display: inline;
+}
+.pagination-style2 ul li a {
+  position: relative;
+  color: #333;
+  padding: 6px 8px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -6px;
+}
+.pagination-style2 ul li:last-child {
+  margin-left: 0;
+}
+.pagination-style2 ul li input {
+  line-height: 1.6;
+  border: 1px solid #ddd;
+  width: 70px;
+  height: 31px;
+}
+.pagination-style2 .btn {
+  padding: 2px 12px;
+  margin-left: 10px;
+}
+.pagination-style2.simple {
+  width: 30%;
+  margin: 0 auto;
 }
 .dropdown {
   position: relative;

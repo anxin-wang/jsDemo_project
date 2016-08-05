@@ -109,3 +109,50 @@
 		border-color: @borderColor;
 	}
 }
+
+.pagination-style2{
+  width:100%;
+  background-color:#dedede;
+  padding:3px 10px;
+  line-height:42px;
+  margin-bottom:30px;
+
+  ul{
+    &:extend(.clearfix all);
+    li{
+      display: inline;
+      a{
+        position: relative;
+        color: @textColor;
+        padding: 6px 8px;
+        text-decoration: none;
+        background-color: @backgroundColor;
+        border: 1px solid @borderColor;
+        margin-left:-6px;
+
+      }
+      &:last-child {
+        margin-left: 0;
+      }
+
+      input{
+        line-height: 1.6;
+        border: 1px solid #ddd;
+        width:70px;
+        height:31px;
+
+      }
+
+    }
+  }
+
+  .btn{
+    padding:2px 12px;
+    margin-left:10px;
+  }
+}
+
+.pagination-style2.simple{
+  width:30%;
+  margin:0 auto;
+}

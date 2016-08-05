@@ -8,6 +8,7 @@
 <!--[if lt IE 9]>
 <script src="../lib/selectivizr/selectivizr.js"></script>
 <script src="../lib/respond/respond.min.js"></script>
+
 <![endif]-->
 <body>
 <div class="wrap" > <br/>
@@ -274,7 +275,114 @@
       </tr>
     </tbody>
   </table>
+
+  <h2>首列为checkbox的表格</h2>
+  <table class="table table-border" >
+    <thead>
+    <tr>
+      <th width="5%" class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></th>
+      <th width="50%">项目名称</th>
+      <th width="10%">年化利率</th>
+      <th width="10%">投资金额</th>
+      <th width="10%">投资期限</th>
+      <th width="10%">进度</th>
+      <th width="5%">状态</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></td>
+      <td class="text-overflow"><a href="#" title="上海市黄浦区中华路房产抵押贷款项目-0432上海项目-0432上海市黄浦区中华路房产抵押贷款项目-0432上海项目-0432" >上海市黄浦区中华路房产抵押贷款项目-0432上海项目-0432上海市黄浦区中华路房产抵押贷款项目-0432上海项目-0432</a></td>
+      <td>13.00%</td>
+      <td>250.00万</td>
+      <td>90天</td>
+      <td>100%</td>
+      <td>撮合成功</td>
+    </tr>
+    <tr>
+      <td class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></td>
+      <td><a href="#">上海市雪佛兰轿车抵押贷款项目-0428</a></td>
+      <td>13.00%</td>
+      <td>10.00万</td>
+      <td>181天</td>
+      <td>100%</td>
+      <td>撮合成功</td>
+    </tr>
+    <tr>
+      <td class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></td>
+      <td><a href="#">上海市雪佛兰轿车抵押贷款项目-0428</a></td>
+      <td>13.00%</td>
+      <td>10.00万</td>
+      <td>181天</td>
+      <td>100%</td>
+      <td>撮合成功</td>
+    </tr>
+    <tr>
+      <td class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></td>
+      <td><a href="#">上海市雪佛兰轿车抵押贷款项目-0428</a></td>
+      <td>13.00%</td>
+      <td>10.00万</td>
+      <td>181天</td>
+      <td>100%</td>
+      <td>撮合成功</td>
+    </tr>
+    <tr>
+      <td class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></td>
+      <td><a href="#">上海市雪佛兰轿车抵押贷款项目-0428</a></td>
+      <td>13.00%</td>
+      <td>10.00万</td>
+      <td>181天</td>
+      <td>100%</td>
+      <td>撮合成功</td>
+    </tr>
+    <tr>
+      <td class="text-center"><div class="radiobox"><span class="radio_ck"></span> </div></td>
+      <td><a href="#">上海市雪佛兰轿车抵押贷款项目-0428</a></td>
+      <td>13.00%</td>
+      <td>10.00万</td>
+      <td>181天</td>
+      <td>100%</td>
+      <td>撮合成功</td>
+    </tr>
+    </tbody>
+  </table>
   <br/>
 </div>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script>
+  $(function(){
+    // 全选，全不选
+    $(".table thead tr th span.radio_ck").click(function(){
+      var parent=$(this).parents("div.radiobox")
+              ,tbody=$(this).parents("thead").next("tbody")
+              ,trs=tbody.find("tr")
+              , checkboxs=tbody.find(".radiobox");
+      if(parent.hasClass("radio_checked")){
+        trs.removeClass("selected");
+        checkboxs.removeClass("radio_checked");
+        parent.removeClass("radio_checked");
+
+      }else{
+        trs.addClass("selected");
+        checkboxs.addClass("radio_checked");
+        parent.addClass("radio_checked");
+      }
+
+    })
+
+    $(".table tbody tr td span.radio_ck").click(function(){
+      var checkbox=$(this).parent("div.radiobox")
+              ,tr=$(this).parents("tr");
+        console.log(checkbox)
+      if(checkbox.hasClass("radio_checked")){
+        checkbox.removeClass("radio_checked");
+        tr.removeClass("selected");
+      }else{
+        checkbox.addClass("radio_checked");
+        tr.addClass("selected");
+      }
+    })
+  })
+</script>
 </body>
 </html>
